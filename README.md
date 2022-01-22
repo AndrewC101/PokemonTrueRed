@@ -1,14 +1,15 @@
 # PokemonTrueRed
-Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content.
+Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content while retaining the feeling of a definitive gen 1 experience.
 
 # Main Features
 - All trainer parties and Pokemon updated for greater difficulty and engagement.
 - A significant amount of dialog changed to make the world more rich and fun.
 - AI updates making all enemies more difficult, some trainers will switch in specific situations.  
 - Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four.
+- Player can sprint at bike speed by holding B, animation speed doubles.  
 - Different wild Pokemon available in every area, in addition to the important vanilla encounters  
 - All in-game trades are different.  
-- Significant content available after ELite Four, such as 17 optional bosses, max DVs on all Pokemon obtained and more.
+- Significant content available after Elite Four, such as 17 optional bosses, max DVs on all Pokemon obtained and more.
 - Boss enemies have better trained Pokemon with higher stats (stat exp / EVs)
 - Items can not be used in boss battles, by a player or opponent.  
 - Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up.
@@ -20,7 +21,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content.
 - All good TMs are available to purchase in Celadon as soon as you get there, but some are only given by Gym Leaders. 
 - HM moves can be deleted at any time like normal moves, just be careful.
 - Easier post-game grinding, with Exp.All giving full exp to whole party and optional bosses giving huge bonus money.
-- Cerulean Cave Mewtwo has dialog on encounter, using master ball and trying to run. Also has AI and different battle music
+- Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 
 # Screen Shots
 
@@ -79,7 +80,7 @@ Signature Moves
 
 # AI
 - Enemies will not prioritize super effective moves if they are non-damaging
-- Enemies will consider both player mon types when assessing if a move is super effective
+- Enemies will consider both player Pokemon types when assessing if a move is super effective
 - Enemies will favor their STAB moves 50% of the time they don't have a super effective move
 - If enemy Pokemon HP is below 33% all non-damaging moves except healing moves are deprioritized  
 - Boss enemies will switch Pokemon under the following conditions
@@ -108,6 +109,7 @@ Signature Moves
 - moves that inflict paralysis are slightly prioritized, since it is an OP status effect
 - Leech seed and substitute are deprioritized if already in effect
 - Useless moves like splash won't be used in battle
+- Game uses FAST text speed and SET battle style by default
 
 # Events/text
 - A huge amount of text has been changed and there is significant additional text
@@ -153,6 +155,7 @@ Signature Moves
   - Mewtwo has a 15/16 chance to block maser ball and print unique text
   - Trying to run displays unique text
   - Mewtwo is the only wild Pokemon to have AI
+- Player can sprint at bike speed by holding B, animation speed doubles.
 
 # Post-game Features
 - A level 70 Mew is given as a reward in Celadon Mansion Roof House
@@ -177,27 +180,27 @@ Signature Moves
   - Fire stone on Route 4
   - Water stone on route 25
 - Viridian Forest also has Venonat, Paras, Beedrill, Butterfree
-- Mt.Moon also has Nidrino, Nidorina, Ghastly, Slowpoke, Machop
-- Routes 4, 24, 25 also have Pikachu, Beedrill, Butterfree, Growlith, Cubone, Samdshrew and Abra is more common
-- Route 6 also has Meowth, Syther, Pinsir, Krabby, Kingler
-- Route 11 also has Syther, Pinsir, Ponyta, Rapidash
+- Mt.Moon also has Nidorino, Nidorina, Gastly, Slowpoke, Machop
+- Routes 4, 24, 25 also have Pikachu, Beedrill, Butterfree, Growlith, Cubone, Sandshrew and Abra is more common
+- Route 6 also has Meowth, Scyther, Pinsir, Krabby, Kingler
+- Route 11 also has Scyther, Pinsir, Ponyta, Rapidash
 - Route 9 also has Magnemite, Machoke, Primeape, Tauros
 - Rock Tunnel also has Gaveller, Machoke, Haunter, Rhyhorn
 - Pokemon Tower also has Clefairy, Kadabra, Meowth, Gengar (on top floor)  
 - Route 7 also has Pikachu, Poliwhirl, Weepinbell, Vulpix, Growlith, Eevee
 - Route 8 also has Pikachu, Poliwhirl, Weepinbell, Vulpix, Eevee, Mr.Mime, Exeggcute
-- Route 16 also has Hypon, Raticate, Fearow, Kangkaskhan
+- Route 16 also has Hypon, Raticate, Fearow, Kangaskhan
 - Route 12 also has Shellder, Gloom, Weepinbell
 - Route 13 also has Ditto, Staryu
 - Route 14 also has Persian, Staryu, Shellder
 - Route 15 also has Fearow, Venomth, Tauros, Dodrio, Kangaskhan, Arcanine
 - Route 18 also has Hypno, Fearow, Dodrio, Raticate, Kangaskhan
-- Safari Zone has Nidoking, Nidoqueen, Clefable, Wigglytuff, Tauros, Syther, Pinsir, Exeggutor, Chasey, Rhydon
+- Safari Zone has Nidoking, Nidoqueen, Clefable, Wigglytuff, Tauros, Scyther, Pinsir, Exeggutor, Chansey, Rhydon
 - Route 21 grass also has Bulbasaur, Squirtle, Charmander, Jynx
 - Route 21 water has Goldeen, Psyduck, Seel, Krabby, Horsea, Tentacrule, Dratini
 - Routes 19, 20 have Seaking, Poliwrath, Seadra, Golduck, Kingler, Vaporeon, Tentacrule, Blastoise
-- Cinnabar Lab has Ditto, Dratini, Rapidash, Magmar, Ninetales, Arcanine, Charizard, Porgon
-- Power Plant also has Joleon, Raichu, Magneton, Electabuzz
+- Cinnabar Lab has Ditto, Dratini, Rapidash, Magmar, Ninetales, Arcanine, Charizard, Porygon
+- Power Plant also has Jolteon, Raichu, Magneton, Electabuzz
 - Seafoam Islands has Seaking, Seadra, Dewgong, Gyarados, Slowbro, Cloyster, Jynx, Lapras, Staryu, Starmie
 - Route 23 has Primeape, Hitmonchan, Hitmonlee, Jolteon, Flareon, Vaporeon, Sandslash, Lickitung, Farfetchd, Ditto
 - Victory Road has Kangaskhan, Mr.Mime, Hypno, Hitmonchan, Hitmonlee, Golem, Machamp, Gengar, Alakazam
@@ -212,12 +215,13 @@ Signature Moves
   - Dragonite is pure dragon type, this makes Lance harder
   - Gyarados is pure water type, this makes Lance harder
   - Gengar is pure ghost type but has less HP and defense, this makes Agatha harder
-- Syther and Pinsir now know Twineedle
+- Scyther and Pinsir now know Twineedle
 - Aerodactyl, Kabutops and Omastar can learn Rock Slide and Earthquake
 - Dragonite and Charizard can learn Fly
 - Pikachu can learn Surf
 - Moltres can learn Solarbeam
 - Articuno can learn Psychic
+- Zapdos has a signature move, Photon wave
   
 # Move Changes
 - Several moves have been altered to promote skill rather than luck
@@ -225,17 +229,17 @@ Signature Moves
   - Spore is 90 accuracy rather than 100
   - OHKO moves are not in the game
   - Body Slam has a 10% chance to paralyse rather than 30%
-  - Wrap is 80 accurasy rather than 85
-- Karate Chop is now a fighting type move
+  - Wrap is 80 accuracy rather than 85
+- Karate Chop is now a Fighting type move
 - Mega Punch is 90 accuracy rather than 85
-- Gust is now a flying type move
+- Gust is now a Flying type move
 - Wing Attack is now 65 base power rather than 35
 - Fly is now 80 base power rather than 70
-- Poison Sting  is 30 base power rather than 15
+- Poison Sting is 30 base power rather than 15
 - Twineedle is 35 base power per hit rather than 15
 - Pin missile is 20 base power per hit rather than 15
 - Hyper Beam has 100 accuracy rather than 90, but 140 power rather than 150
-- Submission has 100 accuracy and no recoil, since it's the best fighting move
+- Submission has 100 accuracy and no recoil, since it's the best Fighting move
 - Lick now has 60 power rather than 30
 - Several special attacks have been changed to make them more effective
   - Solarbeam is now single turn with 90 accuracy, in line with Fireblast/Blizzard
@@ -249,19 +253,9 @@ Signature Moves
 - Sludge is now 80 power and renamed to Sludge Bomb
 - Sky Attack is now single turn and 90 power
 - Psywave is no longer in the game
-- Rockslide is now 100 accuracy
+- Rockslide is now 100 accuracy, since it's the best Rock move
 - Pikachu has a signature move Pika Thunder, a 250 BP 100 Acc Electric move with no other effect
 - Zapdos has a signature move Photon Wave, an 80 BP 100 Acc psychic move with 30% paralysis rate
 - Mew has a signature move Psycrush, a 120 BP 100 Acc Rock move with 10% paralysis rate
 - Mewtwo has a signature move Psyblast, a 120 BP 100 Acc Dragon move with 10% freeze chance
 - When Psyblast freezes the enemy the text reads "turned to stone" rather than "was frozen solid"
-
-
-
-
-  
-  
-
-
-
-

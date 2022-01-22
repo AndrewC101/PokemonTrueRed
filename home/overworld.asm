@@ -273,12 +273,18 @@ OverworldLoopLessDelay::
 .noSpinning
 	call UpdateSprites
 
+; AndrewNote - refactored to increase speed when B is held
 .moveAhead2
 	ld hl, wFlags_0xcd60
 	res 2, [hl]
 	ld a, [wWalkBikeSurfState]
 	dec a ; riding a bike?
-	jr nz, .normalPlayerSpriteAdvancement
+	jr z, .goFast
+	ld a, [hJoyHeld]
+    and B_BUTTON	; holding B to speed up?
+   	jr nz, .goFast
+   	jr .normalPlayerSpriteAdvancement
+.goFast
 	ld a, [wd736]
 	bit 6, a ; jumping a ledge?
 	jr nz, .normalPlayerSpriteAdvancement

@@ -5,7 +5,10 @@ _RockTunnel2AfterBattleText8::
 	done
 
 _RockTunnel2BattleText9::
-	text "I'm about to"
+    text "Is that you"
+    line "YUGI ma boy?"
+
+	para "I'm about to"
 	line "take this fight"
 	cont "to the"
 	cont "SHADOW REALM!"
@@ -17,6 +20,7 @@ _RockTunnel2EndBattleText9::
 	prompt
 
 _RockTunnel2AfterBattleText9::
-	text "I shall haunt"
-	line "your dreams"
+	text "Have you found"
+	line "KAIBA..."
+	cont "ma boy!"
 	done

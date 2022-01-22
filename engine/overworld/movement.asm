@@ -70,8 +70,7 @@ UpdatePlayerSprite:
 	inc a
 	ld [hl], a
 
-;joenote - If B is being held to go faster and full joypad is enabled (i.e. not in a cutscene),
-;Then increase player animation speed by 25%
+; AndrewNote - double player animation speed by holding B
 	push bc
 	ld c, 4
 	ld b, a
@@ -81,15 +80,11 @@ UpdatePlayerSprite:
 	ld a, [hJoyHeld]
 	and B_BUTTON
 	jr z, .doneSpeed
-	ld c, 3
+	ld c, 2 ; AndrewNote - set frame delay to 2, rather than 4
 .doneSpeed
 	ld a, b
 	cp c
 	pop bc
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-	;cp 4
-	;jr nz, .calcImageIndex
 	jr c, .calcImageIndex
 	xor a
 	ld [hl], a

@@ -23,7 +23,8 @@ _MtMoon1BattleText3::
 	done
 
 _MtMoon1EndBattleText3::
-	text "I'm done for"
+	text "I'm"
+	line "done for"
 	prompt
 
 _MtMoon1AfterBattleText3::

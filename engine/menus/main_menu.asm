@@ -127,8 +127,10 @@ MainMenu:
 InitOptions:
 	ld a, TEXT_DELAY_FAST
 	ld [wLetterPrintingDelayFlags], a
-	ld a, TEXT_DELAY_MEDIUM
+	ld a, TEXT_DELAY_FAST ; AndrewNote - use FAST text by default
 	ld [wOptions], a
+    ld hl, wOptions
+    set 6, [hl] ; AndrewNote - use SET battle style by default
 	ret
 
 LinkMenu:
