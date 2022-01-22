@@ -25,24 +25,23 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content.
 # Screen Shots
 
 Rematch Trainers
-![Rematch](/screenshots/rematch.jpg?raw=true)
+![Rematch](/screenshots/rematch.png?raw=true)
 
 New Dialog
 ![Dialog](/screenshots/dialog2.png?raw=true)
-![Dialog](/screenshots/dialog2.bmp?raw=true)
-![Dialog](/screenshots/newDialog.jpg?raw=true)
+![Dialog](/screenshots/newDialog.png?raw=true)
 
 New Enemy Encounters 
-![New encounters](/screenshots/weevil.jpg?raw=true)
+![New encounters](/screenshots/weevil.png?raw=true)
 
 Optional Bosses
-![Optional Bosses](/screenshots/dialog2.jpg?raw=true)
-![Optional Bosses](/screenshots/optionalBosses2.jpg?raw=true)
+![Optional Bosses](/screenshots/dialog2.png?raw=true)
+![Optional Bosses](/screenshots/optionalBosses2.png?raw=true)
 
 Signature Moves
-![New Moves](/screenshots/pikaThunder.jpg?raw=true)
-![New Moves](/screenshots/psyblast.jpg?raw=true)
-![New Moves](/screenshots/stone.jpg?raw=true)
+![New Moves](/screenshots/pikaThunder.png?raw=true)
+![New Moves](/screenshots/psyblast.png?raw=true)
+![New Moves](/screenshots/stone.png?raw=true)
 
 
 # Battle
