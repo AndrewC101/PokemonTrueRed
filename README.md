@@ -31,12 +31,12 @@ New Dialog
 ![Dialog](/screenshots/dialog2.png?raw=true)
 ![Dialog](/screenshots/newDialog.png?raw=true)
 
+Optional Bosses
+![Optional Bosses](/screenshots/optionalBosses1.png?raw=true)
+![Optional Bosses](/screenshots/optionalBosses2.png?raw=true)
+
 New Enemy Encounters 
 ![New encounters](/screenshots/weevil.png?raw=true)
-
-Optional Bosses
-![Optional Bosses](/screenshots/dialog2.png?raw=true)
-![Optional Bosses](/screenshots/optionalBosses2.png?raw=true)
 
 Signature Moves
 ![New Moves](/screenshots/pikaThunder.png?raw=true)
