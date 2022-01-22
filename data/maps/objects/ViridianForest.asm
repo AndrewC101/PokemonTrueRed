@@ -24,7 +24,8 @@ ViridianForest_Object:
 	object_event  2, 18, SPRITE_YOUNGSTER, STAY, LEFT, 4, OPP_BUG_CATCHER, 3
 	object_event 25, 11, SPRITE_POKE_BALL, STAY, NONE, 5, ANTIDOTE
 	object_event 12, 29, SPRITE_POKE_BALL, STAY, NONE, 6, POTION
-	object_event  1, 31, SPRITE_POKE_BALL, STAY, NONE, 7, POKE_BALL
+	object_event  1, 31, SPRITE_POKE_BALL, STAY, NONE, 7, LEAF_STONE
 	object_event 27, 40, SPRITE_YOUNGSTER, STAY, NONE, 8 ; person
+	object_event  1, 30, SPRITE_YOUNGSTER, STAY, DOWN, 9, OPP_BUG_CATCHER, 15
 
 	def_warps_to VIRIDIAN_FOREST

@@ -27,6 +27,7 @@ ViridianForest_TextPointers:
 	dw ViridianForestText12
 	dw ViridianForestText13
 	dw ViridianForestText14
+	dw ViridianForestText15
 
 ViridianForestTrainerHeaders:
 	def_trainers 2
@@ -36,6 +37,8 @@ ViridianForestTrainerHeader1:
 	trainer EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_1, 4, ViridianForestBattleText2, ViridianForestEndBattleText2, ViridianForestAfterBattleText2
 ViridianForestTrainerHeader2:
 	trainer EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_2, 1, ViridianForestBattleText3, ViridianForestEndBattleText3, ViridianForestAfterBattleText3
+ViridianForestTrainerHeader3:
+	trainer EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_3, 4, ViridianForestBattleText4, ViridianForestEndBattleText4, ViridianForestAfterBattleText4
 	db -1 ; end
 
 ViridianForestText1:
@@ -58,6 +61,13 @@ ViridianForestText4:
 	text_asm
 	SetEvent EVENT_MEDIUM_STAT_EXP ; AndrewNote - Beedrill miniboss should be tough
 	ld hl, ViridianForestTrainerHeader2
+	call TalkToTrainer
+	jp TextScriptEnd
+
+ViridianForestText9:
+	text_asm
+	SetEvent EVENT_MEDIUM_STAT_EXP ; AndrewNote - Weevil should be tough
+	ld hl, ViridianForestTrainerHeader3
 	call TalkToTrainer
 	jp TextScriptEnd
 
@@ -97,30 +107,42 @@ ViridianForestAfterBattleText3:
 	text_far _ViridianFrstAfterBattleText3
 	text_end
 
+ViridianForestBattleText4:
+	text_far _ViridianForestBattleText4
+	text_end
+
+ViridianForestEndBattleText4:
+	text_far _ViridianForestEndBattleText4
+	text_end
+
+ViridianForestAfterBattleText4:
+	text_far _ViridianFrstAfterBattleText4
+	text_end
+
 ViridianForestText8:
 	text_far _ViridianForestText8
 	text_end
 
-ViridianForestText9:
+ViridianForestText10:
 	text_far _ViridianForestText9
 	text_end
 
-ViridianForestText10:
+ViridianForestText11:
 	text_far _ViridianForestText10
 	text_end
 
-ViridianForestText11:
+ViridianForestText12:
 	text_far _ViridianForestText11
 	text_end
 
-ViridianForestText12:
+ViridianForestText13:
 	text_far _ViridianForestText12
 	text_end
 
-ViridianForestText13:
+ViridianForestText14:
 	text_far _ViridianForestText13
 	text_end
 
-ViridianForestText14:
+ViridianForestText15:
 	text_far _ViridianForestText14
 	text_end

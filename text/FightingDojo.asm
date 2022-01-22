@@ -59,7 +59,7 @@ _FightingDojoText_5ce8e::
 	done
 
 _FightingDojoText_5ce93::
-	text "You"
+	text "You!"
 	line "I bow to you."
 	prompt
 
@@ -147,7 +147,7 @@ _FightingDojoAfterBattleText1::
 	para "Master OAK is"
 	line "strong! I think"
 	cont "keys to victory"
-	cont "could be."
+	cont "could be,"
 
 	para "MEWTWO, MEW,"
 	line "CHANSEY, ICEBEAM"

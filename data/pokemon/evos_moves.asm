@@ -584,13 +584,13 @@ PidgeyEvosMoves:
 
 SlowpokeEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 37, SLOWBRO
+	db EV_LEVEL, 34, SLOWBRO
 	db 0
 ; Learnset
-	db 18, DISABLE
+	db 18, WATER_GUN
 	db 22, HEADBUTT
-	db 27, GROWL
-	db 33, WATER_GUN
+	db 25, CONFUSION
+	db 30, BUBBLEBEAM
 	db 40, AMNESIA
 	db 48, PSYCHIC_M
 	db 0
@@ -854,7 +854,7 @@ FarfetchdEvosMoves:
 
 VenonatEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 31, VENOMOTH
+	db EV_LEVEL, 25, VENOMOTH
 	db 0
 ; Learnset
 	db 24, POISONPOWDER
@@ -1007,16 +1007,17 @@ VulpixEvosMoves:
 	db 0
 ; Learnset
 	db 16, QUICK_ATTACK
-	db 21, ROAR
-	db 28, CONFUSE_RAY
-	db 35, FLAMETHROWER
-	db 42, FIRE_SPIN
+	db 21, BITE
+	db 24, CONFUSE_RAY
+	db 28, FLAMETHROWER
+	db 35, FIRE_SPIN
 	db 0
 
 NinetalesEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 40, FIRE_BLAST
 	db 0
 
 PikachuEvosMoves:
@@ -1363,8 +1364,8 @@ VenomothEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 35, SLEEP_POWDER
-	db 37, PSYCHIC_M
+	db 26, SLEEP_POWDER
+	db 30, PSYCHIC_M
 	db 0
 
 DewgongEvosMoves:

@@ -99,6 +99,8 @@ BugCatcherData:
 ; Route 9
 	db 28, PINSIR, PARASECT, 0
 	db 30, VENOMOTH, SCYTHER, PINSIR, 0
+; weevil underwood in viridan forest
+    db 30, VENOMOTH, 0
 
 LassData:
 ; Route 3

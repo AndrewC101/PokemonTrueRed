@@ -7,8 +7,8 @@ PokemonMansion3FWildMons:
 	db 35, RAPIDASH
 	db 35, MAGMAR
 	db 35, NINETALES
-	db 35, FLAREON
 	db 40, ARCANINE
+	db 40, CHARIZARD
 	db 40, PORYGON
 	end_grass_wildmons
 

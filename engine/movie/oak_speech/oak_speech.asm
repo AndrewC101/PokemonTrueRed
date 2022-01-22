@@ -32,6 +32,8 @@ SetDefaultNames:
 	jp CopyData
 
 OakSpeech:
+    ld hl, wOptions
+	set 6, [hl] ; AndrewNote - use SET battle style by default
 	ld a, SFX_STOP_ALL_MUSIC
 	call PlaySound
 	ld a, BANK(Music_IndigoPlateau) ; AndrewNote - update music

@@ -35,9 +35,9 @@ _SilphCoPresidentText::
 	line "marching toward"
 	cont "us."
 
-	para "Mothers tried"
-	line "to console their"
-	cont "children."
+	para "I remember an"
+	line "elderly couple"
+	cont "crying beside me"
 
 	para "We were doomed!"
 

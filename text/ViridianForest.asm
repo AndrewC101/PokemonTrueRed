@@ -1,14 +1,11 @@
 _ViridianForestText1::
-	text "I came here with"
-	line "some friends!"
+	text "My friends are"
+	line "hunting noobs"
 
-	para "They're out for"
-	line "#MON fights!"
-
-	para "Be careful"
-	line "I hear there"
-	cont "is a killer"
-	cont "in the forest!"
+	para "Head right!"
+	line "There is a"
+	cont "scary and strong"
+	cont "guy to the left."
 	done
 
 _ViridianForestBattleText1::
@@ -30,11 +27,7 @@ _ViridianFrstAfterBattleText1::
 	done
 
 _ViridianForestBattleText2::
-	text "Well look"
-	line "what we have"
-	cont "here!"
-
-	para "You look like"
+	text "You look like"
 	line "a fresh noob!"
 
 	para "I'll crush you!"
@@ -52,11 +45,6 @@ _ViridianForestEndBattleText2::
 _ViridianFrstAfterBattleText2::
     text "I like crushing"
     line "noobs!"
-
-    para "Once my"
-    line "#MON evolve"
-    cont "they wont have"
-    cont "a chance!"
 	done
 
 _ViridianForestBattleText3::
@@ -67,29 +55,59 @@ _ViridianForestBattleText3::
 _ViridianForestEndBattleText3::
     text "NO!"
 	line "AGHHHHUGHHH!"
-	cont "WAIT!"
-	cont "MERCY!"
 	prompt
 
 _ViridianFrstAfterBattleText3::
 	text "All kinds of"
 	line "noobs come"
 	cont "through here."
+	done
 
-	para "Noobs that"
-	line "nobody will"
-	cont "miss."
+_ViridianForestBattleText4::
+	text "Another weaking!"
+
+	para "I am WEEVIL!"
+
+	para "I am looking for"
+	line "KAIBA. He may"
+	cont "be the one you"
+	cont "call LANCE!"
+
+	para "Or maybe not."
+
+	para "I will defeat"
+	line "his dragons"
+	cont "with my"
+
+	para "PERFECTLY"
+
+	para "ULTIMATE"
+
+	para "GREAT"
+
+	para "MOTH!"
+	done
+
+_ViridianForestEndBattleText4::
+    text "NO!"
+	prompt
+
+_ViridianFrstAfterBattleText4::
+	text "I thought"
+	line "I saw YUGI"
+	cont "come through"
+	cont "here."
+
+	para "Spiky hair"
+	line "and arrogant!"
 	done
 
 _ViridianForestText8::
-	text "People here"
-	line "here are"
-	cont "hunting"
-	cont "noobs."
+	text "People are"
+	line "hunting noobs"
 
-	para "You will"
-	line "need to be"
-	cont "careful!"
+	para "You should be"
+	line "careful!"
 	done
 
 _ViridianForestText9::
@@ -97,8 +115,7 @@ _ViridianForestText9::
 
 	para "Moves that are"
 	line "the same type"
-	cont "as the #MON"
-	cont "using them"
+	cont "as the user"
 	cont "are 50 percent"
 	cont "stronger!"
 	done
@@ -106,8 +123,7 @@ _ViridianForestText9::
 _ViridianForestText10::
 	text "They got me!"
 
-	para "I don't think"
-	line "I can make it"
+	para "I can't make it"
 
 	para "I'm poisoned!"
 	done
@@ -127,8 +143,6 @@ _ViridianForestText12::
 	para "No stealing of"
 	line "#MON from"
 	cont "other trainers!"
-	cont "Catch only wild"
-	cont "#MON!"
 	done
 
 _ViridianForestText13::
@@ -137,9 +151,6 @@ _ViridianForestText13::
 	para "Weaken #MON"
 	line "before attempting"
 	cont "capture!"
-
-	para "When healthy,"
-	line "they may escape!"
 	done
 
 _ViridianForestText14::

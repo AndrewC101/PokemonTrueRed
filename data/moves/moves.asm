@@ -31,7 +31,7 @@ Moves:
 	; AndrewNote - make gust flying type
 	move GUST,         NO_ADDITIONAL_EFFECT,        40, FLYING,       100, 35
 	; AndrewNote - make wing attack stronger
-	move WING_ATTACK,  NO_ADDITIONAL_EFFECT,        70, FLYING,       100, 35
+	move WING_ATTACK,  NO_ADDITIONAL_EFFECT,        65, FLYING,       100, 35
 	move WHIRLWIND,    SWITCH_AND_TELEPORT_EFFECT,   0, NORMAL,        85, 20
 	; AndrewNote - make fly stronger
 	move FLY,          FLY_EFFECT,                  80, FLYING,        95, 15

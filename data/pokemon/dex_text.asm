@@ -695,7 +695,7 @@ _PikachuDexEntry::
 
 	page "Only the bond of"
 	next "a beloved trainer"
-	next "can unleash it."
+	next "can unleash it"
 	dex
 
 _RaichuDexEntry::
