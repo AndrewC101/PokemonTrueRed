@@ -28,7 +28,8 @@ Rematch Trainers
 ![Rematch](/screenshots/rematch.jpg?raw=true)
 
 New Dialog
-![Dialog](/screenshots/dialog2.jpg?raw=true)
+![Dialog](/screenshots/dialog2.png?raw=true)
+![Dialog](/screenshots/dialog2.bmp?raw=true)
 ![Dialog](/screenshots/newDialog.jpg?raw=true)
 
 New Enemy Encounters 
