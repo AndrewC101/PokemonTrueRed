@@ -23,6 +23,16 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Easier post-game grinding, with Exp.All giving full exp to whole party and optional bosses giving huge bonus money.
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 
+# Download and Play
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/11qHCyTvs_pxmHuxa3h0uTdb7wI71LQwU/view?usp=sharing).
+
+To ensure this is compatible with any existing gen 1 saves you have, and your character doesn't get stuck after
+downloading the game, please do the following.
+- Before downloading the game manually save your existing game at Pallet town having just entered the players mums house
+- Download the game and place you existing .sav file in the same directory and rename it to PokemonTrueRed.sav
+- Start the game and select continue
+- Take one step down which should allow you to exit the players mums house with full control
+
 # Screen Shots
 
 Rematch Trainers
