@@ -146,4 +146,24 @@ LoadSpecialWarpData:
 	ld [wDestinationWarpID], a
 	ret
 
+WarpHome:
+    ld a, [hJoyInput]
+	cp D_DOWN + B_BUTTON + SELECT
+	ret nz
+
+	ld a, PALLET_TOWN
+    ld [wLastBlackoutMap], a
+    ld a, [wd732]
+    ld hl, wd732
+	set 3, [hl]
+	set 6, [hl]
+	ld hl, wd72e
+	set 1, [hl]
+	res 4, [hl]
+	ld c, 60
+	call DelayFrames
+	call GBPalWhiteOutWithDelay3
+	ret
+
+
 INCLUDE "data/maps/special_warps.asm"

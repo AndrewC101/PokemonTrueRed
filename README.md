@@ -2,36 +2,37 @@
 Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content while retaining the feeling of a definitive gen 1 experience.
 
 # Main Features
-- All trainer parties and Pokemon updated for greater difficulty and engagement.
-- A significant amount of dialog changed to make the world more rich and fun.
-- AI updates making all enemies more difficult, some trainers will switch in specific situations.  
-- Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four.
-- Player can sprint at bike speed by holding B, animation speed doubles.  
+- All trainer parties and Pokemon updated for greater difficulty and engagement
+- A significant amount of dialog changed to make the world more rich and fun
+- AI updates making all enemies more difficult, some trainers will switch in specific situations
+- Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four
+- Player can sprint at bike speed by holding B, animation speed doubles  
+- Player can warp home anytime by pressing down, select and B together  
 - Different wild Pokemon available in every area, in addition to the important vanilla encounters  
-- All in-game trades are different.  
-- Significant content available after Elite Four, such as 17 optional bosses, max DVs on all Pokemon obtained and more.
+- All in-game trades are different
+- Significant content available after Elite Four, such as 17 optional bosses, max DVs on all Pokemon obtained and more
 - Boss enemies have better trained Pokemon with higher stats (stat exp / EVs)
-- Items can not be used in boss battles, by a player or opponent.  
-- Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up.
-- numerous bug fixes including removal of badge boost, removal of 1 in 256 glitch and critical hit rates halved.
-- Many Gen 1 glitches still left to keep the spirit of the game, such a Hyper Beam not recharging on a kill.  
-- All 151 Pokemon available with no missable Pokemon. Trade evolutions now evolve at level 36.
-- Multiples of all Legendary Pokemon available with new signature moves for Mewtwo, Mew and Pikachu.
-- New enemies, such as the Espada and Aizen on Nugget bridge and Chris Chan who is hiding in Rock Tunnel.
-- All good TMs are available to purchase in Celadon as soon as you get there, but some are only given by Gym Leaders. 
-- HM moves can be deleted at any time like normal moves, just be careful.
-- Easier post-game grinding, with Exp.All giving full exp to whole party and optional bosses giving huge bonus money.
+- Items can not be used in boss battles, by a player or opponent
+- Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up
+- numerous bug fixes including removal of badge boost, removal of 1 in 256 glitch and critical hit rates halved
+- Many Gen 1 glitches still left to keep the spirit of the game, such a Hyper Beam not recharging on a kill
+- All 151 Pokemon available with no missable Pokemon. Trade evolutions now evolve at level 36
+- Multiples of all Legendary Pokemon available with new signature moves for Mewtwo, Mew and Pikachu
+- New enemies, such as the Espada and Aizen on Nugget bridge and Chris Chan who is hiding in Rock Tunnel
+- All good TMs are available to purchase in Celadon as soon as you get there, but some are only given by Gym Leaders 
+- HM moves can be deleted at any time like normal moves, the warp home function protects you from trapping yourself
+- Easier post-game grinding, with Exp.All giving full exp to whole party and optional bosses giving huge bonus money
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/11qHCyTvs_pxmHuxa3h0uTdb7wI71LQwU/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1aCkpzoLoMqER0WcLrXiYuHw2rK_Xr6jK/view?usp=sharing).
 
-To ensure this is compatible with any existing gen 1 saves you have, and your character doesn't get stuck after
-downloading the game, please do the following.
-- Before downloading the game manually save your existing game at Pallet town having just entered the players mums house
-- Download the game and place you existing .sav file in the same directory and rename it to PokemonTrueRed.sav
-- Start the game and select continue
-- Take one step down which should allow you to exit the players mums house with full control
+This is compatible with any existing gen 1 saves you have. You need to
+- Manually save your current game
+- Download this game and place your existing save in the same directory and rename it to PokemonTrueRed.sav
+- Load the game and pick continue
+
+If your character seems to be unable to move simply warp home by pressing down, select and B together to fix it
 
 # Screen Shots
 
@@ -165,7 +166,10 @@ Signature Moves
   - Mewtwo has a 15/16 chance to block maser ball and print unique text
   - Trying to run displays unique text
   - Mewtwo is the only wild Pokemon to have AI
-- Player can sprint at bike speed by holding B, animation speed doubles.
+  
+# Player Functions
+- Player can sprint at bike speed by holding B, animation speed doubles
+- Player can warp home anytime by pressing down, select and B together
 
 # Post-game Features
 - A level 70 Mew is given as a reward in Celadon Mansion Roof House

@@ -1,6 +1,7 @@
 MAP_TILESET_SIZE EQU $60
 
 UpdatePlayerSprite:
+    call WarpHome
 	ld a, [wSpritePlayerStateData2WalkAnimationCounter]
 	and a
 	jr z, .checkIfTextBoxInFrontOfSprite
