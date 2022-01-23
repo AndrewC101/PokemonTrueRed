@@ -146,6 +146,8 @@ LoadSpecialWarpData:
 	ld [wDestinationWarpID], a
 	ret
 
+; AndrewNote - This warps the player back to their mums house
+; this can be used anywhere, even in buildings or caves
 WarpHome:
     ld a, [hJoyInput]
 	cp D_DOWN + B_BUTTON + SELECT
