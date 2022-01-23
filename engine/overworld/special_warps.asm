@@ -153,6 +153,12 @@ WarpHome:
 	cp D_DOWN + B_BUTTON + SELECT
 	ret nz
 
+	CheckEvent EVENT_NO_REMATCH_OPTION ; AndrewNote - can't warp from Elite Four
+	ret nz
+
+	CheckEvent EVENT_IN_SAFARI_ZONE ; AndrewNote can't warp from safari Zone
+	ret nz
+
 	ld a, PALLET_TOWN
     ld [wLastBlackoutMap], a
     ld a, [wd732]

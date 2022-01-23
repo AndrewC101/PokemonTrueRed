@@ -8,7 +8,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four
 - Significant content available after Elite Four, such as 17 optional bosses, max DVs on all Pokemon obtained and more
 - Player can sprint at bike speed by holding B, animation speed doubles  
-- Player can warp home anytime by pressing down, select and B together  
+- Player can warp home almost anytime by pressing down, select and B together  
 - Different wild Pokemon available in every area, in addition to the important vanilla encounters  
 - All in-game trades are different
 - Boss enemies have better trained Pokemon with higher stats (stat exp / EVs)
@@ -25,10 +25,10 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1aCkpzoLoMqER0WcLrXiYuHw2rK_Xr6jK/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1Txk5w3BuTfOJt72Mx9cFVjRvbKncL02H/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
-- Manually save your current game
+- Manually save your current game in an outdoor map such as Pallet Town
 - Download this game and place your existing save in the same directory and rename it to PokemonTrueRed.sav
 - Load the game and pick continue
 
@@ -169,7 +169,9 @@ Signature Moves
   
 # Player Functions
 - Player can sprint at bike speed by holding B, animation speed doubles
-- Player can warp home anytime by pressing down, select and B together
+- Player can warp home almost anytime by pressing down, select and B together. Player can not warp in the following places
+  - Elite Four rooms
+  - Safari Zone
 
 # Post-game Features
 - A level 70 Mew is given as a reward in Celadon Mansion Roof House
