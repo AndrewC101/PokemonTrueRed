@@ -6,11 +6,11 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - A significant amount of dialog changed to make the world more rich and fun
 - AI updates making all enemies more difficult, some trainers will switch in specific situations
 - Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four
+- Significant content available after Elite Four, such as 17 optional bosses, max DVs on all Pokemon obtained and more
 - Player can sprint at bike speed by holding B, animation speed doubles  
 - Player can warp home anytime by pressing down, select and B together  
 - Different wild Pokemon available in every area, in addition to the important vanilla encounters  
 - All in-game trades are different
-- Significant content available after Elite Four, such as 17 optional bosses, max DVs on all Pokemon obtained and more
 - Boss enemies have better trained Pokemon with higher stats (stat exp / EVs)
 - Items can not be used in boss battles, by a player or opponent
 - Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up
