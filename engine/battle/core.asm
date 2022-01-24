@@ -950,6 +950,10 @@ TrainerBattleVictory:
 	ld a, [wTrainerClass]
 	cp RIVAL3 ; final battle against rival
 	jr nz, .notrival
+
+	CheckEvent EVENT_NO_REMATCH_OPTION ; AndrewNote - fix optionalBoss rival music
+	jr z, .notrival
+
 	ld b, MUSIC_DEFEATED_GYM_LEADER
 	ld hl, wFlags_D733
 	set 1, [hl]
