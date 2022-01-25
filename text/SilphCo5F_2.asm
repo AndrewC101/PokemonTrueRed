@@ -51,7 +51,7 @@ _SilphCo5Text11::
 	text "It's a #MON"
 	line "REPORT!"
 
-	para "4 #MON evolve"
+	para "0 #MON evolve"
 	line "only when traded"
 	cont "by link-cable."
 	done

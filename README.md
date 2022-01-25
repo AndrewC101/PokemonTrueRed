@@ -238,6 +238,7 @@ Signature Moves and Mixed Sprites
   - Dragonite is pure dragon type, this makes Lance harder
   - Gyarados is pure water type, this makes Lance harder
   - Gengar is pure ghost type but has less HP and defense, this makes Agatha harder
+- All Trade evolution Pokemon now evolve at level 36  
 - Scyther and Pinsir now know Twineedle
 - Aerodactyl, Kabutops and Omastar can learn Rock Slide and Earthquake
 - Dragonite and Charizard can learn Fly
