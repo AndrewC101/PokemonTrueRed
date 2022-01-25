@@ -138,7 +138,7 @@ Signature Moves and Mixed Sprites
     - Safari warden talks about Bruno
     - Silph chief talks about Lance
 - Oaks intro plays different music, has different text and uses Dragonite instead of Nidorino
-- The Old Man does not fight a level 5 Weedle. He is aware of his power to summon unholy creatures at Cinnabar.  
+- The Old Man does not fight a level 5 Weedle. He is aware of his power to summon unholy creatures at Cinnabar  
 - Weevil (for the yugioh fans) is in Viridian Forest but is too strong to beat when first encountered
 - Gym guide gives actual good advice on how to beat gym leaders, including which Pokemon might help  
 - Brock gives Mega punch tm and you can rematch him for as many as you want  
@@ -148,15 +148,15 @@ Signature Moves and Mixed Sprites
 - Residence of Vermilion are obsessed with a past war with Hoen, they don't take kindly to strangers
 - SS Anne has an NPC who will heal your party for convenience  
 - There are several trainers who are particularly strong who are out hunting noobs
-- Chris Chan is hiding in Rock Tunnel and nearly everyone there has something to say about it. Get Flash to find him.
-- Celadon mart has all the best TMs, available as soon as you get there.  
-- In Celadon Game Cornor is Jackpot Jack, he always wins. Follow the clues to find out the dark secret he hides.
+- Chris Chan is hiding in Rock Tunnel and nearly everyone there has something to say about it. Get Flash to find him
+- Celadon mart has all the best TMs, available as soon as you get there
+- In Celadon Game Cornor is Jackpot Jack, he always wins. Follow the clues to find out the dark secret he hides
 - Celadon Mansion has a lot of updated dialog, the programmer defends the many bugs in his code
 - Trainers in Celadon Gym are having a bit of an argument
 - Silph Co building has the elusive rank S rockets and rocket CEOs, you can never defeat their salaries!
 - Sabrinna gives Psychic TM and can be rematched for as many as you want
 - Koga gives Swords dance TM and can be rematched for as many as you want
-- Cinnabar Pokemon Lab has updated dialog about Mewtwo. One of the scientists has gone mad
+- Cinnabar Pokemon Lab has updated dialog about Mewtwo. One of the scientists has gone slightly mad
 - Cinnabar gym trainers are a cult that worships the great and merciful Missingno
 - Giovanni has a special 6th Pokemon in his final fight, he gives the Hyper beam tm and can be rematched
 - The rival starts to hear voices in his head and go a little crazy  
