@@ -1742,6 +1742,7 @@ RapidashEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 40, FIRE_BLAST
 	db 0
 
 RattataEvosMoves:

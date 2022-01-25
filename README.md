@@ -9,7 +9,8 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Significant content available after Elite Four, such as 17 optional bosses, max DVs on all Pokemon obtained and more
 - Player can sprint at bike speed by holding B, animation speed doubles  
 - Player can warp home almost anytime by pressing down, select and B together  
-- Different wild Pokemon available in every area, in addition to the important vanilla encounters  
+- Different wild Pokemon available in every area, in addition to the important vanilla encounter
+- Pokemon sprites are a mixture of Blue, Green and Yellow version sprites, based on which I felt looked the best  
 - All in-game trades are different
 - Boss enemies have better trained Pokemon with higher stats (stat exp / EVs)
 - Items can not be used in boss battles, by a player or opponent
@@ -25,7 +26,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1Txk5w3BuTfOJt72Mx9cFVjRvbKncL02H/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1J1UDwhy5Zwkm7YOLUoclCFR_Wy1pwbup/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -69,7 +70,8 @@ Signature Moves
   - Elite Four and optional bosses - 655 per level, enough for 64/64 extra stats at level 100
 - All enemy trainers Pokemon have 15/15 DVs in all stats. This means optional boss level 100 Pokemon have max stats
 - Items can not be used in boss battles
-- Shift battle option does not work in boss battles  
+- Shift battle option does not work in boss battles
+- Pokemon sprites are a mixture of Blue, Green and Yellow version sprites, based on which I felt looked the best
 - Some trainers give bonus money when defeated. There are three levels of bonus money
   - Bonus equal to normal prize money - given by Elite Four and a few mini bosses
   - Bonus equal to 10 X normal prize money - given by optional bosses
@@ -80,6 +82,7 @@ Signature Moves
 - Badge boosts are no longer a thing, it was dumb
 - Maximum sleep turns is now 4 rather than 7  
 - 1 in 256 glitch is fixed
+- Pokemon no longer miss out on level up moves if they skip that level  
 - the invulnerability glitch on Fly and Dig is fixed for player and opponent
 - The healing glitch when remaining hp is 255 is fixed
 - Rest restores stat drops from paralysis and burn  
