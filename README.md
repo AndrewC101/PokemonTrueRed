@@ -91,7 +91,7 @@ Signature Moves and Mixed Sprites
   - Enemies still have infinite pp, it makes them harder, even if it is unfair
   - Hyper beam still will not require a recharge on a miss or a kill
   - Trapping moves can still prevent enemy movement
-
+- Game uses FAST text speed and SET battle style by default
 
 # AI
 - Enemies will not prioritize super effective moves if they are non-damaging
@@ -124,7 +124,6 @@ Signature Moves and Mixed Sprites
 - moves that inflict paralysis are slightly prioritized, since it is an OP status effect
 - Leech seed and substitute are deprioritized if already in effect
 - Useless moves like splash won't be used in battle
-- Game uses FAST text speed and SET battle style by default
 
 # Events/text
 - A huge amount of text has been changed and there is significant additional text
