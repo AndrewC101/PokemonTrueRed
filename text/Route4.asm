@@ -1,8 +1,9 @@
 _Route4Text1::
-	text "Ouch! GEODUDE"
-	line "attacked me!"
-	cont "It tried to"
-	cont "drag me away!"
+	text "If you ever get"
+	line "lost just press"
+	cont "Down, Select, B"
+	cont "together to"
+	cont "teleport home."
 	done
 
 _Route4BattleText1::

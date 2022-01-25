@@ -197,7 +197,7 @@ _FightingDojoBattleText2::
 	done
 
 _FightingDojoEndBattleText2::
-	text "Thank you"
+	text "Bravo"
 	prompt
 
 _FightingDojoAfterBattleText2::

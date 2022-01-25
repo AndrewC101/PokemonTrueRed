@@ -200,38 +200,38 @@ Route24Text2:
 	call TalkToTrainer
 	jp TextScriptEnd
 
-; AndrewNote - Espada all have max stat exp
+; AndrewNote - Espada all have medium stat exp
 Route24Text3:
 	text_asm
-	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_MEDIUM_STAT_EXP
 	ld hl, Route24TrainerHeader1
 	call TalkToTrainer
 	jp TextScriptEnd
 
 Route24Text4:
 	text_asm
-	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_MEDIUM_STAT_EXP
 	ld hl, Route24TrainerHeader2
 	call TalkToTrainer
 	jp TextScriptEnd
 
 Route24Text5:
 	text_asm
-	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_MEDIUM_STAT_EXP
 	ld hl, Route24TrainerHeader3
 	call TalkToTrainer
 	jp TextScriptEnd
 
 Route24Text6:
 	text_asm
-	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_MEDIUM_STAT_EXP
 	ld hl, Route24TrainerHeader4
 	call TalkToTrainer
 	jp TextScriptEnd
 
 Route24Text7:
 	text_asm
-	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_MEDIUM_STAT_EXP
 	ld hl, Route24TrainerHeader5
 	call TalkToTrainer
 	jp TextScriptEnd

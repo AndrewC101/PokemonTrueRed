@@ -13,6 +13,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Pokemon sprites are a mixture of Blue, Green and Yellow version sprites, based on which I felt looked the best  
 - All in-game trades are different
 - Boss enemies have better trained Pokemon with higher stats (stat exp / EVs)
+- Unique, starter and legendary Pokemon always have good DVs at minimum  
 - Items can not be used in boss battles, by a player or opponent
 - Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up
 - numerous bug fixes including removal of badge boost, removal of 1 in 256 glitch and critical hit rates halved
@@ -26,7 +27,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1J1UDwhy5Zwkm7YOLUoclCFR_Wy1pwbup/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1CDOCC2d7Zvj8ji8IOPXKd_y_y7oxRjSB/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -51,7 +52,7 @@ Optional Bosses
 New Enemy Encounters 
 ![New encounters](/screenshots/weevil.png?raw=true)
 
-Signature Moves
+Signature Moves and Mixed Sprites
 ![New Moves](/screenshots/pikaThunder.png?raw=true)
 ![New Moves](/screenshots/psyblast.png?raw=true)
 ![New Moves](/screenshots/stone.png?raw=true)
@@ -229,6 +230,9 @@ Signature Moves
 - Cerulean Cave B1F has Chansey, Snorlax, Gyarados, Alakazam, Starmie, Charizard, Venusaur, Blastoise, Dragonite
 
 # Pokemon Changes
+- Pokemon given to the player, such as starter and trades have at least 8 DVs in every stat
+- Snorlax and Legendary birds all have at least 10 DVs in every stat
+- All Pokemon obtained have max DVs after the Elite Four have been defeated  
 - Pokemon types and base stats have not been changed with a few exceptions
   - Onix and Rhyhorn are now pure rock types, this make Brock less trivial for Squirtle or Bulbasaur starters
   - Dragonite is pure dragon type, this makes Lance harder

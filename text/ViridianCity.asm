@@ -60,8 +60,7 @@ _ViridianCityText_19157::
 _ViridianCityText_19175::
 	text "Oh Grandpa! Don't"
 	line "be so mean!"
-	cont "He hasn't had his"
-	cont "coffee yet."
+	cont "He is drunk"
 	done
 
 _ViridianCityText_1917a::
@@ -192,25 +191,23 @@ _ViridianCityText8::
 _ViridianCityText9::
 	text "TRAINER TIPS"
 
-	para "Rematching"
-	line "yields less EXP"
-	cont "unless you are"
-	cont "a battling genius"
-	cont "like the #MON"
-	cont "LEAGUE CHAMPION"
+	para "If you ever"
+	line "get stuck you"
+	cont "can teleport"
+	cont "back home at"
+	cont "any time by"
+	cont "pressing"
+
+	para "Down, Select, B"
+	line "at the same time"
 	done
 
 _ViridianCityText10::
 	text "TRAINER TIPS"
 
-	para "Nidoran is weak"
-	line "but with a"
-	cont "MOONSTONE it is"
-	cont "a powerful"
-	cont "#MON."
-
-	para "And the best"
-	line "at speedruns!"
+	para "You can sprint"
+	line "by holding B"
+	cont "as you walk."
 	done
 
 _ViridianCityText13::

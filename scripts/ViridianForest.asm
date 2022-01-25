@@ -67,6 +67,7 @@ ViridianForestText4:
 ViridianForestText9:
 	text_asm
 	SetEvent EVENT_MEDIUM_STAT_EXP ; AndrewNote - Weevil should be tough
+	SetEvent EVENT_BONUS_MONEY
 	ld hl, ViridianForestTrainerHeader3
 	call TalkToTrainer
 	jp TextScriptEnd

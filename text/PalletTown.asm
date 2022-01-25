@@ -39,9 +39,9 @@ _PalletTownText2::
 	para "Now I stay"
 	line "here."
 
-	para "This world is"
-	line "not for the"
-	cont "weak!"
+	para "Nice shoes!"
+	line "You can sprint"
+	cont "by holding B."
 	done
 
 _PalletTownText3::

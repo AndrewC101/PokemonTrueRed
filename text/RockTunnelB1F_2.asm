@@ -9,7 +9,7 @@ _RockTunnel2BattleText9::
     line "YUGI ma boy?"
 
 	para "I'm about to"
-	line "take this fight"
+	line "take this duel"
 	cont "to the"
 	cont "SHADOW REALM!"
 	done
