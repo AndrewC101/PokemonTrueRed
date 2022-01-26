@@ -18,7 +18,7 @@ IF DEF(_BLUE)
 	db 14, BUTTERFREE
 	db 14, BEEDRILL
 ENDC
-	db 14, PIKACHU
+	db 14, CHARMANDER
 	db 12, ABRA
 	db 12, ABRA
 	end_grass_wildmons

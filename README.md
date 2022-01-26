@@ -27,7 +27,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1CDOCC2d7Zvj8ji8IOPXKd_y_y7oxRjSB/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/18kNSi1kY6fTqVe6qlmHrS49UuxwH6okT/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -198,10 +198,13 @@ Signature Moves and Mixed Sprites
   - 2 moon stones in Mt.Moon
   - Fire stone on Route 4
   - Water stone on route 25
+  - Thunder stone on SS Anne
 - Viridian Forest also has Venonat, Paras, Beedrill, Butterfree
 - Mt.Moon also has Nidorino, Nidorina, Gastly, Slowpoke, Machop
 - Routes 4, 24, 25 also have Pikachu, Beedrill, Butterfree, Growlith, Cubone, Sandshrew and Abra is more common
-- Route 6 also has Meowth, Scyther, Pinsir, Krabby, Kingler
+- Route 4 has also Squirtle
+- Route 25 has also Charmander  
+- Route 6 also has Meowth, Bulbasaur, Scyther, Pinsir, Krabby, Kingler
 - Route 11 also has Scyther, Pinsir, Ponyta, Rapidash
 - Route 9 also has Magnemite, Machoke, Primeape, Tauros
 - Rock Tunnel also has Gaveller, Machoke, Haunter, Rhyhorn
