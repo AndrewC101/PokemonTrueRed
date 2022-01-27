@@ -246,11 +246,10 @@ SpearowEvosMoves:
 	db EV_LEVEL, 20, FEAROW
 	db 0
 ; Learnset
-	db 9, LEER
-	db 15, FURY_ATTACK
 	db 22, MIRROR_MOVE
-	db 29, DRILL_PECK
-	db 36, AGILITY
+	db 30, DRILL_PECK
+	db 40, SKY_ATTACK
+	db 50, HYPER_BEAM
 	db 0
 
 VoltorbEvosMoves:
@@ -961,7 +960,7 @@ DittoEvosMoves:
 
 MeowthEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 28, PERSIAN
+	db EV_LEVEL, 25, PERSIAN
 	db 0
 ; Learnset
 	db 12, BITE
@@ -1026,9 +1025,9 @@ PikachuEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 20, THUNDERBOLT
-	db 25, DIG
-	db 30, SURF
+	db 20, DIG
+	db 25, THUNDERBOLT
+	db 40, SURF
 	db 50, HYPER_BEAM
 	db 100, GUILLOTINE
 	db 0
@@ -1038,8 +1037,7 @@ RaichuEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 20, THUNDERBOLT
-	db 25, SURF
+	db 25, THUNDERBOLT
 	db 50, HYPER_BEAM
 	db 0
 
@@ -1561,9 +1559,9 @@ PersianEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 25, SLASH
-	db 33, BUBBLEBEAM
-	db 36, THUNDERBOLT
+	db 30, SLASH
+	db 32, BUBBLEBEAM
+	db 35, THUNDERBOLT
 	db 0
 
 MarowakEvosMoves:

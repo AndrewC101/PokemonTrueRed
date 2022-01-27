@@ -27,7 +27,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/18kNSi1kY6fTqVe6qlmHrS49UuxwH6okT/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1E0UCfyv_0dVre8JcpyNthDIKYRLjjuu4/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -44,6 +44,7 @@ Rematch Trainers
 New Dialog
 ![Dialog](/screenshots/dialog2.png?raw=true)
 ![Dialog](/screenshots/newDialog.png?raw=true)
+![Dialog](/screenshots/mewtwoTalk.png?raw=true)
 
 Optional Bosses
 ![Optional Bosses](/screenshots/optionalBosses1.png?raw=true)
@@ -53,8 +54,8 @@ New Enemy Encounters
 ![New encounters](/screenshots/weevil.png?raw=true)
 
 Signature Moves and Mixed Sprites
-![New Moves](/screenshots/pikaThunder.png?raw=true)
 ![New Moves](/screenshots/psyblast.png?raw=true)
+![New Moves](/screenshots/pikaThunder.png?raw=true)
 ![New Moves](/screenshots/stone.png?raw=true)
 
 
@@ -192,7 +193,7 @@ Signature Moves and Mixed Sprites
 
 # Wild Pokemon Changes
 - On Route 1 in addition to the classic Pidgey and Rattata there is also - Poliwag, Bellsprout, Vulpix
-- Route 22 has in addition on Spearow, Nidoran also Pikachu and Meowth  
+- Route 22 has in addition to Spearow and Nidoran also Poliwag, Bellsprout, Vulpix, Pikachu and Meowth  
 - There are earlier evolution stones to allow the player to make the most of these Pokemon
   - Leaf stone in Viridian Forest
   - 2 moon stones in Mt.Moon
@@ -241,6 +242,7 @@ Signature Moves and Mixed Sprites
   - Gyarados is pure water type, this makes Lance harder
   - Gengar is pure ghost type but has less HP and defense, this makes Agatha harder
 - All Trade evolution Pokemon now evolve at level 36  
+- Nearly all fully eveolved Pokemon have updated level up moveset
 - Scyther and Pinsir now know Twineedle
 - Aerodactyl, Kabutops and Omastar can learn Rock Slide and Earthquake
 - Dragonite and Charizard can learn Fly
