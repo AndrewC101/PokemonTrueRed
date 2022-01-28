@@ -162,6 +162,7 @@ GainExperience:
 	farcall CalcLevelFromExperience
 	pop hl
 	ld a, [hl] ; current level
+	ld [wTempCoins1], a ; AndrewNote - taken from shinpokered, load current level into wTempCoins1
 	cp d
 	jp z, .nextMon ; if level didn't change, go to next mon
 	ld a, [wCurEnemyLVL]
