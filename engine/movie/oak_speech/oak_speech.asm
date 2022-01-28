@@ -43,11 +43,11 @@ OakSpeech:
 	call SetDefaultNames
 	predef InitPlayerData2
 	ld hl, wNumBoxItems
-	ld a, POTION
+	ld a, RARE_CANDY ; AndrewNote - give a rare candy
 	ld [wcf91], a
 	ld a, 1
 	ld [wItemQuantity], a
-	call AddItemToInventory  ; give one potion
+	call AddItemToInventory
 	ld a, [wDefaultMap]
 	ld [wDestinationMap], a
 	call SpecialWarpIn

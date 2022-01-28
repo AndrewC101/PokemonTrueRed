@@ -27,7 +27,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1E0UCfyv_0dVre8JcpyNthDIKYRLjjuu4/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1KJlh1AZsxrbU9fyLJWv13aZZKx22KMaF/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
