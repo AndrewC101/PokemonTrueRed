@@ -2,7 +2,7 @@
 Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content while retaining the feeling of a definitive gen 1 experience.
 
 # Main Features
-- All trainer parties and Pokemon updated for greater difficulty and engagement
+- All trainer parties and Pokemon updated for greater difficulty and engagement. However, the game is not frustratingly difficult.
 - A significant amount of dialog changed to make the world more rich and fun
 - AI updates making all enemies more difficult, some trainers will switch in specific situations
 - Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four
@@ -27,7 +27,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1_kIna0G0oxiFy4uTDuSTY9Ntydxz4WNV/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1NzygAi4jclg0NxIsn73C4wk7cmt31fDl/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -81,7 +81,7 @@ Signature Moves and Mixed Sprites
 - Exp.ALL now gives full exp and stat exp to all Pokemon in the party
 - Exp.All can be obtained by catching 100 Pokemon or bought at Elite Four shop
 - Critical hit rate is still based on speed but is half of vanilla values, so fast Pokemon have about 12% crit rate   
-- Badge boosts are no longer a thing, it was dumb
+- Badge boosts are no longer a thing
 - Maximum sleep turns is now 4 rather than 7  
 - 1 in 256 glitch is fixed
 - Pokemon no longer miss out on level up moves if they skip that level  
@@ -90,7 +90,7 @@ Signature Moves and Mixed Sprites
 - Rest restores stat drops from paralysis and burn  
 - Some glitches are left in to maintain that gen 1 feeling
   - Enemies still have infinite pp, it makes them harder, even if it is unfair
-  - Hyper beam still will not require a recharge on a miss or a kill
+  - Hyper beam still will not require a recharge after defeating an enemy
   - Trapping moves can still prevent enemy movement
 - Game uses FAST text speed and SET battle style by default
 
@@ -242,11 +242,11 @@ Signature Moves and Mixed Sprites
   - Gyarados is pure water type, this makes Lance harder
   - Gengar is pure ghost type but has less HP and defense, this makes Agatha harder
 - All Trade evolution Pokemon now evolve at level 36  
-- Nearly all fully eveolved Pokemon have updated level up moveset
+- Nearly all fully evolved Pokemon have an updated level up moveset
 - Scyther and Pinsir now know Twineedle
 - Aerodactyl, Kabutops and Omastar can learn Rock Slide and Earthquake
 - Dragonite and Charizard can learn Fly
-- Pikachu can learn Surf
+- Pikachu and Raichu can learn Surf
 - Moltres can learn Solarbeam
 - Articuno can learn Psychic
 - Zapdos has a signature move, Photon wave

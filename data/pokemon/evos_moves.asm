@@ -960,7 +960,7 @@ DittoEvosMoves:
 
 MeowthEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 25, PERSIAN
+	db EV_LEVEL, 27, PERSIAN
 	db 0
 ; Learnset
 	db 12, BITE

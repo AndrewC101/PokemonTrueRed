@@ -10,12 +10,12 @@ ViridianForest_Object:
 	warp_event 18, 47, VIRIDIAN_FOREST_SOUTH_GATE, 2
 
 	def_bg_events
-	bg_event 24, 40,  9 ; ViridianForestText9
-	bg_event 16, 32, 10 ; ViridianForestText10
-	bg_event 26, 17, 11 ; ViridianForestText11
-	bg_event  4, 24, 12 ; ViridianForestText12
-	bg_event 18, 45, 13 ; ViridianForestText13
-	bg_event  2,  1, 14 ; ViridianForestText14
+	bg_event 24, 40, 10 ; ViridianForestText10
+	bg_event 16, 32, 11 ; ViridianForestText11
+	bg_event 26, 17, 12 ; ViridianForestText12
+	bg_event  4, 24, 13 ; ViridianForestText13
+	bg_event 18, 45, 14 ; ViridianForestText14
+	bg_event  2,  1, 15 ; ViridianForestText15
 
 	def_object_events
 	object_event 16, 43, SPRITE_YOUNGSTER, STAY, NONE, 1 ; person

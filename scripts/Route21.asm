@@ -54,6 +54,7 @@ Route21Text1:
 Route21Text2:
 	text_asm
 	SetEvent EVENT_MAX_STAT_EXP ; AndrewNote - Fisherman joke optional boss should be strong
+	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, Route21TrainerHeader1
 	call TalkToTrainer
 	jp TextScriptEnd
