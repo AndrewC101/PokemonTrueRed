@@ -120,6 +120,8 @@ Route24Text1:
 	SetEvent EVENT_NO_REMATCH_OPTION ; AndrewNote - Aizen talks to player after victory, so disable rematch option
 	SetEvent EVENT_GOT_NUGGET
 	SetEvent EVENT_MAX_STAT_EXP ; AndrewNote - Aizen should be strong
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, Route24Text_5151a
 	call PrintText
 	ld hl, Route24Text_51526

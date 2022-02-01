@@ -7,7 +7,7 @@ _Route4Text1::
 	done
 
 _Route4BattleText1::
-    text "Champion!!"
+    text "CHAMPION!!"
 
 	para "There is a"
 	line "great evil in"
@@ -39,7 +39,7 @@ _Route4AfterBattleText1::
 
 	para "I must train"
 	line "with the"
-	cont "champion!"
+	cont "CHAMPION!"
 	done
 
 _Route4Text5::

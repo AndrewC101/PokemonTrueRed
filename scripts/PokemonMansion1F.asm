@@ -73,10 +73,32 @@ Mansion1TrainerHeader0:
 	db -1 ; end
 
 Mansion1Text1:
-	text_asm
+    text_asm
+	CheckEvent EVENT_BEAT_MANSION_1_TRAINER_0
+	jr nz, .fight
+	ld hl, Mansion1BeforeBattleText2
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .done
+.fight
+	; AndrewNote - set boss battle events
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_BIG_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, Mansion1TrainerHeader0
 	call TalkToTrainer
 	jp TextScriptEnd
+.done
+	ld hl, Mansion1AfterBattleText2
+	call PrintText
+	jp TextScriptEnd
+
+Mansion1BeforeBattleText2:
+	text_far _Mansion1BeforeBattleText2
+	text_end
 
 Mansion1BattleText2:
 	text_far _Mansion1BattleText2

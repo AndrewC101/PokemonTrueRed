@@ -66,10 +66,25 @@ ViridianForestText4:
 
 ViridianForestText9:
 	text_asm
+	CheckEvent EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_3
+	jr nz, .fight
+	ld hl, ViridianForestBeforeBattleText4
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .done
+.fight
 	SetEvent EVENT_MEDIUM_STAT_EXP ; AndrewNote - Weevil should be tough
 	SetEvent EVENT_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, ViridianForestTrainerHeader3
 	call TalkToTrainer
+	jp TextScriptEnd
+.done
+	ld hl, ViridianForestAfterBattleText4
+	call PrintText
 	jp TextScriptEnd
 
 ViridianForestBattleText1:
@@ -106,6 +121,10 @@ ViridianForestEndBattleText3:
 
 ViridianForestAfterBattleText3:
 	text_far _ViridianFrstAfterBattleText3
+	text_end
+
+ViridianForestBeforeBattleText4:
+	text_far _ViridianForestBeforeBattleText4
 	text_end
 
 ViridianForestBattleText4:

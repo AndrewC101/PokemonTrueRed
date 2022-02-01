@@ -88,6 +88,8 @@ RockTunnel2Text8:
 	text_asm
 	SetEvent EVENT_MAX_STAT_EXP  ; AndrewNote - Pegasus should be strong
 	SetEvent EVENT_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, RockTunnel2TrainerHeader7
 	call TalkToTrainer
 	jp TextScriptEnd

@@ -247,7 +247,7 @@ SpearowEvosMoves:
 	db 0
 ; Learnset
 	db 22, MIRROR_MOVE
-	db 30, DRILL_PECK
+	db 25, DRILL_PECK
 	db 40, SKY_ATTACK
 	db 50, HYPER_BEAM
 	db 0
@@ -554,17 +554,17 @@ OnixEvosMoves:
 	db 0
 ; Learnset
 	db 20, BODY_SLAM
-	db 25, EARTHQUAKE
 	db 30, ROCK_SLIDE
-	db 35, EXPLOSION
+	db 35, EARTHQUAKE
+	db 40, EXPLOSION
 	db 0
 
 FearowEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 25, DRILL_PECK
-	db 30, MIRROR_MOVE
+	db 25, MIRROR_MOVE
+	db 30, DRILL_PECK
 	db 50, HYPER_BEAM
 	db 0
 
@@ -576,7 +576,7 @@ PidgeyEvosMoves:
 	db 5, SAND_ATTACK
 	db 12, QUICK_ATTACK
 	db 19, WHIRLWIND
-	db 28, WING_ATTACK
+	db 22, WING_ATTACK
 	db 36, AGILITY
 	db 44, MIRROR_MOVE
 	db 0
@@ -856,10 +856,9 @@ VenonatEvosMoves:
 	db EV_LEVEL, 25, VENOMOTH
 	db 0
 ; Learnset
-	db 24, POISONPOWDER
-	db 27, LEECH_LIFE
-	db 30, STUN_SPORE
-	db 35, PSYBEAM
+    db 15, POISONPOWDER
+	db 20, STUN_SPORE
+	db 24, PSYBEAM
 	db 38, SLEEP_POWDER
 	db 43, PSYCHIC_M
 	db 0
@@ -907,9 +906,9 @@ PoliwagEvosMoves:
 	db EV_LEVEL, 25, POLIWHIRL
 	db 0
 ; Learnset
+	db 12, WATER_GUN
 	db 16, HYPNOSIS
-	db 19, WATER_GUN
-	db 25, DOUBLESLAP
+	db 20, DOUBLESLAP
 	db 31, BODY_SLAM
 	db 38, AMNESIA
 	db 45, HYDRO_PUMP
@@ -1026,7 +1025,7 @@ PikachuEvosMoves:
 ; Learnset
 	db 10, THUNDER_WAVE
 	db 20, DIG
-	db 25, THUNDERBOLT
+	db 30, THUNDERBOLT
 	db 40, SURF
 	db 50, HYPER_BEAM
 	db 100, GUILLOTINE
@@ -1037,7 +1036,8 @@ RaichuEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 25, THUNDERBOLT
+	db 30, THUNDERBOLT
+	db 40, SURF
 	db 50, HYPER_BEAM
 	db 0
 
@@ -1136,6 +1136,7 @@ SandshrewEvosMoves:
 	db 0
 ; Learnset
 	db 17, SLASH
+    db 20, DIG
 	db 27, POISON_STING
 	db 36, SWIFT
 	db 47, FURY_SWIPES
@@ -1286,10 +1287,9 @@ PoliwhirlEvosMoves:
 ; Learnset
 	db 16, HYPNOSIS
 	db 19, WATER_GUN
-	db 26, DOUBLESLAP
-	db 33, BODY_SLAM
-	db 41, AMNESIA
-	db 49, HYDRO_PUMP
+	db 28, BODY_SLAM
+	db 35, AMNESIA
+	db 45, HYDRO_PUMP
 	db 0
 
 PoliwrathEvosMoves:
@@ -1297,6 +1297,7 @@ PoliwrathEvosMoves:
 	db 0
 ; Learnset
 	db 35, AMNESIA
+	db 45, HYDRO_PUMP
 	db 55, BLIZZARD
 	db 0
 
@@ -1364,6 +1365,7 @@ VenomothEvosMoves:
 ; Learnset
 	db 26, SLEEP_POWDER
 	db 30, PSYCHIC_M
+	db 40, SOLARBEAM
 	db 0
 
 DewgongEvosMoves:
@@ -1613,7 +1615,7 @@ PidgeottoEvosMoves:
 	db 5, SAND_ATTACK
 	db 12, QUICK_ATTACK
 	db 21, WHIRLWIND
-	db 31, WING_ATTACK
+	db 24, WING_ATTACK
 	db 40, AGILITY
 	db 49, MIRROR_MOVE
 	db 0
@@ -1972,13 +1974,12 @@ BellsproutEvosMoves:
 	db EV_LEVEL, 21, WEEPINBELL
 	db 0
 ; Learnset
-	db 13, WRAP
+	db 11, WRAP
+	db 13, ACID
 	db 15, POISONPOWDER
 	db 18, SLEEP_POWDER
-	db 21, STUN_SPORE
-	db 26, ACID
-	db 33, RAZOR_LEAF
-	db 42, SLAM
+	db 20, STUN_SPORE
+	db 25, RAZOR_LEAF
 	db 0
 
 WeepinbellEvosMoves:
@@ -1990,9 +1991,8 @@ WeepinbellEvosMoves:
 	db 15, POISONPOWDER
 	db 18, SLEEP_POWDER
 	db 23, STUN_SPORE
-	db 29, SLUDGE
-	db 38, RAZOR_LEAF
-	db 49, SLAM
+	db 25, RAZOR_LEAF
+	db 30, SLUDGE
 	db 0
 
 VictreebelEvosMoves:

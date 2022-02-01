@@ -230,6 +230,10 @@ AIMoveChoiceModification2:
 	jp z, .handleDreamEater
 	cp SPLASH_EFFECT
 	jp z, .handleSplash
+	cp SWITCH_AND_TELEPORT_EFFECT
+	jp z, .handleSplash
+	cp DISABLE_EFFECT
+	jp z, .handleDisable
 	jp .nextMove
 .handleNoDamage
     ld a, 3
@@ -241,7 +245,7 @@ AIMoveChoiceModification2:
 	pop de
     pop bc
     pop hl
-    jr .continueEffects
+    jp .continueEffects
 .handleCounter
     ld a, [wPlayerMovePower]
 	and a
@@ -352,9 +356,12 @@ AIMoveChoiceModification2:
 	jp nz, .discourageMove
 	jp .nextMove
 .checksub	;check status, and heavily discourage if bit is set
+    ld a, 4	;
+	call AICheckIfHPBelowFraction
+	jp c, .discourageMove ; don't sub of at 1/4 hp
 	ld a, [wEnemyBattleStatus2]
 	bit HAS_SUBSTITUTE_UP, a
-	jp nz, .discourageMove
+	jp nz, .discourageMove ; don't use if sub already up
 	jp .nextMove
 .checkseed
 	;first check to make sure leech seed isn't used on a grass pokemon
@@ -381,20 +388,20 @@ AIMoveChoiceModification2:
 	jp .nextMove
 .handleAttackDown
     ld a, [wPlayerMonAttackMod]
-    cp $4
-    jr c, .discourageMove  ; discourage if player below -3
+    cp $5
+    jr c, .discourageMove  ; discourage if player below -2
 	jp .nextMove
 .handleDefenseDown
     ld a, [wPlayerMonDefenseMod]
-    cp $4
-    jr c, .discourageMove  ; discourage if player below -3
+    cp $5
+    jr c, .discourageMove  ; discourage if player below -2
 	jp .nextMove
 .handleAccuracyDown
     ld a, [wPlayerMonAccuracyMod]
     cp $7
     jr z, .encourageMove ; lower player accuracy if not lowered yet
-    cp $4
-    jr c, .discourageMove  ; discourage if player below -3
+    cp $5
+    jr c, .discourageMove  ; discourage if player below -2
 	jp .nextMove
 .handleSpeedUp
     ld a, [wEnemyMonSpeedMod]
@@ -416,6 +423,10 @@ AIMoveChoiceModification2:
 	jp .nextMove
 .handleSplash
     jr .discourageMove ; don't use splash!
+.handleDisable
+    ld a, [wPlayerDisabledMove]
+	and a
+	jr nz, .discourageMove
 .discourageMove
 	ld a, [hl]
     add $10 ; strongly discourage move
@@ -596,8 +607,10 @@ AIMoveChoiceModification4:
 	ret z ; no more moves in move set
 	inc de
 	call ReadMove
-	ld a, [wEnemyMoveEffect]
-	cp HEAL_EFFECT
+    ld a, [wPlayerMoveNum]
+    cp RECOVER
+    jr z, .handleHealing
+    cp SOFTBOILED
     jr z, .handleHealing
 	jr .nextMove
 .handleHealing
@@ -616,7 +629,7 @@ AIMoveChoiceModification4:
     pop bc
     pop hl
 	ld a, [hl]
-    sub $2 ; strongly encourage move
+    sub $4 ; strongly encourage move
     ld [hl], a
 	jp .nextMove
 

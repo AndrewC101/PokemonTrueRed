@@ -63,10 +63,15 @@ _ViridianFrstAfterBattleText3::
 	cont "through here."
 	done
 
-_ViridianForestBattleText4::
+_ViridianForestBeforeBattleText4::
 	text "Another weaking!"
 
-	para "I am WEEVIL!"
+	para "You dare to"
+	line "challenge me?"
+	prompt
+
+_ViridianForestBattleText4::
+	text "I am WEEVIL!"
 
 	para "I am looking for"
 	line "KAIBA. He may"

@@ -84,7 +84,7 @@ Route12TrainerHeader0:
 Route12TrainerHeader1:
 	trainer EVENT_BEAT_ROUTE_12_TRAINER_1, 4, Route12BattleText2, Route12EndBattleText2, Route12AfterBattleText2
 Route12TrainerHeader2:
-	trainer EVENT_BEAT_ROUTE_12_TRAINER_2, 4, Route12BattleText3, Route12EndBattleText3, Route12AfterBattleText3
+	trainer EVENT_BEAT_ROUTE_12_TRAINER_2, 0, Route12BattleText3, Route12EndBattleText3, Route12AfterBattleText3
 Route12TrainerHeader3:
 	trainer EVENT_BEAT_ROUTE_12_TRAINER_3, 4, Route12BattleText4, Route12EndBattleText4, Route12AfterBattleText4
 Route12TrainerHeader4:
@@ -144,10 +144,32 @@ Route12AfterBattleText2:
 	text_end
 
 Route12Text4:
-	text_asm
+    text_asm
+	CheckEvent EVENT_BEAT_ROUTE_12_TRAINER_2
+	jr nz, .fight
+	ld hl, Route12BeforeBattleText3
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .done
+.fight
+	; AndrewNote - set boss battle events
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_BIG_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, Route12TrainerHeader2
 	call TalkToTrainer
 	jp TextScriptEnd
+.done
+	ld hl, Route12AfterBattleText3
+	call PrintText
+	jp TextScriptEnd
+
+Route12BeforeBattleText3:
+	text_far _Route12BeforeBattleText3
+	text_end
 
 Route12BattleText3:
 	text_far _Route12BattleText3

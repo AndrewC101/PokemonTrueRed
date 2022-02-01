@@ -1,17 +1,48 @@
+_Mansion1BeforeBattleText2::
+    para "I am too late!"
+
+    para "we are doomed"
+
+    para "But there may"
+    line "be hope!"
+
+    para "Let me test"
+    line "your strength?"
+    prompt
+
 _Mansion1BattleText2::
-	text "Who are you? There"
-	line "shouldn't be"
-	cont "anyone here."
+	text "I am TRUNKS"
+
+	para "I traveled here"
+	line "from the future"
+
+	para "But I am too"
+	line "late."
+
+	para "The scientists"
+	line "have already"
+	cont "created their"
+	cont "monster!"
+
+	para "You must become"
+	line "strong enough"
+	cont "to fight it."
+
+	para "Show me your"
+	line "strength."
 	done
 
 _Mansion1EndBattleText2::
-	text "Ouch!"
+	text "Great!"
 	prompt
 
 _Mansion1AfterBattleText2::
-	text "A key? I don't"
-	line "know what you're"
-	cont "talking about."
+	text "It is too"
+	line "late for my"
+	cont "future."
+
+	para "But yours can"
+	line "still be saved!"
 	done
 
 _MansionSwitchText::

@@ -65,21 +65,54 @@ _Route25AfterBattleText4::
 	line "as good as you!"
 	done
 
+_Route25BeforeBattleText5::
+    text "Hello child"
+
+    para "I am YUGI"
+
+    para "I am not of"
+    line "this world."
+
+    para "I need help"
+    line "to get home."
+
+    para "If you find and"
+    line "defeat KAIBA"
+    cont "come back and"
+    cont "see me."
+    done
+
 _Route25BattleText5::
-	text "I knew I had to"
-	line "fight you!"
+    text "You have defeated"
+    line "KAIBA!"
+
+    para "You are worthy!"
+
+    para "I am YUGI"
+    line "the Great"
+    cont "Pharaoh!"
+
+    para "To get home I"
+    line "must be defeated"
+    cont "in battle."
+
+    para "Maybe you can"
+    line "help me."
 	done
 
 _Route25EndBattleText5::
-	text "I knew"
-	line "I'd lose too!"
+	text "I"
+	line "Thank you!"
 	prompt
 
 _Route25AfterBattleText5::
-	text "If your #MON"
-	line "gets confused or"
-	cont "falls asleep,"
-	cont "switch it!"
+	text "I am complete."
+
+	para "Thank you."
+
+	para "I will stay a"
+	line "while before"
+	cont "going home."
 	done
 
 _Route25BattleText6::
@@ -90,13 +123,16 @@ _Route25BattleText6::
 
 _Route25EndBattleText6::
 	text "I'm"
-	line "not so jealous!"
+	line "so not jealous!"
 	prompt
 
 _Route25AfterBattleText6::
-	text "You came from MT."
-	line "MOON? May I have"
-	cont "a CLEFAIRY?"
+	text "There is a"
+	line "strange boy"
+	cont "on the bridge."
+
+	para "I think he may"
+	line "be really strong"
 	done
 
 _Route25BattleText7::

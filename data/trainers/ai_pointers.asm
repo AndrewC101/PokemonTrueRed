@@ -25,14 +25,14 @@ TrainerAIPointers:
 	dbw 3, GenericAI
 	dbw 3, GenericAI
 	dbw 3, GenericAI
-	dbw 3, GenericAI ; juggler
+	dbw 3, SwitchAI ; juggler
 	dbw 3, GenericAI
 	dbw 3, GenericAI
 	dbw 2, GenericAI ; blackbelt
 	dbw 3, SwitchAI ; rival1
 	dbw 3, GenericAI ; oak
 	dbw 1, GenericAI ; chief
-	dbw 3, GenericAI
+	dbw 3, GenericAI ; scientist
 	dbw 1, SwitchAI ; giovanni
 	dbw 3, GenericAI
 	dbw 2, SwitchAI ; cooltrainerm

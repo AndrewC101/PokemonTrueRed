@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/poliwrath.pic", 0, 1 ; sprite dimensions
 	dw PoliwrathPicFront, PoliwrathPicBack
 
-	db BODY_SLAM, ICE_BEAM, SURF, HYPNOSIS ; level 1 learnset
+	db BODY_SLAM, SURF, ICE_BEAM, HYPNOSIS ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

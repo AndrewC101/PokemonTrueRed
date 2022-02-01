@@ -77,22 +77,17 @@ _VictoryRoad2AfterBattleText3::
 	done
 
 _VictoryRoad2BattleText4::
-	text "I have a"
-	line "strategy for"
-	cont "each ELITE 4"
-	cont "member!"
+	text "I have no"
+	line "time for you!"
 
-	para "LORELEI"
-	line "THUNDERBOLT"
+	para "I am KAIBA!"
 
-	para "BRUNO"
-	line "PSYCHIC"
+	para "I am here for"
+	line "LANCE!"
 
-	para "AGATHA"
-	line "EARTHQUAKE"
-
-	para "LANCE"
-	line "BLIZZARD"
+	para "There can only"
+	line "be one true"
+	cont "Dragon Master!"
 	done
 
 _VictoryRoad2EndBattleText4::
@@ -101,22 +96,14 @@ _VictoryRoad2EndBattleText4::
 	prompt
 
 _VictoryRoad2AfterBattleText4::
-	text "I have a"
-	line "strategy for"
-	cont "each ELITE 4"
-	cont "member!"
+	text "I think YUGI"
+	line "came through"
+	cont "here earlier."
 
-	para "LORELEI"
-	line "THUNDERBOLT"
-
-	para "BRUNO"
-	line "PSYCHIC"
-
-	para "AGATHA"
-	line "EARTHQUAKE"
-
-	para "LANCE"
-	line "BLIZZARD"
+	para "He may have"
+	line "found an"
+	cont "Egyptian "
+	cont "God Card!"
 	done
 
 _VictoryRoad2BattleText5::
@@ -133,4 +120,41 @@ _VictoryRoad2AfterBattleText5::
 	text "Many trainers give"
 	line "up the challenge"
 	cont "here."
+	done
+
+_VictoryRoad2BeforeBattleText6::
+    text "You creatures"
+    line "are so weak."
+
+    para "Shall I give"
+    line "you despair?"
+    prompt
+
+_VictoryRoad2BattleText6::
+	text "I am..."
+
+	para "SEPHIROTH"
+
+	para "Mother..."
+
+	para "Our time has"
+	line "come!"
+
+	para "Nothing can"
+	line "stop meteor!"
+	done
+
+_VictoryRoad2EndBattleText6::
+	text "I"
+	line "will..."
+	cont "never be a"
+	cont "memory."
+	prompt
+
+_VictoryRoad2AfterBattleText6::
+	text "Have you see"
+	line "CLOUD?"
+
+	para "He will come"
+	line "to me."
 	done

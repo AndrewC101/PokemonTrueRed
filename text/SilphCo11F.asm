@@ -310,6 +310,63 @@ _SilphCo11AfterBattleText1::
 	para "250K!!!"
 	done
 
+_SilphCo11BeforeBattleText3::
+    text "Hey kid."
+
+    para "I'm CLOUD."
+
+    para "I'm looking for"
+    line "someone."
+
+    para "I thought he"
+    line "might be the"
+    cont "ROCKET LEADER"
+    cont "but I was wrong."
+
+    para "SEPHIROTH..."
+
+    para "If you face him"
+    line "and live. Come"
+    cont "back and see me."
+	done
+
+_SilphCo11BattleText3::
+    text "You deafeated"
+    line "SEPHIROTH!"
+
+    para "You must be"
+    line "very strong."
+
+    para "SEPHIROTH is"
+    line "always on my"
+    cont "mind."
+
+    para "If I can defeat"
+    line "you. Then I can"
+    cont "beat him."
+
+    para "I CLOUD"
+
+    para "SOLDIER 1st"
+    line "class"
+
+    para "Challenge you!"
+    done
+
+_SilphCo11EndBattleText3::
+    text "you"
+    line "are too strong"
+    prompt
+
+_SilphCo11AfterBattleText3::
+    text "Thank you"
+    line "for defeating"
+    cont "SEPHIROTH."
+
+    para "You really are"
+    line "a true hero."
+    done
+
 _SilphCo10Text_6237b::
 	text "The monitor has"
 	line "#MON on it!"

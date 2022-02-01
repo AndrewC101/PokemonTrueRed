@@ -80,7 +80,7 @@ Route20TrainerHeaders:
 Route20TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_20_TRAINER_0, 4, Route20BattleText1, Route20EndBattleText1, Route20AfterBattleText1
 Route20TrainerHeader1:
-	trainer EVENT_BEAT_ROUTE_20_TRAINER_1, 4, Route20BattleText2, Route20EndBattleText2, Route20AfterBattleText2
+	trainer EVENT_BEAT_ROUTE_20_TRAINER_1, 0, Route20BattleText2, Route20EndBattleText2, Route20AfterBattleText2
 Route20TrainerHeader2:
 	trainer EVENT_BEAT_ROUTE_20_TRAINER_2, 2, Route20BattleText3, Route20EndBattleText3, Route20AfterBattleText3
 Route20TrainerHeader3:
@@ -106,10 +106,21 @@ Route20Text1:
 	jp TextScriptEnd
 
 Route20Text2:
-	text_asm
+    text_asm
+	CheckEvent EVENT_BEAT_ELITE_4
+	jr z, .e4NotBeaten  ; AndrewNote - trainer will only battle after beating Elite 4
+	; AndrewNote - set boss battle events
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_BIG_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, Route20TrainerHeader1
 	call TalkToTrainer
 	jp TextScriptEnd
+.e4NotBeaten
+    ld hl, Route20BeforeBattleText2
+    call PrintText
+    jp TextScriptEnd
 
 Route20Text3:
 	text_asm
@@ -169,6 +180,10 @@ Route20EndBattleText1:
 
 Route20AfterBattleText1:
 	text_far _Route20AfterBattleText1
+	text_end
+
+Route20BeforeBattleText2:
+	text_far _Route20BeforeBattleText2
 	text_end
 
 Route20BattleText2:

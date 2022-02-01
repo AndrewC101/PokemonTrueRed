@@ -12,19 +12,60 @@ _Route20AfterBattleText1::
 	line "ride my #MON."
 	done
 
+_Route20BeforeBattleText2::
+    text "What a lovely"
+    line "place."
+
+    para "I am WALLACE"
+    line "the CHAMPION"
+    cont "of HOEN!"
+
+    para "Pledge yourself"
+    line "to HOEN dear"
+    cont "boy"
+
+    para "And you might"
+    line "live to grow"
+    cont "into a man."
+
+    para "Bring your"
+    line "pathetic"
+    cont "CHAMPION to"
+    cont "me!"
+    done
+
 _Route20BattleText2::
-	text "SEAFOAM is a"
-	line "quiet getaway!"
+	text "Finally"
+	line "a worthy"
+	cont "opponent!"
+
+    para "I am WALLACE"
+    line "the CHAMPION"
+    cont "of HOEN!"
+
+	para "Poor KANTO"
+	line "CHAMPION."
+
+	para "Yours shall"
+	line "be the first"
+	cont "knee to fall."
 	done
 
 _Route20EndBattleText2::
-	text "Quit it!"
+	text "How"
+	line "simple"
 	prompt
 
 _Route20AfterBattleText2::
-	text "There's a huge"
-	line "cavern underneath"
-	cont "this island."
+	text "KANTO is not"
+	line "without its"
+	cont "beauty."
+
+	para "But it is"
+	line "but coal"
+	cont "compared to"
+	cont "the jewel that"
+	cont "is HOEN."
 	done
 
 _Route20BattleText3::

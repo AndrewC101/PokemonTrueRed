@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/venomoth.pic", 0, 1 ; sprite dimensions
 	dw VenomothPicFront, VenomothPicBack
 
-	db STUN_SPORE, PSYCHIC_M, MEGA_DRAIN, NO_MOVE ; level 1 learnset
+	db MEGA_DRAIN, PSYCHIC_M, STUN_SPORE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

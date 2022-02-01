@@ -65,7 +65,7 @@ Signature Moves and Mixed Sprites
   - More Pokemon in some instances  
   - Better movesets  
   - Higher stats, depending on trainer
-- All trainers can be rematched but rematches yield 3/8 of the normal exp until Elite Four is beaten 
+- All trainers can be rematched but rematches yield 1/2 of the normal exp until Elite Four is beaten 
 - Enemy trainers Pokemon can have stat exp (EVs) there are three categories of level dependant stat exp
   - Normal trainers - 64 stat exp per level, enough for 20/64 extra stats at level 100
   - Gym Leaders and Rival - 324 per level, enough for 45/64 extra stats at level 100

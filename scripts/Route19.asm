@@ -34,7 +34,7 @@ Route19TrainerHeader1:
 Route19TrainerHeader2:
 	trainer EVENT_BEAT_ROUTE_19_TRAINER_2, 3, Route19BattleText3, Route19EndBattleText3, Route19AfterBattleText3
 Route19TrainerHeader3:
-	trainer EVENT_BEAT_ROUTE_19_TRAINER_3, 4, Route19BattleText4, Route19EndBattleText4, Route19AfterBattleText4
+	trainer EVENT_BEAT_ROUTE_19_TRAINER_3, 0, Route19BattleText4, Route19EndBattleText4, Route19AfterBattleText4
 Route19TrainerHeader4:
 	trainer EVENT_BEAT_ROUTE_19_TRAINER_4, 4, Route19BattleText5, Route19EndBattleText5, Route19AfterBattleText5
 Route19TrainerHeader5:
@@ -68,10 +68,21 @@ Route19Text3:
 	jp TextScriptEnd
 
 Route19Text4:
-	text_asm
+    text_asm
+	CheckEvent EVENT_BEAT_ELITE_4
+	jr z, .e4NotBeaten  ; AndrewNote - trainer will only battle after beating Elite 4
+	; AndrewNote - set boss battle events
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_BIG_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, Route19TrainerHeader3
 	call TalkToTrainer
 	jp TextScriptEnd
+.e4NotBeaten
+    ld hl, Route19BeforeBattleText4
+    call PrintText
+    jp TextScriptEnd
 
 Route19Text5:
 	text_asm
@@ -143,6 +154,10 @@ Route19EndBattleText3:
 
 Route19AfterBattleText3:
 	text_far _Route19AfterBattleText3
+	text_end
+
+Route19BeforeBattleText4:
+	text_far _Route19BeforeBattleText4
 	text_end
 
 Route19BattleText4:

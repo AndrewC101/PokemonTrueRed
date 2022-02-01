@@ -63,7 +63,9 @@ _Route8AfterBattleText4::
 	done
 
 _Route8BattleText5::
-	text "I'm hanging"
+    text "I am VENESSA"
+
+	para "I'm hanging"
 	line "out with my"
 	cont "gal pals!"
 
@@ -73,8 +75,8 @@ _Route8BattleText5::
 	done
 
 _Route8EndBattleText5::
-	text "I'll"
-	line "stay with school."
+	text "you"
+	line "cheated!"
 	prompt
 
 _Route8AfterBattleText5::
@@ -82,9 +84,9 @@ _Route8AfterBattleText5::
 	line "out with my"
 	cont "gal pals!"
 
-	para "One day"
-	line "they will"
-	cont "appreciate me!"
+	para "I wish they"
+	line "would dump their"
+	cont "boyfriends!"
 	done
 
 _Route8BattleText6::

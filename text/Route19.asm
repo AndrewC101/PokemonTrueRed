@@ -54,18 +54,47 @@ _Route19AfterBattleText3::
 	cont "spies about!"
 	done
 
+_Route19BeforeBattleText4::
+    text "What have I"
+	line "done..."
+
+	para "This power.."
+
+	para "I have doomed"
+	line "us all."
+
+	para "I must speak"
+	line "with the"
+	cont "CHAMPION."
+	done
+
 _Route19BattleText4::
-	text "What's beyond the"
-	line "horizon?"
+	text "CHAMPION!!"
+
+	para "I was the head"
+	line "scientist at"
+	cont "CINNABAR LAB."
+
+	para "The experiments"
+	line "must be stopped"
+
+	para "Let me show you"
+	line "the monsters we"
+	cont "created"
 	done
 
 _Route19EndBattleText4::
-	text "Glub!"
+	text "doomed"
 	prompt
 
 _Route19AfterBattleText4::
-	text "I see a couple of"
-	line "islands!"
+	text "There was"
+	line "another.."
+
+	para "It.."
+
+	para "It killed"
+	line "everyone."
 	done
 
 _Route19BattleText5::
@@ -87,7 +116,7 @@ _Route19BattleText6::
 	text "They spoke"
 	line "about a"
 
-	para "KYOGRE"
+	para "WALLACE"
 	done
 
 _Route19EndBattleText6::
@@ -99,7 +128,7 @@ _Route19AfterBattleText6::
 	text "They spoke"
 	line "about a"
 
-	para "KYOGRE"
+	para "WALLACE"
 	done
 
 _Route19BattleText7::
@@ -107,7 +136,7 @@ _Route19BattleText7::
 	line "indicates that"
 	cont "there is an"
 	cont "anomaly near"
-	cont "cerulean cave!"
+	cont "CERULEAN CAVE!"
 
 	para "It may be a"
 	line "powerful secret"
@@ -126,7 +155,7 @@ _Route19AfterBattleText7::
 	line "indicates that"
 	cont "there is an"
 	cont "anomaly near"
-	cont "cerulean cave!"
+	cont "CERULEAN CAVE!"
 
 	para "It may be a"
 	line "powerful secret"
@@ -145,10 +174,16 @@ _Route19EndBattleText8::
 	prompt
 
 _Route19AfterBattleText8::
-	text "Intelligence"
-	line "indicates that"
-	cont "LANCE may"
-	cont "cause problems!"
+	text "LANCE is"
+	line "strong."
+
+	para "But the mighty"
+	line "WALLACE!"
+
+	para "The CHAMPION of"
+	line "HOEN!"
+
+	para "Is stronger!"
 	done
 
 _Route19BattleText9::
@@ -175,21 +210,13 @@ _Route19EndBattleText9::
 	prompt
 
 _Route19AfterBattleText9::
-	text "Intelligence"
-	line "indicates that"
-	cont "KANTO legendary"
-	cont "#MON are no"
-	cont "match for"
-	cont "KYOGRE,"
-	cont "GROUDON and"
-	cont "RAYQUAZA."
+    text "WALLACE"
 
-	para "Um.."
+    para "The mighty"
+    line "CHAMPION of"
+    cont "HOEN!"
 
-	para "I mean"
-
-	para "Isn't the water"
-	line "great!"
+    para "Is up ahead!"
 	done
 
 _Route19BattleText10::
@@ -212,8 +239,8 @@ _Route19EndBattleText10::
 	prompt
 
 _Route19AfterBattleText10::
-	text "Poor KANTO"
-	line "child!"
+	text "WALLACE will"
+	line "crush you all!"
 
 	para "Soon you"
 	line "shall bow to"

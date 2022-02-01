@@ -279,6 +279,7 @@ SilphCo11F_TextPointers:
 	dw SilphCo11Text4
 	dw SilphCo11Text5
 	dw SilphCo11Text6
+	dw SilphCo11Text7
 
 SilphCo11TrainerHeaders:
 	def_trainers 4
@@ -286,6 +287,8 @@ SilphCo11TrainerHeader0:
 	trainer EVENT_BEAT_SILPH_CO_11F_TRAINER_0, 4, SilphCo11BattleText1, SilphCo11EndBattleText1, SilphCo11AfterBattleText1
 SilphCo11TrainerHeader1:
 	trainer EVENT_BEAT_SILPH_CO_11F_TRAINER_1, 3, SilphCo11BattleText2, SilphCo11EndBattleText2, SilphCo11AfterBattleText2
+SilphCo11TrainerHeader2:
+	trainer EVENT_BEAT_SILPH_CO_11F_TRAINER_2, 0, SilphCo11BattleText3, SilphCo11EndBattleText3, SilphCo11AfterBattleText3
 	db -1 ; end
 
 SilphCo11Text1:
@@ -380,6 +383,39 @@ SilphCo11EndBattleText2:
 
 SilphCo11AfterBattleText2:
 	text_far _SilphCo11AfterBattleText2
+	text_end
+
+SilphCo11Text7:
+    text_asm
+	CheckEvent EVENT_BEAT_VICTORY_ROAD_2_TRAINER_1
+	jr z, .sephNotBeaten  ; AndrewNote - trainer will only battle after beating Sephiroth
+	; AndrewNote - set boss battle events
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_BIG_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
+	ld hl, SilphCo11TrainerHeader2
+	call TalkToTrainer
+	jp TextScriptEnd
+.sephNotBeaten
+    ld hl, SilphCo11BeforeBattleText3
+    call PrintText
+    jp TextScriptEnd
+
+SilphCo11BeforeBattleText3:
+	text_far _SilphCo11BeforeBattleText3
+	text_end
+
+SilphCo11BattleText3:
+	text_far _SilphCo11BattleText3
+	text_end
+
+SilphCo11EndBattleText3:
+	text_far _SilphCo11EndBattleText3
+	text_end
+
+SilphCo11AfterBattleText3:
+	text_far _SilphCo11AfterBattleText3
 	text_end
 
 SilphCo10Text_6236c:

@@ -98,10 +98,21 @@ Route25Text4:
 	jp TextScriptEnd
 
 Route25Text5:
-	text_asm
+    text_asm
+	CheckEvent EVENT_BEAT_VICTORY_ROAD_2_TRAINER_3
+	jr z, .kaibaNotBeaten  ; AndrewNote - trainer will only battle after beating Kaiba
+	; AndrewNote - set boss battle events
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_BIG_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, Route25TrainerHeader4
 	call TalkToTrainer
 	jp TextScriptEnd
+.kaibaNotBeaten
+    ld hl, Route25BeforeBattleText5
+    call PrintText
+    jp TextScriptEnd
 
 Route25Text6:
 	text_asm
@@ -173,6 +184,10 @@ Route25EndBattleText4:
 
 Route25AfterBattleText4:
 	text_far _Route25AfterBattleText4
+	text_end
+
+Route25BeforeBattleText5:
+	text_far _Route25BeforeBattleText5
 	text_end
 
 Route25BattleText5:

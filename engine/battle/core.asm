@@ -828,12 +828,12 @@ FaintEnemyPokemon:
     ld b, $7
 .lowerExpDataLoop
     srl [hl]
-    srl [hl]
-    srl [hl]
-    ld a, [hl] ; a is 1/8 exp
-    add [hl] ; a is 2/8 exp
-    add [hl] ; a is 3/8 exp
-    ld [hl], a ; [hl] is 3/8 exp
+    ;srl [hl]
+    ;srl [hl]
+    ;ld a, [hl] ; a is 1/8 exp
+    ;add [hl] ; a is 2/8 exp
+    ;add [hl] ; a is 3/8 exp
+    ;ld [hl], a ; [hl] is 3/8 exp
     inc hl
     dec b
     jr nz, .lowerExpDataLoop

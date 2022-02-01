@@ -50,9 +50,27 @@ _Route12AfterBattleText2::
 	cont "better #MON!"
 	done
 
+_Route12BeforeBattleText3::
+    text "No such thing"
+    line "bad student"
+
+    para "Only bad"
+    line "teacher."
+
+	para "You want to"
+	line "battle MIYAGI?"
+	prompt
+
 _Route12BattleText3::
-	text "I'm tranin"
-	line "for de nxt war!"
+	text "#MON about"
+	line "Balance."
+
+	para "Not only TYPE"
+
+	para "But team role."
+
+	para "MIYAGI show"
+	line "you the way."
 	done
 
 _Route12EndBattleText3::
@@ -60,8 +78,8 @@ _Route12EndBattleText3::
 	prompt
 
 _Route12AfterBattleText3::
-	text "I'm tranin"
-	line "for de nxt war!"
+	text "You have strong"
+	line "balance in life."
 	done
 
 _Route12BattleText4::
@@ -74,9 +92,10 @@ _Route12EndBattleText4::
 	prompt
 
 _Route12AfterBattleText4::
-	text "Beating these"
-	line "dumb fishermen"
-	cont "is more fun!"
+	text "The fisherman"
+	line "down the road"
+	cont "is way too"
+	cont "strong!"
 	done
 
 _Route12BattleText5::

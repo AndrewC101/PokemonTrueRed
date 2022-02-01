@@ -86,7 +86,7 @@ VictoryRoad2TrainerHeaders:
 VictoryRoad2TrainerHeader0:
 	trainer EVENT_BEAT_VICTORY_ROAD_2_TRAINER_0, 4, VictoryRoad2BattleText1, VictoryRoad2EndBattleText1, VictoryRoad2AfterBattleText1
 VictoryRoad2TrainerHeader1:
-	trainer EVENT_BEAT_VICTORY_ROAD_2_TRAINER_1, 3, VictoryRoad2BattleText2, VictoryRoad2EndBattleText2, VictoryRoad2AfterBattleText2
+	trainer EVENT_BEAT_VICTORY_ROAD_2_TRAINER_1, 0, VictoryRoad2BattleText6, VictoryRoad2EndBattleText6, VictoryRoad2AfterBattleText6
 VictoryRoad2TrainerHeader2:
 	trainer EVENT_BEAT_VICTORY_ROAD_2_TRAINER_2, 3, VictoryRoad2BattleText3, VictoryRoad2EndBattleText3, VictoryRoad2AfterBattleText3
 VictoryRoad2TrainerHeader3:
@@ -105,8 +105,26 @@ VictoryRoad2Text1:
 
 VictoryRoad2Text2:
 	text_asm
+	CheckEvent EVENT_BEAT_VICTORY_ROAD_2_TRAINER_1
+	jr nz, .fight
+	ld hl, VictoryRoad2BeforeBattleText6
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .done
+.fight
+	; AndrewNote - set boss battle events
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_BIG_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, VictoryRoad2TrainerHeader1
 	call TalkToTrainer
+	jp TextScriptEnd
+.done
+	ld hl, VictoryRoad2AfterBattleText6
+	call PrintText
 	jp TextScriptEnd
 
 VictoryRoad2Text3:
@@ -117,6 +135,10 @@ VictoryRoad2Text3:
 
 VictoryRoad2Text4:
 	text_asm
+	SetEvent EVENT_MAX_STAT_EXP ; AndrewNote - Kaiba should be strong
+	SetEvent EVENT_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, VictoryRoad2TrainerHeader3
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -200,4 +222,20 @@ VictoryRoad2EndBattleText5:
 
 VictoryRoad2AfterBattleText5:
 	text_far _VictoryRoad2AfterBattleText5
+	text_end
+
+VictoryRoad2BeforeBattleText6:
+	text_far _VictoryRoad2BeforeBattleText6
+	text_end
+
+VictoryRoad2BattleText6:
+	text_far _VictoryRoad2BattleText6
+	text_end
+
+VictoryRoad2EndBattleText6:
+	text_far _VictoryRoad2EndBattleText6
+	text_end
+
+VictoryRoad2AfterBattleText6:
+	text_far _VictoryRoad2AfterBattleText6
 	text_end
