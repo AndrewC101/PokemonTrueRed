@@ -593,7 +593,6 @@ AIMoveChoiceModification3:
 
 ; AndrewNote - always heal when below 50% hp
 ; this makes enemies with recover/softboiled more difficult
-; this is only used by rival3, agatha, sabrina, giovanni and prof oak
 AIMoveChoiceModification4:
 	ld hl, wBuffer - 1 ; temp move selection array (-1 byte offset)
 	ld de, wEnemyMonMoves ; enemy moves

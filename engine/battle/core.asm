@@ -3196,10 +3196,6 @@ SelectEnemyMove:
     ret z
     cp OPP_BURGLAR
     ret z
-    cp OPP_ENGINEER
-    ret z
-    cp OPP_FISHER
-    ret z
     cp OPP_SWIMMER
     ret z
     cp OPP_CUE_BALL
@@ -3210,17 +3206,9 @@ SelectEnemyMove:
     ret z
     cp OPP_PSYCHIC_TR
     ret z
-    cp OPP_ROCKER
-    ret z
-    cp OPP_JUGGLER
-    ret z
     cp OPP_TAMER
     ret z
     cp OPP_BIRD_KEEPER
-    ret z
-    cp OPP_BLACKBELT
-    ret z
-    cp OPP_SCIENTIST
     ret z
     cp OPP_GENTLEMAN
     ret z
