@@ -97,6 +97,7 @@ FightingDojo_TextPointers:
 	dw FightingDojoText8
 	dw FightingDojoText9
 	dw FightingDojoText10
+	dw FightingDojoText11
 
 FightingDojoTrainerHeaders:
 	def_trainers 2
@@ -113,6 +114,8 @@ FightingDojoTrainerHeader4:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_4, 0, FightingDojoBattleText5, FightingDojoEndBattleText5, FightingDojoAfterBattleText5
 FightingDojoTrainerHeader5:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_5, 0, FightingDojoBattleText6, FightingDojoEndBattleText6, FightingDojoAfterBattleText6
+FightingDojoTrainerHeader6:
+	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_6, 0, FightingDojoBattleText7, FightingDojoEndBattleText7, FightingDojoAfterBattleText7
 	db -1 ; end
 
 FightingDojoText1:
@@ -283,8 +286,20 @@ FightingDojoAfterBattleText6:
 	text_far _FightingDojoAfterBattleText6
 	text_end
 
+FightingDojoBeforeBattleText7:
+	text_far _FightingDojoBattleText7
+	text_end
+
+FightingDojoBattleText7:
+	text_far _FightingDojoBattleText7
+	text_end
+
+FightingDojoEndBattleText7:
+	text_far _FightingDojoEndBattleText7
+	text_end
+
 FightingDojoAfterBattleText7:
-	text_far _FightingDojoText_5ce9d
+	text_far _FightingDojoAfterBattleText7
 	text_end
 
 FightingDojoText6:
@@ -374,6 +389,23 @@ FightingDojoText10:
 	ld hl, FightingDojoTrainerHeader5
 	call TalkToTrainer
 	jp TextScriptEnd
+
+FightingDojoText11:
+    text_asm
+	CheckEvent EVENT_BEAT_KARATE_MASTER
+	jr z, .oakNotBeaten  ; AndrewNote - I will only battle after beating Master OAK
+	; AndrewNote - set boss battle events
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_MAX_BONUS_MONEY
+	SetEvent EVENT_ANDREW
+	SetEvent EVENT_ANDREW_TURN_1
+	ld hl, FightingDojoTrainerHeader6
+	call TalkToTrainer
+	jp TextScriptEnd
+.oakNotBeaten
+    ld hl, FightingDojoBeforeBattleText7
+    call PrintText
+    jp TextScriptEnd
 
 WantHitmonchanText:
 	text_far _WantHitmonchanText

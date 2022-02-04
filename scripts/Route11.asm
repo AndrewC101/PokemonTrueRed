@@ -212,10 +212,32 @@ Route11AfterBattleText9:
 	text_end
 
 Route11Text10:
-	text_asm
+    text_asm
+	CheckEvent EVENT_BEAT_ROUTE_11_TRAINER_9
+	jr nz, .fight
+	ld hl, Route11BeforeBattleText10
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .done
+.fight
+	; AndrewNote - set boss battle events
+	SetEvent EVENT_MEDIUM_STAT_EXP
+	SetEvent EVENT_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	ld hl, Route11TrainerHeader9
 	call TalkToTrainer
 	jp TextScriptEnd
+.done
+	ld hl, Route11AfterBattleText10
+	call PrintText
+	jp TextScriptEnd
+
+Route11BeforeBattleText10:
+	text_far _Route11BeforeBattleText10
+	text_end
 
 Route11BattleText10:
 	text_far _Route11BattleText10

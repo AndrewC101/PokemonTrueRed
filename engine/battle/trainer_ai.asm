@@ -185,7 +185,7 @@ AIMoveChoiceModification2:
     jp z, .handleHealing
     ld a, [wEnemyMovePower] ; read move damage
     and a
-    jp z, .handleNoDamage
+    jp z, .handleBasicStatMoves
     ld a, [wEnemyMoveNum]
 	cp COUNTER
 	jp z, .handleCounter
@@ -235,7 +235,25 @@ AIMoveChoiceModification2:
 	cp DISABLE_EFFECT
 	jp z, .handleDisable
 	jp .nextMove
-.handleNoDamage
+.handleBasicStatMoves
+; first don't use moves against a sub
+;joenote - do not use moves that are ineffective against substitute if a substitute is up
+	ld a, [wPlayerBattleStatus2]
+	bit HAS_SUBSTITUTE_UP, a	;check for substitute bit
+	jr z, .noSub	;if the substitute bit is not set, then skip out of this block
+	ld a, [wEnemyMoveEffect]	;get the move effect into a
+	push hl
+	push de
+	push bc
+	ld hl, SubstituteImmuneEffects
+	ld de, $0001
+	call IsInArray	;see if a is found in the hl array (carry flag set if true)
+	pop bc
+	pop de
+	pop hl
+	jp c, .discourageMove	;carry flag means the move effect is blocked by substitute
+.noSub
+; if hp < 1/3 then just attack, don't use an stat moves except healing
     ld a, 3
 	push hl
     push bc
@@ -257,6 +275,20 @@ AIMoveChoiceModification2:
 	jp z, .encourageMove
 	jp z, .discourageMove
 .handlePara
+   ; encourage if slower than opponent
+    call StrCmpSpeed
+    jp nc, .encouragePara
+
+   ; 50% chance to encourage if faster than opponent
+    call Random
+    cp 128
+    jp c, .encouragePara
+
+    inc [hl] ; 50% to not use para if faster than player
+    jp .nextMove
+
+.encouragePara
+    dec [hl]
     dec [hl] ; slightly encourage moves that inflict para
 	jp .nextMove
 .handleHealing
@@ -282,6 +314,13 @@ AIMoveChoiceModification2:
     jp .stronglyEncourageMove ; strongly encourage swords dance if not at + 2
     jp .nextMove
 .handleSpecialBoost
+    CheckEvent EVENT_ANDREW
+    jr z, .notAndrew
+    ld a, [wEnemyMonSpecialMod]
+    cp 7
+    jp c, .encourageMove ; Andrew battle - only use to reverse stat drops
+    jp .discourageMove
+.notAndrew
     ld a, [wEnemyMonSpecialMod]
     cp $b
     jp nc, .discourageMove ; don't amnesia after +4
@@ -606,6 +645,14 @@ AIMoveChoiceModification4:
 	ret z ; no more moves in move set
 	inc de
 	call ReadMove
+
+	CheckEvent EVENT_ANDREW ; Andrew uses REST at 50%
+	jr z, .notAndrew
+    ld a, [wEnemyMoveEffect] ; read move effect
+	cp HEAL_EFFECT
+	jr z, .handleHealing
+
+.notAndrew
     ld a, [wPlayerMoveNum]
     cp RECOVER
     jr z, .handleHealing
@@ -631,6 +678,43 @@ AIMoveChoiceModification4:
     sub $4 ; strongly encourage move
     ld [hl], a
 	jp .nextMove
+
+; AndrewNote - taken from shinpokered
+SubstituteImmuneEffects:	;joenote - added this table to track for substitute immunities
+	db $01 ; unused sleep effect
+	db SLEEP_EFFECT
+	db POISON_EFFECT
+	db PARALYZE_EFFECT
+	db CONFUSION_EFFECT
+	db DRAIN_HP_EFFECT
+	db LEECH_SEED_EFFECT
+	db DREAM_EATER_EFFECT
+
+; AndrewNote - taken from shinpokered
+StrCmpSpeed:	;joenote - function for AI to compare pkmn speeds
+	push bc
+	push de
+	push hl
+	ld de, wBattleMonSpeed ; player speed value
+	ld hl, wEnemyMonSpeed ; enemy speed value
+	ld c, $2	;bytes to copy
+.spdcmploop
+	ld a, [de]
+	cp [hl]
+	jr nz, .return
+	inc de
+	inc hl
+	dec c
+	jr nz, .spdcmploop
+	;At this point:
+	;zero flag set means speeds equal
+	;carry flag not set means player pkmn faster
+	;carry flag set means ai pkmn faster
+.return
+	pop hl
+	pop de
+	pop bc
+	ret
 
 ; AndrewNote - switch if mon is SLP or FRZ and enemy tries to set up on it
 AIEnemyTrainerSwitch:
@@ -746,6 +830,34 @@ INCLUDE "data/trainers/ai_pointers.asm"
 
 ; AndrewNote - switch if attack, special or accuracy fall to -2 or lower
 SwitchAI:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; AndrewNote - events specific to the Andrew battle ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    CheckEvent EVENT_ANDREW_TURN_1
+    jr z, .andrewHeal
+
+    ResetEvent EVENT_ANDREW_TURN_1
+    call AIPlayRestoringSFX
+	ld hl, wEnemyBattleStatus2
+	set 1, [hl]
+	ld a, GUARD_SPEC
+	jp AIPrintItemUse
+
+.andrewHeal
+    CheckEvent EVENT_ANDREW
+    jr z, .switchAi
+
+    ; If fighting Andrew he has a small chance to troll with fullRestore
+    call Random
+	cp $33 ; 20% chance to use FR when hp < 1/3
+	jr nc, .andrewReturn
+	ld a, 3
+	call AICheckIfHPBelowFraction
+	jp c, AIUseFullRestore
+.andrewReturn
+	ret
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+.switchAi
     ; AndrewNote - switches take priority
     CheckEvent EVENT_ENEMY_SWITCH_NEXT_TURN
     jr nz, .switch
@@ -764,16 +876,17 @@ SwitchAI:
 
     ld a, [wEnemyBattleStatus2]
 	bit 7, a	;check a for the leech seed bit
-	jr z, .done
+	jr z, .checkToxic
     call Random	; 25% chance to switch of seeded
 	cp $40
 	jp c, .prepareSwitch
 
-    ld a, [wEnemyBattleStatus3]
-	bit 0, a	;check a for the toxic bit
+.checkToxic
+	ld hl, wEnemyBattleStatus3
+	bit BADLY_POISONED, [hl]
 	jr z, .done
-	call Random	; 34% chance to switch if intoxicated
-	cp $55
+	call Random	; 50% chance to switch if intoxicated
+	cp $80
 	jp c, .prepareSwitch
 
 .done
@@ -983,27 +1096,6 @@ AICureStatus:
 	res 0, [hl]
 	ret
 
-AIUseXAccuracy: ; unused
-	call AIPlayRestoringSFX
-	ld hl, wEnemyBattleStatus2
-	set 0, [hl]
-	ld a, X_ACCURACY
-	jp AIPrintItemUse
-
-AIUseGuardSpec:
-	call AIPlayRestoringSFX
-	ld hl, wEnemyBattleStatus2
-	set 1, [hl]
-	ld a, GUARD_SPEC
-	jp AIPrintItemUse
-
-AIUseDireHit: ; unused
-	call AIPlayRestoringSFX
-	ld hl, wEnemyBattleStatus2
-	set 2, [hl]
-	ld a, DIRE_HIT
-	jp AIPrintItemUse
-
 AICheckIfHPBelowFraction:
 ; return carry if enemy trainer's current HP is below 1 / a of the maximum
 	ldh [hDivisor], a
@@ -1029,48 +1121,6 @@ AICheckIfHPBelowFraction:
 	ld a, e
 	sub c
 	ret
-
-AIUseXAttack:
-	ld b, $A
-	ld a, X_ATTACK
-	jr AIIncreaseStat
-
-AIUseXDefend:
-	ld b, $B
-	ld a, X_DEFEND
-	jr AIIncreaseStat
-
-AIUseXSpeed:
-	ld b, $C
-	ld a, X_SPEED
-	jr AIIncreaseStat
-
-AIUseXSpecial:
-	ld b, $D
-	ld a, X_SPECIAL
-	; fallthrough
-
-AIIncreaseStat:
-	ld [wAIItem], a
-	push bc
-	call AIPrintItemUse_
-	pop bc
-	ld hl, wEnemyMoveEffect
-	ld a, [hld]
-	push af
-	ld a, [hl]
-	push af
-	push hl
-	ld a, ANIM_AF
-	ld [hli], a
-	ld [hl], b
-	callfar StatModifierUpEffect
-	pop hl
-	pop af
-	ld [hli], a
-	pop af
-	ld [hl], a
-	jp DecrementAICount
 
 AIPrintItemUse:
 	ld [wAIItem], a

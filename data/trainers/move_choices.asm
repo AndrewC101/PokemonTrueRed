@@ -16,7 +16,7 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; SAILOR
 	move_choices 1, 2, 3 ; JR_TRAINER_M
 	move_choices 1, 2, 3 ; JR_TRAINER_F
-	move_choices 1, 2, 3 ; POKEMANIAC
+	move_choices 1, 2, 3, 4 ; POKEMANIAC
 	move_choices 1, 2, 3 ; SUPER_NERD
 	move_choices 1, 2    ; HIKER
 	move_choices 1, 2    ; BIKER

@@ -187,7 +187,7 @@ Moves:
 	move DIZZY_PUNCH,  NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 10
 	; AndrewNote - decrease to 90 accuracy, as sleep is broken
 	move SPORE,        SLEEP_EFFECT,                 0, GRASS,        90, 15
-	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,        70, 20
+	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,       90, 20
 	; AndrewNote - Psywave is now Psyblast
 	move PSYWAVE,      FREEZE_SIDE_EFFECT,          120, DRAGON,      100, 20
 	move SPLASH,       SPLASH_EFFECT,                0, NORMAL,       100, 40

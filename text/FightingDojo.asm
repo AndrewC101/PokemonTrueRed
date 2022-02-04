@@ -413,6 +413,77 @@ _FightingDojoAfterBattleText6::
 	cont "us."
 	done
 
+_FightingDojoBeforeBattleText7::
+	text "Well done on"
+	line "getting here!"
+
+	para "I am ANDREW"
+	line "the creator of"
+	cont "this world."
+
+	para "There are tough"
+	line "bosses all over"
+	cont "the world but"
+	cont "these are the"
+	cont "toughest!"
+
+	para "If you manage"
+	line "to defeat"
+	cont "Master OAK"
+	cont "come and speak"
+	cont "to me."
+	done
+
+_FightingDojoBattleText7::
+	text "You done it!"
+
+	para "You beat the"
+	line "hardest fight"
+	cont "in the world!"
+
+	para "As the creator"
+	line "of this world"
+	cont "I am very happy!"
+
+	para "So now you"
+	line "challenge me!"
+
+	para "Very well!"
+
+	para "One last battle!"
+
+	para "Just for fun!"
+
+	para "Use everything"
+	line "you have got!"
+
+	para "Even Items!"
+
+	para "Do your best."
+	done
+
+_FightingDojoEndBattleText7::
+	text "You"
+	line "are a #MON"
+	cont "Master!"
+	prompt
+
+_FightingDojoAfterBattleText7::
+	text "I really hope"
+	line "you have had"
+	cont "lots of fun"
+	cont "playing this!"
+
+	para "I loved making"
+	line "it what it is."
+
+	para "I done it for"
+	line "all of us who"
+	cont "grew up in"
+	cont "this imaginary"
+	cont "place."
+	done
+
 _WantHitmonleeText::
 	text "You seek the"
 	para "Cosmic"

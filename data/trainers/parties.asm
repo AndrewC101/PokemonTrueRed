@@ -130,6 +130,8 @@ LassData:
 ; Celadon Gym
 	db 43, PARASECT, TANGELA, 0
 	db 42, PARASECT, VILEPLUME, 0
+; Lance Sister
+    db 45, DRAGONAIR, SEADRA, CHARIZARD, 0
 
 SailorData:
 ; SS Anne Stern
@@ -220,6 +222,8 @@ PokemaniacData:
     db 100, PIKACHU, RAICHU, SNORLAX, VAPOREON, JOLTEON, FLAREON, 0
 ; Aizen
     db 23, HYPNO, 0
+; Andrew
+    db $FF, 255, MEWTWO, 0
 
 SuperNerdData:
 ; Mt. Moon 1F
@@ -319,7 +323,7 @@ EngineerData:
 	db 28, MAGNETON, 0
 	db 24, MAGNEMITE, DROWZEE, GROWLITHE, 0
 ; Cloud
-    db $FF, 85, JOLTEON, 86, SCYTHER, 87, BLASTOISE, 88, GENGAR, 89, DODRIO, 90, ZAPDOS, 0
+    db $FF, 85, JOLTEON, 86, SANDSLASH, 87, BLASTOISE, 88, GENGAR, 89, DODRIO, 90, ZAPDOS, 0
 
 UnusedJugglerData:
 ; none
@@ -431,7 +435,7 @@ RockerData:
 ; Grimmjow
     db 20, PERSIAN, 0
 ; Sephiroth
-    db $FF, 82, GYARADOS, 83, SANDSLASH, 84, CHARIZARD, 85, PERSIAN, 86, DRAGONITE, 87, MOLTRES, 0
+    db $FF, 82, GYARADOS, 83, SCYTHER, 84, CHARIZARD, 85, PERSIAN, 86, DRAGONITE, 87, MOLTRES, 0
 
 JugglerData:
 ; Silph Co. 5F

@@ -7,7 +7,7 @@ TechnicalMachinePrices:
 	nybble 2 ; TM03
 	nybble 1 ; TM04
 	nybble 3 ; TM05
-	nybble 4 ; TM06
+	nybble 6 ; TM06
 	nybble 2 ; TM07
 	nybble 6 ; TM08
 	nybble 3 ; TM09

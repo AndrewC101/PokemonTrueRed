@@ -18,8 +18,10 @@
 	const EVENT_ENEMY_SWITCH_NEXT_TURN ; AndrewNote - used to make enemy switching work as expected
 	const EVENT_RESET_MEWTWO_ENCOUNTER ; AndrewNote - reset mewtwo encounter
 	const EVENT_SEND_OUT_FRZ_ENEMY ; AndrewNote - send out frz enemies when there is nothing else
-	const EVENT_STOP_SWITCHING ; AndrewNote - don't switch if all mon are SLP/FRZ
-	const_skip 7
+	const EVENT_STOP_SWITCHING ; AndrewNote - don't switch if all mon are SLP/
+	const EVENT_ANDREW
+	const EVENT_ANDREW_TURN_1
+	const_skip 5
 	const EVENT_GOT_TOWN_MAP
 	const EVENT_ENTERED_BLUES_HOUSE
 	const EVENT_DAISY_WALKING

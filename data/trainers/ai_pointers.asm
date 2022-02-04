@@ -30,7 +30,7 @@ TrainerAIPointers:
 	dbw 3, GenericAI
 	dbw 2, SwitchAI ; blackbelt
 	dbw 3, SwitchAI ; rival1
-	dbw 3, GenericAI ; oak
+	dbw 3, SwitchAI ; oak
 	dbw 1, GenericAI ; chief
 	dbw 3, GenericAI ; scientist
 	dbw 1, SwitchAI ; giovanni

@@ -1190,6 +1190,7 @@ HandlePlayerBlackOut:
     ResetEvent EVENT_MAX_BONUS_MONEY
     ResetEvent EVENT_RESET_MEWTWO_ENCOUNTER
     ResetEvent EVENT_STOP_SWITCHING
+    ResetEvent EVENT_ANDREW
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
 	ld hl, PlayerBlackedOutText2

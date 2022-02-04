@@ -18,6 +18,5 @@ SafariZoneCenter_Object:
 
 	def_object_events
 	object_event 14, 10, SPRITE_POKE_BALL, STAY, NONE, 1, NUGGET
-	object_event 14, 4, SPRITE_POKE_BALL, STAY, NONE, 2, TM_TOXIC
 
 	def_warps_to SAFARI_ZONE_CENTER

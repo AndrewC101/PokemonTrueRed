@@ -580,7 +580,7 @@ StatModifierDownEffect:
 	cp ATTACK_DOWN_SIDE_EFFECT
 	jr c, .nonSideEffect
 	call BattleRandom
-	cp 33 percent + 1 ; chance for side effects
+	cp 20 percent + 1 ; chance for side effects
 	jp nc, CantLowerAnymore
 	ld a, [de]
 	sub ATTACK_DOWN_SIDE_EFFECT ; map each stat to 0-3

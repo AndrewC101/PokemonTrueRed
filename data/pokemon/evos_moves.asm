@@ -1024,8 +1024,8 @@ PikachuEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 20, DIG
 	db 30, THUNDERBOLT
+	db 35, DIG
 	db 40, SURF
 	db 50, HYPER_BEAM
 	db 100, GUILLOTINE
@@ -1071,8 +1071,6 @@ DragonairEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 20, AGILITY
-	db 35, SLAM
 	db 45, DRAGON_RAGE
 	db 55, HYPER_BEAM
 	db 0
@@ -1464,6 +1462,10 @@ MewtwoEvosMoves:
 	db 0
 ; Learnset
     db 71, REFLECT
+    db 252, THUNDER_WAVE
+    db 253, REST
+    db 254, PSYWAVE
+    db 255, AMNESIA
 	db 0
 
 SnorlaxEvosMoves:
