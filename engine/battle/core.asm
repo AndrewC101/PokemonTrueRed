@@ -1190,7 +1190,9 @@ HandlePlayerBlackOut:
     ResetEvent EVENT_MAX_BONUS_MONEY
     ResetEvent EVENT_RESET_MEWTWO_ENCOUNTER
     ResetEvent EVENT_STOP_SWITCHING
-    ResetEvent EVENT_ANDREW
+    ResetEvent EVENT_USE_FULL_RESTORES
+    ResetEvent EVENT_USE_FULL_HEALS
+    ResetEvent EVENT_HIGH_LVL_ENEMY
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
 	ld hl, PlayerBlackedOutText2
@@ -1464,8 +1466,6 @@ EnemySendOutFirstMon:
     cp OPP_RIVAL3
     jp z, .next4
     cp OPP_RIVAL2
-    jp z, .next4
-    cp OPP_RIVAL1
     jp z, .next4
     cp OPP_LANCE
     jp z, .next4
@@ -2314,8 +2314,6 @@ DisplayBattleMenu::
     jr z, .noItems
     cp OPP_RIVAL2
     jr z, .noItems
-    cp OPP_RIVAL1
-    jr z, .noItems
     cp OPP_LANCE
     jr z, .noItems
     cp OPP_AGATHA
@@ -2351,6 +2349,12 @@ DisplayBattleMenu::
     jr nz, BagWasSelected
 
 .noItems
+    CheckEvent EVENT_USE_FULL_HEALS
+    jr z, .notJames
+    ld hl, JamesItemsCantBeUsedHereText
+    call PrintText
+    jp DisplayBattleMenu
+.notJames
 	ld hl, ItemsCantBeUsedHereText
 	call PrintText
 	jp DisplayBattleMenu
@@ -2467,6 +2471,10 @@ UseBagItem:
 
 ItemsCantBeUsedHereText:
 	text_far _ItemsCantBeUsedHereText
+	text_end
+
+JamesItemsCantBeUsedHereText:
+	text_far _JamesItemsCantBeUsedHereText
 	text_end
 
 PartyMenuOrRockOrRun:
@@ -3179,17 +3187,11 @@ SelectEnemyMove:
 .trainerSwitches
     ; classes that wont switch
     ld a, [wCurOpponent]
-    cp OPP_RIVAL1
-    ret z
 	cp OPP_BUG_CATCHER
     ret z
     cp OPP_SAILOR
     ret z
     cp OPP_YOUNGSTER
-    ret z
-    cp OPP_JR_TRAINER_F
-    ret z
-    cp OPP_SUPER_NERD
     ret z
     cp OPP_HIKER
     ret z
@@ -3205,17 +3207,13 @@ SelectEnemyMove:
     ret z
     cp OPP_BEAUTY
     ret z
-    cp OPP_PSYCHIC_TR
-    ret z
     cp OPP_TAMER
     ret z
     cp OPP_BIRD_KEEPER
     ret z
-    cp OPP_GENTLEMAN
-    ret z
     cp OPP_CHANNELER
     ret z
-    cp OPP_ROCKET
+    cp OPP_ENGINEER
     ret z
 
 	callfar AIEnemyTrainerSwitch
@@ -4577,7 +4575,11 @@ GetDamageVarsForEnemyAttack:
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
 	jr z, .done
+	ld a, e ; store lvl in a
 	sla e ; double level if it was a critical hit
+	cp a ; is new lvl larger than old lvl, lvls over 128 roll over
+	jr nz, .done ; if so continue
+	ld e, $FF ; if not use 255
 .done
 	ld a, $1
 	and a

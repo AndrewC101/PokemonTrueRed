@@ -17,6 +17,11 @@ _AIBattleUseItemText::
 	text "!"
 	prompt
 
+_AndrewHealText::
+    text "What do you mean"
+    line "this is unfair!"
+    prompt
+
 _TradeWentToText::
 	text_ram wStringBuffer
 	text " went"
@@ -961,6 +966,12 @@ _ItemsCantBeUsedHereText::
 	text "Items can't be"
 	line "used in boss"
 	cont "battles."
+	prompt
+
+_JamesItemsCantBeUsedHereText::
+	text "That is not OK!"
+	line "Only I can use"
+	cont "those."
 	prompt
 
 _AlreadyOutText::

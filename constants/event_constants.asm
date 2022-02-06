@@ -19,9 +19,12 @@
 	const EVENT_RESET_MEWTWO_ENCOUNTER ; AndrewNote - reset mewtwo encounter
 	const EVENT_SEND_OUT_FRZ_ENEMY ; AndrewNote - send out frz enemies when there is nothing else
 	const EVENT_STOP_SWITCHING ; AndrewNote - don't switch if all mon are SLP/
-	const EVENT_ANDREW
-	const EVENT_ANDREW_TURN_1
-	const_skip 5
+	const EVENT_USE_FULL_RESTORES
+	const EVENT_FIRST_TURN_GUARD_SPEC
+	const EVENT_GUARANTEED_FULL_RESTORE
+	const EVENT_USE_FULL_HEALS
+	const EVENT_HIGH_LVL_ENEMY
+	const_skip 2
 	const EVENT_GOT_TOWN_MAP
 	const EVENT_ENTERED_BLUES_HOUSE
 	const EVENT_DAISY_WALKING

@@ -284,6 +284,7 @@ SlowbroEvosMoves:
     db 35, REST
 	db 40, AMNESIA
 	db 45, PSYCHIC_M
+	db 101, SURF
 	db 0
 
 IvysaurEvosMoves:

@@ -60,7 +60,7 @@ Moves:
 	move TAIL_WHIP,    DEFENSE_DOWN1_EFFECT,         0, NORMAL,       100, 30
 	; AndrewNote - make poision sting, twineedle and pin missile stronger
 	move POISON_STING, POISON_SIDE_EFFECT1,         30, POISON,       100, 35
-	move TWINEEDLE,    TWINEEDLE_EFFECT,            35, BUG,          100, 20
+	move TWINEEDLE,    TWINEEDLE_EFFECT,            30, BUG,          100, 20
 	move PIN_MISSILE,  TWO_TO_FIVE_ATTACKS_EFFECT,  20, BUG,           85, 20
 	move LEER,         DEFENSE_DOWN1_EFFECT,         0, NORMAL,       100, 30
 	move BITE,         FLINCH_SIDE_EFFECT1,         60, NORMAL,       100, 25
@@ -113,8 +113,8 @@ Moves:
 	move THUNDERSHOCK, PARALYZE_SIDE_EFFECT1,       40, ELECTRIC,     100, 30
 	move THUNDERBOLT,  PARALYZE_SIDE_EFFECT1,       95, ELECTRIC,     100, 15
 	move THUNDER_WAVE, PARALYZE_EFFECT,              0, ELECTRIC,     100, 20
-	; AndrewNote - increase to 85 accuracy in line with FireBlast
-	move THUNDER,      PARALYZE_SIDE_EFFECT1,      120, ELECTRIC,      85, 10
+	; AndrewNote - increase to 80 accuracy more in line with FireBlast
+	move THUNDER,      PARALYZE_SIDE_EFFECT2,      120, ELECTRIC,      80, 10
 	; AndrewNote - increase to 85 accuracy so this isn't crap
 	move ROCK_THROW,   NO_ADDITIONAL_EFFECT,        50, ROCK,          85, 15
 	move EARTHQUAKE,   NO_ADDITIONAL_EFFECT,       100, GROUND,       100, 10
@@ -187,7 +187,7 @@ Moves:
 	move DIZZY_PUNCH,  NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 10
 	; AndrewNote - decrease to 90 accuracy, as sleep is broken
 	move SPORE,        SLEEP_EFFECT,                 0, GRASS,        90, 15
-	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,       90, 20
+	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,       100, 20
 	; AndrewNote - Psywave is now Psyblast
 	move PSYWAVE,      FREEZE_SIDE_EFFECT,          120, DRAGON,      100, 20
 	move SPLASH,       SPLASH_EFFECT,                0, NORMAL,       100, 40
@@ -205,7 +205,7 @@ Moves:
 	move CONVERSION,   CONVERSION_EFFECT,            0, NORMAL,       100, 30
 	move TRI_ATTACK,   NO_ADDITIONAL_EFFECT,        80, NORMAL,       100, 10
 	move SUPER_FANG,   SUPER_FANG_EFFECT,            1, NORMAL,        90, 10
-	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 20
+	move SLASH,        NO_ADDITIONAL_EFFECT,        60, NORMAL,       100, 20
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, DRAGON,       100, 10
 	assert_table_length NUM_ATTACKS

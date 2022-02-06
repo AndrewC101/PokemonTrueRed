@@ -187,8 +187,6 @@ AIMoveChoiceModification2:
     and a
     jp z, .handleBasicStatMoves
     ld a, [wEnemyMoveNum]
-	cp COUNTER
-	jp z, .handleCounter
 .continueEffects
     ld a, [wEnemyMoveEffect] ; read move effect
 	cp PARALYZE_EFFECT
@@ -206,8 +204,6 @@ AIMoveChoiceModification2:
     jp z, .checkfocus
     cp SUBSTITUTE_EFFECT
 	jp z, .checksub
-	cp MIST_EFFECT
-	jp z, .checkmist
 	cp LEECH_SEED_EFFECT
 	jp z, .checkseed
 	cp ATTACK_DOWN1_EFFECT
@@ -264,16 +260,6 @@ AIMoveChoiceModification2:
     pop bc
     pop hl
     jp .continueEffects
-.handleCounter
-    ld a, [wPlayerMovePower]
-	and a
-	jp z, .discourageMove	;heavily discourage counter if player is using zero-power move
-	ld a, [wPlayerMoveType]
-	cp NORMAL
-	jp z, .encourageMove
-	cp FIGHTING
-	jp z, .encourageMove
-	jp z, .discourageMove
 .handlePara
    ; encourage if slower than opponent
     call StrCmpSpeed
@@ -306,6 +292,13 @@ AIMoveChoiceModification2:
     pop hl
     jp .nextMove
 .handleAttackBoost
+    CheckEvent EVENT_HIGH_LVL_ENEMY ; for enemies over lvl 100, stop at +2
+    jr z, .normalLvlAttackBoost
+    ld a, [wEnemyMonAttackMod]
+    cp 9
+    jp c, .superStronglyEncourageMove
+    jp .discourageMove
+.normalLvlAttackBoost
     ld a, [wEnemyMonAttackMod]
     cp $b
     jp nc, .discourageMove ; don't swords dance after +4
@@ -314,13 +307,13 @@ AIMoveChoiceModification2:
     jp .stronglyEncourageMove ; strongly encourage swords dance if not at + 2
     jp .nextMove
 .handleSpecialBoost
-    CheckEvent EVENT_ANDREW
-    jr z, .notAndrew
+    CheckEvent EVENT_FIRST_TURN_GUARD_SPEC ; for enemies over lvl 100, mostly just lvl 255 mewtwo
+    jr z, .normalLvlSpecialBoost
     ld a, [wEnemyMonSpecialMod]
     cp 7
     jp c, .encourageMove ; Andrew battle - only use to reverse stat drops
     jp .discourageMove
-.notAndrew
+.normalLvlSpecialBoost
     ld a, [wEnemyMonSpecialMod]
     cp $b
     jp nc, .discourageMove ; don't amnesia after +4
@@ -387,11 +380,6 @@ AIMoveChoiceModification2:
 .checkfocus	;check status, and heavily discourage if bit is set
 	ld a, [wEnemyBattleStatus2]
 	bit GETTING_PUMPED, a
-	jp nz, .discourageMove
-	jp .nextMove
-.checkmist	;check status, and heavily discourage if bit is set
-	ld a, [wEnemyBattleStatus2]
-	bit PROTECTED_BY_MIST, a
 	jp nz, .discourageMove
 	jp .nextMove
 .checksub	;check status, and heavily discourage if bit is set
@@ -646,7 +634,7 @@ AIMoveChoiceModification4:
 	inc de
 	call ReadMove
 
-	CheckEvent EVENT_ANDREW ; Andrew uses REST at 50%
+	CheckEvent EVENT_USE_FULL_RESTORES ; Andrew uses REST at 50%
 	jr z, .notAndrew
     ld a, [wEnemyMoveEffect] ; read move effect
 	cp HEAL_EFFECT
@@ -686,9 +674,7 @@ SubstituteImmuneEffects:	;joenote - added this table to track for substitute imm
 	db POISON_EFFECT
 	db PARALYZE_EFFECT
 	db CONFUSION_EFFECT
-	db DRAIN_HP_EFFECT
 	db LEECH_SEED_EFFECT
-	db DREAM_EATER_EFFECT
 
 ; AndrewNote - taken from shinpokered
 StrCmpSpeed:	;joenote - function for AI to compare pkmn speeds
@@ -829,35 +815,52 @@ TrainerAI:
 INCLUDE "data/trainers/ai_pointers.asm"
 
 ; AndrewNote - switch if attack, special or accuracy fall to -2 or lower
-SwitchAI:
+SwitchAndUseItemsAI:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; AndrewNote - events specific to the Andrew battle ;;;
+;;; AndrewNote - First check for item use             ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    CheckEvent EVENT_ANDREW_TURN_1
-    jr z, .andrewHeal
+    CheckEvent EVENT_FIRST_TURN_GUARD_SPEC
+    jr z, .checkFullRestore
 
-    ResetEvent EVENT_ANDREW_TURN_1
+    ResetEvent EVENT_FIRST_TURN_GUARD_SPEC
     call AIPlayRestoringSFX
 	ld hl, wEnemyBattleStatus2
 	set 1, [hl]
 	ld a, GUARD_SPEC
 	jp AIPrintItemUse
 
-.andrewHeal
-    CheckEvent EVENT_ANDREW
-    jr z, .switchAi
+.checkFullRestore
+    CheckEvent EVENT_USE_FULL_RESTORES
+    jr z, .checkFullHeal
 
+    CheckEvent EVENT_GUARANTEED_FULL_RESTORE
+    jr z, .normalRestore
+    ld a, 3
+	call AICheckIfHPBelowFraction
+	jp c, AIUseFullRestore
+
+.normalRestore
     ; If fighting Andrew he has a small chance to troll with fullRestore
     call Random
-	cp $33 ; 20% chance to use FR when hp < 1/3
-	jr nc, .andrewReturn
+	cp $20 ; 1/8 chance to use FR when hp < 1/3
+	jr nc, .checkFullHeal
 	ld a, 3
 	call AICheckIfHPBelowFraction
 	jp c, AIUseFullRestore
-.andrewReturn
-	ret
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-.switchAi
+
+.checkFullHeal
+    CheckEvent EVENT_USE_FULL_HEALS
+    jr z, .checkSwitch
+
+    ld a, [wEnemyMonStatus]
+	and a
+	jp nz, AIUseFullHeal
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; AndrewNote - now check for switch        ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+.checkSwitch
     ; AndrewNote - switches take priority
     CheckEvent EVENT_ENEMY_SWITCH_NEXT_TURN
     jr nz, .switch
@@ -909,8 +912,9 @@ GenericAI:
 ; end of individual trainer AI routines
 
 DecrementAICount:
-	ld hl, wAICount
-	dec [hl]
+    ; AndrewNote - give AI infinite uses of items and actions
+	;ld hl, wAICount
+	;dec [hl]
 	scf
 	ret
 
@@ -919,6 +923,12 @@ AIPlayRestoringSFX:
 	jp PlaySoundWaitForCurrent
 
 AIUseFullRestore:
+    CheckEvent EVENT_GUARANTEED_FULL_RESTORE
+    jr z, .normal
+    ResetEvent EVENT_GUARANTEED_FULL_RESTORE
+    ld hl, AndrewHealText
+    call PrintText
+.normal
 	call AICureStatus
 	ld a, FULL_RESTORE
 	ld [wAIItem], a
@@ -942,22 +952,22 @@ AIUseFullRestore:
 	ld [wEnemyMonHP], a
 	jr AIPrintItemUseAndUpdateHPBar
 
-AIUsePotion:
+;AIUsePotion:
 ; enemy trainer heals his monster with a potion
-	ld a, POTION
-	ld b, 20
-	jr AIRecoverHP
+;	ld a, POTION
+;	ld b, 20
+;	jr AIRecoverHP
 
-AIUseSuperPotion:
+;AIUseSuperPotion:
 ; enemy trainer heals his monster with a super potion
-	ld a, SUPER_POTION
-	ld b, 50
-	jr AIRecoverHP
+;	ld a, SUPER_POTION
+;	ld b, 50
+;	jr AIRecoverHP
 
-AIUseHyperPotion:
+;AIUseHyperPotion:
 ; enemy trainer heals his monster with a hyper potion
-	ld a, HYPER_POTION
-	ld b, 200
+;	ld a, HYPER_POTION
+;	ld b, 200
 	; fallthrough
 
 AIRecoverHP:
@@ -1085,6 +1095,7 @@ AIUseFullHeal:
 
 AICureStatus:
 ; cures the status of enemy's active pokemon
+	call UndoBurnParStats
 	ld a, [wEnemyMonPartyPos]
 	ld hl, wEnemyMon1Status
 	ld bc, wEnemyMon2 - wEnemyMon1
@@ -1134,6 +1145,10 @@ AIPrintItemUse_:
 	call GetItemName
 	ld hl, AIBattleUseItemText
 	jp PrintText
+
+AndrewHealText:
+    text_far _AndrewHealText
+    text_end
 
 AIBattleUseItemText:
 	text_far _AIBattleUseItemText

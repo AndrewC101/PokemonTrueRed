@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/slowbro.pic", 0, 1 ; sprite dimensions
 	dw SlowbroPicFront, SlowbroPicBack
 
-	db REST, PSYCHIC_M, THUNDER_WAVE, AMNESIA ; level 1 learnset
+	db PSYCHIC_M, REST, THUNDER_WAVE, AMNESIA ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

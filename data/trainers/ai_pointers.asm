@@ -1,6 +1,6 @@
 TrainerAIPointers:
 	table_width 3, TrainerAIPointers
-	; AndrewNote - all trainers have GenericAI except boss enemies who have SwitchAI
+	; AndrewNote - all trainers have GenericAI except boss enemies who have SwitchAndUseItemsAI
 	; one entry per trainer class
 	; first byte, number of times (per Pokémon) it can occur
 	; next two bytes, pointer to AI subroutine for trainer class
@@ -9,47 +9,47 @@ TrainerAIPointers:
 	dbw 3, GenericAI
 	dbw 3, GenericAI
 	dbw 3, GenericAI
-	dbw 3, SwitchAI ; jr trainer male
+	dbw 3, SwitchAndUseItemsAI ; jr trainer male
 	dbw 3, GenericAI
-	dbw 3, SwitchAI ; pokemaniac
-	dbw 3, GenericAI
-	dbw 3, GenericAI
+	dbw 3, SwitchAndUseItemsAI ; pokemaniac
 	dbw 3, GenericAI
 	dbw 3, GenericAI
-	dbw 3, SwitchAI ; engineer
+	dbw 3, GenericAI
+	dbw 3, GenericAI
+	dbw 3, SwitchAndUseItemsAI ; engineer
 	dbw 3, GenericAI ; unused_juggler
-	dbw 3, SwitchAI ; fisher
+	dbw 3, SwitchAndUseItemsAI ; fisher
 	dbw 3, GenericAI
 	dbw 3, GenericAI
 	dbw 3, GenericAI
 	dbw 3, GenericAI
 	dbw 3, GenericAI
-	dbw 3, SwitchAI ; rocker
-	dbw 3, SwitchAI ; juggler
+	dbw 3, SwitchAndUseItemsAI ; rocker
+	dbw 3, SwitchAndUseItemsAI ; juggler
 	dbw 3, GenericAI
 	dbw 3, GenericAI
-	dbw 2, SwitchAI ; blackbelt
-	dbw 3, SwitchAI ; rival1
-	dbw 3, SwitchAI ; oak
+	dbw 2, SwitchAndUseItemsAI ; blackbelt
+	dbw 3, SwitchAndUseItemsAI ; rival1
+	dbw 3, SwitchAndUseItemsAI ; oak
 	dbw 1, GenericAI ; chief
 	dbw 3, GenericAI ; scientist
-	dbw 1, SwitchAI ; giovanni
+	dbw 1, SwitchAndUseItemsAI ; giovanni
 	dbw 3, GenericAI
-	dbw 2, SwitchAI ; cooltrainerm
-	dbw 1, SwitchAI ; cooltrainerf
-	dbw 2, SwitchAI ; bruno
-	dbw 5, SwitchAI ; brock
-	dbw 1, SwitchAI ; misty
-	dbw 1, SwitchAI ; surge
-	dbw 1, SwitchAI ; erika
-	dbw 2, SwitchAI ; koga
-	dbw 2, SwitchAI ; blaine
-	dbw 1, SwitchAI ; sabrina
+	dbw 2, SwitchAndUseItemsAI ; cooltrainerm
+	dbw 1, SwitchAndUseItemsAI ; cooltrainerf
+	dbw 2, SwitchAndUseItemsAI ; bruno
+	dbw 5, SwitchAndUseItemsAI ; brock
+	dbw 1, SwitchAndUseItemsAI ; misty
+	dbw 1, SwitchAndUseItemsAI ; surge
+	dbw 1, SwitchAndUseItemsAI ; erika
+	dbw 2, SwitchAndUseItemsAI ; koga
+	dbw 2, SwitchAndUseItemsAI ; blaine
+	dbw 1, SwitchAndUseItemsAI ; sabrina
 	dbw 3, GenericAI
-	dbw 1, SwitchAI ; rival2
-	dbw 1, SwitchAI ; rival3
-	dbw 2, SwitchAI ; lorelei
+	dbw 1, SwitchAndUseItemsAI ; rival2
+	dbw 1, SwitchAndUseItemsAI ; rival3
+	dbw 2, SwitchAndUseItemsAI ; lorelei
 	dbw 3, GenericAI
-	dbw 2, SwitchAI ; agatha
-	dbw 1, SwitchAI ; lance
+	dbw 2, SwitchAndUseItemsAI ; agatha
+	dbw 1, SwitchAndUseItemsAI ; lance
 	assert_table_length NUM_TRAINERS

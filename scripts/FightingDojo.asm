@@ -98,6 +98,7 @@ FightingDojo_TextPointers:
 	dw FightingDojoText9
 	dw FightingDojoText10
 	dw FightingDojoText11
+	dw FightingDojoText12
 
 FightingDojoTrainerHeaders:
 	def_trainers 2
@@ -116,6 +117,8 @@ FightingDojoTrainerHeader5:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_5, 0, FightingDojoBattleText6, FightingDojoEndBattleText6, FightingDojoAfterBattleText6
 FightingDojoTrainerHeader6:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_6, 0, FightingDojoBattleText7, FightingDojoEndBattleText7, FightingDojoAfterBattleText7
+FightingDojoTrainerHeader7:
+	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_7, 0, FightingDojoBattleText8, FightingDojoEndBattleText8, FightingDojoAfterBattleText8
 	db -1 ; end
 
 FightingDojoText1:
@@ -302,6 +305,22 @@ FightingDojoAfterBattleText7:
 	text_far _FightingDojoAfterBattleText7
 	text_end
 
+FightingDojoBeforeBattleText8:
+	text_far _FightingDojoBattleText8
+	text_end
+
+FightingDojoBattleText8:
+	text_far _FightingDojoBattleText8
+	text_end
+
+FightingDojoEndBattleText8:
+	text_far _FightingDojoEndBattleText8
+	text_end
+
+FightingDojoAfterBattleText8:
+	text_far _FightingDojoAfterBattleText8
+	text_end
+
 FightingDojoText6:
 ; Hitmonlee Poké Ball
 	text_asm
@@ -397,13 +416,35 @@ FightingDojoText11:
 	; AndrewNote - set boss battle events
 	SetEvent EVENT_MAX_STAT_EXP
 	SetEvent EVENT_MAX_BONUS_MONEY
-	SetEvent EVENT_ANDREW
-	SetEvent EVENT_ANDREW_TURN_1
+	SetEvent EVENT_USE_FULL_RESTORES
+	SetEvent EVENT_FIRST_TURN_GUARD_SPEC
+	SetEvent EVENT_GUARANTEED_FULL_RESTORE
+	SetEvent EVENT_HIGH_LVL_ENEMY
 	ld hl, FightingDojoTrainerHeader6
 	call TalkToTrainer
 	jp TextScriptEnd
 .oakNotBeaten
     ld hl, FightingDojoBeforeBattleText7
+    call PrintText
+    jp TextScriptEnd
+
+FightingDojoText12:
+    text_asm
+	CheckEvent EVENT_BEAT_KARATE_MASTER
+	jr z, .oakNotBeaten  ; AndrewNote - James will only battle after beating Master OAK
+	; AndrewNote - set boss battle events
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_MAX_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_USE_FULL_HEALS
+	SetEvent EVENT_USE_FULL_RESTORES
+	SetEvent EVENT_HIGH_LVL_ENEMY
+	ld hl, FightingDojoTrainerHeader7
+	call TalkToTrainer
+	jp TextScriptEnd
+.oakNotBeaten
+    ld hl, FightingDojoBeforeBattleText8
     call PrintText
     jp TextScriptEnd
 

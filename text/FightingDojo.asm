@@ -441,8 +441,12 @@ _FightingDojoBattleText7::
 	line "hardest fight"
 	cont "in the world!"
 
-	para "As the creator"
-	line "of this world"
+	para "I am ANDREW"
+	line "the creator of"
+	cont "this world."
+
+	para "You have really"
+	line "enjoyed my work"
 	cont "I am very happy!"
 
 	para "So now you"
@@ -457,9 +461,13 @@ _FightingDojoBattleText7::
 	para "Use everything"
 	line "you have got!"
 
-	para "Even Items!"
+	para "Use all your"
+	line "cheap strategies"
 
-	para "Do your best."
+	para "Use all the"
+	line "best items!"
+
+	para "Have fun!"
 	done
 
 _FightingDojoEndBattleText7::
@@ -483,6 +491,60 @@ _FightingDojoAfterBattleText7::
 	cont "this imaginary"
 	cont "place."
 	done
+
+_FightingDojoBeforeBattleText8::
+    para "You think you"
+    line "are strong!"
+
+    para "I am JAMES!"
+
+    para "My brother made"
+    line "this world for"
+    cont "me! This is my"
+    cont "world!"
+
+    para "Come see me if"
+    line "you beat OAK."
+    done
+
+_FightingDojoBattleText8::
+    text "Not bad lad!"
+
+    para "I am JAMES!"
+
+    para "My brother made"
+    line "this world for"
+    cont "me! This is my"
+    cont "world!"
+
+    para "This world is"
+    line "build on rules"
+
+    para "Some can be bent"
+    line "others can be"
+    cont "broken."
+
+    para "I am The One!"
+
+    para "You will never"
+    line "beat me!"
+    done
+
+_FightingDojoEndBattleText8::
+    text "I"
+    line "wasn't even"
+    cont "trying!"
+    prompt
+
+_FightingDojoAfterBattleText8::
+    text "You are alright."
+
+    para "My brother is"
+    line "your God. And"
+    cont "I am better than"
+    cont "him. So you are"
+    cont "nothing to me."
+    done
 
 _WantHitmonleeText::
 	text "You seek the"

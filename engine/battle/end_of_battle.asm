@@ -31,7 +31,9 @@ EndOfBattle:
     ResetEvent EVENT_NO_ITEMS
 	ResetEvent EVENT_REMATCH
 	ResetEvent EVENT_STOP_SWITCHING
-	ResetEvent EVENT_ANDREW
+	ResetEvent EVENT_USE_FULL_RESTORES
+	ResetEvent EVENT_USE_FULL_HEALS
+	ResetEvent EVENT_HIGH_LVL_ENEMY
 
 	CheckEvent EVENT_RESET_MEWTWO_ENCOUNTER
 	jr z, .continue
