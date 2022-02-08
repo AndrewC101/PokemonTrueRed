@@ -121,6 +121,8 @@ BrockText:
     SetEvent EVENT_REMATCH
     jr .beforeBeat
 .beforeBeat
+    SetEvent EVENT_NO_ITEMS
+    SetEvent EVENT_NO_SHIFT
 	ld hl, BrockPreBattleText
 	call PrintText
 	ld hl, wd72d

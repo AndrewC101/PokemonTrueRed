@@ -128,6 +128,8 @@ AgathasRoomTrainerHeader0:
 
 AgathaText1:
 	text_asm
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BONUS_MONEY ; AndrewNote - give bonus money
 	ld hl, AgathasRoomTrainerHeader0
 	call TalkToTrainer

@@ -904,7 +904,7 @@ DoduoEvosMoves:
 
 PoliwagEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 25, POLIWHIRL
+	db EV_LEVEL, 22, POLIWHIRL
 	db 0
 ; Learnset
 	db 12, WATER_GUN
@@ -960,7 +960,7 @@ DittoEvosMoves:
 
 MeowthEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 27, PERSIAN
+	db EV_LEVEL, 25, PERSIAN
 	db 0
 ; Learnset
 	db 12, BITE
@@ -1025,7 +1025,7 @@ PikachuEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 30, THUNDERBOLT
+	db 27, THUNDERBOLT
 	db 35, DIG
 	db 40, SURF
 	db 50, HYPER_BEAM
@@ -1565,8 +1565,6 @@ PersianEvosMoves:
 	db 0
 ; Learnset
 	db 30, SLASH
-	db 32, BUBBLEBEAM
-	db 35, THUNDERBOLT
 	db 0
 
 MarowakEvosMoves:
@@ -1974,7 +1972,7 @@ VileplumeEvosMoves:
 
 BellsproutEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 21, WEEPINBELL
+	db EV_LEVEL, 22, WEEPINBELL
 	db 0
 ; Learnset
 	db 11, WRAP

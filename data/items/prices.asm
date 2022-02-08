@@ -1,6 +1,6 @@
 ItemPrices::
 	table_width 3, ItemPrices
-	bcd3 20000     ; MASTER_BALL
+	bcd3 0     ; MASTER_BALL
 	bcd3 1200  ; ULTRA_BALL
 	bcd3 600   ; GREAT_BALL
 	bcd3 200   ; POKE_BALL
@@ -39,7 +39,7 @@ ItemPrices::
 	bcd3 7000  ; IRON
 	bcd3 7000  ; CARBOS
 	bcd3 7000  ; CALCIUM
-	bcd3 7000  ; RARE_CANDY
+	bcd3 0  ; RARE_CANDY
 	bcd3 0     ; DOME_FOSSIL
 	bcd3 0     ; HELIX_FOSSIL
 	bcd3 0     ; SECRET_KEY

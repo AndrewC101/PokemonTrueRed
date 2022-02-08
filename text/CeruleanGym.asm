@@ -140,3 +140,105 @@ _CeruleanGymGuidePostBattleText::
 	line "we make a pretty"
 	cont "darn good team!"
 	done
+
+_SSAnneBrockRematchAfterBattleText::
+    text "If it starts"
+    line "to rain I have"
+    cont "my trusty"
+    cont "frying pan!"
+    done
+
+_SSAnneMistyRematchAfterBattleText::
+    text "I dreamt I"
+    line "followed a kid"
+    cont "for years"
+    cont "because he"
+    cont "broke my bike.."
+    done
+
+_SSAnneSurgeRematchAfterBattleText::
+    text "Kids these days"
+    line "need confidence"
+    cont "in themselves."
+
+    para "I want to help"
+    line "them be as"
+    cont "strong as they"
+    cont "can be."
+    done
+
+_SSAnneErikaRematchAfterBattleText::
+    text "This world seems"
+    line "eternal but it"
+    cont "is not."
+
+    para "It is finite"
+    line "and it is in"
+    cont "pain."
+
+    para "We must protect"
+    line "it."
+    done
+
+_SSAnneKogaRematchAfterBattleText::
+    text "Revenge will"
+    line "occupy every"
+    cont "corner of your"
+    cont "mind and soul."
+
+    para "It is sickness"
+    line "and only you"
+    cont "can cure it."
+    done
+
+_SSAnneSabrinaRematchAfterBattleText::
+    text "Master OAK"
+    line "brought us"
+    cont "here."
+
+    para "He is not"
+    line "Prof OAK."
+
+    para "His mind is an"
+    line "infinite black"
+    cont "hole."
+
+    para "His #MON"
+    line "terrify me."
+    done
+
+_SSAnneBlaineRematchAfterBattleText::
+    text "Mt Silver is"
+    line "in JOHTO."
+
+    para "Maybe you will"
+    line "go there"
+    cont "someday."
+    done
+
+_SSAnneLoreleiRematchAfterBattleText::
+    text "We Humans are"
+    line "a dangerous"
+    cont "species."
+
+    para "#MON need"
+    line "us and we need"
+    cont "them."
+
+    para "I can tell"
+    line "that you"
+    cont "understand."
+    done
+
+_SSAnneBrunoRematchAfterBattleText::
+    text "You are strong"
+
+    para "Hold onto that"
+    line "strength and"
+    cont "never stop"
+    cont "getting stronger"
+
+    para "In the end"
+    line "your strength is"
+    cont "all you have."
+    done

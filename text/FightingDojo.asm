@@ -352,7 +352,7 @@ _FightingDojoAfterBattleText4::
 
 _FightingDojoBattleText5::
 	text "The Merge has"
-	line "full and"
+	line "fully and"
 	cont "PERFECTLY"
 	cont "completed!"
 
@@ -474,6 +474,10 @@ _FightingDojoEndBattleText7::
 	text "You"
 	line "are a #MON"
 	cont "Master!"
+    cont "Here have some"
+    cont "MASTERBALLS"
+    cont "if you have"
+    cont "room."
 	prompt
 
 _FightingDojoAfterBattleText7::
@@ -534,6 +538,10 @@ _FightingDojoEndBattleText8::
     text "I"
     line "wasn't even"
     cont "trying!"
+    cont "Here have some"
+    cont "RARE CANDIES"
+    cont "if you have"
+    cont "room."
     prompt
 
 _FightingDojoAfterBattleText8::

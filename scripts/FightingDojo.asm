@@ -103,18 +103,18 @@ FightingDojo_TextPointers:
 FightingDojoTrainerHeaders:
 	def_trainers 2
 FightingDojoTrainerHeader0:
-	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_0, 0, FightingDojoBattleText1, FightingDojoEndBattleText1, FightingDojoAfterBattleText1
+	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_0, 2, FightingDojoBattleText1, FightingDojoEndBattleText1, FightingDojoAfterBattleText1
 FightingDojoTrainerHeader1:
-	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_1, 0, FightingDojoBattleText2, FightingDojoEndBattleText2, FightingDojoAfterBattleText2
+	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_1, 2, FightingDojoBattleText2, FightingDojoEndBattleText2, FightingDojoAfterBattleText2
 FightingDojoTrainerHeader2:
-	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_2, 0, FightingDojoBattleText3, FightingDojoEndBattleText3, FightingDojoAfterBattleText3
+	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_2, 2, FightingDojoBattleText6, FightingDojoEndBattleText6, FightingDojoAfterBattleText6
 FightingDojoTrainerHeader3:
-	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_3, 0, FightingDojoBattleText4, FightingDojoEndBattleText4, FightingDojoAfterBattleText4
+	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_3, 2, FightingDojoBattleText4, FightingDojoEndBattleText4, FightingDojoAfterBattleText4
 ; AndrewNote - add new trainers
 FightingDojoTrainerHeader4:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_4, 0, FightingDojoBattleText5, FightingDojoEndBattleText5, FightingDojoAfterBattleText5
 FightingDojoTrainerHeader5:
-	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_5, 0, FightingDojoBattleText6, FightingDojoEndBattleText6, FightingDojoAfterBattleText6
+	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_5, 2, FightingDojoBattleText3, FightingDojoEndBattleText3, FightingDojoAfterBattleText3
 FightingDojoTrainerHeader6:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_6, 0, FightingDojoBattleText7, FightingDojoEndBattleText7, FightingDojoAfterBattleText7
 FightingDojoTrainerHeader7:
@@ -189,6 +189,8 @@ FightingDojoText_5ce9d:
 
 FightingDojoText2:
 	text_asm
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
 	SetEvent EVENT_RESET_MEWTWO_ENCOUNTER ; AndrewNote - respawn Mewtwo on victory
 	predef HealParty ; AndrewNote - heal party to prevent pre status cheesing "cleric clause"
@@ -210,6 +212,8 @@ FightingDojoAfterBattleText1:
 
 FightingDojoText3:
 	text_asm
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, FightingDojoTrainerHeader1
 	call TalkToTrainer
@@ -229,6 +233,8 @@ FightingDojoAfterBattleText2:
 
 FightingDojoText4:
 	text_asm
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, FightingDojoTrainerHeader2
 	call TalkToTrainer
@@ -248,6 +254,8 @@ FightingDojoAfterBattleText3:
 
 FightingDojoText5:
 	text_asm
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, FightingDojoTrainerHeader3
 	call TalkToTrainer
@@ -290,7 +298,7 @@ FightingDojoAfterBattleText6:
 	text_end
 
 FightingDojoBeforeBattleText7:
-	text_far _FightingDojoBattleText7
+	text_far _FightingDojoBeforeBattleText7
 	text_end
 
 FightingDojoBattleText7:
@@ -306,7 +314,7 @@ FightingDojoAfterBattleText7:
 	text_end
 
 FightingDojoBeforeBattleText8:
-	text_far _FightingDojoBattleText8
+	text_far _FightingDojoBeforeBattleText8
 	text_end
 
 FightingDojoBattleText8:
@@ -420,6 +428,7 @@ FightingDojoText11:
 	SetEvent EVENT_FIRST_TURN_GUARD_SPEC
 	SetEvent EVENT_GUARANTEED_FULL_RESTORE
 	SetEvent EVENT_HIGH_LVL_ENEMY
+	SetEvent EVENT_SUPPRESS_AMNESIA
 	ld hl, FightingDojoTrainerHeader6
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -432,6 +441,7 @@ FightingDojoText12:
     text_asm
 	CheckEvent EVENT_BEAT_KARATE_MASTER
 	jr z, .oakNotBeaten  ; AndrewNote - James will only battle after beating Master OAK
+	predef HealParty
 	; AndrewNote - set boss battle events
 	SetEvent EVENT_MAX_STAT_EXP
 	SetEvent EVENT_MAX_BONUS_MONEY

@@ -235,6 +235,8 @@ BlaineText:
     SetEvent EVENT_REMATCH
     jr .beforeBeat
 .beforeBeat
+    SetEvent EVENT_NO_ITEMS
+    SetEvent EVENT_NO_SHIFT
 	ld hl, BlainePreBattleText
 	call PrintText
 	ld hl, ReceivedVolcanoBadgeText

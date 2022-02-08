@@ -818,8 +818,8 @@ FaintEnemyPokemon:
 	call PrintEmptyString
 	call SaveScreenTilesToBuffer1
 	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	; AndrewNote - reduce exp on rematches to 3/8 pre E4
-	; if a rematch then reduce exp to 3/8th if E4 not beaten
+	; AndrewNote - reduce exp on rematches to 1/2 pre E4
+	; if a rematch then reduce exp to 1/2 if E4 not beaten
 	CheckEvent EVENT_BEAT_ELITE_4
 	jr nz, .noRematch ; AndrewNote - do not reduce rematch exp after beating E4
 	CheckEvent EVENT_REMATCH
@@ -827,7 +827,7 @@ FaintEnemyPokemon:
     ld hl, wEnemyMonBaseStats
     ld b, $7
 .lowerExpDataLoop
-    srl [hl]
+    srl [hl] ; just use this for 1/2 exp
     ;srl [hl]
     ;srl [hl]
     ;ld a, [hl] ; a is 1/8 exp
@@ -1193,6 +1193,7 @@ HandlePlayerBlackOut:
     ResetEvent EVENT_USE_FULL_RESTORES
     ResetEvent EVENT_USE_FULL_HEALS
     ResetEvent EVENT_HIGH_LVL_ENEMY
+    ResetEvent EVENT_SUPPRESS_AMNESIA
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
 	ld hl, PlayerBlackedOutText2
@@ -1460,6 +1461,7 @@ EnemySendOutFirstMon:
 	jp z, .next4
 
 	; AndrewNote - shift disabled during boss fights
+	; recurring or special bosses
     ld a, [wCurOpponent]
 	cp OPP_PROF_OAK
     jp z, .next4
@@ -1467,29 +1469,7 @@ EnemySendOutFirstMon:
     jp z, .next4
     cp OPP_RIVAL2
     jp z, .next4
-    cp OPP_LANCE
-    jp z, .next4
-    cp OPP_AGATHA
-    jp z, .next4
-    cp OPP_BRUNO
-    jp z, .next4
-    cp OPP_LORELEI
-    jp z, .next4
     cp OPP_GIOVANNI
-    jp z, .next4
-    cp OPP_BLAINE
-    jp z, .next4
-    cp OPP_SABRINA
-    jp z, .next4
-    cp OPP_KOGA
-    jp z, .next4
-    cp OPP_ERIKA
-    jp z, .next4
-    cp OPP_LT_SURGE
-    jp z, .next4
-    cp OPP_MISTY
-    jp z, .next4
-    cp OPP_BROCK
     jp z, .next4
 
     CheckEvent EVENT_NO_SHIFT
@@ -1703,6 +1683,7 @@ TryRunningFromBattle:
 	jr .printCantEscapeOrNoRunningText
 .trainerBattle
 	ld hl, NoRunningText
+	jr .printCantEscapeOrNoRunningText
 .mewtwoBlock
     ld hl, DefyMeText
 .printCantEscapeOrNoRunningText
@@ -2307,6 +2288,7 @@ DisplayBattleMenu::
     jr z, .noItems
 
 ; AndrewNote - disable items in boss fights
+    ; reoccurring or special bosses
 	ld a, [wCurOpponent]
 	cp OPP_PROF_OAK
     jr z, .noItems
@@ -2314,29 +2296,7 @@ DisplayBattleMenu::
     jr z, .noItems
     cp OPP_RIVAL2
     jr z, .noItems
-    cp OPP_LANCE
-    jr z, .noItems
-    cp OPP_AGATHA
-    jr z, .noItems
-    cp OPP_BRUNO
-    jr z, .noItems
-    cp OPP_LORELEI
-    jr z, .noItems
     cp OPP_GIOVANNI
-    jr z, .noItems
-    cp OPP_BLAINE
-    jr z, .noItems
-    cp OPP_SABRINA
-    jr z, .noItems
-    cp OPP_KOGA
-    jr z, .noItems
-    cp OPP_ERIKA
-    jr z, .noItems
-    cp OPP_LT_SURGE
-    jr z, .noItems
-    cp OPP_MISTY
-    jr z, .noItems
-    cp OPP_BROCK
     jr z, .noItems
 
     CheckEvent EVENT_NO_ITEMS
@@ -2349,6 +2309,12 @@ DisplayBattleMenu::
     jr nz, BagWasSelected
 
 .noItems
+    ; items not disabled if current mon level > 100, for fun
+    ld a, [wBattleMonLevel]
+    cp $65
+    jr nc, BagWasSelected
+
+    ; use different text if enemy can use frequent items
     CheckEvent EVENT_USE_FULL_HEALS
     jr z, .notJames
     ld hl, JamesItemsCantBeUsedHereText
@@ -5564,7 +5530,7 @@ AIGetTypeEffectiveness:
 	cp c                      ; or match with type 2 of pokemon
 	jr z, .AImatchingPairFound
 	jr .nextTypePair2
-; AndrewNote - copied from shinpokered - fiz SE calculation
+; AndrewNote - copied from shinpokered - fix Stat Exp calculation
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 .AImatchingPairFound
 	ld a, [hl]	;get damage multiplier
@@ -5699,7 +5665,7 @@ MoveHitTest:
 ; note that this means that even the highest accuracy is still just a 255/256 chance, not 100%
 	call BattleRandom
 	cp b
-	jr z, .moveHits ; AndrewNote - this fixes the 1/256 glitch
+	jr z, .moveHits ; AndrewNote - this fixes the 1/256 glitch - such a simple fix for such an iconic bug (feature)
 	jr nc, .moveMissed
 .moveHits
 	ret

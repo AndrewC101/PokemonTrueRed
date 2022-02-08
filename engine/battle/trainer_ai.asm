@@ -274,9 +274,7 @@ AIMoveChoiceModification2:
     jp .nextMove
 
 .encouragePara
-    dec [hl]
-    dec [hl] ; slightly encourage moves that inflict para
-	jp .nextMove
+    jp .stronglyEncourageMove ; strongly encourage if slower than opponent
 .handleHealing
     ld a, 2
 	push hl
@@ -307,7 +305,7 @@ AIMoveChoiceModification2:
     jp .stronglyEncourageMove ; strongly encourage swords dance if not at + 2
     jp .nextMove
 .handleSpecialBoost
-    CheckEvent EVENT_FIRST_TURN_GUARD_SPEC ; for enemies over lvl 100, mostly just lvl 255 mewtwo
+    CheckEvent EVENT_SUPPRESS_AMNESIA ; for enemies over lvl 100, mostly just lvl 255 mewtwo
     jr z, .normalLvlSpecialBoost
     ld a, [wEnemyMonSpecialMod]
     cp 7
