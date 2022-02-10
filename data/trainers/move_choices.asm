@@ -12,7 +12,7 @@ TrainerClassMoveChoiceModifications:
 	list_start TrainerClassMoveChoiceModifications
 	move_choices         ; YOUNGSTER
 	move_choices 1, 2, 3    ; BUG CATCHER
-	move_choices 1, 2, 3, 4 ; LASS
+	move_choices 1, 2, 3 ; LASS
 	move_choices 1, 2, 3 ; SAILOR
 	move_choices 1, 2, 3 ; JR_TRAINER_M
 	move_choices 1, 2, 3 ; JR_TRAINER_F
@@ -30,7 +30,7 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; BEAUTY
 	move_choices 1, 2, 3 ; PSYCHIC_TR
 	move_choices 1, 2, 3 ; ROCKER
-	move_choices 1, 2, 3, 4  ; JUGGLER
+	move_choices 1, 2, 3 ; JUGGLER
 	move_choices 1, 2    ; TAMER
 	move_choices 1, 2    ; BIRD_KEEPER
 	move_choices 1, 2, 3    ; BLACKBELT
@@ -44,16 +44,16 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; COOLTRAINER_F
 	move_choices 1, 2, 3 ; BRUNO
 	move_choices 1, 2, 3 ; BROCK
-	move_choices 1, 2, 3, 4 ; MISTY
+	move_choices 1, 2, 3 ; MISTY
 	move_choices 1, 2, 3 ; LT_SURGE
 	move_choices 1, 2, 3 ; ERIKA
 	move_choices 1, 2, 3 ; KOGA
 	move_choices 1, 2, 3 ; BLAINE
-	move_choices 1, 2, 3, 4 ; SABRINA
+	move_choices 1, 2, 3 ; SABRINA
 	move_choices 1, 2, 3 ; GENTLEMAN
 	move_choices 1, 2, 3 ; RIVAL2
 	move_choices 1, 2, 3, 4 ; RIVAL3
-	move_choices 1, 2, 3, 4 ; LORELEI
+	move_choices 1, 2, 3 ; LORELEI
 	move_choices 1, 2, 3 ; CHANNELER
 	move_choices 1, 2, 3, 4 ; AGATHA
 	move_choices 1, 2, 3 ; LANCE

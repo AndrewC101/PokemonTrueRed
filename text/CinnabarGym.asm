@@ -127,14 +127,18 @@ _CinnabarGymAfterBattleText3::
 	line "showers us"
 	cont "with 128 more"
 	cont "of our 6th item."
+
+	para "Or it used to."
+
+	para "Now it doesn't"
+	line "we have angered"
+	cont "it."
 	done
 
 _CinnabarGymBattleText4::
-	text "This is folly!"
-
-	para "Don't bring"
-	line "about the end"
-	cont "of days!"
+	text "MISSINGNO"
+	line "hates the"
+	cont "prideful."
 	done
 
 _CinnabarGymEndBattleText4::
@@ -143,15 +147,15 @@ _CinnabarGymEndBattleText4::
 	prompt
 
 _CinnabarGymAfterBattleText4::
-	text "These fools"
-	line "don't understand"
+	text "MISSINGNO"
+	line "hates the"
+	cont "prideful."
 
-	para "Trying to"
-	line "summon"
-	cont "MISSINGNO!"
+	para "It used to"
+	line "destroy the"
+	cont "Hall of Fame."
 
-	para "Will end the"
-	line "world!!"
+	para "But no more."
 	done
 
 _CinnabarGymBattleText5::
@@ -196,8 +200,9 @@ _CinnabarGymAfterBattleText6::
 	done
 
 _CinnabarGymBattleText7::
-	text "Don't listen"
-	line "to these fools!"
+	text "MISSINGO"
+
+	para "Will be mine!"
 	done
 
 _CinnabarGymEndBattleText7::
@@ -205,16 +210,13 @@ _CinnabarGymEndBattleText7::
 	prompt
 
 _CinnabarGymAfterBattleText7::
-	text "Do not try"
-	line "to summon"
-	cont "MISSINGNO!"
+	text "Can MISSINGNO"
+	line "be caught?"
 
-	para "This world is"
-	line "different!"
-
-	para "The world will"
-	line "end if you try"
-	cont "to summon him!"
+	para "Folly shall"
+	line "befall any"
+	cont "arrogant enough"
+	cont "to try."
 	done
 
 _CinnabarGymGuidePreBattleText::

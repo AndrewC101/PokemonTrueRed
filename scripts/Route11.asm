@@ -46,7 +46,7 @@ Route11TrainerHeader7:
 Route11TrainerHeader8:
 	trainer EVENT_BEAT_ROUTE_11_TRAINER_8, 3, Route11BattleText9, Route11EndBattleText9, Route11AfterBattleText9
 Route11TrainerHeader9:
-	trainer EVENT_BEAT_ROUTE_11_TRAINER_9, 4, Route11BattleText10, Route11EndBattleText10, Route11AfterBattleText10
+	trainer EVENT_BEAT_ROUTE_11_TRAINER_9, 0, Route11BattleText10, Route11EndBattleText10, Route11AfterBattleText10
 	db -1 ; end
 
 Route11Text1:

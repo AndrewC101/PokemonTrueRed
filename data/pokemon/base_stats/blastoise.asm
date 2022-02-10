@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/blastoise.pic", 0, 1 ; sprite dimensions
 	dw BlastoisePicFront, BlastoisePicBack
 
-	db SURF, ICE_BEAM, EARTHQUAKE, BODY_SLAM ; level 1 learnset
+	db SURF, ICE_BEAM, BODY_SLAM, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

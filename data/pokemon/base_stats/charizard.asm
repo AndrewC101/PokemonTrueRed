@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/charizard.pic", 0, 1 ; sprite dimensions
 	dw CharizardPicFront, CharizardPicBack
 
-	db FLAMETHROWER, SLASH, EARTHQUAKE, FLY ; level 1 learnset
+	db FLAMETHROWER, SLASH, FLY, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

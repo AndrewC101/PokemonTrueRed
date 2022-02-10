@@ -25,7 +25,7 @@ Moves:
 	move VICEGRIP,     NO_ADDITIONAL_EFFECT,        55, NORMAL,       100, 30
 	; AndrewNote - guillotine is now Pika Thunder
 	move GUILLOTINE,   NO_ADDITIONAL_EFFECT,       250, ELECTRIC,     100,  10
-	move RAZOR_WIND,   CHARGE_EFFECT,               80, NORMAL,        75, 10
+	move RAZOR_WIND,   NO_ADDITIONAL_EFFECT,        60, FLYING,       100, 10
 	move SWORDS_DANCE, ATTACK_UP2_EFFECT,            0, NORMAL,       100, 30
 	move CUT,          NO_ADDITIONAL_EFFECT,        50, NORMAL,        95, 30
 	; AndrewNote - make gust flying type

@@ -230,6 +230,8 @@ AIMoveChoiceModification2:
 	jp z, .handleSplash
 	cp DISABLE_EFFECT
 	jp z, .handleDisable
+	cp CHARGE_EFFECT
+	jp z, .handleDig
 	jp .nextMove
 .handleBasicStatMoves
 ; first don't use moves against a sub
@@ -452,6 +454,11 @@ AIMoveChoiceModification2:
     ld a, [wPlayerDisabledMove]
 	and a
 	jr nz, .discourageMove
+.handleDig
+    ld a, [wPlayerMoveNum]
+    cp DIG
+    jp z, .discourageMove
+    jp .nextMove
 .discourageMove
 	ld a, [hl]
     add $10 ; strongly discourage move
@@ -632,20 +639,22 @@ AIMoveChoiceModification4:
 	inc de
 	call ReadMove
 
-	CheckEvent EVENT_USE_FULL_RESTORES ; Andrew uses REST at 50%
-	jr z, .notAndrew
+	; if not a healing move just return
     ld a, [wEnemyMoveEffect] ; read move effect
 	cp HEAL_EFFECT
-	jr z, .handleHealing
+	jp nz, .nextMove
 
-.notAndrew
-    ld a, [wPlayerMoveNum]
-    cp RECOVER
-    jr z, .handleHealing
-    cp SOFTBOILED
-    jr z, .handleHealing
-	jr .nextMove
-.handleHealing
+	; if fighting Andrew don't check for rest
+    CheckEvent EVENT_SUPPRESS_AMNESIA ; Andrew uses REST at 50%
+    jr nz, .skipRestCheck
+
+	; if REST return, don't want rest prioritized at 50%
+    ld a, [wEnemyMoveNum]
+    cp REST
+    jp z, .nextMove
+
+.skipRestCheck
+    ; encourage move if below 50%
     ld a, 2
 	push hl
     push bc
@@ -1093,16 +1102,24 @@ AIUseFullHeal:
 
 AICureStatus:
 ; cures the status of enemy's active pokemon
-	call UndoBurnParStats
 	ld a, [wEnemyMonPartyPos]
 	ld hl, wEnemyMon1Status
 	ld bc, wEnemyMon2 - wEnemyMon1
 	call AddNTimes
 	xor a
 	ld [hl], a ; clear status in enemy team roster
-	ld [wEnemyMonStatus], a ; clear status of active enemy
+	ld a, [hWhoseTurn]
+	push af
+	ld a, $01 	;forcibly set it to the AI's turn
+	ld [hWhoseTurn], a
+	call UndoBurnParStats	;undo brn/par stat changes
+	pop af
+	ld [hWhoseTurn], a
+	xor a
+	ld [wEnemyMonStatus], a ; clear status in active enemy data
+	ld [wEnemyToxicCounter], a	;clear toxic counter
 	ld hl, wEnemyBattleStatus3
-	res 0, [hl]
+	res BADLY_POISONED, [hl]	;clear toxic bit
 	ret
 
 AICheckIfHPBelowFraction:

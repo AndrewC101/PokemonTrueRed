@@ -74,6 +74,17 @@ TryDoWildEncounter:
 	ld b, 0
 	add hl, bc
 	ld a, [hli]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; AndrewNote - wild pokes with level >100 or <2 are set to level 5
+	cp $65
+	jr nc, .setTo5
+	cp $2
+	jr c, .setTo5
+	jr .continue
+.setTo5
+	ld a, $5
+.continue
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	ld [wCurEnemyLVL], a
 	ld a, [hl]
 	ld [wcf91], a

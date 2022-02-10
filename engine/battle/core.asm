@@ -2309,10 +2309,10 @@ DisplayBattleMenu::
     jr nz, BagWasSelected
 
 .noItems
-    ; items not disabled if current mon level > 100, for fun
+    ; level 255 poke ignores item restrictions, for debug purposes
     ld a, [wBattleMonLevel]
-    cp $65
-    jr nc, BagWasSelected
+    cp $FF
+    jr z, BagWasSelected
 
     ; use different text if enemy can use frequent items
     CheckEvent EVENT_USE_FULL_HEALS
@@ -4542,10 +4542,12 @@ GetDamageVarsForEnemyAttack:
 	and a ; check for critical hit
 	jr z, .done
 	ld a, e ; store lvl in a
-	sla e ; double level if it was a critical hit
-	cp a ; is new lvl larger than old lvl, lvls over 128 roll over
-	jr nz, .done ; if so continue
-	ld e, $FF ; if not use 255
+	cp $80 ; is level >= 128, such levels will roll over when doubled
+	jr c, .doubleLevel ; if not double level
+	ld e, $FF ; if so just use 255 as level
+	jr .done
+.doubleLevel
+    sla e ; double level if it was a critical hit
 .done
 	ld a, $1
 	and a
@@ -6661,11 +6663,13 @@ LoadEnemyMonData:
 	ld [wd11e], a
 	predef IndexToPokedex
 	ld a, [wd11e]
-	dec a
+	sub 1
+	jr c, .skip_seen ; AndrewNote - taken from shinpokered, skip seen for missingno
 	ld c, a
 	ld b, FLAG_SET
 	ld hl, wPokedexSeen
 	predef FlagActionPredef ; mark this mon as seen in the pokedex
+.skip_seen
 	ld hl, wEnemyMonLevel
 	ld de, wEnemyMonUnmodifiedLevel
 	ld bc, 1 + NUM_STATS * 2

@@ -175,11 +175,11 @@ _ViridianCityText_19219::
 	cont "east coast of"
 	cont "Cinnabar!"
 
-	para "Don't go"
-	line "there!"
+	para "But not for"
+	line "long."
 
-	para "The world"
-	line "will end!!"
+	para "Don't go"
+	line "there!!"
 	done
 
 _ViridianCityText8::

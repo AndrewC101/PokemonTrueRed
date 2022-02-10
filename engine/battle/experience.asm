@@ -15,11 +15,9 @@ GainExperience:
 	ld a, [hli]
 	or [hl] ; is mon's HP 0?
 	jp z, .nextMon ; if so, go to next mon
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; AndrewNote - don't gain exp if lvl > 100, for fun
-    ld a, [wBattleMonLevel]
-	cp $65
-	jp nc, .nextMon
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ld a, [wBattleMonLevel] ; level 255 mon doesn't gain exp, for debug purposes
+	cp $FF
+	jp z, .nextMon
 	push hl
 	ld hl, wPartyGainExpFlags
 	ld a, [wWhichPokemon]

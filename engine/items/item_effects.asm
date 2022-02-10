@@ -911,18 +911,28 @@ ItemUseMedicine:
 	cp d ; is pokemon the item was used on active in battle?
 	jp nz, .doneHealing
 ; if it is active in battle
-	xor a
-	ld [wBattleMonStatus], a ; remove the status ailment in the in-battle pokemon data
+    ; AndrewNote - taken from shinpokered
+	;joenote - this part is getting a bit of a rewrite to prevent resetting all stats when using a status healing item
 	push hl
 	ld hl, wPlayerBattleStatus3
 	res BADLY_POISONED, [hl] ; heal Toxic status
+	ld a, [hWhoseTurn]
+	push af
+	xor a	;forcibly set it to the player's turn
+	ld [hWhoseTurn], a
+	callfar UndoBurnParStats	;undo brn/par stat changes
+	pop af
+	ld [hWhoseTurn], a
 	pop hl
+	xor a
+	ld [wBattleMonStatus], a ; remove the status ailment in the in-battle pokemon data
+	ld [wPlayerToxicCounter], a	;clear toxic counter
 	ld bc, wPartyMon1Stats - wPartyMon1Status
 	add hl, bc ; hl now points to party stats
 	ld de, wBattleMonStats
 	ld bc, NUM_STATS * 2
-	call CopyData ; copy party stats to in-battle stat data
-	predef DoubleOrHalveSelectedStats
+	;call CopyData ; copy party stats to in-battle stat data
+	;predef DoubleOrHalveSelectedStats
 	jp .doneHealing
 .healHP
 	inc hl ; hl = address of current HP

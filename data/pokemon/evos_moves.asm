@@ -504,6 +504,7 @@ BlastoiseEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+    db 40, EARTHQUAKE
 	db 50, HYDRO_PUMP
 	db 55, BLIZZARD
 	db 0
@@ -1025,7 +1026,7 @@ PikachuEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 27, THUNDERBOLT
+	db 28, THUNDERBOLT
 	db 35, DIG
 	db 40, SURF
 	db 50, HYPER_BEAM
@@ -1037,7 +1038,7 @@ RaichuEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 30, THUNDERBOLT
+	db 28, THUNDERBOLT
 	db 40, SURF
 	db 50, HYPER_BEAM
 	db 0
@@ -1867,7 +1868,7 @@ CharmanderEvosMoves:
 	db 15, LEER
 	db 22, RAGE
 	db 30, SLASH
-	db 38, FLAMETHROWER
+	db 35, FLAMETHROWER
 	db 46, FIRE_SPIN
 	db 0
 
@@ -1890,8 +1891,8 @@ CharmeleonEvosMoves:
 	db 0
 ; Learnset
 	db 9, EMBER
-	db 33, SLASH
-	db 42, FLAMETHROWER
+	db 30, SLASH
+	db 35, FLAMETHROWER
 	db 0
 
 WartortleEvosMoves:
@@ -1899,6 +1900,7 @@ WartortleEvosMoves:
 	db EV_LEVEL, 36, BLASTOISE
 	db 0
 ; Learnset
+    db 25, BUBBLEBEAM
 	db 31, WITHDRAW
 	db 39, SKULL_BASH
 	db 47, HYDRO_PUMP
@@ -1908,6 +1910,7 @@ CharizardEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+    db 40, EARTHQUAKE
 	db 50, FIRE_BLAST
 	db 55, HYPER_BEAM
 	db 0
