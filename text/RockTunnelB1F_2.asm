@@ -9,7 +9,7 @@ _RockTunnel2BattleText9::
     line "YUGI boy?"
 
     para "It's me..."
-    cont "PEGASUS!"
+    line "PEGASUS!"
 
 	para "I'm about to"
 	line "take this duel"

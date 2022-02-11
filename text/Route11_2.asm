@@ -20,7 +20,7 @@ _Route11BeforeBattleText10::
     para "Do you want to"
     line "train with me?"
     cont "I am strong"
-    done
+    prompt
 
 _Route11BattleText10::
 	text "My brother LANCE"

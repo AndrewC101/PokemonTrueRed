@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/seadra.pic", 0, 1 ; sprite dimensions
 	dw SeadraPicFront, SeadraPicBack
 
-	db ICE_BEAM, SURF, HYPER_BEAM, NO_MOVE ; level 1 learnset
+	db ICE_BEAM, SURF, REST, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

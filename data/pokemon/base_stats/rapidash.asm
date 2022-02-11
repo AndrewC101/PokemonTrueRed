@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/rapidash.pic", 0, 1 ; sprite dimensions
 	dw RapidashPicFront, RapidashPicBack
 
-	db FIRE_BLAST, FIRE_SPIN, BODY_SLAM, HYPER_BEAM ; level 1 learnset
+	db FLAMETHROWER, FIRE_SPIN, BODY_SLAM, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

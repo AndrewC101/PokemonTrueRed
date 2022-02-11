@@ -87,6 +87,8 @@ RockTunnel1Text8:
 	SetEvent EVENT_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS
+    SetEvent EVENT_USE_FULL_HEALS
+    SetEvent EVENT_USE_FULL_RESTORES
 	ld hl, RockTunnel1TrainerHeader7
 	jr RockTunnel1TalkToTrainer
 

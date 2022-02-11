@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/ninetales.pic", 0, 1 ; sprite dimensions
 	dw NinetalesPicFront, NinetalesPicBack
 
-	db FIRE_BLAST, BODY_SLAM, DIG, HYPER_BEAM ; level 1 learnset
+	db FLAMETHROWER, CONFUSE_RAY, DIG, BODY_SLAM ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

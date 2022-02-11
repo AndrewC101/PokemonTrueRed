@@ -753,7 +753,7 @@ ElectabuzzEvosMoves:
 	db 0
 ; Learnset
 	db 30, PSYCHIC_M
-	db 35, SUBMISSION
+	db 34, SUBMISSION
 	db 40, THUNDER
 	db 0
 
@@ -1018,6 +1018,7 @@ NinetalesEvosMoves:
 	db 0
 ; Learnset
 	db 40, FIRE_BLAST
+	db 50, HYPER_BEAM
 	db 0
 
 PikachuEvosMoves:
@@ -1114,6 +1115,7 @@ SeadraEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+    db 45, HYPER_BEAM
 	db 50, HYDRO_PUMP
 	db 55, BLIZZARD
 	db 0
@@ -1209,7 +1211,8 @@ FlareonEvosMoves:
 	db 0
 ; Learnset
 	db 35, FLAMETHROWER
-	db 40, FIRE_BLAST
+	db 40, HYPER_BEAM
+	db 45, FIRE_BLAST
 	db 0
 
 JolteonEvosMoves:
@@ -1264,8 +1267,7 @@ EkansEvosMoves:
 	db 10, POISON_STING
 	db 17, BITE
 	db 24, GLARE
-	db 31, SCREECH
-	db 38, ACID
+	db 30, SLUDGE
 	db 0
 
 ParasEvosMoves:
@@ -1320,7 +1322,6 @@ BeedrillEvosMoves:
 	db 0
 ; Learnset
 	db 12, FURY_ATTACK
-	db 16, FOCUS_ENERGY
 	db 20, TWINEEDLE
 	db 30, PIN_MISSILE
 	db 35, AGILITY
@@ -1411,9 +1412,7 @@ ButterfreeEvosMoves:
 	db 15, POISONPOWDER
 	db 16, STUN_SPORE
 	db 17, SLEEP_POWDER
-	db 21, SUPERSONIC
-	db 26, WHIRLWIND
-	db 32, PSYCHIC_M
+	db 20, PSYCHIC_M
 	db 0
 
 MachampEvosMoves:
@@ -1436,7 +1435,7 @@ GolduckEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 34, PSYCHIC_M
+	db 35, PSYCHIC_M
 	db 50, HYDRO_PUMP
 	db 55, BLIZZARD
 	db 60, HYPER_BEAM
@@ -1529,6 +1528,7 @@ CloysterEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+    db 45, EXPLOSION
     db 50, HYDRO_PUMP
 	db 55, BLIZZARD
 	db 0
@@ -1616,7 +1616,6 @@ PidgeottoEvosMoves:
 ; Learnset
 	db 5, SAND_ATTACK
 	db 12, QUICK_ATTACK
-	db 21, WHIRLWIND
 	db 24, WING_ATTACK
 	db 40, AGILITY
 	db 49, MIRROR_MOVE
@@ -1654,7 +1653,6 @@ BulbasaurEvosMoves:
 	db 27, RAZOR_LEAF
 	db 34, GROWTH
 	db 41, SLEEP_POWDER
-	db 48, SOLARBEAM
 	db 0
 
 VenusaurEvosMoves:
@@ -1688,7 +1686,6 @@ GoldeenEvosMoves:
 ; Learnset
 	db 19, SUPERSONIC
 	db 24, HORN_ATTACK
-	db 30, FURY_ATTACK
 	db 37, WATERFALL
 	db 45, THRASH
 	db 54, AGILITY
@@ -1732,9 +1729,7 @@ PonytaEvosMoves:
 	db EV_LEVEL, 40, RAPIDASH
 	db 0
 ; Learnset
-	db 30, TAIL_WHIP
 	db 32, STOMP
-	db 35, GROWL
 	db 39, FIRE_SPIN
 	db 43, TAKE_DOWN
 	db 48, AGILITY
@@ -1744,7 +1739,8 @@ RapidashEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 40, FIRE_BLAST
+    db 40, HYPER_BEAM
+	db 45, FIRE_BLAST
 	db 0
 
 RattataEvosMoves:

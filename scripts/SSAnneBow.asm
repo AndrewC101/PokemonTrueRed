@@ -152,6 +152,8 @@ SSAnne5Text10:
 	SetEvent EVENT_BIG_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS
+    SetEvent EVENT_USE_FULL_HEALS
+    SetEvent EVENT_USE_FULL_RESTORES
 	ld hl, SSAnne5TrainerHeader9
 	call TalkToTrainer
 	jp TextScriptEnd
