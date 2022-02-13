@@ -25,11 +25,12 @@ _RocketHideout4Text_45584::
 	line "need to get"
 	cont "stronger!"
 
-	para "You would do well"
-	line "in my Organisation."
+	para "You would do"
+	line "well in my"
+	cont "Organisation."
 
-	para "I would start you"
-	line "at rank B."
+	para "I would start"
+	line "you at rank B."
 	cont "With 50K salary!"
 
 	para "You refuse!"
@@ -51,9 +52,9 @@ _RocketHideout4BattleText2::
 	line "guest!"
 
 	para "I am a Rank"
-	line "A ROCKET!"
+	line "B ROCKET!"
 
-	para "Salary 55K!"
+	para "Salary 50K!"
 	done
 
 _RocketHideout4EndBattleText2::
@@ -68,9 +69,9 @@ _RocketHide4AfterBattleText2::
 	line "guest!"
 
 	para "I am a Rank"
-	line "A ROCKET!"
+	line "B ROCKET!"
 
-	para "Salary 55K!"
+	para "Salary 50K!"
 	done
 
 _RocketHideout4BattleText3::
@@ -79,8 +80,8 @@ _RocketHideout4BattleText3::
 	cont "this door!"
 
 	para "As a Rank"
-	line "A ROCKET"
-	cont "Salary 55K"
+	line "B ROCKET"
+	cont "Salary 50K"
 
 	para "I can not"
 	line "let you pass!"
@@ -95,7 +96,7 @@ _RocketHide4AfterBattleText3::
 	line "of us!"
 
 	para "On a combined"
-	line "110K!"
+	line "100K!"
 
 	para "We still weren't"
 	line "strong enough!"
