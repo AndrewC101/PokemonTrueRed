@@ -1299,7 +1299,8 @@ PoliwrathEvosMoves:
 	db 0
 ; Learnset
 	db 35, AMNESIA
-	db 45, HYDRO_PUMP
+	db 45, REST
+	db 50, HYDRO_PUMP
 	db 55, BLIZZARD
 	db 0
 
