@@ -87,9 +87,9 @@ CeladonGym_TextPointers:
 CeladonGymTrainerHeaders:
 	def_trainers 2
 CeladonGymTrainerHeader0:
-	trainer EVENT_BEAT_CELADON_GYM_TRAINER_0, 2, CeladonGymBattleText2, CeladonGymEndBattleText2, CeladonGymAfterBattleText2
+	trainer EVENT_BEAT_CELADON_GYM_TRAINER_0, 2, CeladonGymBattleText2, CeladonGymEndBattleText2, CeladonGymAfterBattleText
 CeladonGymTrainerHeader1:
-	trainer EVENT_BEAT_CELADON_GYM_TRAINER_1, 2, CeladonGymBattleText3, CeladonGymEndBattleText3, CeladonGymAfterBattleText3
+	trainer EVENT_BEAT_CELADON_GYM_TRAINER_1, 2, CeladonGymBattleText3, CeladonGymEndBattleText3, CeladonGymAfterBattleText
 CeladonGymTrainerHeader2:
 	trainer EVENT_BEAT_CELADON_GYM_TRAINER_2, 4, CeladonGymBattleText4, CeladonGymEndBattleText4, CeladonGymAfterBattleText4
 CeladonGymTrainerHeader3:
@@ -97,9 +97,9 @@ CeladonGymTrainerHeader3:
 CeladonGymTrainerHeader4:
 	trainer EVENT_BEAT_CELADON_GYM_TRAINER_4, 2, CeladonGymBattleText6, CeladonGymEndBattleText6, CeladonGymAfterBattleText6
 CeladonGymTrainerHeader5:
-	trainer EVENT_BEAT_CELADON_GYM_TRAINER_5, 2, CeladonGymBattleText7, CeladonGymEndBattleText7, CeladonGymAfterBattleText7
+	trainer EVENT_BEAT_CELADON_GYM_TRAINER_5, 2, CeladonGymBattleText7, CeladonGymEndBattleText7, CeladonGymAfterBattleText
 CeladonGymTrainerHeader6:
-	trainer EVENT_BEAT_CELADON_GYM_TRAINER_6, 3, CeladonGymBattleText8, CeladonGymEndBattleText8, CeladonGymAfterBattleText8
+	trainer EVENT_BEAT_CELADON_GYM_TRAINER_6, 3, CeladonGymBattleText8, CeladonGymEndBattleText8, CeladonGymAfterBattleText
 	db -1 ; end
 
 ByeTextErika:
@@ -191,10 +191,6 @@ CeladonGymEndBattleText2:
 	text_far _CeladonGymEndBattleText2
 	text_end
 
-CeladonGymAfterBattleText2:
-	text_far _CeladonGymAfterBattleText2
-	text_end
-
 CeladonGymTrainerText2:
 	text_asm
 	ld hl, CeladonGymTrainerHeader1
@@ -207,10 +203,6 @@ CeladonGymBattleText3:
 
 CeladonGymEndBattleText3:
 	text_far _CeladonGymEndBattleText3
-	text_end
-
-CeladonGymAfterBattleText3:
-	text_far _CeladonGymAfterBattleText3
 	text_end
 
 CeladonGymTrainerText3:
@@ -281,10 +273,6 @@ CeladonGymEndBattleText7:
 	text_far _CeladonGymEndBattleText7
 	text_end
 
-CeladonGymAfterBattleText7:
-	text_far _CeladonGymAfterBattleText7
-	text_end
-
 CeladonGymTrainerText7:
 	text_asm
 	ld hl, CeladonGymTrainerHeader6
@@ -299,6 +287,6 @@ CeladonGymEndBattleText8:
 	text_far _CeladonGymEndBattleText8
 	text_end
 
-CeladonGymAfterBattleText8:
-	text_far _CeladonGymAfterBattleText8
+CeladonGymAfterBattleText:
+	text_far _CeladonGymAfterBattleText
 	text_end

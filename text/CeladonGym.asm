@@ -130,35 +130,9 @@ _CeladonGymEndBattleText2::
 	line "too rough!"
 	prompt
 
-_CeladonGymAfterBattleText2::
-    text "OK look..."
-
-	para "I'm not saying"
-	line "he's hot..."
-	cont "necessarily"
-
-	para "Have you seen"
-
-	para "OMG..."
-
-	para "His stare"
-
-	para "He is so"
-	line "intense"
-
-	para "KOGA gives me"
-	line "chills"
-
-	para "Would you tell"
-	line "her!"
-
-	para "She thinks"
-	line "SURGE is"
-	cont "hotter!"
-
-	para "Like..."
-
-	para "He's mean!"
+_CeladonGymAfterBattleText::
+	text "Would you tell"
+	line "her?!!"
 	done
 
 _CeladonGymBattleText3::
@@ -195,36 +169,6 @@ _CeladonGymEndBattleText3::
 	text "My"
 	line "makeup!"
 	prompt
-
-_CeladonGymAfterBattleText3::
-    text "OK look..."
-
-    para "SURGE is hot!"
-
-	para "Have you seen"
-
-	para "OMG..."
-
-	para "His scars"
-
-	para "He is so"
-	line "tough"
-
-	para "And his chest!"
-
-	para "Would you tell"
-	line "her!"
-
-	para "She thinks"
-	line "KOGA is"
-	cont "hotter!"
-
-	para "Like..."
-
-	para "OMG"
-
-	para "Vile!"
-	done
 
 _CeladonGymBattleText4::
 	text "Aren't you the"
@@ -314,33 +258,6 @@ _CeladonGymEndBattleText7::
 	line "Splendid!"
 	prompt
 
-_CeladonGymAfterBattleText7::
-	text "OK look..."
-
-	para "Have you seen"
-	line "BRUNOs arms!"
-
-	para "Have you seen"
-
-	para "OMG..."
-
-	para "His thighs!"
-
-	para "He would protect"
-	line "me!"
-
-	para "Would you tell"
-	line "her!"
-
-	para "She thinks"
-	line "LANCE is"
-	cont "hotter!"
-
-	para "Like..."
-
-	para "He's skinny!"
-	done
-
 _CeladonGymBattleText8::
 	text "OK look..."
 
@@ -367,25 +284,3 @@ _CeladonGymEndBattleText8::
 	text "Oh!"
 	line "Beaten!"
 	prompt
-
-_CeladonGymAfterBattleText8::
-	text "OK look..."
-
-	para "LANCE is..."
-
-	para "Like, OMG...."
-
-	para "He is clearly"
-	line "the hottest!!"
-
-	para "Would you tell"
-	line "her!"
-
-	para "She thinks"
-	line "BRUNO is"
-	cont "hotter"
-
-	para "Like..."
-
-	para "YUCK!"
-	done

@@ -22,12 +22,6 @@ _Mansion4BattleText2::
 	line "go?"
 
 	para "My child!"
-
-    para "Through MEWTWO"
-
-    para "I shall live..."
-
-    para "Forever!"
 	done
 
 _Mansion4EndBattleText2::
@@ -36,17 +30,7 @@ _Mansion4EndBattleText2::
 	prompt
 
 _Mansion4AfterBattleText2::
-	text "MEWTWO.."
-
-	para "Oh beautiful"
-	line "MEWTWO..."
-
-	para "Where did you"
-	line "go?"
-
-	para "My child!"
-
-    para "Through MEWTWO"
+    text "Through MEWTWO"
 
     para "I shall live..."
 
