@@ -145,6 +145,12 @@ Route12AfterBattleText2:
 
 Route12Text4:
     text_asm
+    predef HealParty    ; AndrewNote - trainer heals party
+	call GBFadeOutToWhite
+	call Delay3
+	call GBFadeInFromWhite
+	ld hl, MiyagiHealText
+	call PrintText
 	CheckEvent EVENT_BEAT_ROUTE_12_TRAINER_2
 	jr nz, .fight
 	ld hl, Route12BeforeBattleText3

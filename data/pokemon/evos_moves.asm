@@ -629,7 +629,7 @@ ChanseyEvosMoves:
 	db 30, THUNDER_WAVE
 	db 35, SOFTBOILED
 	db 40, THUNDERBOLT
-	db 55, BLIZZARD
+	db 53, BLIZZARD
 	db 68, REFLECT
 	db 0
 

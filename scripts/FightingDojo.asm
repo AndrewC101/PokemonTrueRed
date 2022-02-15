@@ -428,7 +428,7 @@ FightingDojoText11:
 	SetEvent EVENT_FIRST_TURN_GUARD_SPEC
 	SetEvent EVENT_GUARANTEED_FULL_RESTORE
 	SetEvent EVENT_HIGH_LVL_ENEMY
-	SetEvent EVENT_SUPPRESS_AMNESIA
+	SetEvent EVENT_ANDREW_BATTLE
 	ld hl, FightingDojoTrainerHeader6
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -450,6 +450,7 @@ FightingDojoText12:
 	SetEvent EVENT_USE_FULL_HEALS
 	SetEvent EVENT_USE_FULL_RESTORES
 	SetEvent EVENT_HIGH_LVL_ENEMY
+	SetEvent EVENT_JAMES_BATTLE
 	ld hl, FightingDojoTrainerHeader7
 	call TalkToTrainer
 	jp TextScriptEnd

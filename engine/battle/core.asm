@@ -1193,7 +1193,8 @@ HandlePlayerBlackOut:
     ResetEvent EVENT_USE_FULL_RESTORES
     ResetEvent EVENT_USE_FULL_HEALS
     ResetEvent EVENT_HIGH_LVL_ENEMY
-    ResetEvent EVENT_SUPPRESS_AMNESIA
+    ResetEvent EVENT_ANDREW_BATTLE
+    ResetEvent EVENT_JAMES_BATTLE
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
 	ld hl, PlayerBlackedOutText2

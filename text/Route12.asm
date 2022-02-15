@@ -69,8 +69,12 @@ _Route12BattleText3::
 
 	para "But team role."
 
-	para "MIYAGI show"
-	line "you the way."
+	para "MIYAGI teach."
+
+	para "Now show me.."
+	line "#MON battle!"
+
+	para "Show!"
 	done
 
 _Route12EndBattleText3::

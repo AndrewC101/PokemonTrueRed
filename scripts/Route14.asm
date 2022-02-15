@@ -87,6 +87,12 @@ Route14AfterBattleText2:
 
 Route14Text3:
 	text_asm
+    predef HealParty    ; AndrewNote - trainer heals party
+	call GBFadeOutToWhite
+	call Delay3
+	call GBFadeInFromWhite
+	ld hl, Route15HealText2
+	call PrintText
 	ld hl, Route14TrainerHeader2
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -231,4 +237,8 @@ Route14AfterBattleText10:
 
 Route14Text11:
 	text_far _Route14Text11
+	text_end
+
+Route15HealText2:
+	text_far _Route15HealText
 	text_end

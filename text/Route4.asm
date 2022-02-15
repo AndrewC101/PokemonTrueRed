@@ -30,10 +30,7 @@ _Route4EndBattleText1::
 	prompt
 
 _Route4AfterBattleText1::
-    text "Let us heal"
-    line "your #MON."
-
-	para "The evil force"
+	text "The evil force"
 	line "within the cave"
 	cont "must be stopped!"
 

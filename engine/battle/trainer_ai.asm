@@ -307,7 +307,7 @@ AIMoveChoiceModification2:
     jp .stronglyEncourageMove ; strongly encourage swords dance if not at + 2
     jp .nextMove
 .handleSpecialBoost
-    CheckEvent EVENT_SUPPRESS_AMNESIA ; for enemies over lvl 100, mostly just lvl 255 mewtwo
+    CheckEvent EVENT_ANDREW_BATTLE ; for enemies over lvl 100, mostly just lvl 255 mewtwo
     jr z, .normalLvlSpecialBoost
     ld a, [wEnemyMonSpecialMod]
     cp 7
@@ -645,7 +645,7 @@ AIMoveChoiceModification4:
 	jp nz, .nextMove
 
 	; if fighting Andrew don't check for rest
-    CheckEvent EVENT_SUPPRESS_AMNESIA ; Andrew uses REST at 50%
+    CheckEvent EVENT_ANDREW_BATTLE ; Andrew uses REST at 50%
     jr nz, .skipRestCheck
 
 	; if REST return, don't want rest prioritized at 50%

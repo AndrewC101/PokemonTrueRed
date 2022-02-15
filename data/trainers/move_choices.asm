@@ -26,13 +26,13 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; FISHER
 	move_choices 1, 2, 3 ; SWIMMER
 	move_choices         ; CUE_BALL
-	move_choices 1, 2    ; GAMBLER
+	move_choices 1, 2, 3 ; GAMBLER
 	move_choices 1, 2, 3 ; BEAUTY
 	move_choices 1, 2, 3 ; PSYCHIC_TR
 	move_choices 1, 2, 3 ; ROCKER
 	move_choices 1, 2, 3 ; JUGGLER
 	move_choices 1, 2    ; TAMER
-	move_choices 1, 2    ; BIRD_KEEPER
+	move_choices 1, 2, 3  ; BIRD_KEEPER
 	move_choices 1, 2, 3    ; BLACKBELT
 	move_choices 1, 2, 3 ; RIVAL1
 	move_choices 1, 2, 3, 4 ; PROF_OAK

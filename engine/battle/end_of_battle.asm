@@ -28,13 +28,13 @@ EndOfBattle:
     ; AndrewNote - reset battle events that must be reset
     callfar ClearAISentOut
 
-    CheckEvent EVENT_USE_FULL_HEALS
+    CheckEvent EVENT_JAMES_BATTLE
     jr z, .checkAndrew
     lb bc, RARE_CANDY, 99 ; AndrewNote - James gives 99 rare candies
     call GiveItem
 
 .checkAndrew
-    CheckEvent EVENT_SUPPRESS_AMNESIA
+    CheckEvent EVENT_ANDREW_BATTLE
     jr z, .resetEvents
     lb bc, MASTER_BALL, 99 ; AndrewNote - Andrew gives 99 master balls
     call GiveItem
@@ -47,7 +47,8 @@ EndOfBattle:
 	ResetEvent EVENT_USE_FULL_RESTORES
 	ResetEvent EVENT_USE_FULL_HEALS
 	ResetEvent EVENT_HIGH_LVL_ENEMY
-	ResetEvent EVENT_SUPPRESS_AMNESIA
+	ResetEvent EVENT_ANDREW_BATTLE
+	ResetEvent EVENT_JAMES_BATTLE
 
 	CheckEvent EVENT_RESET_MEWTWO_ENCOUNTER
 	jr z, .continue
@@ -154,6 +155,7 @@ BonusIncrement:
 	predef AddBCDPredef ; add total price to money
 	ret
 
+; AndrewNote - this is crap, but gets the job done
 BonusIncrementBig:
 	ld de, wPlayerMoney + 2
 	ld hl, wAmountMoneyWon + 2 ; total price of items

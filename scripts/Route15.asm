@@ -92,6 +92,12 @@ Route15Text8:
 
 Route15Text9:
 	text_asm
+    predef HealParty    ; AndrewNote - trainer heals party for easy grinding
+	call GBFadeOutToWhite
+	call Delay3
+	call GBFadeInFromWhite
+	ld hl, Route15HealText
+	call PrintText
 	ld hl, Route15TrainerHeader8
 	jr Route15TalkToTrainer
 
@@ -225,3 +231,11 @@ Route15AfterBattleText10:
 Route15Text12:
 	text_far _Route15Text12
 	text_end
+
+Route15HealText:
+	text_far _Route15HealText
+	text_end
+
+MiyagiHealText:
+    text_far _MiyagiHealText
+    text_end

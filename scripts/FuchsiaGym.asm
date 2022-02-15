@@ -118,7 +118,7 @@ KogaText:
     ld a, [wCurrentMenuItem]
     and a
     jr nz, .rematch
-    ld hl, ByeText
+    ld hl, ByeTextKoga
     call PrintText
 	jr .done
 .rematch
@@ -301,3 +301,7 @@ FuchsiaGymGuidePreBattleText:
 FuchsiaGymGuidePostBattleText:
 	text_far _FuchsiaGymGuidePostBattleText
 	text_end
+
+ByeTextKoga:
+    text_far _ByeText
+    text_end

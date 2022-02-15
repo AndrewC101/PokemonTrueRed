@@ -136,18 +136,28 @@ _Route15AfterBattleText8::
 	done
 
 _Route15BattleText9::
-	text "What's cool?"
-	line "Trading #MON!"
+	text "Valient"
+	line "knight."
+	cont "I will test thee"
 	done
 
+_Route15HealText::
+    text "Let me heal you."
+    prompt
+
+_MiyagiHealText::
+    text "MIYAGI heal you."
+    prompt
+
 _Route15EndBattleText9::
-	text "I"
-	line "said trade!"
+	text "Thou"
+	line "art strong!"
 	prompt
 
 _Route15AfterBattleText9::
-	text "I trade #MON"
-	line "with my friends!"
+	text "I shall pray"
+	line "for thee brave"
+	cont "knight."
 	done
 
 _Route15BattleText10::

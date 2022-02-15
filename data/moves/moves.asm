@@ -22,7 +22,8 @@ Moves:
 	move ICE_PUNCH,    FREEZE_SIDE_EFFECT,          75, ICE,          100, 15
 	move THUNDERPUNCH, PARALYZE_SIDE_EFFECT1,       75, ELECTRIC,     100, 15
 	move SCRATCH,      NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 35
-	move VICEGRIP,     NO_ADDITIONAL_EFFECT,        55, NORMAL,       100, 30
+	; AndrewNote - make viceGrip as good as bodyslam, since it a signature move of Pinsir and Kingler
+	move VICEGRIP,     PARALYZE_SIDE_EFFECT1,       85, NORMAL,       100, 30
 	; AndrewNote - guillotine is now Pika Thunder
 	move GUILLOTINE,   NO_ADDITIONAL_EFFECT,       250, ELECTRIC,     100,  10
 	move RAZOR_WIND,   NO_ADDITIONAL_EFFECT,        60, FLYING,       100, 10
@@ -184,7 +185,7 @@ Moves:
 	move SKY_ATTACK,   NO_ADDITIONAL_EFFECT,        90, FLYING,        100,  10
 	move TRANSFORM,    TRANSFORM_EFFECT,             0, NORMAL,       100, 10
 	move BUBBLE,       SPEED_DOWN_SIDE_EFFECT,      20, WATER,        100, 30
-	move DIZZY_PUNCH,  NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 10
+	move DIZZY_PUNCH,  FLINCH_SIDE_EFFECT2,        70, NORMAL,       100, 10
 	; AndrewNote - decrease to 90 accuracy, as sleep is broken
 	move SPORE,        SLEEP_EFFECT,                 0, GRASS,        90, 15
 	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,       100, 20
