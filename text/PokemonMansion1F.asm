@@ -1,5 +1,5 @@
 _Mansion1BeforeBattleText2::
-    para "I am too late!"
+    text "I am too late!"
 
     para "we are doomed"
 

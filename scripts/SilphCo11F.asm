@@ -221,7 +221,7 @@ SilphCo11Script5:
 	call SilphCo11Script_6221a
 	ld a, $f0
 	ld [wJoyIgnore], a
-	ld a, $6
+	ld a, $7
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	call GBFadeOutToBlack
@@ -343,7 +343,7 @@ SilphCo10Text_62330:
 	text_far _SilphCo10Text_62330
 	text_end
 
-SilphCo11Text6:
+SilphCo11Text7:
 	text_far _SilphCo10Text_62335
 	text_end
 
@@ -385,7 +385,7 @@ SilphCo11AfterBattleText2:
 	text_far _SilphCo11AfterBattleText2
 	text_end
 
-SilphCo11Text7:
+SilphCo11Text6:
     text_asm
 	CheckEvent EVENT_BEAT_VICTORY_ROAD_2_TRAINER_1
 	jr z, .sephNotBeaten  ; AndrewNote - trainer will only battle after beating Sephiroth

@@ -237,7 +237,6 @@ ClefairyEvosMoves:
 	db 18, DOUBLESLAP
 	db 24, MINIMIZE
 	db 31, METRONOME
-	db 39, DEFENSE_CURL
 	db 48, LIGHT_SCREEN
 	db 0
 
@@ -249,7 +248,6 @@ SpearowEvosMoves:
 	db 22, MIRROR_MOVE
 	db 25, DRILL_PECK
 	db 40, SKY_ATTACK
-	db 50, HYPER_BEAM
 	db 0
 
 VoltorbEvosMoves:
@@ -363,9 +361,7 @@ NidoranFEvosMoves:
 ; Learnset
 	db 8, SCRATCH
 	db 14, POISON_STING
-	db 21, TAIL_WHIP
 	db 29, BITE
-	db 36, FURY_SWIPES
 	db 43, DOUBLE_KICK
 	db 0
 
@@ -386,11 +382,9 @@ CuboneEvosMoves:
 	db EV_LEVEL, 28, MAROWAK
 	db 0
 ; Learnset
-	db 25, LEER
 	db 31, FOCUS_ENERGY
 	db 38, THRASH
 	db 43, BONEMERANG
-	db 46, RAGE
 	db 0
 
 RhyhornEvosMoves:
@@ -436,9 +430,13 @@ GyaradosEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 50, HYDRO_PUMP
-	db 55, BLIZZARD
-	db 58, HYPER_BEAM
+    db 30, SURF
+    db 35, ICE_BEAM
+    db 40, DOUBLE_EDGE
+    db 45, THUNDER
+	db 48, HYDRO_PUMP
+	db 51, BLIZZARD
+	db 54, HYPER_BEAM
 	db 0
 
 ShellderEvosMoves:
@@ -1485,6 +1483,7 @@ MagikarpEvosMoves:
 	db 0
 ; Learnset
 	db 15, TACKLE
+	db 100, WATER_GUN
 	db 0
 
 MissingNo86EvosMoves:

@@ -14,17 +14,21 @@ _Route21AfterBattleText1::
 	done
 
 _Route21BattleText2::
-	text "."
+	text "Son..."
 
-	para "."
+	para "You just found"
+	line "an Optional Boss"
 
-	para "Destiny shatters!"
+	para "...really!"
 
-	para "wait... "
-	line "what?"
+	para "Sorry to do"
+	line "this to ya!"
 
-	para "Behold my full"
-	line "ultimate team!"
+	para "Behold..."
+
+	para "My..."
+
+	para "POWER!!!"
 	done
 
 _Route21EndBattleText2::

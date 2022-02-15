@@ -15,6 +15,6 @@ SilphCo11F_Object:
 	object_event  6,  9, SPRITE_GIOVANNI, STAY, DOWN, 3, OPP_GIOVANNI, 2
 	object_event  3, 16, SPRITE_ROCKET, STAY, UP, 4, OPP_ROCKET, 41
 	object_event 15,  9, SPRITE_ROCKET, STAY, UP, 5, OPP_ROCKET, 40
-	object_event 12,  8, SPRITE_COOLTRAINER_M, STAY, LEFT, 7, OPP_ENGINEER, 4
+	object_event 12,  8, SPRITE_COOLTRAINER_M, STAY, LEFT, 6, OPP_ENGINEER, 4
 
 	def_warps_to SILPH_CO_11F

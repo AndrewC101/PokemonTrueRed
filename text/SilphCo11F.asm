@@ -227,7 +227,7 @@ _SilphCo11Text3::
 _SilphCo10Text_62330::
 	text "You"
 	line "are not"
-	line "an ordinary"
+	cont "an ordinary"
 	cont "trainer."
 	prompt
 
