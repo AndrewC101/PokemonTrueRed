@@ -343,7 +343,7 @@ Signature Moves and Mixed Sprites
   - Celadon Gym has an NPC outside who heals your team allowing grinding on the trainers inside
   - Route 15 wild Pokemon have been updated specifically to give high exp, it is one of the best grinding spots
   - Seafoam Islands has some of the strongest Pokemon and is a good grinding spot
-  - Victory Road wild Pokemon is the best grinding spot pre elite four, especially as you have access to Exp.All
+  - Victory Road wild Pokemon are the best for grinding pre elite four, especially as you have access to Exp.All
 - After beating the Elite four, rematches give full exp and the player has easier access to Exp.All, best grinding spots are
   - Nurse trainer in Victory Road, she gives high exp and heals your party
   - Nurse Joy outside Cerulean Cave, she is the best exp grind trainer
