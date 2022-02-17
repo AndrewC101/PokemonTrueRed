@@ -9,7 +9,7 @@ FightingDojo_Object:
 
 	def_object_events
 	; AndrewNote - add optional bosses
-	object_event  5,  3, SPRITE_OAK, STAY, DOWN, 1, OPP_PROF_OAK, 4
+	object_event  5,  3, SPRITE_OAK, STAY, DOWN, 1, OPP_PROF_OAK, 1
 	object_event  3,  4, SPRITE_BLUE, STAY, RIGHT, 2, OPP_RIVAL3, 4
 	object_event  6,  5, SPRITE_GIOVANNI, STAY, LEFT, 3, OPP_GIOVANNI, 4
 	object_event  6,  10, SPRITE_RED, STAY, LEFT, 4, OPP_JR_TRAINER_M, 9

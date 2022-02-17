@@ -106,6 +106,10 @@ VictoryRoad3Text1:
 
 VictoryRoad3Text2:
 	text_asm
+	SetEvent EVENT_MAX_STAT_EXP ; AndrewNote - Tsunekazu Ishihara should be strong
+	SetEvent EVENT_USE_FULL_RESTORES
+	SetEvent EVENT_USE_FULL_HEALS
+	SetEvent EVENT_NO_SHIFT
 	ld hl, VictoryRoad3TrainerHeader1
 	call TalkToTrainer
 	jp TextScriptEnd

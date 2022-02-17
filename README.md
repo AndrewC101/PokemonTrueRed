@@ -6,7 +6,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - A significant amount of dialog changed to make the world more rich and fun
 - AI updates making all enemies more difficult particularly bosses
 - Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four
-- Significant content available after Elite Four, such as 27 optional bosses, max DVs on all Pokemon obtained and more
+- Significant content available after Elite Four, such as 28 optional bosses, max DVs on all Pokemon obtained and more
 - Player can sprint at bike speed by holding B, animation speed doubles  
 - Player can warp home almost anytime by pressing down, select and B together  
 - Different wild Pokemon available in every area, in addition to the important vanilla encounters
@@ -28,7 +28,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Missingno glitch and Mew glitch are still present (it wouldn't be gen 1 without them) but balanced so the player can't exploit them
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1RzcakozGo3QR5dZPc0yrKE8nmZNyhDAK/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1414ySNPYa_4AuQ4nZYiO72Zac_AtUE_7/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -168,12 +168,14 @@ Signature Moves and Mixed Sprites
 - Sabrinna gives Psychic TM and can be rematched for as many as you want
 - Mr Miyagi (Karate Kid) is fishing on route 12, he will battle if the player agrees  
 - Koga gives Swords dance TM and can be rematched for as many as you want
+- 6 Magikarp man on Route 21 thinks he is an optional boss. Maybe he is  
 - Cinnabar Pokemon Lab has updated dialog about Mewtwo. One of the scientists has gone slightly mad
 - Trunks (DBZ) is in the lab, he will battle if the player agrees  
 - Cinnabar gym trainers are a cult that worships the great and merciful Missingno
 - Giovanni has a special 6th Pokemon in his final fight, he gives the Hyper beam tm and can be rematched
 - The rival starts to hear voices in his head and go a little
-- Kaiba and Sephiroth are in Victory Road. Sephiroth will battle if the player agrees  
+- Kaiba and Sephiroth are in Victory Road. Sephiroth will battle if the player agrees 
+- Tsunekazu Ishihara (original game tester) is testing the game in Victory Road, he battles with his actual debug Pokemon  
 - Victory road has trainers designed for grinding exp and money
 - The Elite Four and Final rival are much stronger to live up to their reputations at this point
 - Mewtwo Cerulean Cave encounter has several changes
@@ -202,6 +204,7 @@ Signature Moves and Mixed Sprites
 - Numerous Optional Bosses in the world with levels ranging from 60 up.
   - 6 Magikarp man on route 21
   - Kaiba in Victory Road
+  - Tsunekazu Ishihara (original game tester) is in Victory Road, he battles with his actual debug Pokemon
   - Mr Miyagi on route 12, will battle if the player agrees
   - Wallace the Champion of Hoen is on Seafoam Island, he will battle if the player has become Champion  
   - Trunks is in the Cinnabar Lab, he will battle if the player agrees

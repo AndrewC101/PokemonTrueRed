@@ -1,21 +1,22 @@
 _VictoryRoad3BattleText2::
-	text "There is no"
-	line "point!"
+	text "Hello!"
 
-	para "The guy that"
-	line "came through"
-	cont "here is"
-	cont "unbeatable!"
+	para "I am"
+	line "Tsunekazu"
+	cont "Ishihara"
+
+	para "I am testing"
+	line "this game."
 	done
 
 _VictoryRoad3EndBattleText2::
 	text "I"
-	line "don't believe it!"
+	line "had fun!"
 	prompt
 
 _VictoryRoad3AfterBattleText2::
-	text "Maybe you"
-	line "can do it!!"
+	text "This game is"
+	line "fun!"
 	done
 
 _VictoryRoad3BattleText3::

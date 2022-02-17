@@ -33,19 +33,20 @@ _CeladonMansion5Text1::
 	line "back to the"
 	cont "SS ANNE."
 
-	para "You will find 9"
+	para "You will find 10"
 	line "optional bosses"
     cont "there."
 
-    para "And another 7 in"
+    para "And another 8 in"
     line "the HALL OF"
     cont "DESTINY."
 
-    para "One boss is"
-    line "obscene in"
-    cont "difficulty, but"
-    cont "with strategy"
-    cont "you can win!"
+    para "There are other"
+    line "optional bosses"
+    cont "all over the"
+    cont "world. I'm sure"
+    cont "you'll run into"
+    cont "some."
 
     para "You also get full"
     line "EXP from"
