@@ -219,7 +219,7 @@ Signature Moves and Mixed Sprites
   - Agatha and Lance
   - Giovanni and Final Rival
   - 3 strongest bosses
-- The 3 strongest bosses are obscenely strong, some break and stretch the limits of what can be beaten. They give the following rewards
+- The 3 strongest bosses are obscenely strong, some break the rules and stretch the limits of what can be beaten. They give the following rewards
   - Max money and a renewable choice of a level 100 Mew or Mewtwo
   - Max money and 99 Rare Candies
   - Max money and 99 Master Balls
