@@ -116,7 +116,7 @@ TalkToTrainer::
     ld a, [wCurrentMenuItem]
     and a
     jr nz, .rematch
-    ld hl, ByeText
+    ld hl, ByeText ; text upon declining a rematch, same for all trainers
     jp PrintText
 .noRematch
     jp TextScriptEnd

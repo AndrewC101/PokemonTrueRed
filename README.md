@@ -6,7 +6,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - A significant amount of dialog changed to make the world more rich and fun
 - AI updates making all enemies more difficult, some trainers will switch in specific situations
 - Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four
-- Significant content available after Elite Four, such as 17 optional bosses, max DVs on all Pokemon obtained and more
+- Significant content available after Elite Four, such as 27 optional bosses, max DVs on all Pokemon obtained and more
 - Player can sprint at bike speed by holding B, animation speed doubles  
 - Player can warp home almost anytime by pressing down, select and B together  
 - Different wild Pokemon available in every area, in addition to the important vanilla encounter
@@ -25,9 +25,10 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - HM moves can be deleted at any time like normal moves, the warp home function protects you from trapping yourself
 - Easier post-game grinding, with Exp.All giving full exp to whole party and optional bosses giving huge bonus money
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
+- Missingno glitch and Mew glitch are still present (it wouldn't be gen 1 without them) but balanced so the player can't exploit them
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1NzygAi4jclg0NxIsn73C4wk7cmt31fDl/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1RzcakozGo3QR5dZPc0yrKE8nmZNyhDAK/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -47,17 +48,20 @@ New Dialog
 ![Dialog](/screenshots/mewtwoTalk.png?raw=true)
 
 Optional Bosses
-![Optional Bosses](/screenshots/optionalBosses1.png?raw=true)
 ![Optional Bosses](/screenshots/optionalBosses2.png?raw=true)
+![Optional Bosses](/screenshots/optionalBosses1.png?raw=true)
 
-New Enemy Encounters 
+New Enemy Encounters
+![Optional Bosses](/screenshots/sephiroth.png?raw=true)
+![Optional Bosses](/screenshots/yugioh.png?raw=true)
+![Optional Bosses](/screenshots/wallace.png?raw=true)
+![Optional Bosses](/screenshots/miyagi.png?raw=true)
 ![New encounters](/screenshots/weevil.png?raw=true)
 
 Signature Moves and Mixed Sprites
 ![New Moves](/screenshots/psyblast.png?raw=true)
 ![New Moves](/screenshots/pikaThunder.png?raw=true)
 ![New Moves](/screenshots/stone.png?raw=true)
-
 
 # Battle
 - All trainer parties are updated with
@@ -122,9 +126,11 @@ Signature Moves and Mixed Sprites
 - Moves that lower accuracy are prioritized if player Pokemon isn't at least at -1 accuracy
 - Stat dropping moves, such a growl are deprioritized if player is at -3 in the relevant stat
 - Stat boosting moves, such a barrier are deprioritized if enemy is at +4 in the relevant stat  
-- moves that inflict paralysis are slightly prioritized, since it is an OP status effect
+- moves that inflict paralysis are
+  - prioritized if against a faster opponent
+  - 50% chance to be used against a slower opponent
 - Leech seed and substitute are deprioritized if already in effect
-- Useless moves like splash won't be used in battle
+- Useless moves like splash or roar won't be used in battle
 
 # Events/text
 - A huge amount of text has been changed and there is significant additional text
@@ -140,29 +146,35 @@ Signature Moves and Mixed Sprites
     - Silph chief talks about Lance
 - Oaks intro plays different music, has different text and uses Dragonite instead of Nidorino
 - The Old Man does not fight a level 5 Weedle. He is aware of his power to summon unholy creatures at Cinnabar  
-- Weevil (for the yugioh fans) is in Viridian Forest but is too strong to beat when first encountered
+- Weevil (yugioh) is in Viridian Forest, he will battle if the player agrees
 - Gym guide gives actual good advice on how to beat gym leaders, including which Pokemon might help  
 - Brock gives Mega punch tm and you can rematch him for as many as you want  
 - Rockets are obsessed with their rank (D-S) and salary, often telling the player this info with pride
 - Several Espada and Aizen (for the bleach fans) are on the nugget bridge
 - Aizen gives a pp up when fought and can be farmed for more pp ups
+- Yugioh is on Route 25, he will battle if the player has beaten Kaiba  
 - Residence of Vermilion are obsessed with a past war with Hoen, they don't take kindly to strangers
+- Lances' sister  is on Route 11, she will battle if the player agrees
 - SS Anne has an NPC who will heal your party for convenience  
 - There are several trainers who are particularly strong who are out hunting noobs
+- Pegasus (yugioh) is in Rock Tunnel, looking for Kaiba  
 - Chris Chan is hiding in Rock Tunnel and nearly everyone there has something to say about it. Get Flash to find him
 - Celadon mart has all the best TMs, available as soon as you get there
 - In Celadon Game Cornor is Jackpot Jack, he always wins. Follow the clues to find out the dark secret he hides
 - Celadon Mansion has a lot of updated dialog, the programmer defends the many bugs in his code
 - Trainers in Celadon Gym are having a bit of an argument
 - Silph Co building has the elusive rank S rockets and rocket CEOs, you can never defeat their salaries!
+- Cloud (FF7) is on floor 11 of Silph Co, he will battle if the player has beaten Sephiroth  
 - Sabrinna gives Psychic TM and can be rematched for as many as you want
+- Mr Miyagi (Karate Kid) is fishing on route 12, he will battle if the player agrees  
 - Koga gives Swords dance TM and can be rematched for as many as you want
 - Cinnabar Pokemon Lab has updated dialog about Mewtwo. One of the scientists has gone slightly mad
+- Trunks (DBZ) is in the lab, he will battle if the player agrees  
 - Cinnabar gym trainers are a cult that worships the great and merciful Missingno
 - Giovanni has a special 6th Pokemon in his final fight, he gives the Hyper beam tm and can be rematched
-- The rival starts to hear voices in his head and go a little crazy  
-- Victory road has a trainer who will heal your team, she wanted to be a nurse, but how wants to be a champion
-- Victory road has a trainer who has won the lottery, he is designed for money grinding pre Elite Four
+- The rival starts to hear voices in his head and go a little
+- Kaiba and Sephiroth are in Victory Road. Sephiroth will battle if the player agrees  
+- Victory road has trainers designed for grinding exp and money
 - The Elite Four and Final rival are much stronger to live up to their reputations at this point
 - Mewtwo Cerulean Cave encounter has several changes
   - Dialog during first interaction
@@ -171,25 +183,49 @@ Signature Moves and Mixed Sprites
   - Trying to run displays unique text
   - Mewtwo is the only wild Pokemon to have AI
   
-# Player Functions
+# Player Functions and Glitches
 - Player can sprint at bike speed by holding B, animation speed doubles
 - Player can warp home almost anytime by pressing down, select and B together. Player can not warp in the following places
   - Elite Four rooms
   - Safari Zone
+-  Missingno glitch and trainer fly (Mew glitch) are present but the following balancing changes have been made
+  - Seeing Missingno will not corrupt the players Hall of Fame data
+  - Seeing Missingno will not give the player 128 more of their 6th item, or any amount more of any item
+  - Wild Pokemon whos levels would be >100 or <2 have their level set to 5 
 
-# Post-game Features
+# Post-game Features and Optional Bosses
 - A level 70 Mew is given as a reward in Celadon Mansion Roof House
 - Cerulean Cave accessible, which has entirely different wild encounters
 - All Pokemon obtained by the player now have max DVs (IVs)
 - Vitamins such as protein can be used indefinitely to max out stats  
 - Rematches now give full exp  
-- SS Anne returns, and the Bow can now be accessed where there are 9 optional bosses
-- Hall of Destiny (fighting dojo) is accessible and has 7 optional bosses
-- An optional boss outside Cerulean Cave will now fight the player  
+- Numerous Optional Bosses in the world with levels ranging from 60 up.
+  - 6 Magikarp man on route 21
+  - Kaiba in Victory Road
+  - Mr Miyagi on route 12, will battle if the player agrees
+  - Wallace the Champion of Hoen is on Seafoam Island, he will battle if the player has become Champion  
+  - Trunks is in the Cinnabar Lab, he will battle if the player agrees
+  - Nurse Joy is outside Cerulean Cave, she will battle if the player has become Champion
+  - Sephiroth is in Victory Road, he will battle if the player agrees
+  - Cloud is on floor 11 of Silph Co building, he will battle if the player has beaten Sephiroth
+  - Yugioh is on Route 25, he will battle if the player has beaten Kaiba
+  - The lead scientist of the Cinnabar Lab is south of Fuchsia, he will battle if the player has become Champion
+- SS Anne returns, and the Bow can now be accessed where there are 10 optional bosses, these include
+  - Rematches of all Gym Leaders minus Giovanni
+  - Rematches of Lorelei and Bruno
+  - Rematch of Chris Chan
+- Hall of Destiny (fighting dojo) is accessible and has 8 optional bosses, these include
+  - Red
+  - Agatha and Lance
+  - Giovanni and Final Rival
+  - 3 strongest bosses
+- The 3 strongest bosses are obscenely strong, some break and stretch the limits of what can be beaten. They give the following rewards
+  - Max money and a renewable choice of a level 100 Mew or Mewtwo
+  - Max money and 99 Rare Candies
+  - Max money and 99 Master Balls
 - Legendary birds can be respawned by defeating Elite Four
 - Mewtwo can be respawned by defeating one of the optional bosses
-- Each time the strongest optional boss is defeated, the player is rewarded with a choice of level 100 Mewtwo or Mew
-- Optional bosses yield huge bonus money, the strongest optional boss maxes out the players money when defeated
+- Optional bosses yield huge bonus money, the strongest optional bosses maxes out the players money when defeated
 
 # Wild Pokemon Changes
 - On Route 1 in addition to the classic Pidgey and Rattata there is also - Poliwag, Bellsprout, Vulpix
@@ -216,7 +252,7 @@ Signature Moves and Mixed Sprites
 - Route 12 also has Shellder, Gloom, Weepinbell
 - Route 13 also has Ditto, Staryu
 - Route 14 also has Persian, Staryu, Shellder
-- Route 15 also has Fearow, Venomth, Tauros, Dodrio, Kangaskhan, Arcanine
+- Route 15 has Wigglytuff, Fearow, Venomoth, Tauros, Dodrio, Kingler, Venusaur, Kangaskhan, Arcanine
 - Route 18 also has Hypno, Fearow, Dodrio, Raticate, Kangaskhan
 - Safari Zone has Nidoking, Nidoqueen, Clefable, Wigglytuff, Tauros, Scyther, Pinsir, Exeggutor, Chansey, Rhydon
 - Route 21 grass also has Bulbasaur, Squirtle, Charmander, Jynx
@@ -235,7 +271,7 @@ Signature Moves and Mixed Sprites
 # Pokemon Changes
 - Pokemon given to the player, such as starter and trades have at least 8 DVs in every stat
 - Snorlax and Legendary birds all have at least 10 DVs in every stat
-- All Pokemon obtained have max DVs after the Elite Four have been defeated  
+- All Pokemon obtained have max DVs after the Elite Four have been defeated
 - Pokemon types and base stats have not been changed with a few exceptions
   - Onix and Rhyhorn are now pure rock types, this make Brock less trivial for Squirtle or Bulbasaur starters
   - Dragonite is pure dragon type, this makes Lance harder
@@ -250,6 +286,9 @@ Signature Moves and Mixed Sprites
 - Moltres can learn Solarbeam
 - Articuno can learn Psychic
 - Zapdos has a signature move, Photon wave
+- Snorlax is now encountered at level 40
+- Lapras gifted to the player is now at level 40
+- Fossil Pokemon are obtained from Cinnabar lab at level 40
   
 # Move Changes
 - Several moves have been altered to promote skill rather than luck
@@ -258,6 +297,7 @@ Signature Moves and Mixed Sprites
   - OHKO moves are not in the game
   - Body Slam has a 10% chance to paralyse rather than 30%
   - Wrap is 80 accuracy rather than 85
+- Flash is now 100% accurate  
 - Karate Chop is now a Fighting type move
 - Mega Punch is 90 accuracy rather than 85
 - Gust is now a Flying type move
@@ -287,3 +327,22 @@ Signature Moves and Mixed Sprites
 - Mew has a signature move Psycrush, a 120 BP 100 Acc Rock move with 10% paralysis rate
 - Mewtwo has a signature move Psyblast, a 120 BP 100 Acc Dragon move with 10% freeze chance
 - When Psyblast freezes the enemy the text reads "turned to stone" rather than "was frozen solid"
+
+#Grinding
+
+- The game is balanced such that only a little grinding should be needed depending on what Pokemon are on the players team.
+- There are some areas and NPCs added specifically to make grinding faster.
+- Before beating the elite four the following are good grinding spots as you progress through the game
+  - Viridian forest first trainer can not harm the player is good for a few early levels
+  - Viridian Forest wild Pokemon - wild Beedrill and Butterfree can be found for high experience
+  - Bug Catchers around Mt Moon can yield high experience
+  - Entrance of SS Anne has an NPC which can heal you team allowing easy grinding on the trainers in the rooms
+  - Fishermen on route 12 give high exp when they are encountered
+  - Celadon Gym has an NPC outside who heals your team allowing grinding on the trainers inside
+  - Route 15 wild Pokemon have been updated specifically to give high exp, it is one of the best grinding spots
+  - Seafoam Islands has some of the strongest Pokemon and is a good grinding spot
+  - Victory Road wild Pokemon is the best grinding spot pre elite four, especially as you have access to Exp.All
+- After beating the Elite four, rematches give full exp and the player has easier access to Exp.All, best grinding spots are
+  - Nurse trainer in Victory Road, she gives high exp and heals your party
+  - Nurse Joy outside Cerulean Cave, she is the best exp grind trainer
+  - Blaine rematch on SS Anne, he gives high exp but also significant money, probably the best overall way to grind
