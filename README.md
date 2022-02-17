@@ -81,7 +81,7 @@ Signature Moves and Mixed Sprites
 - Some trainers give bonus money when defeated. There are three levels of bonus money
   - Bonus equal to normal prize money - given by Elite Four and a few mini bosses
   - Bonus equal to 10 X normal prize money - given by optional bosses
-  - Bonus equal to 100 X normal prize money - given by the strongest optional boss
+  - Bonus equal to 100 X normal prize money - given by the strongest 3 optional bosses
 - Exp.ALL now gives full exp and stat exp to all Pokemon in the party
 - Exp.All can be obtained by catching 100 Pokemon or bought at Elite Four shop
 - Critical hit rate is still based on speed but is half of vanilla values, so fast Pokemon have about 12% crit rate   
@@ -328,8 +328,7 @@ Signature Moves and Mixed Sprites
 - Mewtwo has a signature move Psyblast, a 120 BP 100 Acc Dragon move with 10% freeze chance
 - When Psyblast freezes the enemy the text reads "turned to stone" rather than "was frozen solid"
 
-#Grinding
-
+# Grinding
 - The game is balanced such that only a little grinding should be needed depending on what Pokemon are on the players team.
 - There are some areas and NPCs added specifically to make grinding faster.
 - Before beating the elite four the following are good grinding spots as you progress through the game
