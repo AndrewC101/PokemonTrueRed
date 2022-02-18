@@ -455,7 +455,7 @@ JugglerData:
 	db 47, GENGAR, 0
 	db $FF, 50, MR_MIME, 70, DITTO, 0
 ; Pegasus
-    db 40, GENGAR, 0
+    db $FF, 30, FARFETCHD, 40, GENGAR, 0
 ; Wallace
     db $FF, 70, STARMIE, 71, HYPNO, 72, LAPRAS, 73, CHANSEY, 74, GYARADOS, 75, ARTICUNO, 0
 
