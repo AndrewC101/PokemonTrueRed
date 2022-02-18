@@ -260,14 +260,14 @@ HikerData:
 	db 31, GRAVELER, DUGTRIO, 0
 	db 30, RHYHORN, GRAVELER, 0
 ; Rock Tunnel B1F
-	db 30, GRAVELER, GRAVELER, GOLEM, 0
-	db 35, GOLEM, 0
+	db 30, GRAVELER, GRAVELER, RHYHORN, 0
+	db 40, GOLEM, 0
 ; Route 9/Rock Tunnel B1F
 	db 32, MACHOKE, ONIX, 0
 ; Rock Tunnel 1F
 	db 31, GRAVELER, DUGTRIO, SANDSLASH, MACHOKE, 0
 	db 34, ONIX, ONIX, RHYHORN, 0
-	db 30, GOLEM, GOLEM, 0
+	db 30, ONIX, OMANYTE, 0
 
 BikerData:
 ; Route 13

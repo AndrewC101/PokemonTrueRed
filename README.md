@@ -18,7 +18,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up
 - numerous bug fixes including removal of badge boost, removal of 1 in 256 glitch and critical hit rates halved
 - Many Gen 1 glitches still left to keep the spirit of the game, such a Hyper Beam not recharging on a kill
-- All 151 Pokemon available with no missable Pokemon. Trade evolutions now evolve at level 36
+- All 151 Pokemon available with no missable Pokemon. Trade evolutions now evolve at level 40
 - Multiples of all Legendary Pokemon available with new signature moves for Mewtwo, Mew and Pikachu
 - New enemies, such as the Espada and Aizen on Nugget bridge and Chris Chan who is hiding in Rock Tunnel
 - All good TMs are available to purchase in Celadon as soon as you get there, but some are only given by Gym Leaders 
@@ -28,7 +28,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Missingno glitch and Mew glitch are still present (it wouldn't be gen 1 without them) but balanced so the player can't exploit them
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1euImua8eRwG2begq_Un6qxiefwLFnv6u/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1--fHEK7vsUj258-UnuGLkeVuumUGg_7s/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -280,7 +280,10 @@ Signature Moves and Mixed Sprites
   - Dragonite is pure dragon type, this makes Lance harder
   - Gyarados is pure water type, this makes Lance harder
   - Gengar is pure ghost type but has less HP and defense, this makes Agatha harder
-- All Trade evolution Pokemon now evolve at level 36  
+- All Trade evolution Pokemon now evolve at level 40  
+- Some early game Pokemon evolve earlier
+  - Bellsprout and Poliwag evolve at level 22
+  - Machop and Meowth evolve at level 25
 - Nearly all fully evolved Pokemon have an updated level up moveset
 - Scyther and Pinsir now know Twineedle
 - Aerodactyl, Kabutops and Omastar can learn Rock Slide and Earthquake
