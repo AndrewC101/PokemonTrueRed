@@ -32,7 +32,7 @@ TrainerAIPointers:
 	dbw 3, SwitchAndUseItemsAI ; rival1
 	dbw 3, SwitchAndUseItemsAI ; oak
 	dbw 1, GenericAI ; chief
-	dbw 3, GenericAI ; scientist
+	dbw 3, SwitchAndUseItemsAI ; scientist
 	dbw 1, SwitchAndUseItemsAI ; giovanni
 	dbw 3, GenericAI
 	dbw 2, SwitchAndUseItemsAI ; cooltrainerm

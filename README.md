@@ -28,7 +28,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Missingno glitch and Mew glitch are still present (it wouldn't be gen 1 without them) but balanced so the player can't exploit them
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1VaGbfreVcn-6Hd5qs1DOTV-O66Xk4qEm/view?usp=sharing).
+The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1euImua8eRwG2begq_Un6qxiefwLFnv6u/view?usp=sharing).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
