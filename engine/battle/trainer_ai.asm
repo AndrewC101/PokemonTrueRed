@@ -307,7 +307,7 @@ AIMoveChoiceModification2:
     jp .stronglyEncourageMove ; strongly encourage swords dance if not at + 2
     jp .nextMove
 .handleSpecialBoost
-    CheckEvent EVENT_ANDREW_BATTLE ; for enemies over lvl 100, mostly just lvl 255 mewtwo
+    CheckEvent EVENT_ANDREW_BATTLE ; for lvl 255 mewtwo
     jr z, .normalLvlSpecialBoost
     ld a, [wEnemyMonSpecialMod]
     cp 7
@@ -318,7 +318,10 @@ AIMoveChoiceModification2:
     cp $b
     jp nc, .discourageMove ; don't amnesia after +4
     cp $9
-    jp nc, .nextMove
+    jp nc, .nextMove ; no preference if at +2
+    ld a, [wPlayerMonSpecialMod]
+	cp $9
+	jp nc, .superStronglyEncourageMove ; extra encourage if player has boosted special and enemy doesn't
     jp .stronglyEncourageMove; strongly encourage amnesia if not at +2
     jp .nextMove
 .handleReflect

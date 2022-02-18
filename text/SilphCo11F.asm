@@ -133,9 +133,9 @@ _SilphCo10Text_6231c::
 	line "marching toward"
 	cont "us."
 
-	para "Mothers tried"
-	line "to console their"
-	cont "children."
+	para "An elderly"
+	line "couple wept"
+	cont "beside me."
 
 	para "We were doomed!"
 
@@ -160,7 +160,7 @@ _SilphCo10Text_6231c::
 	para "In moments.."
 
 	para "Everything was"
-	line "still!"
+	line "still."
 
 	para "All that was"
 	line "left was him"

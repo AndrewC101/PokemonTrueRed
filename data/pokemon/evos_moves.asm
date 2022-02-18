@@ -279,8 +279,8 @@ SlowbroEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-    db 35, REST
-	db 40, AMNESIA
+    db 40, REST
+	db 42, AMNESIA
 	db 45, PSYCHIC_M
 	db 101, SURF
 	db 0
@@ -583,7 +583,7 @@ PidgeyEvosMoves:
 
 SlowpokeEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 34, SLOWBRO
+	db EV_LEVEL, 37, SLOWBRO
 	db 0
 ; Learnset
 	db 18, WATER_GUN

@@ -98,6 +98,10 @@ _Route25BattleText5::
 
     para "Maybe you can"
     line "help me."
+
+    para "It's time to"
+    line "D-D-D-D..."
+    cont "D-D-D-D-D-DUEL!"
 	done
 
 _Route25EndBattleText5::
