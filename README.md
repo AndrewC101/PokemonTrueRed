@@ -20,7 +20,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Many Gen 1 glitches still left to keep the spirit of the game, such a Hyper Beam not recharging on a kill
 - All 151 Pokemon available with no missable Pokemon. Trade evolutions now evolve at level 40
 - Multiples of all Legendary Pokemon available with new signature moves for Mewtwo, Mew and Pikachu
-- New enemies, such as the Espada and Aizen on Nugget bridge and Chris Chan who is hiding in Rock Tunnel
+- New enemies, such as Sephiroth, Cloud, Yugi, Kaiba, Trunks, Wallace, Aizen, Mr Miyagi and Chris Chan who is hiding in Rock Tunnel
 - All good TMs are available to purchase in Celadon as soon as you get there, but some are only given by Gym Leaders 
 - HM moves can be deleted at any time like normal moves, the warp home function protects you from trapping yourself
 - Easier post-game grinding, with Exp.All giving full exp to whole party and optional bosses giving huge bonus money
