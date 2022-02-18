@@ -190,7 +190,7 @@ Signature Moves and Mixed Sprites
 - Player can warp home almost anytime by pressing down, select and B together. Player can not warp in the following places
   - Elite Four rooms
   - Safari Zone
--  Missingno glitch and trainer fly (Mew glitch) are present but the following balancing changes have been made
+- Missingno glitch and trainer fly (Mew glitch) are present, but the following balancing changes have been made
   - Seeing Missingno will not corrupt the players Hall of Fame data
   - Seeing Missingno will not give the player 128 more of their 6th item, or any amount more of any item
   - Wild Pokemon whos levels would be >100 or <2 have their level set to 5 
