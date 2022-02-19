@@ -51,34 +51,34 @@ DoubleSelectedStats:
 	ret
 
 ; does nothing since no stats are ever selected (barring glitches)
-HalveSelectedStats:
-	ldh a, [hWhoseTurn]
-	and a
-	ld a, [wPlayerStatsToHalve]
-	ld hl, wBattleMonAttack
-	jr z, .notEnemyTurn
-	ld a, [wEnemyStatsToHalve]
-	ld hl, wEnemyMonAttack
-.notEnemyTurn
-	ld c, 4
-	ld b, a
-.loop
-	srl b
-	call c, .halveStat
-	inc hl
-	inc hl
-	dec c
-	ret z
-	jr .loop
+;HalveSelectedStats:
+;	ldh a, [hWhoseTurn]
+;	and a
+;	ld a, [wPlayerStatsToHalve]
+;	ld hl, wBattleMonAttack
+;	jr z, .notEnemyTurn
+;	ld a, [wEnemyStatsToHalve]
+;	ld hl, wEnemyMonAttack
+;.notEnemyTurn
+;	ld c, 4
+;	ld b, a
+;.loop
+;	srl b
+;	call c, .halveStat
+;	inc hl
+;	inc hl
+;	dec c
+;	ret z
+;	jr .loop
 
-.halveStat
-	ld a, [hl]
-	srl a
-	ld [hli], a
-	rr [hl]
-	or [hl]
-	jr nz, .nonzeroStat
-	ld [hl], 1
-.nonzeroStat
-	dec hl
-	ret
+;.halveStat
+;	ld a, [hl]
+;	srl a
+;	ld [hli], a
+;	rr [hl]
+;	or [hl]
+;	jr nz, .nonzeroStat
+;	ld [hl], 1
+;.nonzeroStat
+;	dec hl
+;	ret

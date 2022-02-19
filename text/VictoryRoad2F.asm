@@ -96,14 +96,13 @@ _VictoryRoad2EndBattleText4::
 	prompt
 
 _VictoryRoad2AfterBattleText4::
-	text "I think YUGI"
-	line "came through"
-	cont "here earlier."
+	text "I am searching"
+	line "for an"
+    cont "Egyptian "
+    cont "God Card!"
 
-	para "He may have"
-	line "found an"
-	cont "Egyptian "
-	cont "God Card!"
+	para "I know there"
+	line "is one near by!"
 	done
 
 _VictoryRoad2BattleText5::

@@ -1192,7 +1192,6 @@ HandlePlayerBlackOut:
     ResetEvent EVENT_STOP_SWITCHING
     ResetEvent EVENT_USE_FULL_RESTORES
     ResetEvent EVENT_USE_FULL_HEALS
-    ResetEvent EVENT_HIGH_LVL_ENEMY
     ResetEvent EVENT_ANDREW_BATTLE
     ResetEvent EVENT_JAMES_BATTLE
 	ld b, SET_PAL_BATTLE_BLACK
@@ -6992,9 +6991,9 @@ LoadPlayerBackPic:
 	predef_jump CopyUncompressedPicToTilemap
 
 ; does nothing since no stats are ever selected (barring glitches)
-DoubleOrHalveSelectedStats:
-	callfar DoubleSelectedStats
-	jpfar HalveSelectedStats
+;DoubleOrHalveSelectedStats:
+;	callfar DoubleSelectedStats
+;	jpfar HalveSelectedStats
 
 ScrollTrainerPicAfterBattle:
 	jpfar _ScrollTrainerPicAfterBattle

@@ -51,6 +51,7 @@ FormatMovesString:
 	ld [de], a
 	ret
 
+; AndrewNote - TODO this could potentially be deleted to free some space
 ; XXX this is called in a few places, but it doesn't appear to do anything useful
 InitList:
 	ld a, [wInitListType]

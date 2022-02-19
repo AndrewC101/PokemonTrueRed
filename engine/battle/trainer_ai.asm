@@ -292,7 +292,7 @@ AIMoveChoiceModification2:
     pop hl
     jp .nextMove
 .handleAttackBoost
-    CheckEvent EVENT_HIGH_LVL_ENEMY ; for enemies over lvl 100, stop at +2
+    CheckEvent EVENT_JAMES_BATTLE ; for enemies over lvl 100, stop at +2
     jr z, .normalLvlAttackBoost
     ld a, [wEnemyMonAttackMod]
     cp 9
@@ -911,6 +911,33 @@ SwitchAndUseItemsAI:
     ld a, 4
 	call AICheckIfHPBelowFraction
     jr c, .nothing ; don't switch if hp < 25%, just let it die
+
+; If enemy only has 1 Pokemon left, don't try to switch
+	ld a, [wEnemyPartyCount]
+	ld c, a
+	ld hl, wEnemyMon1HP
+	ld d, 0 ; keep count of unfainted monsters
+; count how many monsters haven't fainted yet
+.loop
+	ld a, [hli]
+	ld b, a
+	ld a, [hld]
+	or b
+	jr z, .Fainted ; has monster fainted?
+	inc d
+.Fainted
+	push bc
+	ld bc, wEnemyMon2 - wEnemyMon1
+	add hl, bc
+	pop bc
+	dec c
+	jr nz, .loop
+
+	ld a, d ; how many available monsters are there?
+	cp $1
+	jr z, .nothing ; don't bother if only 1
+
+; prepare for switch
     SetEvent EVENT_ENEMY_SWITCH_NEXT_TURN
     SetEvent EVENT_ENEMY_MOVE_FIRST
 .nothing
