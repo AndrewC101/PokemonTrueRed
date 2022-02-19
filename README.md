@@ -29,6 +29,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 
 # Download and Play
 The current version of the game can be downloaded from [here](https://drive.google.com/file/d/1JbQPxpU5oqXdRSiWZsL5Dd4F9rz5VgdA/view?usp=sharing).
+Or it is also available from [here](https://www.dropbox.com/s/95zi9q8m3tjoe6f/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
