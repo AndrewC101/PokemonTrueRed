@@ -28,7 +28,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Missingno glitch and Mew glitch are still present (it wouldn't be gen 1 without them) but balanced so the player can't exploit them
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/rt2dgmr04p91kpw/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/y70gh11qgocn350/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -88,14 +88,18 @@ Signature Moves and Mixed Sprites
 - Badge boosts are no longer a thing
 - Maximum sleep turns is now 4 rather than 7  
 - 1 in 256 glitch is fixed
+- If a critical hit can not occur if it would deal less damage than a normal attack
 - Pokemon no longer miss out on level up moves if they skip that level  
 - the invulnerability glitch on Fly and Dig is fixed for player and opponent
 - The healing glitch when remaining hp is 255 is fixed
 - Rest restores stat drops from paralysis and burn  
-- Some glitches are left in to maintain that gen 1 feeling
+- Stat penalties from paralysis and burn are not re-applied on a stat modification  
+- Some glitches and features are left in to maintain that gen 1 feeling
   - Enemies still have infinite pp, it makes them harder, even if it is unfair
   - Hyper beam still will not require a recharge after defeating an enemy
   - Trapping moves can still prevent enemy movement
+  - Freeze still lasts forever
+  - Sleeping Pokemon still don't attack on wake up
 - Game uses FAST text speed and SET battle style by default
 
 # AI

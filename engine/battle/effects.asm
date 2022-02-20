@@ -745,30 +745,30 @@ UpdateLoweredStatDone:
 ; But they are always called regardless of the stat affected by the stat-down move.
 ; AndrewNote - this is a bad bug, if you are para and the enemy lowers any of your stats, they just quartered your speed again!
 ; fix taken from shinpokered
-push de	;preserve de on the stack
-	ld de, wPlayerMoveEffect	;get the player move effect
-	ld a, [hWhoseTurn]	;load the turn
-	and a	;check the turn
-	jr z, .skip1	;if it is not the player's turn...
-	ld de, wEnemyMoveEffect	;...then it's the enemy's turn - load enemy move effect
-.skip1
-	ld a, [de]	;get the move effect into a
-	cp ATTACK_DOWN1_EFFECT
-	jr z, .skip_brn	;attack effect. skip to brn penalty
-	cp ATTACK_DOWN2_EFFECT
-	jr z, .skip_brn	;attack effect. skip to brn penalty
-	cp SPEED_DOWN1_EFFECT
-	jr z, .skip_par	;speed effect. skip to par penalty.
-	cp SPEED_DOWN2_EFFECT
-	jr z, .skip_par	;speed effect. skip to par penalty.
-	jr .skip_end	;no attack or speed effect if at this line. skip to end.
-.skip_brn
-	call HalveAttackDueToBurn	;the non-active pkmn has a new recalculated attack. the active pkmn applies brn penalty to its opponent.
-	jr .skip_end
-.skip_par
-	call QuarterSpeedDueToParalysis	;the non-active pkmn has a new recalculated speed. the active pkmn applies par penalty to its opponent.
-.skip_end
-	pop de	;restore de from the stack
+;push de	;preserve de on the stack
+;	ld de, wPlayerMoveEffect	;get the player move effect
+;	ld a, [hWhoseTurn]	;load the turn
+;	and a	;check the turn
+;	jr z, .skip1	;if it is not the player's turn...
+;	ld de, wEnemyMoveEffect	;...then it's the enemy's turn - load enemy move effect
+;.skip1
+;	ld a, [de]	;get the move effect into a
+;	cp ATTACK_DOWN1_EFFECT
+;	jr z, .skip_brn	;attack effect. skip to brn penalty
+;	cp ATTACK_DOWN2_EFFECT
+;	jr z, .skip_brn	;attack effect. skip to brn penalty
+;	cp SPEED_DOWN1_EFFECT
+;	jr z, .skip_par	;speed effect. skip to par penalty.
+;	cp SPEED_DOWN2_EFFECT
+;	jr z, .skip_par	;speed effect. skip to par penalty.
+;	jr .skip_end	;no attack or speed effect if at this line. skip to end.
+;.skip_brn
+;	call HalveAttackDueToBurn	;the non-active pkmn has a new recalculated attack. the active pkmn applies brn penalty to its opponent.
+;	jr .skip_end
+;.skip_par
+;	call QuarterSpeedDueToParalysis	;the non-active pkmn has a new recalculated speed. the active pkmn applies par penalty to its opponent.
+;.skip_end
+;	pop de	;restore de from the stack
 	ret	;remember to return
 
 CantLowerAnymore_Pop:

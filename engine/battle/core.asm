@@ -4347,6 +4347,16 @@ GetDamageVarsForPlayerAttack:
 	sla c
 	rl b
 .physicalAttackCritCheck
+    ld a, [wPlayerMonAttackMod]
+    cp $a
+    jr c, .physicalCritCheck ; if player attack stat is not boosted to +3 or more, then normal crit check
+    ld a, [wEnemyMonDefenseMod]
+    cp $8
+    jr nc, .physicalCritCheck ; if enemy defense stat is boosted, then normal crit check
+    ; AndrewNote - no crit if player has boosted attack and enemy doesn't have boosted defense, as crit will deal less damage
+    ld a, $0
+    ld [wCriticalHitOrOHKO], a
+.physicalCritCheck
 	ld hl, wBattleMonAttack
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
@@ -4379,6 +4389,16 @@ GetDamageVarsForPlayerAttack:
 ; reflect and light screen boosts do not cap the stat at MAX_STAT_VALUE, so weird things will happen during stats scaling
 ; if a Pokemon with 512 or more Defense has used Reflect, or if a Pokemon with 512 or more Special has used Light Screen
 .specialAttackCritCheck
+    ld a, [wPlayerMonSpecialMod]
+    cp $a
+    jr c, .specialCritCheck ; if player attack stat is not boosted to +3 or more, then normal crit check
+    ld a, [wEnemyMonSpecialMod]
+    cp $8
+    jr nc, .specialCritCheck ; if enemy defense stat is boosted, then normal crit check
+    ; AndrewNote - no crit if player has boosted special and enemy doesn't, as crit will deal less damage
+    ld a, $0
+    ld [wCriticalHitOrOHKO], a
+.specialCritCheck
 	ld hl, wBattleMonSpecial
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
@@ -4542,7 +4562,7 @@ GetDamageVarsForEnemyAttack:
 	and a ; check for critical hit
 	jr z, .done
 	ld a, e ; store lvl in a
-	cp $80 ; is level >= 128, such levels will roll over when doubled
+	cp $80 ; AndrewNote - is level >= 128, such levels will roll over when doubled
 	jr c, .doubleLevel ; if not double level
 	ld e, $FF ; if so just use 255 as level
 	jr .done

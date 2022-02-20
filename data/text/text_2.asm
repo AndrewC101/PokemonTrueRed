@@ -584,7 +584,7 @@ _IndigoPlateauHQText::
 
 _RedBedroomSNESText::
 	text "<PLAYER> is"
-	line "destroying"
+	line "hunting"
 	cont "noobs in"
 	cont "Dark Souls!"
 	cont "...Okay!"
