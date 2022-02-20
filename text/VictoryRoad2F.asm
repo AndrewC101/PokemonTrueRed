@@ -151,7 +151,7 @@ _VictoryRoad2EndBattleText6::
 	prompt
 
 _VictoryRoad2AfterBattleText6::
-	text "Have you see"
+	text "Have you seen"
 	line "CLOUD?"
 
 	para "He will come"

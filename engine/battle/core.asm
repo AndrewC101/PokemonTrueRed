@@ -2309,10 +2309,10 @@ DisplayBattleMenu::
     jr nz, BagWasSelected
 
 .noItems
-    ; level 255 poke ignores item restrictions, for debug purposes
+    ; mon lvl >100 poke ignores item restrictions, for debug
     ld a, [wBattleMonLevel]
-    cp $FF
-    jr z, BagWasSelected
+    cp $65
+    jr nc, BagWasSelected
 
     ; use different text if enemy can use frequent items
     CheckEvent EVENT_USE_FULL_HEALS

@@ -130,6 +130,10 @@ _FightingDojoBattleText1::
 _FightingDojoEndBattleText1::
 	text "You are"
 	line "the strongest!"
+
+	para "I sense a MEWTWO"
+    line "has returned to"
+    cont "CERULEAN CAVE."
 	prompt
 
 _FightingDojoAfterBattleText1::
@@ -152,10 +156,6 @@ _FightingDojoAfterBattleText1::
 	para "MEWTWO, MEW,"
 	line "CHANSEY, ICEBEAM"
 	cont "and THUNDERWAVE"
-
-	para "I sense a MEWTWO"
-	line "has returned to"
-	cont "CERULEAN CAVE."
 	done
 
 _FightingDojoBattleText2::
@@ -522,7 +522,7 @@ _FightingDojoBattleText8::
     cont "world!"
 
     para "This world is"
-    line "build on rules"
+    line "built on rules"
 
     para "Some can be bent"
     line "others can be"
