@@ -88,7 +88,7 @@ Signature Moves and Mixed Sprites
 - Badge boosts are no longer a thing
 - Maximum sleep turns is now 4 rather than 7  
 - 1 in 256 glitch is fixed
-- If a critical hit can not occur if it would deal less damage than a normal attack
+- A critical hit can not occur for the player if it would deal less damage than a normal attack
 - Pokemon no longer miss out on level up moves if they skip that level  
 - the invulnerability glitch on Fly and Dig is fixed for player and opponent
 - The healing glitch when remaining hp is 255 is fixed
