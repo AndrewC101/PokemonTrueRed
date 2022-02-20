@@ -16,7 +16,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Unique, starter and legendary Pokemon always have good DVs at minimum  
 - Items can not be used in boss battles, by a player or opponent
 - Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up
-- numerous bug fixes including removal of badge boost, removal of 1 in 256 glitch and critical hit rates halved
+- numerous bug fixes including removal of badge boost, removal of 1 in 256 glitch, fix re-application of PARA/BRN effects, critical hit rates halved
 - Many Gen 1 glitches still left to keep the spirit of the game, such a Hyper Beam not recharging on a kill
 - All 151 Pokemon available with no missable Pokemon. Trade evolutions now evolve at level 40
 - Multiples of all Legendary Pokemon available with new signature moves for Mewtwo, Mew and Pikachu
@@ -28,7 +28,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Missingno glitch and Mew glitch are still present (it wouldn't be gen 1 without them) but balanced so the player can't exploit them
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/zed4ei49gbvt87o/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/rt2dgmr04p91kpw/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town

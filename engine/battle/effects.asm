@@ -516,14 +516,44 @@ UpdateStatDone:
 	pop af
 	call nz, Bankswitch
 .applyBadgeBoostsAndStatusPenalties
-	ldh a, [hWhoseTurn]
-	and a
+	;ldh a, [hWhoseTurn]
+	;and a
 	ld hl, MonsStatsRoseText
 	call PrintText
 
 ; these shouldn't be here
-	call QuarterSpeedDueToParalysis ; apply speed penalty to the player whose turn is not, if it's paralyzed
-	jp HalveAttackDueToBurn ; apply attack penalty to the player whose turn is not, if it's burned
+; AndrewNote - this is a bad bug, if you are para and you use sat amnesia, you just quartered your speed again!
+; fix taken from shinpokered
+	push de	;preserve de on the stack
+	ld de, wPlayerMoveEffect	;get the player move effect
+	ld a, [hWhoseTurn]	;load the turn
+	and a	;check the turn
+	jr z, .skip1	;if it is not the player's turn...
+	ld de, wEnemyMoveEffect	;...then it's the enemy's turn - load enemy move effect
+.skip1
+	xor $1	;invert the turn
+	ld [hWhoseTurn], a	;store the inverted turn
+	ld a, [de]	;get the move effect into a
+	cp ATTACK_UP1_EFFECT
+	jr z, .skip_brn	;attack effect. skip to brn penalty
+	cp ATTACK_UP2_EFFECT
+	jr z, .skip_brn	;attack effect. skip to brn penalty
+	cp SPEED_UP1_EFFECT
+	jr z, .skip_par	;speed effect. skip to par penalty.
+	cp SPEED_UP2_EFFECT
+	jr z, .skip_par	;speed effect. skip to par penalty.
+	jr .skip_end	;no attack or speed effect if at this line. skip to end.
+.skip_brn
+	call HalveAttackDueToBurn	;the active pkmn has a new recalculated attack. the non-active pkmn applies brn penalty to its opponent.
+	jr .skip_end
+.skip_par
+	call QuarterSpeedDueToParalysis	;the active pkmn has a new recalculated speed. the non-active pkmn applies par penalty to its opponent.
+.skip_end
+	ld a, [hWhoseTurn]	;load the inverted turn
+	xor $1	;revert the turn back to normal
+	ld [hWhoseTurn], a	;store the normal turn
+	pop de	;restore de from the stack
+	ret	;remember to return
 
 RestoreOriginalStatModifier:
 	pop hl
@@ -576,14 +606,14 @@ StatModifierDownEffect:
 .statModifierDownEffect
 	call CheckTargetSubstitute ; can't hit through substitute
 	jp nz, MoveMissed
-	ld a, [de]
-	cp ATTACK_DOWN_SIDE_EFFECT
+	ld a, [de] ; load move effect into a
+	cp ATTACK_DOWN_SIDE_EFFECT ; start with attack down, but loops through all stats
 	jr c, .nonSideEffect
 	call BattleRandom
 	cp 20 percent + 1 ; chance for side effects
 	jp nc, CantLowerAnymore
 	ld a, [de]
-	sub ATTACK_DOWN_SIDE_EFFECT ; map each stat to 0-3
+	sub ATTACK_DOWN_SIDE_EFFECT ; map each stat to 0-3, this loops though stats
 	jr .decrementStatMod
 .nonSideEffect ; non-side effects only
 	push hl
@@ -705,16 +735,41 @@ UpdateLoweredStatDone:
 	jr nc, .ApplyBadgeBoostsAndStatusPenalties
 	call PlayCurrentMoveAnimation2
 .ApplyBadgeBoostsAndStatusPenalties
-	ldh a, [hWhoseTurn]
-	and a
+	;ldh a, [hWhoseTurn]
+	;and a
 	ld hl, MonsStatsFellText
 	call PrintText
 
 ; These where probably added given that a stat-down move affecting speed or attack will override
 ; the stat penalties from paralysis and burn respectively.
 ; But they are always called regardless of the stat affected by the stat-down move.
-	call QuarterSpeedDueToParalysis
-	jp HalveAttackDueToBurn
+; AndrewNote - this is a bad bug, if you are para and the enemy lowers any of your stats, they just quartered your speed again!
+; fix taken from shinpokered
+push de	;preserve de on the stack
+	ld de, wPlayerMoveEffect	;get the player move effect
+	ld a, [hWhoseTurn]	;load the turn
+	and a	;check the turn
+	jr z, .skip1	;if it is not the player's turn...
+	ld de, wEnemyMoveEffect	;...then it's the enemy's turn - load enemy move effect
+.skip1
+	ld a, [de]	;get the move effect into a
+	cp ATTACK_DOWN1_EFFECT
+	jr z, .skip_brn	;attack effect. skip to brn penalty
+	cp ATTACK_DOWN2_EFFECT
+	jr z, .skip_brn	;attack effect. skip to brn penalty
+	cp SPEED_DOWN1_EFFECT
+	jr z, .skip_par	;speed effect. skip to par penalty.
+	cp SPEED_DOWN2_EFFECT
+	jr z, .skip_par	;speed effect. skip to par penalty.
+	jr .skip_end	;no attack or speed effect if at this line. skip to end.
+.skip_brn
+	call HalveAttackDueToBurn	;the non-active pkmn has a new recalculated attack. the active pkmn applies brn penalty to its opponent.
+	jr .skip_end
+.skip_par
+	call QuarterSpeedDueToParalysis	;the non-active pkmn has a new recalculated speed. the active pkmn applies par penalty to its opponent.
+.skip_end
+	pop de	;restore de from the stack
+	ret	;remember to return
 
 CantLowerAnymore_Pop:
 	pop de
