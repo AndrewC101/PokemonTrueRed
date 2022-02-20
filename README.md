@@ -109,7 +109,8 @@ Signature Moves and Mixed Sprites
 - If enemy Pokemon HP is below 33% all non-damaging moves except healing moves are deprioritized  
 - Boss enemies will switch Pokemon under the following conditions
     - HP > 25% and one of Attack, Special or Accuracy have been lowered to -2 or lower
-    - HP > 25% and enemy afflicted with leech seed, 25% chance to switch
+    - HP > 25% and enemy afflicted with leech seed, 25% chance to switch per turn
+    - HP > 25% and enemy afflicted with toxic, 50% chance to switch per turn
     - Enemy Pokemon is in a state of SLP or FRZ and player uses a healing or stat boosting move
 - When switching Pokemon Enemies use the following citeria
     - Pokemon that are in a state of SLP or FRZ are saved for last
