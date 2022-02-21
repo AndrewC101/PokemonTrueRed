@@ -4296,7 +4296,7 @@ GetDamageVarsForPlayerAttack:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; AndrewNote - critical hits will not occur if all the following are satisfied
 ; - attacking mon has offensive stat boosted to +3 or higher
-; - defending mon has non boosted defencive stat
+; - defending mon has non boosted defensive stat
 ; - defending mon does not have reflect/lightscreen up
 ; in this situation a critical hit would deal less damage than a normal hit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -4345,7 +4345,7 @@ GetDamageVarsForPlayerAttack:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; AndrewNote - critical hits will not occur if all the following are satisfied
 ; - attacking mon has offensive stat boosted to +3 or higher
-; - defending mon has non boosted defencive stat
+; - defending mon has non boosted defensive stat
 ; - defending mon does not have reflect/lightscreen up
 ; in this situation a critical hit would deal less damage than a normal hit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -4447,7 +4447,7 @@ GetDamageVarsForEnemyAttack:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; AndrewNote - critical hits will not occur if all the following are satisfied
 ; - attacking mon has offensive stat boosted to +3 or higher
-; - defending mon has non boosted defencive stat
+; - defending mon has non boosted defensive stat
 ; - defending mon does not have reflect/lightscreen up
 ; in this situation a critical hit would deal less damage than a normal hit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -4496,7 +4496,7 @@ GetDamageVarsForEnemyAttack:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; AndrewNote - critical hits will not occur if all the following are satisfied
 ; - attacking mon has offensive stat boosted to +3 or higher
-; - defending mon has non boosted defencive stat
+; - defending mon has non boosted defensive stat
 ; - defending mon does not have reflect/lightscreen up
 ; in this situation a critical hit would deal less damage than a normal hit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

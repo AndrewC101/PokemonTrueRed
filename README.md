@@ -90,7 +90,7 @@ Signature Moves and Mixed Sprites
 - 1 in 256 glitch is fixed
 - A critical hit can not occur if it would deal less damage than a normal attack, that is if all the following are satisfied
   - Attacking mon has offensive stat boosted to +3 or higher
-  - Defending mon has non boosted defencive stat
+  - Defending mon has non boosted defensive stat
   - Defending mon does not have reflect/lightscreen up
 - Pokemon no longer miss out on level up moves if they skip that level  
 - the invulnerability glitch on Fly and Dig is fixed for player and opponent
