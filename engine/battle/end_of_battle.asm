@@ -48,6 +48,7 @@ EndOfBattle:
 	ResetEvent EVENT_USE_FULL_HEALS
 	ResetEvent EVENT_ANDREW_BATTLE
 	ResetEvent EVENT_JAMES_BATTLE
+	ResetEvent EVENT_NO_WARP
 
 	CheckEvent EVENT_RESET_MEWTWO_ENCOUNTER
 	jr z, .continue
