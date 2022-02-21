@@ -98,6 +98,9 @@ SSAnne2Script1:
 	call Delay3
 	ld a, OPP_RIVAL2
 	ld [wCurOpponent], a
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
+	SetEvent EVENT_MEDIUM_STAT_EXP
 
 	; select which team to use during the encounter
 	ld a, [wRivalStarter]

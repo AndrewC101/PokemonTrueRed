@@ -151,6 +151,9 @@ FightingDojoText1:
 .fightMaster
     SetEvent EVENT_NO_REMATCH_OPTION
     SetEvent EVENT_MAX_BONUS_MONEY ; AndrewNote - give X100 money after victory
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
+	SetEvent EVENT_MAX_STAT_EXP
     predef HealParty ; AndrewNote - heal party to prevent pre status cheesing "cleric clause"
 	ld hl, FightingDojoText_5ce8e
 	call PrintText
@@ -193,6 +196,7 @@ FightingDojoText2:
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
 	SetEvent EVENT_RESET_MEWTWO_ENCOUNTER ; AndrewNote - respawn Mewtwo on victory
+	SetEvent EVENT_MAX_STAT_EXP
 	predef HealParty ; AndrewNote - heal party to prevent pre status cheesing "cleric clause"
 	ld hl, FightingDojoTrainerHeader0
 	call TalkToTrainer
@@ -215,6 +219,7 @@ FightingDojoText3:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
+	SetEvent EVENT_MAX_STAT_EXP
 	ld hl, FightingDojoTrainerHeader1
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -236,6 +241,7 @@ FightingDojoText4:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
+	SetEvent EVENT_MAX_STAT_EXP
 	ld hl, FightingDojoTrainerHeader2
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -257,6 +263,7 @@ FightingDojoText5:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
+	SetEvent EVENT_MAX_STAT_EXP
 	ld hl, FightingDojoTrainerHeader3
 	call TalkToTrainer
 	jp TextScriptEnd

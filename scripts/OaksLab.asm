@@ -383,6 +383,8 @@ OaksLabScript11:
 	; define which team rival uses, and fight it
 	ld a, OPP_RIVAL1
 	ld [wCurOpponent], a
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
 	ld a, [wRivalStarter]
 	cp STARTER2
 	jr nz, .NotSquirtle

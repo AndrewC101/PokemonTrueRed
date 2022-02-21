@@ -265,6 +265,9 @@ SilphCo11Script4:
 	call SaveEndBattleTextPointers
 	ldh a, [hSpriteIndex]
 	ld [wSpriteIndex], a
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
+	SetEvent EVENT_MEDIUM_STAT_EXP
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
 	xor a

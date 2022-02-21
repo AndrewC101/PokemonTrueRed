@@ -228,6 +228,9 @@ GiovanniText:
     SetEvent EVENT_REMATCH ; AndrewNote - set rematch flag to reduce exp gain
     jr .beforeBeat
 .beforeBeat
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
+	SetEvent EVENT_MAX_STAT_EXP
 	ld hl, GiovanniPreBattleText
 	call PrintText
 	ld hl, wd72d

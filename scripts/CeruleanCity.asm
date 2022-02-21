@@ -140,6 +140,8 @@ CeruleanCityScript1:
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL1
 	ld [wCurOpponent], a
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
 
 	; select which team to use during the encounter
 	ld a, [wRivalStarter]

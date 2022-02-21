@@ -131,6 +131,7 @@ LoreleiText1:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BONUS_MONEY ; AndrewNote - give bonus money
+	SetEvent EVENT_MAX_STAT_EXP
 	ld hl, LoreleisRoomTrainerHeader0
 	call TalkToTrainer
 	jp TextScriptEnd

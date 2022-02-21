@@ -133,6 +133,7 @@ LTSurgeText:
     SetEvent EVENT_REMATCH
     jr .beforeBeat
 .beforeBeat
+    SetEvent EVENT_MEDIUM_STAT_EXP
     SetEvent EVENT_NO_ITEMS
     SetEvent EVENT_NO_SHIFT
 	ld hl, LTSurgePreBattleText

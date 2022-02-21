@@ -46,7 +46,10 @@ GaryEntrance_RLEMovement:
 	db -1 ; end
 
 GaryScript2:
-    SetEvent EVENT_BONUS_MONEY ; AndrewNote - give bonus money
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
+	SetEvent EVENT_BONUS_MONEY ; AndrewNote - give bonus money
+	SetEvent EVENT_MAX_STAT_EXP
 	ld a, [wSimulatedJoypadStatesIndex]
 	and a
 	ret nz

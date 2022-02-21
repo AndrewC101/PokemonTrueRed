@@ -113,6 +113,7 @@ MistyText:
 .beforeBeat
     SetEvent EVENT_NO_ITEMS
     SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_MEDIUM_STAT_EXP
 	ld hl, MistyPreBattleText
 	call PrintText
 	ld hl, wd72d

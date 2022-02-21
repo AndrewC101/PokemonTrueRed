@@ -1460,18 +1460,7 @@ EnemySendOutFirstMon:
 	cp LINK_STATE_BATTLING
 	jp z, .next4
 
-	; AndrewNote - shift disabled during boss fights
-	; recurring or special bosses
-    ld a, [wCurOpponent]
-	cp OPP_PROF_OAK
-    jp z, .next4
-    cp OPP_RIVAL3
-    jp z, .next4
-    cp OPP_RIVAL2
-    jp z, .next4
-    cp OPP_GIOVANNI
-    jp z, .next4
-
+	; AndrewNote - check event to disable shift
     CheckEvent EVENT_NO_SHIFT
     jr nz, .next4
 
@@ -2287,18 +2276,7 @@ DisplayBattleMenu::
     cp LINK_STATE_BATTLING
     jr z, .noItems
 
-; AndrewNote - disable items in boss fights
-    ; reoccurring or special bosses
-	ld a, [wCurOpponent]
-	cp OPP_PROF_OAK
-    jr z, .noItems
-    cp OPP_RIVAL3
-    jr z, .noItems
-    cp OPP_RIVAL2
-    jr z, .noItems
-    cp OPP_GIOVANNI
-    jr z, .noItems
-
+    ; AndrewNote - check event to disable items
     CheckEvent EVENT_NO_ITEMS
     jr nz, .noItems
 
@@ -3149,39 +3127,8 @@ SelectEnemyMove:
 .linkedOpponentUsedStruggle
 	ld a, STRUGGLE
 	jr .done
-; AndrewNote - boss trainers will switch in some situations
+; AndrewNote - trainers will switch in some situations
 .trainerSwitches
-    ; classes that wont switch
-    ld a, [wCurOpponent]
-	cp OPP_BUG_CATCHER
-    ret z
-    cp OPP_SAILOR
-    ret z
-    cp OPP_YOUNGSTER
-    ret z
-    cp OPP_HIKER
-    ret z
-    cp OPP_BIKER
-    ret z
-    cp OPP_BURGLAR
-    ret z
-    cp OPP_SWIMMER
-    ret z
-    cp OPP_CUE_BALL
-    ret z
-    cp OPP_GAMBLER
-    ret z
-    cp OPP_BEAUTY
-    ret z
-    cp OPP_TAMER
-    ret z
-    cp OPP_BIRD_KEEPER
-    ret z
-    cp OPP_CHANNELER
-    ret z
-    cp OPP_ENGINEER
-    ret z
-
 	callfar AIEnemyTrainerSwitch
 	ret
 
@@ -4343,9 +4290,17 @@ GetDamageVarsForPlayerAttack:
 	ld a, [wEnemyBattleStatus3]
 	bit HAS_REFLECT_UP, a ; check for Reflect
 	jr z, .physicalAttackCritCheck
-; if the enemy has used Reflect, double the enemy's defense
+; if the enemy has used Reflect, double the enemy's defense and always allow crits
 	sla c
 	rl b
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; AndrewNote - critical hits will not occur if all the following are satisfied
+; - attacking mon has offensive stat boosted to +3 or higher
+; - defending mon has non boosted defencive stat
+; - defending mon does not have reflect/lightscreen up
+; in this situation a critical hit would deal less damage than a normal hit
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jr .physicalCritCheck
 .physicalAttackCritCheck
     ld a, [wPlayerMonAttackMod]
     cp $a
@@ -4357,6 +4312,7 @@ GetDamageVarsForPlayerAttack:
     ld a, $0
     ld [wCriticalHitOrOHKO], a
 .physicalCritCheck
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	ld hl, wBattleMonAttack
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
@@ -4383,9 +4339,17 @@ GetDamageVarsForPlayerAttack:
 	ld a, [wEnemyBattleStatus3]
 	bit HAS_LIGHT_SCREEN_UP, a ; check for Light Screen
 	jr z, .specialAttackCritCheck
-; if the enemy has used Light Screen, double the enemy's special
+; if the enemy has used Light Screen, double the enemy's special and always allow crits
 	sla c
 	rl b
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; AndrewNote - critical hits will not occur if all the following are satisfied
+; - attacking mon has offensive stat boosted to +3 or higher
+; - defending mon has non boosted defencive stat
+; - defending mon does not have reflect/lightscreen up
+; in this situation a critical hit would deal less damage than a normal hit
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jr .specialCritCheck
 ; reflect and light screen boosts do not cap the stat at MAX_STAT_VALUE, so weird things will happen during stats scaling
 ; if a Pokemon with 512 or more Defense has used Reflect, or if a Pokemon with 512 or more Special has used Light Screen
 .specialAttackCritCheck
@@ -4399,6 +4363,7 @@ GetDamageVarsForPlayerAttack:
     ld a, $0
     ld [wCriticalHitOrOHKO], a
 .specialCritCheck
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	ld hl, wBattleMonSpecial
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
@@ -4476,10 +4441,29 @@ GetDamageVarsForEnemyAttack:
 	ld a, [wPlayerBattleStatus3]
 	bit HAS_REFLECT_UP, a ; check for Reflect
 	jr z, .physicalAttackCritCheck
-; if the player has used Reflect, double the player's defense
+; if the player has used Reflect, double the player's defense and always allow crits
 	sla c
 	rl b
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; AndrewNote - critical hits will not occur if all the following are satisfied
+; - attacking mon has offensive stat boosted to +3 or higher
+; - defending mon has non boosted defencive stat
+; - defending mon does not have reflect/lightscreen up
+; in this situation a critical hit would deal less damage than a normal hit
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jr .physicalCritCheck
 .physicalAttackCritCheck
+    ld a, [wEnemyMonAttackMod]
+    cp $a
+    jr c, .physicalCritCheck ; if enemy attack stat is not boosted to +3 or more, then normal crit check
+    ld a, [wPlayerMonDefenseMod]
+    cp $8
+    jr nc, .physicalCritCheck ; if player defense stat is boosted, then normal crit check
+    ; AndrewNote - no crit if enemy has boosted attack and player doesn't have boosted defense, as crit will deal less damage
+    ld a, $0
+    ld [wCriticalHitOrOHKO], a
+.physicalCritCheck
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	ld hl, wEnemyMonAttack
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
@@ -4506,12 +4490,31 @@ GetDamageVarsForEnemyAttack:
 	ld a, [wPlayerBattleStatus3]
 	bit HAS_LIGHT_SCREEN_UP, a ; check for Light Screen
 	jr z, .specialAttackCritCheck
-; if the player has used Light Screen, double the player's special
+; if the player has used Light Screen, double the player's special and always allow crits
 	sla c
 	rl b
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; AndrewNote - critical hits will not occur if all the following are satisfied
+; - attacking mon has offensive stat boosted to +3 or higher
+; - defending mon has non boosted defencive stat
+; - defending mon does not have reflect/lightscreen up
+; in this situation a critical hit would deal less damage than a normal hit
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jr .specialCritCheck
 ; reflect and light screen boosts do not cap the stat at MAX_STAT_VALUE, so weird things will happen during stats scaling
 ; if a Pokemon with 512 or more Defense has used Reflect, or if a Pokemon with 512 or more Special has used Light Screen
 .specialAttackCritCheck
+    ld a, [wEnemyMonSpecialMod]
+    cp $a
+    jr c, .specialCritCheck ; if enemy attack stat is not boosted to +3 or more, then normal crit check
+    ld a, [wPlayerMonSpecialMod]
+    cp $8
+    jr nc, .specialCritCheck ; if player defense stat is boosted, then normal crit check
+    ; AndrewNote - no crit if enemy has boosted special and player doesn't, as crit will deal less damage
+    ld a, $0
+    ld [wCriticalHitOrOHKO], a
+.specialCritCheck
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	ld hl, wEnemyMonSpecial
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
@@ -6426,100 +6429,6 @@ LoadEnemyMonData:
 	cp $2 ; is it a trainer battle?
 	jp nz, .nottrainer2	;not a trainer battle, so hl will continue to point to wEnemyMonHP and b=0 for CalcStats
 
-    ld a, [wCurOpponent]
-
-    ; classes which generally have low stat exp
-    cp OPP_RIVAL1
-    jp z, .addStatExp
-	cp OPP_BUG_CATCHER
-    jp z, .addStatExp
-    cp OPP_SAILOR
-    jp z, .addStatExp
-    cp OPP_YOUNGSTER
-    jp z, .addStatExp
-    cp OPP_JR_TRAINER_F
-    jp z, .addStatExp
-    cp OPP_SUPER_NERD
-    jp z, .addStatExp
-    cp OPP_HIKER
-    jp z, .addStatExp
-    cp OPP_BIKER
-    jp z, .addStatExp
-    cp OPP_BURGLAR
-    jp z, .addStatExp
-    cp OPP_ENGINEER
-    jp z, .addStatExp
-    cp OPP_FISHER
-    jr z, .addStatExp
-    cp OPP_SWIMMER
-    jr z, .addStatExp
-    cp OPP_CUE_BALL
-    jr z, .addStatExp
-    cp OPP_GAMBLER
-    jr z, .addStatExp
-    cp OPP_BEAUTY
-    jr z, .addStatExp
-    cp OPP_PSYCHIC_TR
-    jr z, .addStatExp
-    cp OPP_ROCKER
-    jr z, .addStatExp
-    cp OPP_JUGGLER
-    jr z, .addStatExp
-    cp OPP_TAMER
-    jr z, .addStatExp
-    cp OPP_BIRD_KEEPER
-    jr z, .addStatExp
-    cp OPP_BLACKBELT
-    jr z, .addStatExp
-    cp OPP_SCIENTIST
-    jr z, .addStatExp
-    cp OPP_GENTLEMAN
-    jr z, .addStatExp
-    cp OPP_CHANNELER
-    jr z, .addStatExp
-    cp OPP_ROCKET
-    jr z, .addStatExp
-    cp OPP_JR_TRAINER_M
-    jr z, .addStatExp
-    cp OPP_LASS
-    jr z, .addStatExp
-    cp OPP_POKEMANIAC
-    jr z, .addStatExp
-
-    ; classes with medium stat exp
-    cp OPP_COOLTRAINER_M
-    jr z, .addMediumStatExp
-    cp OPP_COOLTRAINER_F
-    jr z, .addMediumStatExp
-    cp OPP_BROCK
-    jr z, .addMediumStatExp
-    cp OPP_MISTY
-    jr z, .addMediumStatExp
-    cp OPP_LT_SURGE
-    jr z, .addMediumStatExp
-    cp OPP_ERIKA
-    jr z, .addMediumStatExp
-    cp OPP_KOGA
-    jr z, .addMediumStatExp
-    cp OPP_SABRINA
-    jr z, .addMediumStatExp
-    cp OPP_BLAINE
-    jr z, .addMediumStatExp
-    cp OPP_RIVAL2
-    jr z, .addMediumStatExp
-
-; max stat exp for Giovanni, E4, Rival3 and Oak
-.addMaxStatExp
-    SetEvent EVENT_MAX_STAT_EXP
-    jr .addStatExp
-
-; medium stat exp for Gym Leaders and Rival2
-.addMediumStatExp
-    SetEvent EVENT_MEDIUM_STAT_EXP
-    jr .addStatExp
-
-; low stat exp for everyone else
-.addStatExp
 ;this is a trainer battle, so point hl to the HP statExp address of the correct mon in the enemy party data
 	ld hl, wEnemyMon1HPExp	;make hl point to HP statExp of the first enemy party mon
 	ld a, [wWhichPokemon]	;get the party position

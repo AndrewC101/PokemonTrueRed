@@ -133,6 +133,8 @@ Route22Script1:
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL1
 	ld [wCurOpponent], a
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
 	ld hl, StarterMons_50faf
 	call Route22Script_50ed6
 	ld a, $2
@@ -289,6 +291,9 @@ Route22Script4:
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL2
 	ld [wCurOpponent], a
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
+	SetEvent EVENT_MAX_STAT_EXP
 	ld hl, StarterMons_510d9
 	call Route22Script_50ed6
 	ld a, $5

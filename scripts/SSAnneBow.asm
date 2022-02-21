@@ -133,6 +133,7 @@ SSAnne5Text8:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
+	SetEvent EVENT_MAX_STAT_EXP
 	ld hl, SSAnne5TrainerHeader7
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -142,6 +143,7 @@ SSAnne5Text9:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
+	SetEvent EVENT_MAX_STAT_EXP
 	ld hl, SSAnne5TrainerHeader8
 	call TalkToTrainer
 	jp TextScriptEnd
