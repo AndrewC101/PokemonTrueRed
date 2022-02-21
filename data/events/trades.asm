@@ -4,7 +4,7 @@ TradeMons:
 	table_width 3 + NAME_LENGTH, TradeMons
 	; give mon, get mon, dialog id, nickname
 	db GOLEM,   RHYDON,  TRADE_DIALOGSET_CASUAL, "BARNEY@@@@@"
-	db ABRA,       JYNX,   TRADE_DIALOGSET_CASUAL, "POPO@@@@@@@"
+	db KADABRA,       JYNX,   TRADE_DIALOGSET_CASUAL, "POPO@@@@@@@"
 	db BUTTERFREE, SCYTHER,  TRADE_DIALOGSET_HAPPY,  "JACK@@@@@@@"
 	db CLEFABLE,    CHANSEY,      TRADE_DIALOGSET_CASUAL, "THE BLOB@@@"
 	db SPEAROW,    FARFETCHD, TRADE_DIALOGSET_HAPPY,  "DUX@@@@@@@@"

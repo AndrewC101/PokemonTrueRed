@@ -28,7 +28,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Missingno glitch and Mew glitch are still present (it wouldn't be gen 1 without them) but balanced so the player can't exploit them
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/y70gh11qgocn350/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/025iea3rq7wqvuf/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -178,7 +178,6 @@ Signature Moves and Mixed Sprites
 - Trunks (DBZ) is in the lab, he will battle if the player agrees  
 - Cinnabar gym trainers are a cult that worships the great and merciful Missingno
 - Giovanni has a special 6th Pokemon in his final fight, he gives the Hyper beam tm and can be rematched
-- The rival starts to hear voices in his head and go a little
 - Kaiba and Sephiroth are in Victory Road. Sephiroth will battle if the player agrees 
 - Tsunekazu Ishihara (original game tester) is testing the game in Victory Road, he battles with his actual debug Pokemon  
 - Victory road has trainers designed for grinding exp and money
@@ -307,7 +306,7 @@ Signature Moves and Mixed Sprites
   - Spore is 90 accuracy rather than 100
   - OHKO moves are not in the game
   - Body Slam has a 10% chance to paralyse rather than 30%
-  - Wrap is 80 accuracy rather than 85
+  - Wrap is 75 accuracy rather than 85
 - Flash is now 100% accurate  
 - Karate Chop is now a Fighting type move
 - Mega Punch is 90 accuracy rather than 85
