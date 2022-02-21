@@ -51,6 +51,7 @@ CeladonGameCornerScript0:
 	ret
 
 CeladonGameCornerScript1:
+    SetEvent EVENT_NO_WARP
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, CeladonGameCornerScript_48c07
@@ -79,6 +80,7 @@ CeladonGameCornerScript1:
 	call MoveSprite
 	ld a, $2
 	ld [wGameCornerCurScript], a
+	ResetEvent EVENT_NO_WARP
 	ret
 
 MovementData_48c5a:

@@ -156,7 +156,10 @@ WarpHome:
 	CheckEvent EVENT_NO_REMATCH_OPTION ; AndrewNote - can't warp from Elite Four
 	ret nz
 
-	CheckEvent EVENT_IN_SAFARI_ZONE ; AndrewNote can't warp from safari Zone
+	CheckEvent EVENT_IN_SAFARI_ZONE ; AndrewNote - can't warp from safari Zone
+	ret nz
+
+	CheckEvent EVENT_NO_WARP ; AndrewNote - event that prevents warp
 	ret nz
 
 	ld a, PALLET_TOWN

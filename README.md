@@ -28,7 +28,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Missingno glitch and Mew glitch are still present (it wouldn't be gen 1 without them) but balanced so the player can't exploit them
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/i51a7pviwyl22ce/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/4a09v9il6zrn7ze/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -109,7 +109,8 @@ Signature Moves and Mixed Sprites
 - Enemies will not prioritize super effective moves if they are non-damaging
 - Enemies will consider both player Pokemon types when assessing if a move is super effective
 - Enemies will favor their STAB moves 50% of the time they don't have a super effective move
-- If enemy Pokemon HP is below 33% all non-damaging moves except healing moves are deprioritized  
+- If enemy Pokemon HP is below 33% all non-damaging moves except healing moves are deprioritized
+- If the players Pokemon is in red health the enemy pokemon will always attack with damaging moves  
 - Boss enemies will switch Pokemon under the following conditions
     - HP > 25% and one of Attack, Special or Accuracy have been lowered to -2 or lower
     - HP > 25% and enemy afflicted with leech seed, 25% chance to switch per turn

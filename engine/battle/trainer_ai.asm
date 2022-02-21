@@ -178,6 +178,10 @@ AIMoveChoiceModification2:
 	ret z ; no more moves in move set
 	inc de
 	call ReadMove
+    ld a, [wEnemyMovePower] ; read move damage
+    and a
+    jp z, .handleFinishEnemy
+.continueEffects
 	ld a, [wEnemyMoveEffect] ; read move effect
 	cp HEAL_EFFECT
     jp z, .handleHealing
@@ -187,7 +191,7 @@ AIMoveChoiceModification2:
     and a
     jp z, .handleBasicStatMoves
     ld a, [wEnemyMoveNum]
-.continueEffects
+.continueEffects2
     ld a, [wEnemyMoveEffect] ; read move effect
 	cp PARALYZE_EFFECT
     jp z, .handlePara
@@ -233,6 +237,11 @@ AIMoveChoiceModification2:
 	cp CHARGE_EFFECT
 	jp z, .handleDig
 	jp .nextMove
+.handleFinishEnemy
+    ld a, [wPlayerHPBarColor]
+	cp HP_BAR_RED
+	jp z, .discourageMove ; discourage all non damaging moves if player hp in the red
+	jp .continueEffects
 .handleBasicStatMoves
 ; first don't use moves against a sub
 ;joenote - do not use moves that are ineffective against substitute if a substitute is up
@@ -261,7 +270,7 @@ AIMoveChoiceModification2:
 	pop de
     pop bc
     pop hl
-    jp .continueEffects
+    jp .continueEffects2
 .handlePara
    ; encourage if slower than opponent
     call StrCmpSpeed
@@ -850,9 +859,9 @@ SwitchAndUseItemsAI:
 	jp c, AIUseFullRestore
 
 .normalRestore
-    ; If fighting Andrew he has a small chance to troll with fullRestore
+    ; small chance to troll with fullRestore
     call Random
-	cp $20 ; 1/8 chance to use FR when hp < 1/3
+	cp $1A ; 10% chance to use FR when hp < 1/3
 	jr nc, .checkFullHeal
 	ld a, 3
 	call AICheckIfHPBelowFraction

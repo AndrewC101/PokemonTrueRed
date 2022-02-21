@@ -346,15 +346,15 @@ _OaksLabText26::
 	line "to fulfill my"
 	cont "dream for me!"
 
-	para "You must catch"
-	line "them all!"
+	para "If you ever get"
+	line "lost you can"
+	cont "now warp home"
+	cont "from almost"
+	cont "anywhere by"
+	cont "pressing"
 
-	para "Get moving, you"
-	line "two!"
-
-	para "This is a great"
-	line "undertaking in"
-	cont "#MON history!"
+	para "Down Select B"
+	line "together"
 	done
 
 _OaksLabText27::

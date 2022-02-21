@@ -647,6 +647,7 @@ OaksLabScript17:
 
 	ld a, $12
 	ld [wOaksLabCurScript], a
+	ResetEvent EVENT_NO_WARP
 	ret
 
 OaksLabScript18:

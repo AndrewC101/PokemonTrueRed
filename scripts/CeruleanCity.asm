@@ -62,6 +62,7 @@ ENDC
 .skipRocketThiefEncounter
 	CheckEvent EVENT_BEAT_CERULEAN_RIVAL
 	ret nz
+	SetEvent EVENT_NO_WARP ; AndrewNote - disable warp
 	ld hl, CeruleanCityCoords2
 	call ArePlayerCoordsInArray
 	ret nc
@@ -98,6 +99,7 @@ ENDC
 	call MoveSprite
 	ld a, $1
 	ld [wCeruleanCityCurScript], a
+	ResetEvent EVENT_NO_WARP ; AndrewNote - enable warp
 	ret
 
 CeruleanCityCoords1:
@@ -167,6 +169,7 @@ CeruleanCityScript1:
 	ret
 
 CeruleanCityScript2:
+    SetEvent EVENT_NO_WARP ; AndrewNote - disable warp
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, CeruleanCityScript_1948c
@@ -197,6 +200,7 @@ CeruleanCityScript2:
 	call MoveSprite
 	ld a, $3
 	ld [wCeruleanCityCurScript], a
+	ResetEvent EVENT_NO_WARP ; AndrewNote - enable warp
 	ret
 
 CeruleanCityMovement3:

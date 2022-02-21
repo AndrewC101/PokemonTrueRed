@@ -63,6 +63,7 @@ CoordsData_6055e:
 	db $0F ; end? (should be $ff?)
 
 PokemonTower2Script1:
+    SetEvent EVENT_NO_WARP
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, PokemonTower2Script_604fe
@@ -87,6 +88,7 @@ PokemonTower2Script1:
 	ld a, $2
 	ld [wPokemonTower2FCurScript], a
 	ld [wCurMapScript], a
+	ResetEvent EVENT_NO_WARP
 	ret
 
 MovementData_605a9:
