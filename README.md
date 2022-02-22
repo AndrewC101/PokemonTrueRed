@@ -369,3 +369,6 @@ Signature Moves and Mixed Sprites
   - Nurse trainer in Victory Road, she gives high exp and heals your party
   - Nurse Joy outside Cerulean Cave, she is the best exp grind trainer
   - Blaine rematch on SS Anne, he gives high exp but also significant money, probably the best overall way to grind
+  
+# Acknowledgments
+  - Big acknowledgment to the hack [shinpokered](https://github.com/jojobear13/shinpokered), the author knows assembly far better than me and much of the code here is inspired by or taken from this hack
