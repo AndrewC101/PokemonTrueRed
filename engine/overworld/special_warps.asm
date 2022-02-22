@@ -159,6 +159,9 @@ WarpHome:
 	CheckEvent EVENT_IN_SAFARI_ZONE ; AndrewNote - can't warp from safari Zone
 	ret nz
 
+	CheckEvent EVENT_OAK_GOT_PARCEL ; AndrewNote - can't warp during tutorial
+    ret z
+
 	CheckEvent EVENT_NO_WARP ; AndrewNote - event that prevents warp
 	ret nz
 

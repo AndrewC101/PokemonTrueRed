@@ -36,17 +36,16 @@ Route22Script_50ed6:
 	ret
 
 Route22MoveRivalSprite:
-    SetEvent EVENT_NO_WARP
 	ld de, Route22RivalMovementData
 	ld a, [wcf0d]
 	cp $1
 	jr z, .asm_50ef1
 	inc de
 .asm_50ef1
+    SetEvent EVENT_NO_WARP
 	call MoveSprite
 	ld a, SPRITE_FACING_RIGHT
 	ldh [hSpriteFacingDirection], a
-	ResetEvent EVENT_NO_WARP
 	jp SetSpriteFacingDirectionAndDelay
 
 Route22RivalMovementData:
@@ -194,6 +193,7 @@ Route22Script_51008:
 Route22Script_5100d:
 	ld de, Route22RivalExitMovementData2
 Route22MoveRival1:
+    SetEvent EVENT_NO_WARP
 	ld a, $1
 	ldh [hSpriteIndex], a
 	jp MoveSprite
@@ -356,6 +356,7 @@ Route22Script_5113d:
 Route22Script_51142:
 	ld de, MovementData_5114d
 Route22MoveRival2:
+    SetEvent EVENT_NO_WARP
 	ld a, $2
 	ldh [hSpriteIndex], a
 	jp MoveSprite
