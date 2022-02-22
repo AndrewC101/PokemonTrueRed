@@ -145,9 +145,11 @@ _ViridianForestText11::
 _ViridianForestText12::
 	text "TRAINER TIPS"
 
-	para "No stealing of"
-	line "#MON from"
-	cont "other trainers!"
+	para "You can forfeit"
+	line "a battle by"
+	cont "holding Select"
+	cont "while trying"
+	cont "to Run"
 	done
 
 _ViridianForestText13::

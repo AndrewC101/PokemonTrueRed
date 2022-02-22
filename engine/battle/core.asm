@@ -2568,6 +2568,18 @@ AlreadyOutText:
 
 BattleMenu_RunWasSelected:
 	call LoadScreenTilesFromBuffer1
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; AndrewNote - allows forfeit of battles - taken from shinpokered
+;joenote - this allows for trainer battles to be forfeited and force a blackout
+	push bc
+	callfar ForfeitTrainerMatch
+	pop bc
+	jr z, .no_forfeit
+	call HandlePlayerMonFainted
+	scf
+	jr .retc_menu
+.no_forfeit
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	ld a, $3
 	ld [wCurrentMenuItem], a
 	ld hl, wBattleMonSpeed
@@ -2575,6 +2587,7 @@ BattleMenu_RunWasSelected:
 	call TryRunningFromBattle
 	ld a, 0
 	ld [wForcePlayerToChooseMon], a
+.retc_menu
 	ret c
 	ld a, [wActionResultOrTookBattleTurn]
 	and a

@@ -9,6 +9,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Significant content available after Elite Four, such as 28 optional bosses, max DVs on all Pokemon obtained and more
 - Player can sprint at bike speed by holding B, animation speed doubles  
 - Player can warp home almost anytime by pressing A and Select together on the pause menu Exit option  
+- Player can forfeit battles by holding Select while trying to Run, player will be asked for confirmation, useful for potential softlocks  
 - Different wild Pokemon available in every area, in addition to the important vanilla encounters
 - Pokemon sprites are a mixture of Blue, Green and Yellow version sprites, based on which I felt looked the best  
 - All in-game trades are different
@@ -17,7 +18,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Items can not be used in boss battles, by a player or opponent
 - Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up
 - numerous bug fixes including removal of badge boost, removal of 1 in 256 glitch, fix re-application of PARA/BRN effects, critical hit rates halved
-- Many Gen 1 glitches still left to keep the spirit of the game, such a Hyper Beam not recharging on a kill
+- Many Gen 1 mechanics still left to keep the spirit of the game, such a Hyper Beam not recharging on a kill
 - All 151 Pokemon available with no missable Pokemon. Trade evolutions now evolve at level 40
 - Multiples of all Legendary Pokemon available with new signature moves for Mewtwo, Mew and Pikachu
 - New enemies, such as Sephiroth, Cloud, Yugi, Kaiba, Trunks, Wallace, Aizen, Mr Miyagi and Chris Chan who is hiding in Rock Tunnel
@@ -25,10 +26,11 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - HM moves can be deleted at any time like normal moves, the warp home function protects you from trapping yourself
 - Easier post-game grinding, with Exp.All giving full exp to whole party and optional bosses giving huge bonus money
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
-- Missingno glitch and Mew glitch are still present (it wouldn't be gen 1 without them) but balanced so the player can't exploit them
+- Missingno glitch is still present (it wouldn't be gen 1 without it) but is balanced so the player can't exploit it
+- Trainer fly (Mew glitch) has been removed (you can get Mew legitimately) as it can softlock the game
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/9qfp9ttx4s20fxy/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/okshsmxunmmdloc/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -204,7 +206,9 @@ Signature Moves and Mixed Sprites
   - Elite Four rooms
   - Safari Zone
   - Anywhere before obtaining the Pokedex
-- Missingno glitch and trainer fly (Mew glitch) are present, but the following balancing changes have been made
+- Player can forfeit battles by holding Select while trying to Run, player will be asked for confirmation  
+- Trainer fly (Mew glitch) has been removed (you can get Mew legitimately) as it can softlock the game
+- Missingno glitch is present, but the following balancing changes have been made
   - Seeing Missingno will not corrupt the players Hall of Fame data
   - Seeing Missingno will not give the player 128 more of their 6th item, or any amount more of any item
   - Wild Pokemon whos levels would be >100 or <2 have their level set to 5 

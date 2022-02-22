@@ -156,6 +156,7 @@ SSAnne5Text10:
     SetEvent EVENT_NO_ITEMS
     SetEvent EVENT_USE_FULL_HEALS
     SetEvent EVENT_USE_FULL_RESTORES
+    SetEvent EVENT_GUARANTEED_FULL_RESTORE
 	ld hl, SSAnne5TrainerHeader9
 	call TalkToTrainer
 	jp TextScriptEnd

@@ -89,6 +89,7 @@ RockTunnel1Text8:
     SetEvent EVENT_NO_ITEMS
     SetEvent EVENT_USE_FULL_HEALS
     SetEvent EVENT_USE_FULL_RESTORES
+    SetEvent EVENT_GUARANTEED_FULL_RESTORE
 	ld hl, RockTunnel1TrainerHeader7
 	jr RockTunnel1TalkToTrainer
 

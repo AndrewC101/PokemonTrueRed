@@ -861,7 +861,7 @@ SwitchAndUseItemsAI:
 .normalRestore
     ; small chance to troll with fullRestore
     call Random
-	cp $1A ; 10% chance to use FR when hp < 1/3
+	cp $20 ; 1/8 chance to use FR when hp < 1/3
 	jr nc, .checkFullHeal
 	ld a, 3
 	call AICheckIfHPBelowFraction

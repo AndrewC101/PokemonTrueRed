@@ -58,6 +58,16 @@ OverworldLoopLessDelay::
 	bit 3, [hl]
 	res 3, [hl]
 	jp nz, WarpFound2
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; AndrewNote - remove trainer fly as it can softlock a game - taken from shinpokered
+;joenote - check if trainer is wanting to battle and cancel fly/teleport warp if so
+	ld hl, wFlags_D733
+	bit 3, [hl] ; does a trainer see us
+	jr z, .continueWithWarp ; if not continue as normal
+	ld hl, wd732
+	res 3, [hl] ; if so clear the warp data so we don't warp
+.continueWithWarp
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	ld a, [wd732]
 	and 1 << 4 | 1 << 3 ; fly warp or dungeon warp
 	jp nz, HandleFlyWarpOrDungeonWarp
