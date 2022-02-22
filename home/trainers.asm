@@ -161,7 +161,6 @@ ENDC
 	ld [wTrainerHeaderFlagBit], a
 	ret
 .trainerEngaging
-    SetEvent EVENT_NO_WARP ; AndrewNote - disable warp while trainer engaging
 	ld hl, wFlags_D733
 	set 3, [hl]
 	ld [wEmotionBubbleSpriteIndex], a

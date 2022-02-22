@@ -168,7 +168,6 @@ SilphCo11Script0:
 	ld hl, CoordsData_62211
 	call ArePlayerCoordsInArray
 	jp nc, CheckFightingMapTrainers
-	SetEvent EVENT_NO_WARP
 	ld a, [wCoordIndex]
 	ld [wcf0d], a
 	xor a
@@ -183,7 +182,6 @@ SilphCo11Script0:
 	call SetSpriteMovementBytesToFF
 	ld de, MovementData_62216
 	call MoveSprite
-	ResetEvent EVENT_NO_WARP
 	ld a, $3
 	jp SilphCo11Script_621c8
 

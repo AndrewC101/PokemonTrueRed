@@ -151,7 +151,6 @@ OakSpeech:
 	ld c, 50
 	call DelayFrames
 	call GBFadeOutToWhite
-	SetEvent EVENT_NO_WARP ; AndrewNote - disable warp in tutorial
 	jp ClearScreen
 OakSpeechText1:
 	text_far _OakSpeechText1

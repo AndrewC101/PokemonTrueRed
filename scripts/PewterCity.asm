@@ -44,7 +44,6 @@ CoordsData_19277:
 	db -1 ; end
 
 PewterCityScript1:
-    SetEvent EVENT_NO_WARP
 	ld a, [wNPCMovementScriptPointerTableNum]
 	and a
 	ret nz
@@ -79,7 +78,6 @@ PewterCityScript1:
 	call MoveSprite
 	ld a, $2
 	ld [wPewterCityCurScript], a
-	ResetEvent EVENT_NO_WARP
 	ret
 
 MovementData_PewterMuseumGuyExit:
@@ -114,7 +112,6 @@ PewterCityScript3:
 	ret
 
 PewterCityScript4:
-    SetEvent EVENT_NO_WARP
 	ld a, [wNPCMovementScriptPointerTableNum]
 	and a
 	ret nz
@@ -149,7 +146,6 @@ PewterCityScript4:
 	call MoveSprite
 	ld a, $5
 	ld [wPewterCityCurScript], a
-	ResetEvent EVENT_NO_WARP
 	ret
 
 MovementData_PewterGymGuyExit:

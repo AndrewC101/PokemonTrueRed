@@ -25,7 +25,7 @@
 	const EVENT_FIRST_TURN_GUARD_SPEC ; AndrewNote - enemy uses guard spec on first turn
 	const EVENT_GUARANTEED_FULL_RESTORE ; AndrewNote - enemy is guaranteed to use 1 full restore
 	const EVENT_USE_FULL_HEALS ; AndrewNote - enemy can use full heals
-	const EVENT_NO_WARP ; AndrewNote - used to disable the warp home function when it could break the game
+	const_skip
 	const EVENT_GOT_TOWN_MAP
 	const EVENT_ENTERED_BLUES_HOUSE
 	const EVENT_DAISY_WALKING

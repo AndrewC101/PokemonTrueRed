@@ -351,10 +351,12 @@ _OaksLabText26::
 	cont "now warp home"
 	cont "from almost"
 	cont "anywhere by"
-	cont "pressing"
+	cont "holding"
 
-	para "Down Select B"
-	line "together"
+	para "A and Select"
+	line "together on"
+	cont "the Pause menu"
+	cont "Exit option"
 	done
 
 _OaksLabText27::

@@ -8,7 +8,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four
 - Significant content available after Elite Four, such as 28 optional bosses, max DVs on all Pokemon obtained and more
 - Player can sprint at bike speed by holding B, animation speed doubles  
-- Player can warp home almost anytime by pressing down, select and B together  
+- Player can warp home almost anytime by pressing A and Select together on the pause menu Exit option  
 - Different wild Pokemon available in every area, in addition to the important vanilla encounters
 - Pokemon sprites are a mixture of Blue, Green and Yellow version sprites, based on which I felt looked the best  
 - All in-game trades are different
@@ -28,14 +28,14 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Missingno glitch and Mew glitch are still present (it wouldn't be gen 1 without them) but balanced so the player can't exploit them
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/sb4gacfdzim5zym/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/9qfp9ttx4s20fxy/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
 - Download this game and place your existing save in the same directory and rename it to PokemonTrueRed.sav
 - Load the game and pick continue
 
-If your character seems to be unable to move simply warp home by pressing down, select and B together to fix it
+If your character seems to be unable to move simply warp home by pressing A and Select on the pause menu Exit option
 
 # Screen Shots
 
@@ -195,9 +195,15 @@ Signature Moves and Mixed Sprites
   
 # Player Functions and Glitches
 - Player can sprint at bike speed by holding B, animation speed doubles
-- Player can warp home almost anytime by pressing down, select and B together. Player can not warp in the following places
+- Player can warp home almost anytime by doing the following 
+  - Open the pause menu by pressing Start
+  - Place the cursor over the Exit option
+  - Press and hold Select
+  - Press and hold A
+- Player can not warp in the following places
   - Elite Four rooms
   - Safari Zone
+  - Anywhere before obtaining the Pokedex
 - Missingno glitch and trainer fly (Mew glitch) are present, but the following balancing changes have been made
   - Seeing Missingno will not corrupt the players Hall of Fame data
   - Seeing Missingno will not give the player 128 more of their 6th item, or any amount more of any item

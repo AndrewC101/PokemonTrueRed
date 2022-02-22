@@ -78,7 +78,12 @@ RedisplayStartMenu::
 ; EXIT falls through to here
 CloseStartMenu::
 	call Joypad
-	ldh a, [hJoyPressed]
+	ldh a, [hJoyInput]
+	cp A_BUTTON + SELECT
+	jr nz, .noWarp
+    callfar WarpHome ; AndrewNote - warp home if pressing A + SELECT over the EXIT option
+.noWarp
+    ldh a, [hJoyPressed]
 	bit BIT_A_BUTTON, a
 	jr nz, CloseStartMenu
 	call LoadTextBoxTilePatterns

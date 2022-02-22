@@ -1,9 +1,11 @@
 _Route4Text1::
 	text "If you ever get"
 	line "lost just press"
-	cont "Down, Select, B"
-	cont "together to"
-	cont "teleport home."
+
+	para "A and Select"
+	line "together on"
+	cont "the Pause menu"
+	cont "Exit option"
 	done
 
 _Route4BattleText1::

@@ -61,7 +61,6 @@ BillsHouseScript2:
 BillsHouseScript3:
 	CheckEvent EVENT_USED_CELL_SEPARATOR_ON_BILL
 	ret z
-	SetEvent EVENT_NO_WARP ; AndrewNote - disable warp
 	ld a, $f0
 	ld [wJoyIgnore], a
 	ld a, $2
@@ -86,7 +85,6 @@ BillsHouseScript3:
 	call MoveSprite
 	ld a, $4
 	ld [wBillsHouseCurScript], a
-	ResetEvent EVENT_NO_WARP ; AndrewNote - enable warp
 	ret
 
 MovementData_1e807:

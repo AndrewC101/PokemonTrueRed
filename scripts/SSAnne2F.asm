@@ -24,7 +24,6 @@ SSAnne2Script0:
 	ld hl, CoordsData_61411
 	call ArePlayerCoordsInArray
 	ret nc
-	SetEvent EVENT_NO_WARP
 	ld a, SFX_STOP_ALL_MUSIC
 	ld [wNewSoundID], a
 	call PlaySound
@@ -55,7 +54,6 @@ SSAnne2Script0:
 	call MoveSprite
 	ld a, $1
 	ld [wSSAnne2FCurScript], a
-	ResetEvent EVENT_NO_WARP
 	ret
 
 MovementData_6140c:
@@ -126,7 +124,6 @@ SSAnne2Script1:
 	ret
 
 SSAnne2Script2:
-    SetEvent EVENT_NO_WARP
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, SSAnne2Script_613ab
@@ -156,7 +153,6 @@ SSAnne2Script2:
 	farcall Music_RivalAlternateStart
 	ld a, $3
 	ld [wSSAnne2FCurScript], a
-	ResetEvent EVENT_NO_WARP
 	ret
 
 MovementData_614b7:

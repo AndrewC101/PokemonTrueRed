@@ -87,7 +87,6 @@ MtMoon3Script3:
 	ret
 
 MtMoon3Script4:
-    SetEvent EVENT_NO_WARP
 	ld a, $1
 	ldh [hSpriteIndex], a
 	call SetSpriteMovementBytesToFF
@@ -108,7 +107,6 @@ MtMoon3Script4:
 	ld a, $5
 	ld [wMtMoonB2FCurScript], a
 	ld [wCurMapScript], a
-	ResetEvent EVENT_NO_WARP
 	ret
 
 CoordsData_49dea:

@@ -585,7 +585,6 @@ OaksLabScript16:
 	ld a, HS_POKEDEX_2
 	ld [wMissableObjectIndex], a
 	predef HideObject
-	SetEvent EVENT_NO_WARP
 	call OaksLabScript_1cefd
 	ld a, $1a
 	ldh [hSpriteIndexOrTextID], a
@@ -648,7 +647,6 @@ OaksLabScript17:
 
 	ld a, $12
 	ld [wOaksLabCurScript], a
-	ResetEvent EVENT_NO_WARP
 	ret
 
 OaksLabScript18:

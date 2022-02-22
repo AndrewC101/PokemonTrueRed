@@ -125,7 +125,6 @@ SilphCo7Script0:
 	call ArePlayerCoordsInArray
 	jp nc, CheckFightingMapTrainers
 	xor a
-	SetEvent EVENT_NO_WARP
 	ldh [hJoyHeld], a
 	ld a, $f0
 	ld [wJoyIgnore], a
@@ -153,7 +152,6 @@ SilphCo7Script0:
 	ld a, $9
 	ldh [hSpriteIndex], a
 	call MoveSprite
-	ResetEvent EVENT_NO_WARP
 	ld a, $3
 	jp SilphCo7Text_51c10
 
@@ -208,7 +206,6 @@ SilphCo7Script3:
 	jp SilphCo7Text_51c10
 
 SilphCo7Script4:
-    SetEvent EVENT_NO_WARP
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, SilphCo7Text_51c0c
@@ -238,7 +235,6 @@ SilphCo7Script4:
 	ld a, $9
 	ldh [hSpriteIndex], a
 	call MoveSprite
-	ResetEvent EVENT_NO_WARP
 	ld a, $5
 	jp SilphCo7Text_51c10
 

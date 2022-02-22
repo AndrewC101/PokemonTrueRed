@@ -1194,7 +1194,6 @@ HandlePlayerBlackOut:
     ResetEvent EVENT_USE_FULL_HEALS
     ResetEvent EVENT_ANDREW_BATTLE
     ResetEvent EVENT_JAMES_BATTLE
-    ResetEvent EVENT_NO_WARP
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
 	ld hl, PlayerBlackedOutText2

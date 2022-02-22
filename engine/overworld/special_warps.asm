@@ -146,38 +146,35 @@ LoadSpecialWarpData:
 	ld [wDestinationWarpID], a
 	ret
 
-; AndrewNote - This warps the player back to their mums house
-; this can be used anywhere, even in buildings or caves
-WarpHome:
-    ld a, [hJoyInput]
-	cp D_DOWN + B_BUTTON + SELECT
-	ret nz
-
-	CheckEvent EVENT_NO_REMATCH_OPTION ; AndrewNote - can't warp from Elite Four
-	ret nz
-
-	CheckEvent EVENT_IN_SAFARI_ZONE ; AndrewNote - can't warp from safari Zone
-	ret nz
-
-	CheckEvent EVENT_OAK_GOT_PARCEL ; AndrewNote - can't warp during tutorial
-    ret z
-
-	CheckEvent EVENT_NO_WARP ; AndrewNote - event that prevents warp
-	ret nz
-
-	ld a, PALLET_TOWN
-    ld [wLastBlackoutMap], a
-    ld a, [wd732]
-    ld hl, wd732
-	set 3, [hl]
-	set 6, [hl]
-	ld hl, wd72e
-	set 1, [hl]
-	res 4, [hl]
-	ld c, 60
-	call DelayFrames
-	call GBPalWhiteOutWithDelay3
+; AndrewNote - function to warp player home
+WarpHome::
+    CheckEvent EVENT_NO_REMATCH_OPTION ; can't warp from Elite Four
+	jr nz, .noWarp
+    CheckEvent EVENT_IN_SAFARI_ZONE ; can't warp from safari Zone
+	jr nz, .noWarp
+	CheckEvent EVENT_GOT_POKEDEX ; can't warp before getting Pokedex
+	jr nz, .next
+.noWarp
+	callfar ItemUseNotTime
 	ret
-
+.next
+	call GBPalWhiteOutWithDelay3
+	ld a, PALLET_TOWN
+	ld [wLastBlackoutMap], a
+	ld a, [wd732]
+	set 3, a
+	res 4, a
+	set 6, a
+	ld [wd732], a
+	;make sure player has at least 1000 money
+	ld a, [wPlayerMoney]
+	and a
+	ret nz
+	ld a, [wPlayerMoney + 1]
+	cp $10
+	ret nc
+	ld a, $10
+	ld [wPlayerMoney + 1], a
+	ret
 
 INCLUDE "data/maps/special_warps.asm"

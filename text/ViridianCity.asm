@@ -198,8 +198,10 @@ _ViridianCityText9::
 	cont "any time by"
 	cont "pressing"
 
-	para "Down, Select, B"
-	line "at the same time"
+	para "A and Select"
+	line "together on"
+	cont "the Pause menu"
+	cont "Exit option"
 	done
 
 _ViridianCityText10::

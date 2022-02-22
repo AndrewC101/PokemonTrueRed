@@ -108,6 +108,7 @@ _LeaveMapAnim::
 	ld [hli], a ; wPlayerSpinWhileMovingUpOrDownAnimMaxY
 	call GetPlayerTeleportAnimFrameDelay
 	ld [hl], a ; wPlayerSpinWhileMovingUpOrDownAnimFrameDelay
+	ld hl, wFacingDirectionList
 	call PlayerSpinWhileMovingUpOrDown
 	call IsPlayerStandingOnWarpPadOrHole
 	ld a, b
