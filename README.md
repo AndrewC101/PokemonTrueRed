@@ -75,7 +75,7 @@ Signature Moves and Mixed Sprites
   - Gym Leaders and Rival - 324 per level, enough for 45/64 extra stats at level 100
   - Elite Four and optional bosses - 655 per level, enough for 64/64 extra stats at level 100
 - All enemy trainers Pokemon have 15/15 DVs in all stats. This means optional boss level 100 Pokemon have max stats
-- Items can not be used in boss battles
+- Items can not be used in boss battles by player or opponent. So no more Gym Leaders wasting turns on X items
 - Shift battle option does not work in boss battles
 - Pokemon sprites are a mixture of Blue, Green and Yellow version sprites, based on which I felt looked the best
 - Some trainers give bonus money when defeated. There are three levels of bonus money
