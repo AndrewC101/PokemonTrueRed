@@ -71,6 +71,8 @@ _Route19BeforeBattleText4::
 _Route19BattleText4::
 	text "CHAMPION!!"
 
+	para "I am Dr Fuji."
+
 	para "I was the head"
 	line "scientist at"
 	cont "CINNABAR LAB."
@@ -91,10 +93,16 @@ _Route19AfterBattleText4::
 	text "There was"
 	line "another.."
 
+	para "MEWTWO..."
+
 	para "It.."
 
 	para "It killed"
-	line "everyone."
+	line "everyone!"
+
+	para "Dear AMBER..."
+	line "forgive your"
+	cont "foolish father."
 	done
 
 _Route19BattleText5::

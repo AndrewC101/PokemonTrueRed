@@ -31,7 +31,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Trainer fly (Mew glitch) has been removed (you can get Mew legitimately) as it can softlock the game
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/05wf1tiam0moh77/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/h22uyyx89kl35br/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -53,13 +53,10 @@ New Dialog
 Optional Bosses
 ![Optional Bosses](/screenshots/optionalBosses2.png?raw=true)
 ![Optional Bosses](/screenshots/optionalBosses1.png?raw=true)
-
-New Enemy Encounters
 ![Optional Bosses](/screenshots/sephiroth.png?raw=true)
 ![Optional Bosses](/screenshots/yugioh.png?raw=true)
 ![Optional Bosses](/screenshots/wallace.png?raw=true)
 ![Optional Bosses](/screenshots/miyagi.png?raw=true)
-![New encounters](/screenshots/weevil.png?raw=true)
 
 Signature Moves and Mixed Sprites
 ![New Moves](/screenshots/psyblast.png?raw=true)
@@ -232,7 +229,7 @@ Signature Moves and Mixed Sprites
   - Sephiroth is in Victory Road, he will battle if the player agrees
   - Cloud is on floor 11 of Silph Co building, he will battle if the player has beaten Sephiroth
   - Yugioh is on Route 25, he will battle if the player has beaten Kaiba
-  - The lead scientist of the Cinnabar Lab is south of Fuchsia, he will battle if the player has become Champion
+  - Dr Fuji, the lead scientist of the Cinnabar Lab is south of Fuchsia, he will battle if the player has become Champion
 - SS Anne returns, and the Bow can now be accessed where there are 10 optional bosses, these include
   - Rematches of all Gym Leaders minus Giovanni
   - Rematches of Lorelei and Bruno
