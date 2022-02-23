@@ -13,8 +13,11 @@ _PokemonTower2Text_60c24::
 	done
 
 _PokemonTower6BattleText1::
-	text "Give...me..."
-	line "blood..."
+	text "Beetlejuice"
+
+	para "Beetlejuice"
+
+	para "Beetlejuice"
 	done
 
 _PokemonTower6EndBattleText1::
@@ -22,23 +25,25 @@ _PokemonTower6EndBattleText1::
 	prompt
 
 _PokemonTower6AfterBattleText1::
-	text "I feel anemic and"
-	line "weak..."
+	text "GENGAR is the"
+	line "ghost with the"
+	cont "most!"
 	done
 
 _PokemonTower6BattleText2::
-	text "Urff... Kwaah!"
+	text "Klaatu"
+	line "Barada"
+	cont "Nikto"
 	done
 
 _PokemonTower6EndBattleText2::
-	text "Some-"
-	line "thing fell out!"
+	text "cough"
+	line "cough"
 	prompt
 
 _PokemonTower6AfterBattleText2::
-	text "Hair didn't fall"
-	line "out! It was an"
-	cont "evil spirit!"
+	text "Were those the"
+	line "right words?"
 	done
 
 _PokemonTower6BattleText3::

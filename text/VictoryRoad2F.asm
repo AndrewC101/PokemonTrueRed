@@ -3,19 +3,26 @@ _MoltresBattleText::
 	text_end
 
 _VictoryRoad2BattleText1::
-	text "VICTORY ROAD is"
-	line "the final test"
-	cont "for trainers!"
+	text "It puts the"
+	line "Pokeball in the"
+	cont "basket!"
+
+	para "It does this"
+	line "whenever its"
+	cont "told."
 	done
 
 _VictoryRoad2EndBattleText1::
-	text "Aiyah!"
+	text "Give"
+	line "me back my"
+	cont "#MON"
 	prompt
 
 _VictoryRoad2AfterBattleText1::
-	text "If you get stuck,"
-	line "try moving some"
-	cont "boulders around!"
+	text "Would you"
+	line "fight me?"
+
+	para "I'd fight me."
 	done
 
 _VictoryRoad2BattleText2::

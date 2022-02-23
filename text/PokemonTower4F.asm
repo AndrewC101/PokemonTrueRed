@@ -14,8 +14,8 @@ _PokemonTower4AfterBattleText1::
 	done
 
 _PokemonTower4BattleText2::
-	text "Be cursed with"
-	line "me! Kwaaah!"
+	text "I put a spell"
+	line "on you!"
 	done
 
 _PokemonTower4EndBattleText2::
@@ -23,9 +23,8 @@ _PokemonTower4EndBattleText2::
 	prompt
 
 _PokemonTower4AfterBattleText2::
-	text "We can't crack"
-	line "the identity of"
-	cont "the GHOSTs."
+	text "And now you're"
+	line "mine!!"
 	done
 
 _PokemonTower4BattleText3::

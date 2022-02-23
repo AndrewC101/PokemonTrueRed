@@ -648,9 +648,8 @@ MrMimeEvosMoves:
 	db 0
 ; Learnset
 	db 20, THUNDER_WAVE
-	db 25, PSYCHIC_M
-	db 30, THUNDERBOLT
-	db 35, SOLARBEAM
+	db 25, THUNDERBOLT
+	db 30, PSYCHIC_M
 	db 0
 
 HitmonleeEvosMoves:
@@ -759,7 +758,8 @@ MagnetonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 38, THUNDER
+	db 35, THUNDER
+	db 40, TOXIC
 	db 0
 
 KoffingEvosMoves:
@@ -820,6 +820,9 @@ TaurosEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+    db 30, BODY_SLAM
+    db 35, EARTHQUAKE
+    db 40, BLIZZARD
 	db 50, HYPER_BEAM
 	db 0
 
@@ -1220,7 +1223,7 @@ JolteonEvosMoves:
 	db 26, THUNDER_WAVE
 	db 30, THUNDERBOLT
 	db 35, PIN_MISSILE
-	db 40, DOUBLE_KICK
+	db 40, FLASH
 	db 0
 
 VaporeonEvosMoves:

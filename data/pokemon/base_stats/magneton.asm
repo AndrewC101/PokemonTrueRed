@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/magneton.pic", 0, 1 ; sprite dimensions
 	dw MagnetonPicFront, MagnetonPicBack
 
-	db THUNDER_WAVE, SONICBOOM, THUNDERBOLT, NO_MOVE ; level 1 learnset
+	db SONICBOOM, THUNDERBOLT, THUNDER_WAVE, FLASH ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

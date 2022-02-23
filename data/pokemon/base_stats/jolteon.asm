@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/jolteon.pic", 0, 1 ; sprite dimensions
 	dw JolteonPicFront, JolteonPicBack
 
-	db THUNDERBOLT, THUNDER_WAVE, PIN_MISSILE, DOUBLE_KICK ; level 1 learnset
+	db THUNDERBOLT, THUNDER_WAVE, PIN_MISSILE, FLASH ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

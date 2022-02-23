@@ -7,8 +7,8 @@ _PokemonTower5Text1::
 	done
 
 _PokemonTower5BattleText1::
-	text "Give...me..."
-	line "your...soul..."
+	text "Be afraid!"
+	line "Be very afraid!"
 	done
 
 _PokemonTower5EndBattleText1::
@@ -21,8 +21,7 @@ _PokemonTower5AfterBattleText1::
 	done
 
 _PokemonTower5BattleText2::
-	text "You...shall..."
-	line "join...us..."
+	text "Join us...."
 	done
 
 _PokemonTower5EndBattleText2::
@@ -35,21 +34,22 @@ _PokemonTower5AfterBattleText2::
 	done
 
 _PokemonTower5BattleText3::
-	text "Zombies!"
+	text "Liberate"
+	line "tute me!"
 	done
 
 _PokemonTower5EndBattleText3::
-	text "Ha?"
+	text "Ha"
 	prompt
 
 _PokemonTower5AfterBattleText3::
-	text "I regained my"
-	line "senses!"
+	text "Ex inferis."
 	done
 
 _PokemonTower5BattleText4::
-	text "Urgah..."
-	line "Urff...."
+	text "Do you want"
+	line "to play a"
+	cont "little game?"
 	done
 
 _PokemonTower5EndBattleText4::
@@ -57,9 +57,9 @@ _PokemonTower5EndBattleText4::
 	prompt
 
 _PokemonTower5AfterBattleText4::
-	text "I fell to evil"
-	line "spirits despite"
-	cont "my training!"
+	text "We all go a"
+	line "little mad"
+	cont "sometimes."
 	done
 
 _PokemonTower5Text7::

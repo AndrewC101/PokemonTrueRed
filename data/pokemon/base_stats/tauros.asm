@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/tauros.pic", 0, 1 ; sprite dimensions
 	dw TaurosPicFront, TaurosPicBack
 
-	db BODY_SLAM, EARTHQUAKE, BLIZZARD, NO_MOVE ; level 1 learnset
+	db STOMP, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset

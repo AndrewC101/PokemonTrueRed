@@ -1,6 +1,6 @@
 _PokemonTower3BattleText1::
-	text "Urrg...Awaa..."
-	line "Huhu...graa.."
+	text "Can I keep"
+	line "you?"
 	done
 
 _PokemonTower3EndBattleText1::
@@ -15,8 +15,8 @@ _PokemonTower3AfterBattleText1::
 	done
 
 _PokemonTower3BattleText2::
-	text "Kekeke...."
-	line "Kwaaah!"
+	text "I see dead"
+	line "#MON"
 	done
 
 _PokemonTower3EndBattleText2::
@@ -30,8 +30,8 @@ _PokemonTower3AfterBattleText2::
 	done
 
 _PokemonTower3BattleText3::
-	text "Be gone!"
-	line "Evil spirit!"
+	text "Who you gonna"
+	line "call!"
 	done
 
 _PokemonTower3EndBattleText3::
@@ -40,6 +40,6 @@ _PokemonTower3EndBattleText3::
 	prompt
 
 _PokemonTower3AfterBattleText3::
-	text "My friends were"
-	line "possessed too!"
+	text "This tower is"
+	line "very haunted!"
 	done
