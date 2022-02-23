@@ -2,7 +2,7 @@
 Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content while retaining the feeling of a definitive gen 1 experience.
 
 # Main Features
-- All trainer parties and Pokemon updated for greater difficulty and engagement. However, the game is not frustratingly difficult.
+- All trainer parties and Pokemon updated for greater difficulty and engagement. However, care has been taken to ensure the game is not frustratingly difficult
 - A significant amount of dialog changed to make the world more rich and fun
 - AI updates making all enemies more difficult particularly bosses
 - Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four
@@ -240,7 +240,7 @@ Signature Moves and Mixed Sprites
   - Agatha and Lance
   - Giovanni and Final Rival
   - 3 strongest bosses
-- The 3 strongest bosses are obscenely strong, some break the rules and stretch the limits of what can be beaten. They give the following rewards
+- The 3 strongest bosses are obscenely strong. They are the only enemies that can't be beaten with any standard team. Some break the rules and stretch the limits of what can be beaten. They give the following rewards
   - Max money and a renewable choice of a level 100 Mew or Mewtwo
   - Max money and 99 Rare Candies
   - Max money and 99 Master Balls
