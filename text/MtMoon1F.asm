@@ -66,18 +66,19 @@ _MtMoon1AfterBattleText5::
 
 _MtMoon1BattleText6::
 	text "What? I'm waiting"
-	line "for my friends to"
-	cont "find me here."
+	line "for my friends"
+	cont "to find me here."
 	done
 
 _MtMoon1EndBattleText6::
-	text "I lost?"
+	text "I'm lost?"
 	prompt
 
 _MtMoon1AfterBattleText6::
-	text "I heard there are"
-	line "some very rare"
-	cont "fossils here."
+	text "I heard there"
+	line "are some very"
+	cont "rare fossils"
+	cont "here."
 	done
 
 _MtMoon1BattleText7::
@@ -93,7 +94,7 @@ _MtMoon1EndBattleText7::
 
 _MtMoon1AfterBattleText7::
 	text "I saw them! I'm"
-	line "sure they're from"
+	line "sure they are"
 	cont "TEAM ROCKET!"
 	done
 

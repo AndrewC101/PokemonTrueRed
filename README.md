@@ -30,7 +30,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Trainer fly (Mew glitch) has been removed (you can get Mew legitimately) as it can softlock the game
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/okshsmxunmmdloc/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/nzhstabmqmm6ozk/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -372,3 +372,4 @@ Signature Moves and Mixed Sprites
   
 # Acknowledgments
   - Big acknowledgment to the hack [shinpokered](https://github.com/jojobear13/shinpokered), the author knows assembly far better than me and much of the code here is inspired by or taken from this hack
+  - This code was originally cloned from [pret/pokered](https://github.com/pret/pokered), nothing would be possible without the pioneers and contributors behind this

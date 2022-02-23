@@ -286,7 +286,8 @@ _OaksLabRivalToughenUpText::
 	done
 
 _OaksLabText21::
-	text "<RIVAL>: Grandfather!"
+	text "<RIVAL>:"
+	line "Grandfather!"
 	done
 
 _OaksLabText22::

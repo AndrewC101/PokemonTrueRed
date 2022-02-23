@@ -42,7 +42,7 @@ _SSAnne9Text_61c3d::
 	done
 
 _SSAnne9Text_61c4c::
-	text "I hear many people"
+	text "I hear many"
 	line "are sick from"
 	cont "the food."
 	done
@@ -70,7 +70,8 @@ _SSAnne9BattleText2::
 	done
 
 _SSAnne9EndBattleText2::
-	text "I feel sick"
+	text "I"
+	line "feel sick"
 	prompt
 
 _SSAnne9AfterBattleText2::
