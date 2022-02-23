@@ -140,6 +140,7 @@ Signature Moves and Mixed Sprites
   - prioritized if against a faster opponent
   - 50% chance to be used against a slower opponent
 - Leech seed and substitute are deprioritized if already in effect
+- Enemies will not use ineffective moves if the player is behind a substitute  
 - Useless moves like splash or roar won't be used in battle
 
 # Events/text
