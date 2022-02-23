@@ -272,6 +272,11 @@ AIMoveChoiceModification2:
     pop hl
     jp .continueEffects2
 .handlePara
+   ; don't use if the player has chosen substitute - prevents cheesing slower enemies for free setup
+    ld a, [wPlayerMoveNum]
+    cp SUBSTITUTE
+    jp z, .discourageMove
+
    ; encourage if slower than opponent
     call StrCmpSpeed
     jp nc, .encouragePara
@@ -694,6 +699,7 @@ SubstituteImmuneEffects:	;joenote - added this table to track for substitute imm
 	db PARALYZE_EFFECT
 	db CONFUSION_EFFECT
 	db LEECH_SEED_EFFECT
+	db $FF
 
 ; AndrewNote - taken from shinpokered
 StrCmpSpeed:	;joenote - function for AI to compare pkmn speeds

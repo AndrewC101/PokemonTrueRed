@@ -18,6 +18,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Items can not be used in boss battles, by a player or opponent
 - Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up
 - numerous bug fixes including removal of badge boost, removal of 1 in 256 glitch, fix re-application of PARA/BRN effects, critical hit rates halved
+- Some mechanics fixes for example Substitute blocks status as it is supposed to  
 - Many Gen 1 mechanics still left to keep the spirit of the game, such a Hyper Beam not recharging on a kill
 - All 151 Pokemon available with no missable Pokemon. Trade evolutions now evolve at level 40
 - Multiples of all Legendary Pokemon available with new signature moves for Mewtwo, Mew and Pikachu
@@ -30,7 +31,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Trainer fly (Mew glitch) has been removed (you can get Mew legitimately) as it can softlock the game
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/nzhstabmqmm6ozk/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/hs832jbdhj05htc/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -99,6 +100,7 @@ Signature Moves and Mixed Sprites
 - The healing glitch when remaining hp is 255 is fixed
 - Rest restores stat drops from paralysis and burn  
 - Stat penalties from paralysis and burn are not re-applied on a stat modification  
+- Substitue blocks status as it is supposed to  
 - Some glitches and features are left in to maintain that gen 1 feeling
   - Enemies still have infinite pp, it makes them harder, even if it is unfair
   - Hyper beam still will not require a recharge after defeating an enemy

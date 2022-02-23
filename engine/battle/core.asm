@@ -5253,8 +5253,19 @@ AttackSubstitute:
 	jr z, .nullifyEffect
 	ld hl, wEnemyMoveEffect ; value for enemy's turn
 .nullifyEffect
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;joenote - do not nullify certain effects
+	ld a, [hl]
+	cp HYPER_BEAM_EFFECT
+	jr z, .skipNullify
+	cp EXPLODE_EFFECT
+	jr z, .skipNullify
+	cp RECOIL_EFFECT
+	jr z, .skipNullify
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	xor a
 	ld [hl], a ; zero the effect of the attacker's move
+.skipNullify
 	jp DrawHUDsAndHPBars
 
 SubstituteTookDamageText:
