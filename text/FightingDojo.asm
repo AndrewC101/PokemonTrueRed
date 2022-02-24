@@ -497,7 +497,7 @@ _FightingDojoAfterBattleText7::
 	done
 
 _FightingDojoBeforeBattleText8::
-    para "You think you"
+    text "You think you"
     line "are strong!"
 
     para "I am JAMES!"

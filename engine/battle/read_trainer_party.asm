@@ -145,53 +145,52 @@ ReadTrainer:
 ;	ld a, b
 ;	ld [wEnemyMon6Moves + 2], a
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; This is yellows way of doing it, still don't want it though
 .AddAdditionalMoveData
 ; does the trainer have additional move data?
-	ld a, [wTrainerClass]
-	ld b, a
-	ld a, [wTrainerNo]
-	ld c, a
-	ld hl, SpecialTrainerMoves
-.loopAdditionalMoveData
-	ld a, [hli]
-	cp $ff
-	jr z, .FinishUp
-	cp b
-	jr nz, .asm_39c46
-	ld a, [hli]
-	cp c
-	jr nz, .asm_39c46
-	ld d, h
-	ld e, l
-.writeAdditionalMoveDataLoop
-	ld a, [de]
-	inc de
-	and a
-	jp z, .FinishUp
-	dec a
-	ld hl, wEnemyMon1Moves
-	ld bc, wEnemyMon2 - wEnemyMon1
-	call AddNTimes
-	ld a, [de]
-	inc de
-	dec a
-	ld c, a
-	ld b, 0
-	add hl,bc
-	ld a, [de]
-	inc de
-	ld [hl], a
-	jr .writeAdditionalMoveDataLoop
-.asm_39c46
-	ld a, [hli]
-	and a
-	jr nz, .asm_39c46
-	jr .loopAdditionalMoveData
+;	ld a, [wTrainerClass]
+;	ld b, a
+;	ld a, [wTrainerNo]
+;	ld c, a
+;	ld hl, SpecialTrainerMoves
+;.loopAdditionalMoveData
+;	ld a, [hli]
+;	cp $ff
+;	jr z, .FinishUp
+;	cp b
+;	jr nz, .asm_39c46
+;	ld a, [hli]
+;	cp c
+;	jr nz, .asm_39c46
+;	ld d, h
+;	ld e, l
+;.writeAdditionalMoveDataLoop
+;	ld a, [de]
+;	inc de
+;	and a
+;	jp z, .FinishUp
+;	dec a
+;	ld hl, wEnemyMon1Moves
+;	ld bc, wEnemyMon2 - wEnemyMon1
+;	call AddNTimes
+;	ld a, [de]
+;	inc de
+;	dec a
+;	ld c, a
+;	ld b, 0
+;	add hl,bc
+;	ld a, [de]
+;	inc de
+;	ld [hl], a
+;	jr .writeAdditionalMoveDataLoop
+;.asm_39c46
+;	ld a, [hli]
+;	and a
+;	jr nz, .asm_39c46
+;	jr .loopAdditionalMoveData
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 .FinishUp
-; prevent prize money from being capped at 9999
 ; clear wAmountMoneyWon addresses
 	xor a
 	ld [wTrainerBaseMoney - 1], a

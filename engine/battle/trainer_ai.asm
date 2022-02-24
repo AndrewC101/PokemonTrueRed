@@ -236,6 +236,8 @@ AIMoveChoiceModification2:
 	jp z, .handleDisable
 	cp CHARGE_EFFECT
 	jp z, .handleDig
+	cp FLY_EFFECT
+	jp z, .handleFly
 	jp .nextMove
 .handleFinishEnemy
     ld a, [wPlayerHPBarColor]
@@ -474,8 +476,15 @@ AIMoveChoiceModification2:
 .handleDig
     ld a, [wPlayerMoveNum]
     cp DIG
-    jp z, .discourageMove
-    jp .nextMove
+    jp nz, .nextMove
+    call StrCmpSpeed
+    jp c, .discourageMove
+.handleFly
+    ld a, [wPlayerMoveNum]
+    cp FLY
+    jp nz, .nextMove
+    call StrCmpSpeed
+    jp c, .discourageMove
 .discourageMove
 	ld a, [hl]
     add $10 ; strongly discourage move

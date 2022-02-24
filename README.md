@@ -31,7 +31,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Trainer fly (Mew glitch) has been removed (you can get Mew legitimately) as it can softlock the game
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/h22uyyx89kl35br/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/uf2tq772bh9pfy0/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -141,6 +141,7 @@ Signature Moves and Mixed Sprites
   - 50% chance to be used against a slower opponent
 - Leech seed and substitute are deprioritized if already in effect
 - Enemies will not use ineffective moves if the player is behind a substitute  
+- AI is clever about using Fly and Dig while the player is also using them  
 - Useless moves like splash or roar won't be used in battle
 
 # Events/text

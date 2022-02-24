@@ -797,8 +797,8 @@ SeelEvosMoves:
 	db EV_LEVEL, 34, DEWGONG
 	db 0
 ; Learnset
-	db 30, GROWL
-	db 35, AURORA_BEAM
+	db 30, AURORA_BEAM
+	db 33, MIST
 	db 40, REST
 	db 45, TAKE_DOWN
 	db 50, ICE_BEAM
@@ -1253,11 +1253,10 @@ ZubatEvosMoves:
 	db EV_LEVEL, 22, GOLBAT
 	db 0
 ; Learnset
-	db 10, SUPERSONIC
-	db 15, BITE
-	db 21, CONFUSE_RAY
-	db 28, WING_ATTACK
-	db 36, HAZE
+	db 10, BITE
+	db 14, CONFUSE_RAY
+	db 18, WING_ATTACK
+	db 21, HAZE
 	db 0
 
 EkansEvosMoves:

@@ -22,6 +22,12 @@ PlayBattleMusic::
     jr z, .finalBattle
 	cp OPP_LANCE
 	jr nz, .normalTrainerBattle
+	;cp OPP_AGATHA
+	;jr nz, .normalTrainerBattle
+	;cp OPP_BRUNO
+	;jr nz, .normalTrainerBattle
+	;cp OPP_LORELEI
+	;jr nz, .normalTrainerBattle
 	ld a, MUSIC_GYM_LEADER_BATTLE ; lance also plays gym leader theme
 	jr .playSong
 .normalTrainerBattle
