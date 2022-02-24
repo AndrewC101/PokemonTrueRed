@@ -269,7 +269,7 @@ Signature Moves and Mixed Sprites
 - Pokemon Tower also has Clefairy, Kadabra, Meowth, Gengar (on top floor)  
 - Route 7 also has Pikachu, Poliwhirl, Weepinbell, Vulpix, Growlith, Eevee
 - Route 8 also has Pikachu, Poliwhirl, Weepinbell, Vulpix, Eevee, Mr.Mime, Exeggcute
-- Route 16 also has Hypon, Raticate, Fearow, Kangaskhan
+- Route 16 also has Hypno, Raticate, Fearow, Kangaskhan
 - Route 12 also has Shellder, Gloom, Weepinbell
 - Route 13 also has Ditto, Staryu
 - Route 14 also has Persian, Staryu, Shellder
@@ -328,7 +328,7 @@ Signature Moves and Mixed Sprites
 - Wing Attack is now 65 base power rather than 35
 - Fly is now 80 base power rather than 70
 - Poison Sting is 30 base power rather than 15
-- Twineedle is 35 base power per hit rather than 15
+- Twineedle is 30 base power per hit rather than 25
 - Pin missile is 20 base power per hit rather than 15
 - Hyper Beam has 100 accuracy rather than 90, but 140 power rather than 150
 - Submission has 100 accuracy and no recoil, since it's the best Fighting move
@@ -353,8 +353,8 @@ Signature Moves and Mixed Sprites
 - When Psyblast freezes the enemy the text reads "turned to stone" rather than "was frozen solid"
 
 # Grinding
-- The game is balanced such that only a little grinding should be needed depending on what Pokemon are on the players team.
-- There are some areas and NPCs added specifically to make grinding faster.
+- The game is balanced such that only a little grinding should be needed depending on what Pokemon are on the players team
+- There are some areas and NPCs added specifically to make grinding faster
 - Before beating the elite four the following are good grinding spots as you progress through the game
   - Viridian forest first trainer can not harm the player is good for a few early levels
   - Viridian Forest wild Pokemon - wild Beedrill and Butterfree can be found for high experience
