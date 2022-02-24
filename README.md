@@ -249,7 +249,7 @@ Signature Moves and Mixed Sprites
 - Optional bosses yield huge bonus money, the strongest optional bosses maxes out the players money when defeated
 
 # Wild Pokemon Changes
-- On Route 1 in addition to the classic Pidgey and Rattata there is also - Poliwag, Bellsprout, Vulpix
+- On Route 1 in addition to the classic Pidgey and Rattata there is also - Poliwag, Bellsprout, Vulpix, Pikachu
 - Route 22 has in addition to Spearow and Nidoran also Poliwag, Bellsprout, Vulpix, Pikachu and Meowth  
 - There are earlier evolution stones to allow the player to make the most of these Pokemon
   - Leaf stone in Viridian Forest
