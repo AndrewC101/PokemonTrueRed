@@ -33,12 +33,12 @@ Route4Text1:
 ; AndrewNote - optional boss outside Cerulean Cave
 Route4Text2:
 	text_asm
+	CheckEvent EVENT_BEAT_ELITE_4
+	jr z, .e4NotBeaten  ; AndrewNote - trainer will only battle after beating Elite 4
 	predef HealParty    ; AndrewNote - trainer heals party for easy grinding
 	call GBFadeOutToWhite
 	call Delay3
 	call GBFadeInFromWhite
-	CheckEvent EVENT_BEAT_ELITE_4
-	jr z, .e4NotBeaten  ; AndrewNote - trainer will only battle after beating Elite 4
 	; AndrewNote - set boss battle events
 	SetEvent EVENT_MAX_STAT_EXP
 	SetEvent EVENT_BIG_BONUS_MONEY

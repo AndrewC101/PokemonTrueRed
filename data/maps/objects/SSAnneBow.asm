@@ -19,5 +19,6 @@ SSAnneBow_Object:
 	object_event 1,  6, SPRITE_LORELEI, STAY, LEFT, 8, OPP_LORELEI, 2
 	object_event 1,  7, SPRITE_BRUNO, STAY, LEFT, 9, OPP_BRUNO, 2
 	object_event 11,  11, SPRITE_GYM_GUIDE, STAY, DOWN, 10, OPP_POKEMANIAC, 9
+    object_event  2,  5, SPRITE_COOLTRAINER_M, STAY, DOWN, 11, OPP_JR_TRAINER_M, 9
 
 	def_warps_to SS_ANNE_BOW

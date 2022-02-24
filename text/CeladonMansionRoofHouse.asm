@@ -33,11 +33,11 @@ _CeladonMansion5Text1::
 	line "back to the"
 	cont "SS ANNE."
 
-	para "You will find 10"
+	para "You will find 11"
 	line "optional bosses"
     cont "there."
 
-    para "And another 8 in"
+    para "And another 7 in"
     line "the HALL OF"
     cont "DESTINY."
 

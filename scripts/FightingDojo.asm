@@ -107,7 +107,7 @@ FightingDojoTrainerHeader0:
 FightingDojoTrainerHeader1:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_1, 2, FightingDojoBattleText2, FightingDojoEndBattleText2, FightingDojoAfterBattleText2
 FightingDojoTrainerHeader2:
-	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_2, 2, FightingDojoBattleText6, FightingDojoEndBattleText6, FightingDojoAfterBattleText6
+	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_2, 2, FightingDojoBattleText3, FightingDojoEndBattleText3, FightingDojoAfterBattleText3
 FightingDojoTrainerHeader3:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_3, 2, FightingDojoBattleText4, FightingDojoEndBattleText4, FightingDojoAfterBattleText4
 ; AndrewNote - add new trainers
