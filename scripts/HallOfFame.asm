@@ -74,6 +74,7 @@ RLEMovement5a528:
 
 HallofFameRoomScript1:
     SetEvent EVENT_BEAT_ELITE_4 ; AndrewNote - flag that Elite 4 has been defeated in this save file
+    predef HealParty
 	ld a, [wSimulatedJoypadStatesIndex]
 	and a
 	ret nz

@@ -23,7 +23,6 @@ SSAnneBow_TextPointers:
 	dw SSAnne5Text8
 	dw SSAnne5Text9
 	dw SSAnne5Text10
-	dw SSAnne5Text11
 
 ; AndrewNote - Add Gym Leader optional bosses
 SSAnne5TrainerHeaders:
@@ -48,8 +47,6 @@ SSAnne5TrainerHeader8:
 	trainer EVENT_BEAT_BRUNO_REMATCH, 0, SSAnne5BattleText9, SSAnne5EndBattleText9, SSAnneBrunoRematchAfterBattleText
 SSAnne5TrainerHeader9:
 	trainer EVENT_BEAT_CHRIS_CHAN_REMATCH, 0, SSAnne5BattleText10, SSAnne5EndBattleText10, SSAnne5AfterBattleText10
-SSAnne5TrainerHeader10:
-	trainer EVENT_BEAT_RED, 0, SSAnne5BattleText11, SSAnne5EndBattleText11, SSAnne5AfterBattleText11
 	db -1 ; end
 
 ; AndrewNote - Gym leader optional bosses
@@ -164,16 +161,6 @@ SSAnne5Text10:
 	call TalkToTrainer
 	jp TextScriptEnd
 
-SSAnne5Text11:
-	text_asm
-	SetEvent EVENT_MAX_STAT_EXP
-	SetEvent EVENT_BIG_BONUS_MONEY
-    SetEvent EVENT_NO_SHIFT
-    SetEvent EVENT_NO_ITEMS
-	ld hl, SSAnne5TrainerHeader10
-	call TalkToTrainer
-	jp TextScriptEnd
-
 SSAnne5BattleText2:
 	text_far _SSAnne5BattleText2
 	text_end
@@ -252,18 +239,6 @@ SSAnne5EndBattleText10:
 
 SSAnne5AfterBattleText10:
 	text_far _FightingDojoAfterBattleText5
-	text_end
-
-SSAnne5BattleText11:
-	text_far _FightingDojoBattleText6
-	text_end
-
-SSAnne5EndBattleText11:
-	text_far _FightingDojoEndBattleText6
-	text_end
-
-SSAnne5AfterBattleText11:
-	text_far _FightingDojoAfterBattleText6
 	text_end
 
 SSAnneBrockRematchAfterBattleText:

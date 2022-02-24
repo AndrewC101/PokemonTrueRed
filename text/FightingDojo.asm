@@ -388,15 +388,52 @@ _FightingDojoAfterBattleText5::
 	done
 
 _FightingDojoBattleText6::
-	text "In another"
-	line "reality"
+    text "You have done"
+    line "it!"
+
+    para "I knew you"
+    line "would."
+
+    para "We are a"
+    line "powerful"
+    cont "trainer."
+
+	para "In another"
+	line "reality."
 
 	para "I am you!"
 
-	para "Master OAK"
-	line "brought me here"
+	para "I was brought"
+	line "here by"
+	cont "Master OAK."
 
 	para "to test you!"
+	done
+
+_FightingDojoBeforeBattleText6::
+	text "Hello!"
+
+	para "I used to"
+	line "live somewhere"
+	cont "just like this."
+
+	para "You are about"
+	line "to go on a"
+	cont "great adventure!"
+
+	para "You will have"
+	line "to defeat the 8"
+	cont "Gyms and then"
+	cont "the Elite Four."
+
+	para "When you do"
+	line "all that..."
+
+	para "Come speak to"
+	line "me."
+
+	para "Future"
+	line "Champion!"
 	done
 
 _FightingDojoEndBattleText6::
@@ -411,6 +448,9 @@ _FightingDojoAfterBattleText6::
 	para "But Master OAK"
 	line "is far beyond"
 	cont "us."
+
+	para "I have missed"
+	line "this tiny town."
 	done
 
 _FightingDojoBeforeBattleText7::

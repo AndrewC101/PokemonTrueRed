@@ -32,7 +32,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Route4 map has been changed to allow backtracking and easy access to Cerulean Cave
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/b6ux39ax65gonbh/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/tolk0vs5fvsfch1/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -232,12 +232,12 @@ Signature Moves and Mixed Sprites
   - Sephiroth is in Victory Road, he will battle if the player agrees
   - Cloud is on floor 11 of Silph Co building, he will battle if the player has beaten Sephiroth
   - Yugioh is on Route 25, he will battle if the player has beaten Kaiba
+  - Red is in Pallet Town, he will battle if the player has become Champion
   - Dr Fuji, the lead scientist of the Cinnabar Lab is south of Fuchsia, he will battle if the player has become Champion
-- SS Anne returns, and the Bow can now be accessed where there are 11 optional bosses, these include
+- SS Anne returns, and the Bow can now be accessed where there are 10 optional bosses, these include
   - Rematches of all Gym Leaders minus Giovanni
   - Rematches of Lorelei and Bruno
   - Rematch of Chris Chan
-  - Red
 - Hall of Destiny (fighting dojo) is accessible and has 7 optional bosses, these include
   - Agatha and Lance
   - Giovanni and Final Rival

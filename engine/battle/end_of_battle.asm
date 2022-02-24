@@ -50,13 +50,19 @@ EndOfBattle:
 	ResetEvent EVENT_JAMES_BATTLE
 
 	CheckEvent EVENT_RESET_MEWTWO_ENCOUNTER
-	jr z, .continue
+	jr z, .checkRed
 	ResetEvent EVENT_RESET_MEWTWO_ENCOUNTER
 
 	ld a, HS_MEWTWO
 	ld [wMissableObjectIndex], a
 	predef ShowObject
 	ResetEvent EVENT_BEAT_MEWTWO
+
+.checkRed
+	CheckEvent EVENT_SHOULD_BEAT_RED
+	jr z, .continue
+	ResetEvent EVENT_SHOULD_BEAT_RED
+	SetEvent EVENT_BEAT_RED
 
 .continue
 	ld a, [wBattleResult]

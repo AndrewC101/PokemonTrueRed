@@ -156,6 +156,7 @@ PalletTown_TextPointers:
 	dw PalletTownText5
 	dw PalletTownText6
 	dw PalletTownText7
+	dw PalletTownText8
 
 PalletTownText1:
 	text_asm
@@ -211,4 +212,72 @@ PalletTownText6: ; sign by Red's house
 
 PalletTownText7: ; sign by Blue's house
 	text_far _PalletTownText7
+	text_end
+
+PalletTownText8:
+	text_asm
+    CheckEvent EVENT_BEAT_ELITE_4
+	jr z, .e4NotBeaten
+	CheckEvent EVENT_BEAT_RED
+	jr nz, .afterBeat
+.beforeBeat
+	ld hl, RedBattleText
+	call PrintText
+	ld hl, wd72d
+	set 6, [hl]
+	set 7, [hl]
+	ld hl, RedEndBattleText
+	ld de, RedEndBattleText
+	call SaveEndBattleTextPointers
+	ldh a, [hSpriteIndex]
+	ld [wSpriteIndex], a
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_NO_SHIFT
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_BIG_BONUS_MONEY
+	SetEvent EVENT_SHOULD_BEAT_RED
+	call EngageMapTrainer
+	call InitBattleEnemyParameters
+	xor a
+	ldh [hJoyHeld], a
+	;ld a, $3
+	;ld [wRocketHideoutB4FCurScript], a
+	;ld [wCurMapScript], a
+	jr .done
+.afterBeat
+	ld hl, RedAfterBattleText
+	call PrintText
+    call RematchChoice ; AndrewNote - offer rematch
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .beforeBeat
+    ld hl, RedBye
+    call PrintText
+	jr .done
+.e4NotBeaten
+    ld hl, RedBeforeBattleText
+    call PrintText
+.done
+	jp TextScriptEnd
+RedBye:
+	text_far _RedBye
+	text_end
+_RedBye:
+    text "Go have fun!"
+    done
+
+RedBattleText:
+	text_far _FightingDojoBattleText6
+	text_end
+
+RedBeforeBattleText:
+	text_far _FightingDojoBeforeBattleText6
+	text_end
+
+RedEndBattleText:
+	text_far _FightingDojoEndBattleText6
+	text_end
+
+RedAfterBattleText:
+	text_far _FightingDojoAfterBattleText6
 	text_end
