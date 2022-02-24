@@ -44,7 +44,7 @@ Route4Text2:
 	SetEvent EVENT_BIG_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS
-	ld hl, Route15HealText
+	ld hl, Route4HealText
 	call PrintText
 	ld hl, Route4TrainerHeader0
 	call TalkToTrainer
@@ -72,4 +72,8 @@ Route4Text5:
 
 Route4Text6:
 	text_far _Route4Text6
+	text_end
+
+Route4HealText:
+	text_far _Route15HealText
 	text_end
