@@ -214,6 +214,7 @@ PalletTownText7: ; sign by Blue's house
 	text_far _PalletTownText7
 	text_end
 
+; AndrewNote - Red, a lot of script dedicated to a single npc
 PalletTownText8:
 	text_asm
     CheckEvent EVENT_BEAT_ELITE_4
@@ -263,16 +264,24 @@ PalletTownText8:
     call PrintText
 	jr .done
 .e4NotBeaten
+    CheckEvent EVENT_BEAT_MISTY
+    jr z, .mistyNotBeaten
+    ld hl, RedBeforeBattleText2
+    call PrintText
+    jr .done
+.mistyNotBeaten
     ld hl, RedBeforeBattleText
     call PrintText
 .done
 	jp TextScriptEnd
+
 RedBye:
 	text_far _RedBye
 	text_end
 _RedBye:
     text "Go have fun!"
     done
+
 LetsGo:
 	text_far _LetsGo
 	text_end
@@ -280,6 +289,28 @@ _LetsGo:
     text "Let's go!"
     done
 
+RedBeforeBattleText2:
+    text_far _RedBeforeBattleText2
+    text_end
+_RedBeforeBattleText2:
+    text "You are doing"
+    line "well!"
+
+    para "BROCK and MISTY"
+    line "are pretty cool"
+    cont "aren't they?"
+
+    para "Keep it up"
+    line "and don't give"
+    cont "up!"
+
+    para "Soon you'll"
+    line "be the Champion!"
+    done
+
+RedBattleText:
+	text_far _RedBattleText
+	text_end
 _RedBattleText:
     text "You have done"
     line "it!"
@@ -324,10 +355,6 @@ _RedBattleText:
 
 	para "Do you accept?"
 	done
-
-RedBattleText:
-	text_far _RedBattleText
-	text_end
 
 RedBeforeBattleText:
 	text_far _FightingDojoBeforeBattleText6
