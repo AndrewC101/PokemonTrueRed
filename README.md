@@ -32,7 +32,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Route4 map has been changed to allow backtracking and easy access to Cerulean Cave
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/042mwmgkk9ozds4/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/wmixm5h8av1ydd6/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town

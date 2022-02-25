@@ -373,6 +373,7 @@ CeladonGameCornerText10:
 	call SaveEndBattleTextPointers
 	ldh a, [hSpriteIndex]
 	ld [wSpriteIndex], a
+	SetEvent EVENT_MAX_STAT_EXP
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
 	xor a
