@@ -32,7 +32,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Route4 map has been changed to allow backtracking and easy access to Cerulean Cave
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/myg7uckpw3wppf3/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/042mwmgkk9ozds4/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -173,7 +173,7 @@ Signature Moves and Mixed Sprites
 - Pegasus (yugioh) is in Rock Tunnel, looking for Kaiba  
 - Chris Chan is hiding in Rock Tunnel and nearly everyone there has something to say about it. Get Flash to find him
 - Celadon mart has all the best TMs, available as soon as you get there
-- In Celadon Game Cornor is Jackpot Jack, he always wins. Follow the clues to find out the dark secret he hides
+- In Celadon Game Cornor is Jackpot Jack, he always wins. Follow the clues to find out the dark secret he hides then confront him about it
 - Celadon Mansion has a lot of updated dialog, the programmer defends the many bugs in his code
 - Trainers in Celadon Gym are having a bit of an argument
 - Silph Co building has the elusive rank S rockets and rocket CEOs, you can never defeat their salaries!
@@ -222,6 +222,7 @@ Signature Moves and Mixed Sprites
 - Vitamins such as protein can be used indefinitely to max out stats  
 - Rematches now give full exp  
 - Numerous Optional Bosses in the world with levels ranging from 60 up.
+  - JackPot Jack is a joke boss but he will fight you once you have discovered his secret
   - 6 Magikarp man on route 21
   - Kaiba in Victory Road
   - Tsunekazu Ishihara (original game tester) is in Victory Road, he battles with his actual debug Pokemon

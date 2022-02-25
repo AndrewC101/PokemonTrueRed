@@ -338,7 +338,7 @@ _RedBattleText:
     para "And you can"
     line "now access the"
     cont "SAFFRON"
-    cont "Hall of Destiny"
+    cont "Hall of Destiny. "
 
     para "You see..."
 

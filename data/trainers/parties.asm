@@ -713,6 +713,8 @@ GentlemanData:
 	db 30, DRAGONAIR, 0
 ; Baragan
     db 21, WEEZING, 0
+; Jackpot Jack
+    db $FF, 10, ABRA, 8, ABRA, 6, ABRA, 4, ABRA, 2, ABRA, 50, ALAKAZAM, 0
 
 Green2Data:
 ; SS Anne 2F

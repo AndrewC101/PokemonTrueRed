@@ -356,40 +356,59 @@ CeladonGameCornerText_48e36:
 	text_far _CeladonGameCornerText_48e36
 	text_end
 
+; AndrewNote - Jackpot Jack
 CeladonGameCornerText10:
 	text_asm
-	CheckEvent EVENT_GOT_20_COINS
-	jr nz, .asm_48e75
+	CheckEvent EVENT_JACKS_SECRET
+	jr z, .notFoundOut
 	ld hl, CeladonGameCornerText_48e88
 	call PrintText
-	ld b, COIN_CASE
-	call IsItemInBag
-	jr z, .asm_48e7f
-	call Has9990Coins
-	jr z, .asm_48e7a
+	ld hl, JackFoundOut
+    call PrintText
+	ld hl, wd72d
+	set 6, [hl]
+	set 7, [hl]
+	ld hl, JackPotJackDefeat
+	ld de, JackPotJackDefeat
+	call SaveEndBattleTextPointers
+	ldh a, [hSpriteIndex]
+	ld [wSpriteIndex], a
+	call EngageMapTrainer
+	call InitBattleEnemyParameters
 	xor a
-	ldh [hUnusedCoinsByte], a
-	ldh [hCoins], a
-	ld a, $20
-	ldh [hCoins + 1], a
-	ld de, wPlayerCoins + 1
-	ld hl, hCoins + 1
-	ld c, $2
-	predef AddBCDPredef
-	SetEvent EVENT_GOT_20_COINS
-	ld hl, CeladonGameCornerText_48e8d
-	jr .asm_48e82
-.asm_48e75
-	ld hl, CeladonGameCornerText_48e98
-	jr .asm_48e82
-.asm_48e7a
-	ld hl, CeladonGameCornerText_48e93
-	jr .asm_48e82
-.asm_48e7f
-	ld hl, CeladonGameCornerText_48f19
-.asm_48e82
+	ldh [hJoyHeld], a
+	;ldh [hJoyPressed], a
+	;ldh [hJoyReleased], a
+	;ld a, $1
+	;ld [wGameCornerCurScript], a
+	jr .done
+.notFoundOut
+	ld hl, CeladonGameCornerText_48e88
 	call PrintText
+.done
 	jp TextScriptEnd
+
+JackPotJackDefeat:
+    text_far _JackPotJackDefeat
+    text_end
+_JackPotJackDefeat:
+    text "My"
+    line "luck has"
+    cont "run out"
+    prompt
+
+JackFoundOut:
+    text_far _JackFoundOut
+    text_end
+_JackFoundOut:
+    text "What!"
+    para "You know how"
+    line "I do it!"
+    para "No!"
+    para "Stay your"
+    line "savage tongue"
+    cont "boy!"
+    done
 
 CeladonGameCornerText_48e88:
 	text_far _CeladonGameCornerText_48e88

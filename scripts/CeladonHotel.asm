@@ -15,5 +15,12 @@ CeladonHotelText2:
 	text_end
 
 CeladonHotelText3:
+    text_asm
+    SetEvent EVENT_JACKS_SECRET
+	ld hl, JackPotJackSecret
+	call PrintText
+	jp TextScriptEnd
+
+JackPotJackSecret:
 	text_far _CeladonHotelText3
 	text_end

@@ -33,4 +33,7 @@ _CeladonHotelText3::
 
 	para "He says he likes"
 	line "them pocket size"
+
+	para "Go ask him"
+	line "about it!"
 	done

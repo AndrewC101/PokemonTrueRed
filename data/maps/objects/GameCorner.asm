@@ -19,7 +19,7 @@ GameCorner_Object:
 	object_event  8, 14, SPRITE_GYM_GUIDE, STAY, LEFT, 7 ; person
 	object_event 11, 15, SPRITE_GAMBLER, STAY, RIGHT, 8 ; person
 	object_event 14, 11, SPRITE_CLERK, STAY, LEFT, 9 ; person
-	object_event 17, 13, SPRITE_GENTLEMAN, STAY, RIGHT, 10 ; person
+	object_event 17, 13, SPRITE_GENTLEMAN, STAY, RIGHT, 10, OPP_GENTLEMAN, 7
 	object_event  9,  5, SPRITE_ROCKET, STAY, UP, 11, OPP_ROCKET, 7
 
 	def_warps_to GAME_CORNER

@@ -199,11 +199,8 @@ _CeladonGameCornerText_48e88::
 	line "look at all those"
 	cont "Coins!"
 
-	para "Here you can have"
-	line "a few."
-
-	para "Just a few mind!"
-	prompt
+	para "Beautiful!"
+	done
 
 _CeladonGameCornerText_48e8d::
 	text "<PLAYER> received"
