@@ -292,17 +292,6 @@ FightingDojoAfterBattleText5:
 	text_far _FightingDojoAfterBattleText5
 	text_end
 
-FightingDojoBattleText6:
-	text_far _FightingDojoBattleText6
-	text_end
-
-FightingDojoEndBattleText6:
-	text_far _FightingDojoEndBattleText6
-	text_end
-
-FightingDojoAfterBattleText6:
-	text_far _FightingDojoAfterBattleText6
-	text_end
 
 FightingDojoBeforeBattleText7:
 	text_far _FightingDojoBeforeBattleText7

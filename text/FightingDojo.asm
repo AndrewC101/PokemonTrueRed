@@ -387,29 +387,6 @@ _FightingDojoAfterBattleText5::
 	cont "self."
 	done
 
-_FightingDojoBattleText6::
-    text "You have done"
-    line "it!"
-
-    para "I knew you"
-    line "would."
-
-    para "We are a"
-    line "powerful"
-    cont "trainer."
-
-	para "In another"
-	line "reality."
-
-	para "I am you!"
-
-	para "I was brought"
-	line "here by"
-	cont "Master OAK."
-
-	para "to test you!"
-	done
-
 _FightingDojoBeforeBattleText6::
 	text "Hello!"
 

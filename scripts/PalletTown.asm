@@ -220,9 +220,19 @@ PalletTownText8:
 	jr z, .e4NotBeaten
 	CheckEvent EVENT_BEAT_RED
 	jr nz, .afterBeat
+    ld hl, RedBattleText
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .bye
+	ld hl, LetsGo
+	call PrintText
+	jr z, .fight
 .beforeBeat
 	ld hl, RedBattleText
 	call PrintText
+.fight
 	ld hl, wd72d
 	set 6, [hl]
 	set 7, [hl]
@@ -240,9 +250,6 @@ PalletTownText8:
 	call InitBattleEnemyParameters
 	xor a
 	ldh [hJoyHeld], a
-	;ld a, $3
-	;ld [wRocketHideoutB4FCurScript], a
-	;ld [wCurMapScript], a
 	jr .done
 .afterBeat
 	ld hl, RedAfterBattleText
@@ -251,6 +258,7 @@ PalletTownText8:
     ld a, [wCurrentMenuItem]
     and a
     jr nz, .beforeBeat
+.bye
     ld hl, RedBye
     call PrintText
 	jr .done
@@ -265,9 +273,60 @@ RedBye:
 _RedBye:
     text "Go have fun!"
     done
+LetsGo:
+	text_far _LetsGo
+	text_end
+_LetsGo:
+    text "Let's go!"
+    done
+
+_RedBattleText:
+    text "You have done"
+    line "it!"
+
+    para "Well done!"
+
+    para "I knew you"
+    line "would do it."
+
+    para "We are"
+    line "powerful!"
+
+    para "Now you get"
+    line "full exp from"
+    cont "rematches."
+
+    para "And all #MON"
+    line "you catch are"
+    cont "at their"
+    cont "strongest."
+
+    para "The SS Anne"
+    line "has returned."
+
+    para "And you can"
+    line "now access the"
+    cont "SAFFRON"
+    cont "Hall of Destiny"
+
+    para "You see..."
+
+	para "In another"
+	line "reality."
+
+	para "I am you!"
+
+	para "I was brought"
+	line "here by"
+	cont "Master OAK."
+
+	para "to test you!"
+
+	para "Do you accept?"
+	done
 
 RedBattleText:
-	text_far _FightingDojoBattleText6
+	text_far _RedBattleText
 	text_end
 
 RedBeforeBattleText:
