@@ -66,6 +66,7 @@ Signature Moves and Mixed Sprites
 ![New Moves](/screenshots/psyblast.png?raw=true)
 ![New Moves](/screenshots/pikaThunder.png?raw=true)
 ![New Moves](/screenshots/stone.png?raw=true)
+![Decline Prize](/screenshots/declinePrize.png?raw=true)
 
 # Battle
 - All trainer parties are updated with
