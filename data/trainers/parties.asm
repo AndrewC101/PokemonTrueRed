@@ -132,6 +132,8 @@ LassData:
 	db 42, PARASECT, VILEPLUME, 0
 ; Lance Sister
     db 45, DRAGONAIR, SEADRA, CHARIZARD, 0
+; Karen
+    db $FF, 61, PERSIAN, 62, VILEPLUME, 63, ARBOK, 64, GENGAR, 65, FLAREON, 0
 
 SailorData:
 ; SS Anne Stern
@@ -203,6 +205,8 @@ JrTrainerFData:
 	db 46, KANGASKHAN, FEAROW, TANGELA, 0
 ; Route 20
 	db 45, VENUSAUR, CHARIZARD, BLASTOISE, 0
+; Green
+    db $FF, 76, CLEFABLE, 77, GENGAR, 78, VICTREEBEL, 79, NINETALES, 80, KANGASKHAN, 81, BLASTOISE, 0
 
 PokemaniacData:
 ; Route 10
@@ -421,6 +425,8 @@ BeautyData:
 	db 50, SEADRA, DRAGONAIR, DRAGONAIR, 0
 ; Harribel
 	db 21, STARMIE, 0
+; Prof Ivy
+    db 17, WARTORTLE, LAPRAS, 0
 
 PsychicData:
 ; Saffron Gym
@@ -469,7 +475,7 @@ TamerData:
 ; Victory Road 2F
 	db 59, PERSIAN, ARCANINE, RHYDON, 0
 ; Unused
-	db 42, RHYHORN, PRIMEAPE, ARBOK, TAUROS, 0
+	;db 42, RHYHORN, PRIMEAPE, ARBOK, TAUROS, 0
 
 BirdKeeperData:
 ; Route 13
@@ -511,7 +517,7 @@ BlackbeltData:
 ; Victory Road 2F
 	db 60, MACHAMP, MACHAMP, MACHAMP, 0
 ; Trunks
-    db $FF, 75, PIDGEOT, 76, JOLTEON, 77, ARCANINE, 78, MACHAMP, 79, MAROWAK, 80, ELECTABUZZ, 0
+    db $FF, 70, PIDGEOT, 71, RAICHU, 72, ARCANINE, 73, MACHAMP, 74, MAROWAK, 75, ELECTABUZZ, 0
 
 Green1Data:
 	db 5, SQUIRTLE, 0
@@ -653,6 +659,8 @@ CooltrainerMData:
 	db 55, GENGAR, 0
 ; Stark
     db 22, ARCANINE, 0
+; ichigo
+    db 40, TAUROS, 0
 
 CooltrainerFData:
 ; Celadon Gym
@@ -665,9 +673,9 @@ CooltrainerFData:
 ; Victory Road 1F
 	db 59, PERSIAN, NINETALES, VAPOREON, 0
 ; Unused
-	db 45, IVYSAUR, VENUSAUR, 0
-	db 45, NIDORINA, NIDOQUEEN, 0
-	db 43, PERSIAN, NINETALES, RAICHU, 0
+	;db 45, IVYSAUR, VENUSAUR, 0
+	;db 45, NIDORINA, NIDOQUEEN, 0
+	;db 43, PERSIAN, NINETALES, RAICHU, 0
 
 BrunoData:
 	db $FF, 63, TAUROS, 64, GOLEM, 65, PINSIR, 66, POLIWRATH, 66, SNORLAX, 67, MACHAMP, 0

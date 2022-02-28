@@ -7,9 +7,15 @@ _BrockPostBattleAdviceText::
 	line "very gifted as a"
 	cont "#MON trainer!"
 
-	para "Go to the GYM in"
-	line "CERULEAN and test"
-	cont "your abilities!"
+	para "Now I must get"
+	line "to the Museum!"
+
+	para "Oh my sweetest"
+	line "IVY!"
+
+	para "Here comes the"
+	line "man of your"
+	cont "dreams!"
 	done
 
 _BeforeReceivedTM34Text::
@@ -76,13 +82,13 @@ _BrockBoulerBadgeInfoText::
 	prompt
 
 _PewterGymBattleText1::
-	text "Stop right there,"
-	line "kid!"
+	text "My big bro"
+	line "BROCK has a"
+	cont "date waiting"
+	cont "at the Museum."
 
-	para "Many come to"
-	line "challenge my"
-	cont "big bro BROCK!"
-	cont "they all lose!"
+	para "He can't be"
+	line "late!"
 	done
 
 _PewterGymEndBattleText1::
@@ -94,9 +100,8 @@ _PewterGymEndBattleText1::
 	prompt
 
 _PewterGymAfterBattleText1::
-	text "You're pretty good"
-	line "but BROCK is a"
-	cont "real trainer!"
+	text "Don't make my"
+	line "bro late!"
 	done
 
 _PewterGymGuidePreAdviceText::

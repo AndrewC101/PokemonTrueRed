@@ -224,6 +224,7 @@ Route11Text10:
 .fight
 	; AndrewNote - set boss battle events
 	SetEvent EVENT_MEDIUM_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS

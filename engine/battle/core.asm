@@ -1195,9 +1195,17 @@ HandlePlayerBlackOut:
     ResetEvent EVENT_ANDREW_BATTLE
     ResetEvent EVENT_JAMES_BATTLE
     ResetEvent EVENT_SHOULD_BEAT_RED
+    ResetEvent EVENT_SHOULD_BEAT_SEPHIROTH
+    ResetEvent EVENT_SHOULD_BEAT_GREEN
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
+	CheckEvent EVENT_DONT_TAKE_MONEY
+	jr z, .takeMoney
+	ld hl, PlayerBlackedOutText3
+	jr .continue
+.takeMoney
 	ld hl, PlayerBlackedOutText2
+.continue
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	jr nz, .noLinkBattle
@@ -1218,6 +1226,10 @@ Rival1WinText:
 PlayerBlackedOutText2:
 	text_far _PlayerBlackedOutText2
 	text_end
+
+PlayerBlackedOutText3:
+    text_far _PlayerBlackedOutText3
+    text_end
 
 LinkBattleLostText:
 	text_far _LinkBattleLostText

@@ -16,6 +16,9 @@ ResetStatusAndHalveMoneyOnBlackout::
 	call HasEnoughMoney
 	jr c, .lostmoney ; never happens
 
+	CheckEvent EVENT_DONT_TAKE_MONEY
+	jr nz, .lostmoney
+
 	; Halve the player's money.
 	ld a, [wPlayerMoney]
 	ldh [hMoney], a
@@ -37,6 +40,7 @@ ResetStatusAndHalveMoneyOnBlackout::
 	ld [wPlayerMoney + 2], a
 
 .lostmoney
+    ResetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, wd732
 	set 2, [hl]
 	res 3, [hl]

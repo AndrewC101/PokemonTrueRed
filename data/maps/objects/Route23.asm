@@ -18,5 +18,7 @@ Route23_Object:
 	object_event 12, 105, SPRITE_GUARD, STAY, DOWN, 5 ; person
 	object_event  8, 119, SPRITE_GUARD, STAY, DOWN, 6 ; person
 	object_event  8, 136, SPRITE_GUARD, STAY, DOWN, 7 ; person
+	object_event 8,  7, SPRITE_SUPER_NERD, STAY, DOWN, 9, OPP_ROCKER, 4
+	object_event  0, 18, SPRITE_GYM_GUIDE, STAY, DOWN, 10 ; person
 
 	def_warps_to ROUTE_23

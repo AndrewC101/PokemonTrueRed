@@ -101,6 +101,7 @@ VictoryRoad3TrainerHeader3:
 VictoryRoad3Text1:
 	text_asm
 	SetEvent EVENT_MAX_STAT_EXP ; AndrewNote - Tsunekazu Ishihara should be strong
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_USE_FULL_RESTORES
 	SetEvent EVENT_USE_FULL_HEALS
 	SetEvent EVENT_NO_SHIFT
@@ -127,6 +128,7 @@ VictoryRoad3Text4:
 	call GBFadeOutToWhite
 	call Delay3
 	call GBFadeInFromWhite
+	SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, VictoryRoad3TrainerHeader3
 	call TalkToTrainer
 	jp TextScriptEnd

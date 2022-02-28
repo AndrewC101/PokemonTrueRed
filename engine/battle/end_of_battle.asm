@@ -60,9 +60,21 @@ EndOfBattle:
 
 .checkRed
 	CheckEvent EVENT_SHOULD_BEAT_RED
-	jr z, .continue
+	jr z, .checkSephiroth
 	ResetEvent EVENT_SHOULD_BEAT_RED
 	SetEvent EVENT_BEAT_RED
+
+.checkSephiroth
+	CheckEvent EVENT_SHOULD_BEAT_SEPHIROTH
+	jr z, .checkGreen
+	ResetEvent EVENT_SHOULD_BEAT_SEPHIROTH
+	SetEvent EVENT_BEAT_SEPHIROTH
+
+.checkGreen
+	CheckEvent EVENT_SHOULD_BEAT_GREEN
+	jr z, .continue
+	ResetEvent EVENT_SHOULD_BEAT_GREEN
+	SetEvent EVENT_BEAT_GREEN
 
 .continue
 	ld a, [wBattleResult]

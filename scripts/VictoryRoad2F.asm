@@ -115,10 +115,8 @@ VictoryRoad2Text2:
     jr nz, .done
 .fight
 	; AndrewNote - set boss battle events
-	SetEvent EVENT_MAX_STAT_EXP
-	SetEvent EVENT_BIG_BONUS_MONEY
-    SetEvent EVENT_NO_SHIFT
-    SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_MEDIUM_STAT_EXP
+    SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, VictoryRoad2TrainerHeader1
 	call TalkToTrainer
 	jp TextScriptEnd

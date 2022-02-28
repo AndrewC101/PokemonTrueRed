@@ -595,7 +595,11 @@
 	const EVENT_BEAT_RED
 	const EVENT_SHOULD_BEAT_RED
 	const EVENT_JACKS_SECRET
-	const_skip 15
+	const EVENT_DONT_TAKE_MONEY
+	const EVENT_SHOULD_BEAT_SEPHIROTH
+	const EVENT_BEAT_SEPHIROTH
+	const EVENT_SHOULD_BEAT_GREEN
+	const_skip 11
 	const EVENT_GOT_HM01
 	const EVENT_RUBBED_CAPTAINS_BACK
 	const EVENT_SS_ANNE_LEFT
@@ -754,6 +758,7 @@
 	const_next $8C0
 	const EVENT_BEAT_ELITE_4 ; AndrewNote - denote Elite 4 are beaten. Very important flag!
 	const EVENT_BEAT_MEWTWO
+	const EVENT_BEAT_GREEN
 
 ; Indigo Plateau events
 	const_next $8E0

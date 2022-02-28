@@ -147,6 +147,8 @@ Route23_TextPointers:
 	dw Route23Text6
 	dw Route23Text7
 	dw Route23Text8
+	dw Route23Text9
+	dw Route23Text10
 
 Route23Text1:
 	text_asm
@@ -241,3 +243,311 @@ VictoryRoadGuardText2:
 Route23Text8:
 	text_far _Route23Text8
 	text_end
+	
+; AndrewNote - Sephiroth battle
+Route23Text9:
+    text_asm
+	CheckEvent EVENT_BEAT_SEPHIROTH
+	jr nz, .afterBeat
+	ld hl, SephirothBattleText
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .noBattle
+.beforeBeat
+    ld hl, SephirothBeginBattleText
+    call PrintText
+	ld hl, wd72d
+	set 6, [hl]
+	set 7, [hl]
+	ld hl, SephirothEndBattleText
+	ld de, SephirothEndBattleText
+	call SaveEndBattleTextPointers
+	ldh a, [hSpriteIndex]
+	ld [wSpriteIndex], a
+	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_BIG_BONUS_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
+    SetEvent EVENT_SHOULD_BEAT_SEPHIROTH
+	call EngageMapTrainer
+	call InitBattleEnemyParameters
+	xor a
+	ldh [hJoyHeld], a
+	jp TextScriptEnd
+.afterBeat
+	ld hl, SephirothAfterBattleText
+	call PrintText
+    call RematchChoice ; AndrewNote - offer rematch
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .beforeBeat
+.noBattle
+    ld hl, SephirothNoBattleText
+    call PrintText
+    jp TextScriptEnd
+
+SephirothBattleText:
+    text_far _SephirothBattleText
+    text_end
+
+SephirothBeginBattleText:
+    text_far _SephirothBeginBattleText
+    text_end
+
+SephirothEndBattleText:
+    text_far _SephirothEndBattleText
+    text_end
+
+SephirothAfterBattleText:
+    text_far _SephirothAfterBattleText
+    text_end
+
+SephirothNoBattleText:
+    text_far _SephirothNoBattleText
+    text_end
+
+_SephirothBattleText:
+    text "You creatures"
+    line "are too weak"
+    cont "to survive."
+
+    para "You can not"
+    line "hope to defeat"
+    cont "me."
+
+    para "Shall I give"
+    line "you despair?"
+    done
+
+_SephirothBeginBattleText:
+	text "I am..."
+
+	para "SEPHIROTH"
+
+	para "Mother..."
+
+	para "Our time has"
+	line "come!"
+
+	para "Nothing can"
+	line "stop us!"
+    done
+
+_SephirothEndBattleText:
+    text "I will"
+    line "never be a"
+    cont "memory."
+    prompt
+
+_SephirothNoBattleText:
+    text "A wise choice."
+
+    para "But this world"
+    line "is near its end."
+
+    para "Soon all shall"
+    line "become one with"
+    cont "me."
+    done
+
+_SephirothAfterBattleText:
+    text "Have you seen"
+    line "CLOUD?"
+
+    para "Bring CLOUD"
+    line "to me."
+    done
+
+Route23Text10:
+    text_asm
+	ld hl, QuitterText1
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr z, .done
+    ld hl, QuitterText2
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .done
+    ld hl, QuitterText3
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr z, .done
+    ld hl, QuitterText4
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .done
+    lb bc, FULL_RESTORE, 5
+	call GiveItem
+	jr nc, .bagFull
+    ld hl, QuitterNeverGiveUpText
+	call PrintText
+    ld hl, GotFullRestoresText
+	call PrintText
+    jp TextScriptEnd
+.bagFull
+    ld hl, BagFullText
+	call PrintText
+    jp TextScriptEnd
+.done
+	ld hl, QuitterQuitsText
+	call PrintText
+    jp TextScriptEnd
+
+QuitterNeverGiveUpText:
+    text_far _QuitterNeverGiveUpText
+    text_end
+_QuitterNeverGiveUpText:
+    text "You are right!"
+
+    para "I have got here"
+    line "because I am"
+    cont "strong."
+
+    para "I must keep"
+    line "going and"
+    cont "believe in"
+    cont "myself."
+
+    para "Here have these"
+    line "my friend."
+
+    para "I have lots of"
+    line "them."
+    prompt
+
+GotFullRestoresText:
+    text_far _GotFullRestoresText
+    sound_get_item_1
+    text_end
+_GotFullRestoresText:
+    text "Received 5"
+    line "Full Restores!"
+    done
+
+BagFullText:
+    text_far _BagFullText
+    text_end
+_BagFullText:
+    text "You've got too"
+    line "much stuff for"
+    cont "my gift."
+    done
+
+QuitterText1:
+    text_far _QuitterText1
+    text_end
+_QuitterText1:
+    text "What am I"
+    line "doing here!?"
+
+    para "What am I"
+    line "thinking!?"
+
+    para "I can't do this!"
+
+    para "I should just"
+    line "go home."
+
+    para "Don't you think"
+    line "I should just"
+    cont "go home?"
+    prompt
+
+QuitterText2:
+    text_far _QuitterText2
+    text_end
+_QuitterText2:
+    text "Yeah I have"
+    line "all 8 badges."
+
+    para "But the Gym"
+    line "Leaders only"
+    cont "gave them to me"
+    cont "because they"
+    cont "felt sorry for"
+    cont "me."
+
+    para "Do you think"
+    line "I deserve the"
+    cont "badges?"
+    prompt
+
+QuitterText3:
+    text_far _QuitterText3
+    text_end
+_QuitterText3:
+    text "Well yeah I"
+    line "got through"
+    cont "victory road."
+
+    para "But I got"
+    line "lucky that few"
+    cont "other trainers"
+    cont "challenged me."
+
+    para "I am way weaker"
+    line "than them."
+
+    para "Look how cool"
+    line "and confident"
+    cont "they are."
+
+    para "Not like me."
+
+    para "I'm weak."
+
+    para "Don't you think"
+    line "I'm weak?"
+    prompt
+
+QuitterText4:
+    text_far _QuitterText4
+    text_end
+_QuitterText4:
+    text "Maybe you're"
+    line "right."
+
+    para "I have made it"
+    line "this far and"
+    cont "many others"
+    cont "haven't."
+
+    para "But..."
+
+    para "I'm afraid."
+
+    para "You say it's"
+    line "ok to be"
+    cont "nervous."
+
+    para "Maybe I can"
+    line "do this."
+
+    para "Do you think"
+    line "I can do this?"
+    prompt
+
+QuitterQuitsText:
+    text_far _QuitterQuitsText
+    text_end
+_QuitterQuitsText:
+    text "You are right"
+    line "I don't know"
+    cont "what I was"
+    cont "thinking."
+
+    para "I'm quiting my"
+    line "#MON journey"
+    cont "and going home."
+    done
+

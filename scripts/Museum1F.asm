@@ -37,6 +37,7 @@ Museum1F_TextPointers:
 	dw Museum1FText3
 	dw Museum1FText4
 	dw Museum1FText5
+	dw Museum1FText6
 
 Museum1FText1:
 	text_asm
@@ -245,3 +246,91 @@ Museum1FText5:
 Museum1FText_5c2bc:
 	text_far _Museum1FText_5c2bc
 	text_end
+
+; AndrewNote - Prof IVY battle
+Museum1FText6:
+    text_asm
+	ld hl, IvyBattleText
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .noBattle
+    ld hl, IvyBeginBattleText
+    call PrintText
+	ld hl, wd72d
+	set 6, [hl]
+	set 7, [hl]
+	ld hl, IvyEndBattleText
+	ld de, IvyEndBattleText
+	call SaveEndBattleTextPointers
+	ldh a, [hSpriteIndex]
+	ld [wSpriteIndex], a
+	SetEvent EVENT_MEDIUM_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
+	call EngageMapTrainer
+	call InitBattleEnemyParameters
+	xor a
+	ldh [hJoyHeld], a
+	jp TextScriptEnd
+.noBattle
+    ld hl, IvyNoBattleText
+    call PrintText
+    jp TextScriptEnd
+
+IvyBattleText:
+    text_far _IvyBattleText
+    text_end
+
+IvyBeginBattleText:
+    text_far _IvyBeginBattleText
+    text_end
+
+IvyEndBattleText:
+    text_far _IvyEndBattleText
+    text_end
+
+IvyNoBattleText:
+    text_far _IvyNoBattleText
+    text_end
+
+_IvyBattleText:
+    text "Hey!"
+
+    para "I am Prof IVY."
+
+    para "I'm waiting to"
+    line "meet someone"
+    cont "here."
+
+    para "His name is"
+    line "BROCK and I'm"
+    cont "surprisingly a"
+    cont "little nervous."
+
+    para "No it's not a"
+    line "date....."
+
+    para "Maybe a battle"
+    line "would help my"
+    cont "nerves."
+
+    para "Would you like"
+    line "to battle?"
+    done
+
+_IvyBeginBattleText:
+    text "Let's go!"
+    done
+
+_IvyEndBattleText:
+    text "Thanks"
+    line "that helped!"
+    prompt
+
+_IvyNoBattleText:
+    text "That's fine"
+    line "I'm not that"
+    cont "nervous really"
+    cont "...."
+    done

@@ -16,6 +16,6 @@ PalletTown_Object:
 	object_event  8,  5, SPRITE_OAK, STAY, NONE, 1 ; person
 	object_event  3,  8, SPRITE_GIRL, WALK, ANY_DIR, 2 ; person
 	object_event 11, 14, SPRITE_FISHER, WALK, ANY_DIR, 3 ; person
-	object_event 9, 2, SPRITE_YOUNGSTER, STAY, DOWN, 8, OPP_JR_TRAINER_M, 9
+	object_event 9, 2, SPRITE_RED, STAY, DOWN, 8, OPP_JR_TRAINER_M, 9
 
 	def_warps_to PALLET_TOWN

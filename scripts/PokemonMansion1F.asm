@@ -85,6 +85,7 @@ Mansion1Text1:
 .fight
 	; AndrewNote - set boss battle events
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS

@@ -154,6 +154,7 @@ FightingDojoText1:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
     predef HealParty ; AndrewNote - heal party to prevent pre status cheesing "cleric clause"
 	ld hl, FightingDojoText_5ce8e
 	call PrintText
@@ -197,6 +198,7 @@ FightingDojoText2:
 	SetEvent EVENT_BIG_BONUS_MONEY
 	SetEvent EVENT_RESET_MEWTWO_ENCOUNTER ; AndrewNote - respawn Mewtwo on victory
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	predef HealParty ; AndrewNote - heal party to prevent pre status cheesing "cleric clause"
 	ld hl, FightingDojoTrainerHeader0
 	call TalkToTrainer
@@ -220,6 +222,7 @@ FightingDojoText3:
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, FightingDojoTrainerHeader1
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -242,6 +245,7 @@ FightingDojoText4:
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, FightingDojoTrainerHeader2
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -264,6 +268,7 @@ FightingDojoText5:
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, FightingDojoTrainerHeader3
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -399,6 +404,7 @@ FightingDojoText9:
 	SetEvent EVENT_BIG_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS
+    SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, FightingDojoTrainerHeader4
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -406,6 +412,7 @@ FightingDojoText9:
 FightingDojoText10:
 	text_asm
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS
@@ -419,6 +426,7 @@ FightingDojoText11:
 	jr z, .oakNotBeaten  ; AndrewNote - I will only battle after beating Master OAK
 	; AndrewNote - set boss battle events
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_MAX_BONUS_MONEY
 	SetEvent EVENT_USE_FULL_RESTORES
 	SetEvent EVENT_FIRST_TURN_GUARD_SPEC
@@ -439,6 +447,7 @@ FightingDojoText12:
 	predef HealParty
 	; AndrewNote - set boss battle events
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_MAX_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS

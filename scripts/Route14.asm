@@ -93,6 +93,7 @@ Route14Text3:
 	call GBFadeInFromWhite
 	ld hl, Route15HealText2
 	call PrintText
+	SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, Route14TrainerHeader2
 	call TalkToTrainer
 	jp TextScriptEnd

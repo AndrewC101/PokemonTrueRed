@@ -129,38 +129,45 @@ _VictoryRoad2AfterBattleText5::
 	done
 
 _VictoryRoad2BeforeBattleText6::
-    text "You creatures"
-    line "are so weak."
+    text "Hello"
 
-    para "Shall I give"
-    line "you despair?"
+    para "I'm a trainer"
+    line "from JOHTO."
+
+    para "Would you like"
+    line "to battle?"
     prompt
 
 _VictoryRoad2BattleText6::
-	text "I am..."
+	text "I am KAREN."
 
-	para "SEPHIROTH"
+	para "I came here"
+	line "from JOHTO"
+	cont "on the request"
+	cont "of LANCE."
 
-	para "Mother..."
-
-	para "Our time has"
-	line "come!"
-
-	para "Nothing can"
-	line "stop meteor!"
+	para "He believes I"
+	line "could become"
+	cont "an Elite Four"
+	cont "member."
 	done
 
 _VictoryRoad2EndBattleText6::
-	text "I"
-	line "will..."
-	cont "never be a"
-	cont "memory."
+	text "You"
+	line "will go far."
 	prompt
 
 _VictoryRoad2AfterBattleText6::
-	text "Have you seen"
-	line "CLOUD?"
+	text "Strong #MON"
 
-	para "He will come"
-	line "to me."
+	para "Weak #MON"
+
+	para "That is just"
+	line "the selfish"
+	cont "perceptions of"
+	cont "people."
+
+	para "True trainers"
+	line "try to win with"
+	cont "their favorites."
 	done

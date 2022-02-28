@@ -11,14 +11,9 @@ _MistyPreBattleText::
 
     para "Like me.."
 
-    para "My water #MON"
-    line "will crush you"
-    cont "in a torrent of"
-    cont "power"
-
-    para "Now learn the"
-    line "terror of the"
-    cont "sea!"
+    para "Now I'll show"
+    line "you how scary"
+    cont "the sea can be!"
 	done
 
 _TM11ExplanationText::

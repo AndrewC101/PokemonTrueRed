@@ -911,6 +911,17 @@ _PlayerBlackedOutText2::
 	line "out!"
 	prompt
 
+_PlayerBlackedOutText3::
+	text "<PLAYER> is out of"
+	line "useable #MON!"
+
+	para "Opponent declined"
+	line "to take money."
+
+	para "<PLAYER> blacked"
+	line "out!"
+	prompt
+
 _LinkBattleLostText::
 	text "<PLAYER> lost to"
 	line "@"

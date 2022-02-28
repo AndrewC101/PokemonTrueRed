@@ -245,6 +245,7 @@ PalletTownText8:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
 	SetEvent EVENT_SHOULD_BEAT_RED
 	call EngageMapTrainer

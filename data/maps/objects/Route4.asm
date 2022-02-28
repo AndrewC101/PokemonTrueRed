@@ -13,7 +13,7 @@ Route4_Object:
 
 	def_object_events
 	object_event  9,  8, SPRITE_COOLTRAINER_F, WALK, ANY_DIR, 1 ; person
-	object_event 63,  2, SPRITE_COOLTRAINER_F, STAY, DOWN, 2, OPP_LASS, 4
+	object_event 63,  2, SPRITE_NURSE, STAY, DOWN, 2, OPP_LASS, 4
 	object_event 57,  3, SPRITE_POKE_BALL, STAY, NONE, 3, FIRE_STONE
 
 	def_warps_to ROUTE_4

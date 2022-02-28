@@ -98,6 +98,7 @@ Route15Text9:
 	call GBFadeInFromWhite
 	ld hl, Route15HealText
 	call PrintText
+	SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, Route15TrainerHeader8
 	jr Route15TalkToTrainer
 

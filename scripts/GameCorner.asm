@@ -378,10 +378,6 @@ CeladonGameCornerText10:
 	call InitBattleEnemyParameters
 	xor a
 	ldh [hJoyHeld], a
-	;ldh [hJoyPressed], a
-	;ldh [hJoyReleased], a
-	;ld a, $1
-	;ld [wGameCornerCurScript], a
 	jr .done
 .notFoundOut
 	ld hl, CeladonGameCornerText_48e88

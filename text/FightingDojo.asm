@@ -426,6 +426,15 @@ _FightingDojoAfterBattleText6::
 	line "is far beyond"
 	cont "us."
 
+	para "You should go"
+	line "to the"
+	cont "Hall of Destiny"
+	cont "in SAFFRON."
+
+	para "I wonder how"
+	line "BROCK and MISTY"
+	cont "are doing."
+
 	para "I have missed"
 	line "this tiny town."
 	done

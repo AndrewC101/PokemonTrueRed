@@ -2,21 +2,22 @@
 Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content while retaining the feeling of a definitive gen 1 experience.
 
 # Main Features
-- All trainer parties and Pokemon updated for greater difficulty and engagement. However, care has been taken to ensure the game is not frustratingly difficult
-- A significant amount of dialog changed to make the world more rich and fun
-- AI updates making all enemies more difficult particularly bosses
-- Added ability to rematch any trainer, but you gain reduced exp before beating Elite Four
-- Significant content available after Elite Four, such as 28 optional bosses, max DVs on all Pokemon obtained and more
+- All trainer parties, Pokemon and AI updated for greater difficulty and engagement. However, care has been taken to ensure the game is not frustratingly difficult
+- A significant amount of additional and altered dialog to make the world more rich and fun
+- Significant additional content with 44 new interesting enemy encounters, 28 of which are optional bosses intended for post game
+- Many different wild Pokemon available in every area, in addition to the important vanilla encounters 
+- Pokemon sprites are a mixture of Blue, Green and Yellow version sprites
+- Added ability to rematch any trainer, but you gain half exp until post game
+- New features available after Elite Four, such as full exp on all rematches and max DVs on all Pokemon obtained
 - Player can sprint at bike speed by holding B, animation speed doubles  
 - Player can warp home almost anytime by pressing A and Select together on the pause menu Exit option  
-- Player can forfeit battles by holding Select while trying to Run, player will be asked for confirmation, useful for potential softlocks  
-- Different wild Pokemon available in every area, in addition to the important vanilla encounters
-- Pokemon sprites are a mixture of Blue, Green and Yellow version sprites, based on which I felt looked the best  
+- Player can forfeit battles by holding Select while trying to Run, player will be asked for confirmation, useful for potential softlocks
+- Elite four and many friendly bosses will not take the players money upon defeating the player
 - All in-game trades are different
 - Boss enemies have better trained Pokemon with higher stats (stat exp / EVs)
-- Unique, starter and legendary Pokemon always have good DVs at minimum  
 - Items can not be used in boss battles, by a player or opponent
-- Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up
+- Updated level-up moveset for all fully evolved Pokemon, they now learn good moves by level up  
+- Unique, starter and legendary Pokemon always have good DVs at minimum
 - numerous bug fixes including removal of badge boost, removal of 1 in 256 glitch, fix re-application of PARA/BRN effects, critical hit rates halved
 - Some mechanics fixes for example Substitute blocks status as it is supposed to  
 - Many Gen 1 mechanics still left to keep the spirit of the game, such a Hyper Beam not recharging on a kill
@@ -29,10 +30,10 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Cerulean Cave Mewtwo has dialog on encounter, also when using master ball and trying to run. Also has AI and different battle music
 - Missingno glitch is still present (it wouldn't be gen 1 without it) but is balanced so the player can't exploit it
 - Trainer fly (Mew glitch) has been removed (you can get Mew legitimately) as it can softlock the game
-- Route4 map has been changed to allow backtracking and easy access to Cerulean Cave
+- Route 4 map has been changed to allow backtracking and easy access to Cerulean Cave
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/wmixm5h8av1ydd6/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/p0cvrahtlflnvhn/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -158,22 +159,25 @@ Signature Moves and Mixed Sprites
     - Safari warden talks about Bruno
     - Silph chief talks about Lance
 - Oaks intro plays different music, has different text and uses Dragonite instead of Nidorino
+- Red is in Pallet town, he will battle after the player has become the Champion  
 - The Old Man does not fight a level 5 Weedle. He is aware of his power to summon unholy creatures at Cinnabar  
-- Weevil (yugioh) is in Viridian Forest, he will battle if the player agrees
+- Weevil (Yugioh) is in Viridian Forest, he will battle if the player agrees
 - Gym guide gives actual good advice on how to beat gym leaders, including which Pokemon might help  
-- Brock gives Mega punch tm and you can rematch him for as many as you want  
+- Brock gives Mega punch tm and you can rematch him for as many as you want 
+- Prof Ivy is in the pewter museum waiting on a date with Brock, she will battle if the player agrees  
 - Rockets are obsessed with their rank (D-S) and salary, often telling the player this info with pride
-- Several Espada and Aizen (for the bleach fans) are on the nugget bridge
+- Several Espada and Aizen (Bleach) are on the nugget bridge
 - Aizen gives a pp up when fought and can be farmed for more pp ups
 - Yugioh is on Route 25, he will battle if the player has beaten Kaiba  
 - Residence of Vermilion are obsessed with a past war with Hoen, they don't take kindly to strangers
 - Lances' sister  is on Route 11, she will battle if the player agrees
+- Ichigo is training in digletts cave, he will battle if the player agrees  
 - SS Anne has an NPC who will heal your party for convenience  
 - There are several trainers who are particularly strong who are out hunting noobs
-- Pegasus (yugioh) is in Rock Tunnel, looking for Kaiba  
+- Pegasus (Yugioh) is in Rock Tunnel, looking for Kaiba  
 - Chris Chan is hiding in Rock Tunnel and nearly everyone there has something to say about it. Get Flash to find him
 - Celadon mart has all the best TMs, available as soon as you get there
-- In Celadon Game Cornor is Jackpot Jack, he always wins. Follow the clues to find out the dark secret he hides then confront him about it
+- In Celadon Game Cornor is Jackpot Jack, he always wins. Follow the clues to find out his dark secret then confront him about it
 - Celadon Mansion has a lot of updated dialog, the programmer defends the many bugs in his code
 - Trainers in Celadon Gym are having a bit of an argument
 - Silph Co building has the elusive rank S rockets and rocket CEOs, you can never defeat their salaries!
@@ -186,10 +190,15 @@ Signature Moves and Mixed Sprites
 - Trunks (DBZ) is in the lab, he will battle if the player agrees  
 - Cinnabar gym trainers are a cult that worships the great and merciful Missingno
 - Giovanni has a special 6th Pokemon in his final fight, he gives the Hyper beam tm and can be rematched
-- Kaiba and Sephiroth are in Victory Road. Sephiroth will battle if the player agrees 
+- Kaiba is in Victory Road looking for an Egyptian God Card.
 - Tsunekazu Ishihara (original game tester) is testing the game in Victory Road, he battles with his actual debug Pokemon  
+- Karen from Johto is in victory road, she will battle if the player agrees   
 - Victory road has trainers designed for grinding exp and money
+- Route 23 just outside victory road has a trainer in the corner who has lost confidence, answer his questions right to encourage him
+- Sephiroth is in the statue maze before Indigo Plateau, he will battle if the player agrees  
 - The Elite Four and Final rival are much stronger to live up to their reputations at this point
+- A level 70 Mew is given as a prize for beating the elite four in the Celadon Mansion roof house  
+- Green is in Cerulean Cave, the player has to beat her to reach Mewtwo  
 - Mewtwo Cerulean Cave encounter has several changes
   - Dialog during first interaction
   - Final battle music plays  
@@ -222,15 +231,16 @@ Signature Moves and Mixed Sprites
 - Vitamins such as protein can be used indefinitely to max out stats  
 - Rematches now give full exp  
 - Numerous Optional Bosses in the world with levels ranging from 60 up.
-  - JackPot Jack is a joke boss but he will fight you once you have discovered his secret
   - 6 Magikarp man on route 21
   - Kaiba in Victory Road
   - Tsunekazu Ishihara (original game tester) is in Victory Road, he battles with his actual debug Pokemon
+  - Karen from Johto is in victory road, she will battle if the player agrees  
   - Mr Miyagi on route 12, will battle if the player agrees
   - Wallace the Champion of Hoen is on Seafoam Island, he will battle if the player has become Champion  
   - Trunks is in the Cinnabar Lab, he will battle if the player agrees
   - Nurse Joy is outside Cerulean Cave, she will battle if the player has become Champion
-  - Sephiroth is in Victory Road, he will battle if the player agrees
+  - Green is in Cerulean Cave, she must be beaten to reach Mewtwo  
+  - Sephiroth is in the statue maze before Indigo Plateau, he will battle if the player agrees
   - Cloud is on floor 11 of Silph Co building, he will battle if the player has beaten Sephiroth
   - Yugioh is on Route 25, he will battle if the player has beaten Kaiba
   - Red is in Pallet Town, he will battle if the player has become Champion and they agree

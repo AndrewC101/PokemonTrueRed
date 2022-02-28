@@ -55,6 +55,7 @@ SSAnne5Text1:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, SSAnne5TrainerHeader0
 	call TalkToTrainer
@@ -65,6 +66,7 @@ SSAnne5Text2:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, SSAnne5TrainerHeader1
 	call TalkToTrainer
@@ -75,6 +77,7 @@ SSAnne5Text3:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, SSAnne5TrainerHeader2
 	call TalkToTrainer
@@ -85,6 +88,7 @@ SSAnne5Text4:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, SSAnne5TrainerHeader3
 	call TalkToTrainer
@@ -103,6 +107,7 @@ SSAnne5Text5:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, SSAnne5TrainerHeader4
 	call TalkToTrainer
@@ -113,6 +118,7 @@ SSAnne5Text6:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, SSAnne5TrainerHeader5
 	call TalkToTrainer
@@ -123,6 +129,7 @@ SSAnne5Text7:
 	SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
 	ld hl, SSAnne5TrainerHeader6
 	call TalkToTrainer
@@ -134,6 +141,7 @@ SSAnne5Text8:
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, SSAnne5TrainerHeader7
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -144,6 +152,7 @@ SSAnne5Text9:
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BIG_BONUS_MONEY
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, SSAnne5TrainerHeader8
 	call TalkToTrainer
 	jp TextScriptEnd

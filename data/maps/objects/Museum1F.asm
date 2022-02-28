@@ -16,5 +16,6 @@ Museum1F_Object:
 	object_event 15,  2, SPRITE_SCIENTIST, STAY, DOWN, 3 ; person
 	object_event 17,  4, SPRITE_SCIENTIST, STAY, NONE, 4 ; person
 	object_event 16,  2, SPRITE_OLD_AMBER, STAY, NONE, 5 ; person
+	object_event 10,  1, SPRITE_BEAUTY, STAY, DOWN, 6, OPP_BEAUTY, 16
 
 	def_warps_to MUSEUM_1F

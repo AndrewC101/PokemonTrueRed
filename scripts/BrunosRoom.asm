@@ -129,6 +129,7 @@ BrunoText1:
 	SetEvent EVENT_NO_SHIFT
 	SetEvent EVENT_BONUS_MONEY ; AndrewNote - give bonus money
 	SetEvent EVENT_MAX_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, BrunosRoomTrainerHeader0
 	call TalkToTrainer
 	jp TextScriptEnd
