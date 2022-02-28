@@ -45,20 +45,22 @@ If your character seems to be unable to move simply warp home by pressing A and 
 # Screen Shots
 
 Rematch Trainers
-![Rematch](/screenshots/rematch.png?raw=true)
+![Rematch](/screenshots/Red.png?raw=true)
 
 New Dialog
 ![Dialog](/screenshots/dialog2.png?raw=true)
 ![Dialog](/screenshots/newDialog.png?raw=true)
 ![Dialog](/screenshots/mewtwoTalk.png?raw=true)
 
-Optional Bosses
-![Optional Bosses](/screenshots/optionalBosses2.png?raw=true)
-![Optional Bosses](/screenshots/optionalBosses1.png?raw=true)
-![Optional Bosses](/screenshots/sephiroth.png?raw=true)
-![Optional Bosses](/screenshots/yugioh.png?raw=true)
-![Optional Bosses](/screenshots/wallace.png?raw=true)
-![Optional Bosses](/screenshots/miyagi.png?raw=true)
+New Encounters
+![New Encounters](/screenshots/optionalBosses2.png?raw=true)
+![New Encounters](/screenshots/optionalBosses1.png?raw=true)
+![New Encounters](/screenshots/sephiroth.png?raw=true)
+![New Encounters](/screenshots/yugioh.png?raw=true)
+![New Encounters](/screenshots/wallace.png?raw=true)
+![New Encounters](/screenshots/miyagi.png?raw=true)
+![New Encounters](/screenshots/Quitter.png?raw=true)
+![New Encounters](/screenshots/Green.png?raw=true)
 
 Signature Moves and Mixed Sprites
 ![New Moves](/screenshots/psyblast.png?raw=true)
