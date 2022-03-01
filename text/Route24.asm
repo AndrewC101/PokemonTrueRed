@@ -59,6 +59,6 @@ _Route24Text_51530::
 	done
 
 _Route24BattleText1::
-	text "I saw your feat"
-	line "from the grass!"
+	text "Did you just try"
+	line "to Teleport away!"
 	done

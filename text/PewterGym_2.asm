@@ -123,6 +123,9 @@ _PewterGymGuidePreAdviceText::
 	para "POLIWAG or"
 	line "BELLSPROUT"
 	cont "would be good!"
+
+	para "Want more"
+	line "advice?"
 	done
 
 _PewterGymGuideBeginAdviceText::

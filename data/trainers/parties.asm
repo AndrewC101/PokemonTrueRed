@@ -426,7 +426,7 @@ BeautyData:
 ; Harribel
 	db 21, STARMIE, 0
 ; Prof Ivy
-    db 17, WARTORTLE, LAPRAS, 0
+    db 16, WARTORTLE, LAPRAS, 0
 
 PsychicData:
 ; Saffron Gym

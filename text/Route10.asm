@@ -16,20 +16,20 @@ _Route10AfterBattleText1::
 	done
 
 _Route10BattleText2::
-	text "Ha-hahah-ah-ha!"
+	text "Take me home"
+	line "country road!"
 	done
 
 _Route10EndBattleText2::
-	text "Ha-haha!"
-	line "Not laughing!"
-	cont "Ha-hay fever!"
-	cont "Haha-ha-choo!"
+	text "To the"
+	line "place I"
+	cont "belonggg!"
 	prompt
 
 _Route10AfterBattleText2::
-	text "Haha-ha-choo!"
-	line "Ha-choo!"
-	cont "Snort! Snivel!"
+	text "Take me home"
+
+	para "Country road!"
 	done
 
 _Route10BattleText3::
@@ -81,18 +81,19 @@ _Route10AfterBattleText4::
 	done
 
 _Route10BattleText5::
-	text "Ah! This mountain"
-	line "air is delicious!"
+	text "Rocky mountain"
+	line "hiiiiiiigh!"
 	done
 
 _Route10EndBattleText5::
-	text "That"
-	line "cleared my head!"
+	text "Rocky mountain"
+	line "hiiiiiigh!"
 	prompt
 
 _Route10AfterBattleText5::
-	text "I feel bloated on"
-	line "mountain air!"
+	text "I've seen it"
+	line "raining fire in"
+	cont "the sky!"
 	done
 
 _Route10BattleText6::

@@ -62,7 +62,7 @@ Route25TrainerHeader2:
 Route25TrainerHeader3:
 	trainer EVENT_BEAT_ROUTE_25_TRAINER_3, 2, Route25BattleText4, Route25EndBattleText4, Route25AfterBattleText4
 Route25TrainerHeader4:
-	trainer EVENT_BEAT_ROUTE_25_TRAINER_4, 4, Route25BattleText5, Route25EndBattleText5, Route25AfterBattleText5
+	trainer EVENT_BEAT_ROUTE_25_TRAINER_4, 0, Route25BattleText5, Route25EndBattleText5, Route25AfterBattleText5
 Route25TrainerHeader5:
 	trainer EVENT_BEAT_ROUTE_25_TRAINER_5, 4, Route25BattleText6, Route25EndBattleText6, Route25AfterBattleText6
 Route25TrainerHeader6:

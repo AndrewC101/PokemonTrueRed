@@ -27,7 +27,7 @@ _Museum2FText4::
 	text "I want a PIKACHU!"
 	line "It's so cute!"
 
-	para "And I hear if"
+	para "And I hear if I"
 	line "raise it to level"
 	cont "100! It learns"
 	cont "a special move!"

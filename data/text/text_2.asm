@@ -521,14 +521,15 @@ _ViridianSchoolNotebookText1::
 _ViridianSchoolNotebookText2::
 	text "Second page..."
 
-	para "A healthy #MON"
-	line "may be hard to"
-	cont "catch, so weaken"
-	cont "it first!"
+	para "You can sprint"
+	line "by holding B"
 
-	para "Poison, burns and"
-	line "other damage are"
-	cont "effective!"
+	para "You can also"
+	line "warp home by"
+	cont "holding SELECT"
+	cont "and pressing A"
+	cont "on the pause"
+	cont "menu exit option"
 	prompt
 
 _ViridianSchoolNotebookText3::
@@ -542,6 +543,11 @@ _ViridianSchoolNotebookText3::
 	para "Battles are"
 	line "constantly fought"
 	cont "at #MON GYMs."
+
+	para "You can forfeit"
+	line "a fight by"
+	cont "holding SELECT"
+	cont "and picking Run."
 	prompt
 
 _ViridianSchoolNotebookText4::

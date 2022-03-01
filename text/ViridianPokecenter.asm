@@ -1,7 +1,7 @@
 _ViridianPokeCenterText2::
 	text "You can store"
 	line "the souls of"
-	cont "your slaves in"
+	cont "your minions in"
 	cont "that PC."
 	done
 
