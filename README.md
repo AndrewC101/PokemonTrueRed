@@ -4,7 +4,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 # Main Features
 - All trainer parties, Pokemon and AI updated for greater difficulty and engagement. However, care has been taken to ensure the game is not frustratingly difficult
 - A significant amount of additional and altered dialog to make the world more rich and fun
-- Significant additional content with 44 new interesting enemy encounters, 28 of which are optional bosses intended for post game
+- Significant additional content with 47 new interesting enemy encounters, 29 of which are optional bosses intended for post game
 - Many different wild Pokemon available in every area, in addition to the important vanilla encounters 
 - Pokemon sprites are a mixture of Blue, Green and Yellow version sprites
 - Added ability to rematch any trainer, but you gain half exp until post game
@@ -23,7 +23,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Many Gen 1 mechanics still left to keep the spirit of the game, such a Hyper Beam not recharging on a kill
 - All 151 Pokemon available with no missable Pokemon. Trade evolutions now evolve at level 40
 - Multiples of all Legendary Pokemon available with new signature moves for Mewtwo, Mew and Pikachu
-- New enemies, such as Sephiroth, Cloud, Yugi, Kaiba, Trunks, Wallace, Aizen, Mr Miyagi and Chris Chan who is hiding in Rock Tunnel
+- New enemies, such as Sephiroth, Cloud, Yuna, Yugi, Kaiba, Trunks, Wallace, Aizen, Mr Miyagi, Chris Chan and more
 - All good TMs are available to purchase in Celadon as soon as you get there, but some are only given by Gym Leaders 
 - HM moves can be deleted at any time like normal moves, the warp home function protects you from trapping yourself
 - Easier post-game grinding, with Exp.All giving full exp to whole party and optional bosses giving huge bonus money
@@ -33,7 +33,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Route 4 map has been changed to allow backtracking and easy access to Cerulean Cave
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/w1zsiliqn5ig05b/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/jsslh352mz3cbhk/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -179,14 +179,17 @@ Signature Moves and Mixed Sprites
 - There are several trainers who are particularly strong who are out hunting noobs
 - Pegasus (Yugioh) is in Rock Tunnel, looking for Kaiba  
 - Chris Chan is hiding in Rock Tunnel and nearly everyone there has something to say about it. Get Flash to find him
+- Yuna (FFX) is in Pokeon Tower in Lavender Town, she will battle after the play is Grand Maester (Champion)  
 - Celadon mart has all the best TMs, available as soon as you get there
 - In Celadon Game Cornor is Jackpot Jack, he always wins. Follow the clues to find out his dark secret then confront him about it
+- Officer Jenny is in the Rocket Hideout, she will ask if you are a Team Rocket member and battle if you say yes  
 - Celadon Mansion has a lot of updated dialog, the programmer defends the many bugs in his code
 - Trainers in Celadon Gym are having a bit of an argument
 - Silph Co building has the elusive rank S rockets and rocket CEOs, you can never defeat their salaries!
 - Cloud (FF7) is on floor 11 of Silph Co, he will battle if the player has beaten Sephiroth  
 - Sabrinna gives Psychic TM and can be rematched for as many as you want
-- Mr Miyagi (Karate Kid) is fishing on route 12, he will battle if the player agrees  
+- Mr Miyagi (Karate Kid) is fishing on route 12, he will battle if the player agrees 
+- Yuffie is in the Fuchsia city gym  
 - Koga gives Swords dance TM and can be rematched for as many as you want
 - 6 Magikarp man on Route 21 thinks he is an optional boss. Maybe he is  
 - Cinnabar Pokemon Lab has updated dialog about Mewtwo. One of the scientists has gone slightly mad
@@ -241,6 +244,7 @@ Signature Moves and Mixed Sprites
   - Mr Miyagi on route 12, will battle if the player agrees
   - Wallace the Champion of Hoen is on Seafoam Island, he will battle if the player has become Champion  
   - Trunks is in the Cinnabar Lab, he will battle if the player agrees
+  - Yuna is in Pokemon Tower, she will battle if the player has become Champion  
   - Nurse Joy is outside Cerulean Cave, she will battle if the player has become Champion
   - Green is in Cerulean Cave, she must be beaten to reach Mewtwo  
   - Sephiroth is in the statue maze before Indigo Plateau, he will battle if the player agrees
@@ -339,6 +343,7 @@ Signature Moves and Mixed Sprites
   - Wrap is 75 accuracy rather than 85
 - Flash is now 100% accurate  
 - Karate Chop is now a Fighting type move
+- Slash is now 60 base power rather than 70, more consistent with other high crit rate moves  
 - Mega Punch is 90 accuracy rather than 85
 - Gust is now a Flying type move
 - Wing Attack is now 65 base power rather than 35

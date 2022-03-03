@@ -8,6 +8,6 @@ DiglettsCave_Object:
 	def_bg_events
 
 	def_object_events
-	object_event  9,  14, SPRITE_COOLTRAINER_M, STAY, DOWN, 1, OPP_COOLTRAINER_M, 12
+	object_event  9,  14, SPRITE_COOLTRAINER_M, STAY, DOWN, 1, OPP_COOLTRAINER_M, 7
 
 	def_warps_to DIGLETTS_CAVE

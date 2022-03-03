@@ -55,7 +55,7 @@ RocketHideout1TrainerHeader2:
 RocketHideout1TrainerHeader3:
 	trainer EVENT_BEAT_ROCKET_HIDEOUT_1_TRAINER_3, 3, RocketHideout1BattleText5, RocketHideout1EndBattleText5, RocketHideout1AfterBattleTxt5
 RocketHideout1TrainerHeader4:
-	trainer EVENT_BEAT_ROCKET_HIDEOUT_1_TRAINER_4, 3, RocketHideout1BattleText6, RocketHideout1EndBattleText6, RocketHideout1AfterBattleTxt6
+	trainer EVENT_BEAT_ROCKET_HIDEOUT_1_TRAINER_4, 0, RocketHideout1BattleText6, RocketHideout1EndBattleText6, RocketHideout1AfterBattleText6
 	db -1 ; end
 
 RocketHideout1Text1:
@@ -83,9 +83,24 @@ RocketHideout1Text4:
 	jp TextScriptEnd
 
 RocketHideout1Text5:
-	text_asm
+    text_asm
+	CheckEvent EVENT_BEAT_ROCKET_HIDEOUT_1_TRAINER_4
+	jr nz, .fight
+	ld hl, RocketHideout1BeforeBattleText6
+	call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .done
+.fight
+	SetEvent EVENT_MEDIUM_STAT_EXP
+	SetEvent EVENT_DONT_TAKE_MONEY
 	ld hl, RocketHideout1TrainerHeader4
 	call TalkToTrainer
+	jp TextScriptEnd
+.done
+	ld hl, RocketHideout1AfterBattleText6
+	call PrintText
 	jp TextScriptEnd
 
 RocketHideout1EndBattleText6:
@@ -147,10 +162,40 @@ RocketHideout1AfterBattleTxt5:
 	text_far _RocketHideout1AfterBattleTxt5
 	text_end
 
+RocketHideout1BeforeBattleText6:
+	text_far _RocketHideout1BeforeBattleText6
+	text_end
+
 RocketHideout1BattleText6:
 	text_far _RocketHideout1BattleText6
 	text_end
 
-RocketHideout1AfterBattleTxt6:
-	text_far _RocketHideout1AfterBattleTxt6
+RocketHideout1AfterBattleText6:
+	text_far _RocketHideout1AfterBattleText6
 	text_end
+
+_RocketHideout1BeforeBattleText6::
+	text "Stop there!"
+
+	para "Are you a Rocket?"
+	done
+
+_RocketHideout1BattleText6::
+	text "I am"
+	line "Officer Jenny."
+
+	para "I've infiltrated"
+	line "the Rockets."
+
+	para "I am waiting"
+	line "for a shot at"
+	cont "their boss."
+	done
+
+_RocketHideout1AfterBattleText6::
+	text "You aren't a"
+	line "Rocket."
+
+	para "You must be"
+	line "my backup!"
+	done

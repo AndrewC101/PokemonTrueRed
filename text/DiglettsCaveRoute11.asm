@@ -1,6 +1,6 @@
 _DiglettsCaveEntRoute11Text1::
 	text "DIGLETTs dug this"
-	cont "long tunnel!"
+	line "long tunnel!"
 
 	para "There is a"
 	line "serious looking"

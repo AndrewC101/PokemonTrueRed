@@ -1,5 +1,5 @@
 _RocketHideout1EndBattleText6::
-	text "Why...?@"
+	text "Wait@"
 	text_end
 
 _RocketHideout1BattleText2::
@@ -65,16 +65,4 @@ _RocketHideout1AfterBattleTxt5::
 	text "OK, I'll talk!"
 	line "Take the elevator"
 	cont "to see my BOSS!"
-	done
-
-_RocketHideout1BattleText6::
-	text "Oi!"
-
-	para "What's your"
-	line "Salary!?"
-	done
-
-_RocketHideout1AfterBattleTxt6::
-	text "Uh-oh, that fight"
-	line "opened the door!"
 	done

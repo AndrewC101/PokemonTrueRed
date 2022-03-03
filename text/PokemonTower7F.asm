@@ -83,3 +83,54 @@ _PokemonTower7AfterBattleText3::
 	cont "and leave us"
 	cont "alone."
 	done
+
+_PokemonTower7BeforeBattleText4::
+	text "Hello."
+
+	para "I am YUNA."
+
+	para "I am a #MON"
+	line "summoner."
+
+	para "I am praying"
+	line "so I may become"
+	cont "a hi-summoner."
+
+	para "I must train with"
+	line "the grand Maester"
+
+	para "the Champion."
+	done
+
+_PokemonTower7BattleText4::
+	text "Grand Maester!"
+
+    para "I am YUNA."
+
+	para "I am a #MON"
+	line "summoner."
+
+	para "I am praying"
+	line "so I may become"
+	cont "a high summoner."
+
+	para "Please pray"
+	line "with me."
+	done
+
+_PokemonTower7EndBattleText4::
+	text "I"
+	line "am grateful."
+	prompt
+
+_PokemonTower7AfterBattleText4::
+	text "I shall become"
+	line "a high summoner."
+
+	para "So I may bring"
+	line "about the calm."
+
+	para "Then we can all"
+	line "relax and have"
+	cont "fun!"
+	done

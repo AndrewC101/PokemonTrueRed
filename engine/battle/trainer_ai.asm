@@ -279,10 +279,13 @@ AIMoveChoiceModification2:
     cp SUBSTITUTE
     jp z, .discourageMove
 
-   ; encourage if slower than opponent
+   ; encourage if slower than opponent, unless in Andrew battle
+    CheckEvent EVENT_ANDREW_BATTLE
+    jr nz, .faster
     call StrCmpSpeed
     jp nc, .encouragePara
 
+.faster
    ; 50% chance to encourage if faster than opponent
     call Random
     cp 128
@@ -740,6 +743,10 @@ StrCmpSpeed:	;joenote - function for AI to compare pkmn speeds
 AIEnemyTrainerSwitch:
     ld a, [wEnemyMonStatus]
     and SLP | 1 << FRZ ; sleeping or frozen
+    ret z
+
+    ld a, [wEnemyPartyCount]
+    cp $1
     ret z
 
     CheckEvent EVENT_STOP_SWITCHING

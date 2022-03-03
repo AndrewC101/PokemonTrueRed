@@ -86,8 +86,9 @@ _Route10BattleText5::
 	done
 
 _Route10EndBattleText5::
-	text "Rocky mountain"
-	line "hiiiiiigh!"
+	text "Rocky"
+	line "mountain"
+	cont "hiiiiiigh!"
 	prompt
 
 _Route10AfterBattleText5::

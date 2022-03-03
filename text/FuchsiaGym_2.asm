@@ -141,27 +141,28 @@ _FuchsiaGymAfterBattleText5::
 	done
 
 _FuchsiaGymBattleText6::
-	text "Master KOGA comes"
-	line "from a long line"
-	cont "of ninjas!"
+	text "Stop!"
 
-	para "What did you"
-	line "descend from?"
+	para "I am the great"
+	line "ninja YUFFIE!"
+
+	para "If I win you"
+	line "have to give"
+	cont "me your"
+	cont "#MON!"
 	done
 
 _FuchsiaGymEndBattleText6::
-	text "Dropped"
-	line "my balls!"
+	text "Huh"
 	prompt
 
 _FuchsiaGymAfterBattleText6::
-	text "Where there is"
-	line "light, there is"
-	cont "shadow!"
+	text "Of course if"
+	line "you win I don't"
+	cont "have to give up"
+	cont "my #MON."
 
-	para "Light and shadow!"
-	line "Which do you"
-	cont "choose?"
+	para "Hehe!"
 	done
 
 _FuchsiaGymGuidePreBattleText::

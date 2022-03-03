@@ -9,7 +9,7 @@ PokemonMansion3F_Object:
 	def_bg_events
 
 	def_object_events
-	object_event  5, 11, SPRITE_SUPER_NERD, WALK, LEFT_RIGHT, 1, OPP_BURGLAR, 8
+	object_event  5, 11, SPRITE_SUPER_NERD, WALK, LEFT_RIGHT, 1, OPP_BURGLAR, 5
 	object_event 20, 11, SPRITE_SCIENTIST, STAY, LEFT, 2, OPP_SCIENTIST, 12
 	object_event  1, 16, SPRITE_POKE_BALL, STAY, NONE, 3, MAX_POTION
 	object_event 25,  5, SPRITE_POKE_BALL, STAY, NONE, 4, IRON

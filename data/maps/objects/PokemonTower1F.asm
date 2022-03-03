@@ -14,5 +14,6 @@ PokemonTower1F_Object:
 	object_event  8, 12, SPRITE_BALDING_GUY, STAY, NONE, 3 ; person
 	object_event 13,  7, SPRITE_GIRL, STAY, NONE, 4 ; person
 	object_event 17,  7, SPRITE_CHANNELER, STAY, LEFT, 5 ; person
+	object_event 10,  7, SPRITE_DAISY, STAY, DOWN, 6, OPP_LASS, 21
 
 	def_warps_to POKEMON_TOWER_1F

@@ -10,11 +10,11 @@ _SSAnne10BattleText1::
 	done
 
 _SSAnne10EndBattleText1::
-	text "I had a buddy"
-	line "with me."
+	text "I had"
+	line "a buddy with me."
 
 	para "don't know where"
-	cont "he has gone."
+	line "he has gone."
 	prompt
 
 _SSAnne10AfterBattleText1::

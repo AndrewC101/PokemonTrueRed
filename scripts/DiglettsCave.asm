@@ -43,7 +43,7 @@ _IchigoBattleText:
     text "Hey I'm ICHIGO!"
 
     para "Substitute"
-    cont "#MON trainer."
+    line "#MON trainer."
 
     para "I am training"
     line "here to defeat"
@@ -57,7 +57,7 @@ IchigoEndBattleText:
     text_far _IchigoEndBattleText
     text_end
 _IchigoEndBattleText:
-    text "Nani!"
+    text "Nani"
     prompt
 
 IchigoNoBattleText:

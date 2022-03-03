@@ -25,8 +25,12 @@ _Route6BattleText2::
 	done
 
 _Route6EndBattleText2::
-	text "Yes dear..."
+	text "help me!"
 	prompt
+
+_Route6AfterBattleText2::
+	text "Yes dear..."
+	done
 
 _Route6BattleText3::
 	text "There are some"

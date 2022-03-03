@@ -475,19 +475,18 @@ _JustAMomentText::
 	done
 
 TMNotebookText::
-	text "It's a pamphlet"
-	line "on TMs."
+	text "If you are"
+	line "reading this"
+	cont "I want to say"
 
-	para "..."
+	para "Thank you."
 
-	para "There are 50 TMs"
-	line "in all."
+	para "For playing"
+	line "this game."
 
-	para "There are also 5"
-	line "HMs that can be"
-	cont "used repeatedly."
-
-	para "SILPH CO.@"
+	para "There is lots"
+	line "more fun still"
+	cont "have!"
 	text_end
 
 _TurnPageText::

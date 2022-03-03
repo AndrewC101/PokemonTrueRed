@@ -15,9 +15,10 @@ _Route4BattleText1::
 	line "great evil in"
 	cont "this cave!"
 
-	para "As a Nurse"
-	line "I have decided"
-	cont "to stop the"
+	para "I am Nurse JOY."
+
+	para "I have decided"
+	line "to stop the"
 	cont "evil force!"
 
 	para "May we test"

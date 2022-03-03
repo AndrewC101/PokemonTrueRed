@@ -69,13 +69,13 @@ FanClubChairStoryText::
 	cont "love it!"
 
 	para "Hug it...when..."
-	cont "sleeping...warm"
+	line "sleeping...warm"
 	cont "and cuddly..."
 	cont "spectacular..."
 	cont "ravishing..."
 
 	para "Oh God I love"
-	cont "RAPIDASH!"
+	line "RAPIDASH!"
 
 	para "You can sometimes"
 	line "find them to"
@@ -87,7 +87,7 @@ FanClubChairStoryText::
 	cont "to look for one!"
 
 	para "...Oops! Look at"
-	cont "the time! I kept"
+	line "the time! I kept"
 	cont "you too long!"
 
 	para "Thanks for hearing"

@@ -77,8 +77,8 @@ _ReceivedTM28Text2::
 	text_end
 
 _TM28NoRoomText::
-	text "Make room for"
-	line "this!"
+	text "Make room"
+	line "for this!"
 
 	para "I can't run until"
 	line "I give it to you!"
