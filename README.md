@@ -179,7 +179,7 @@ Signature Moves and Mixed Sprites
 - SS Anne has an NPC who will heal your party for convenience  
 - There are several trainers who are particularly strong who are out hunting noobs
 - Pegasus (Yugioh) is in Rock Tunnel, looking for Kaiba  
-- Chris Chan is hiding in Rock Tunnel and nearly everyone there has something to say about it. Get Flash to find him
+- Chris Chan is hiding in Rock Tunnel and he doesn't play by the rules. Get Flash to find him
 - Yuna (FFX) is in Pokeon Tower in Lavender Town, she will battle after the play is Grand Maester (Champion)  
 - Celadon mart has all the best TMs, available as soon as you get there
 - In Celadon Game Cornor is Jackpot Jack, he always wins. Follow the clues to find out his dark secret then confront him about it
