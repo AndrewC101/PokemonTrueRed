@@ -376,6 +376,7 @@ Signature Moves and Mixed Sprites
 # Grinding
 - The game is balanced such that only a little grinding should be needed depending on what Pokemon are on the players team
 - There are some areas and NPCs added specifically to make grinding faster
+- Note that it is expected the player battles Koga before battling Sabrina  
 - Before beating the elite four the following are good grinding spots as you progress through the game
   - Viridian forest first trainer can not harm the player is good for a few early levels
   - Viridian Forest wild Pokemon - wild Beedrill and Butterfree can be found for high experience
