@@ -92,12 +92,16 @@ _PokemonTower7BeforeBattleText4::
 	para "I am a #MON"
 	line "summoner."
 
+	para "I am here to"
+	line "send the souls"
+	cont "of #MON."
+
 	para "I am praying"
 	line "so I may become"
-	cont "a hi-summoner."
+	cont "a high summoner."
 
 	para "I must train with"
-	line "the grand Maester"
+	line "the Grand Maester"
 
 	para "the Champion."
 	done
@@ -109,6 +113,10 @@ _PokemonTower7BattleText4::
 
 	para "I am a #MON"
 	line "summoner."
+
+	para "I am here to"
+	line "send the souls"
+	cont "of #MON."
 
 	para "I am praying"
 	line "so I may become"

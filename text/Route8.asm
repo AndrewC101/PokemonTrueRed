@@ -63,7 +63,7 @@ _Route8AfterBattleText4::
 	done
 
 _Route8BattleText5::
-    text "I am VENESSA"
+    text "I am VENE"
 
 	para "I'm hanging"
 	line "out with my"

@@ -711,6 +711,10 @@ SubstituteImmuneEffects:	;joenote - added this table to track for substitute imm
 	db PARALYZE_EFFECT
 	db CONFUSION_EFFECT
 	db LEECH_SEED_EFFECT
+	db ACCURACY_DOWN1_EFFECT
+	db DEFENSE_DOWN1_EFFECT
+	db DEFENSE_DOWN2_EFFECT
+	db ATTACK_DOWN1_EFFECT
 	db $FF
 
 ; AndrewNote - taken from shinpokered

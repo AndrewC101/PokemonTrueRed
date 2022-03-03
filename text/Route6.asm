@@ -25,7 +25,7 @@ _Route6BattleText2::
 	done
 
 _Route6EndBattleText2::
-	text "help me!"
+	text "help!"
 	prompt
 
 _Route6AfterBattleText2::
