@@ -55,7 +55,7 @@ New Dialog
 New Encounters
 ![New Encounters](/screenshots/optionalBosses2.png?raw=true)
 ![New Encounters](/screenshots/optionalBosses1.png?raw=true)
-![New Encounters](/screenshots/sephiroth.png?raw=true)
+![New Encounters](/screenshots/Sephiroth.png?raw=true)
 ![New Encounters](/screenshots/yugioh.png?raw=true)
 ![New Encounters](/screenshots/wallace.png?raw=true)
 ![New Encounters](/screenshots/miyagi.png?raw=true)
