@@ -31,6 +31,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Missingno glitch is still present (it wouldn't be gen 1 without it) but is balanced so the player can't exploit it
 - Trainer fly (Mew glitch) has been removed (you can get Mew legitimately) as it can softlock the game
 - Route 4 map has been changed to allow backtracking and easy access to Cerulean Cave
+- Rock Tunnel map has a small change allowing the player to bypass much of it
 
 # Download and Play
 The current version of the game can be downloaded from [here](https://www.dropbox.com/s/r0315xic9eb2zqz/PokemonTrueRed.gbc?dl=0).
