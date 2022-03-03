@@ -73,7 +73,7 @@ _ReceivedTM28Text2::
 	text_start
 
 	para "How did that"
-	line "get in there!"
+	line "get in there!@"
 	text_end
 
 _TM28NoRoomText::

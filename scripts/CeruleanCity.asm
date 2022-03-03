@@ -310,6 +310,7 @@ CeruleanCityText2:
 	jr c, .Success
 	ld hl, TM28NoRoomText
 	call PrintText
+	call CeruleanMoveGuardOnly
 	jr .Done
 .Success
 	ld a, $1
@@ -319,6 +320,16 @@ CeruleanCityText2:
 	farcall CeruleanHideRocket
 .Done
 	jp TextScriptEnd
+
+; AndrewNote - taken from shinpokered
+CeruleanMoveGuardOnly:	;joenote - this only moves the guard to prevent getting permanently stuck in the front door
+	ld a, HS_CERULEAN_GUARD_1
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ld a, HS_CERULEAN_GUARD_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ret
 
 CeruleanCityText_196d9:
 	text_far _CeruleanCityText_196d9
