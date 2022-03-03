@@ -487,7 +487,7 @@ TMNotebookText::
 	para "There is lots"
 	line "more fun still"
 	cont "have!"
-	text_end
+	done
 
 _TurnPageText::
 	text "Turn the page?"
