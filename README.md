@@ -180,9 +180,9 @@ Signature Moves and Mixed Sprites
 - There are several trainers who are particularly strong who are out hunting noobs
 - Pegasus (Yugioh) is in Rock Tunnel, looking for Kaiba  
 - Chris Chan is hiding in Rock Tunnel and he doesn't play by the rules. Get Flash to find him
-- Yuna (FFX) is in Pokeon Tower in Lavender Town, she will battle after the play is Grand Maester (Champion)  
+- Yuna (FFX) is in Pokemon Tower in Lavender Town, she will battle after the play is Grand Maester (Champion)  
 - Celadon mart has all the best TMs, available as soon as you get there
-- In Celadon Game Cornor is Jackpot Jack, he always wins. Follow the clues to find out his dark secret then confront him about it
+- In Celadon Game Corner is Jackpot Jack, he always wins. Follow the clues to find out his dark secret then confront him about it
 - Officer Jenny is in the Rocket Hideout, she will ask if you are a Team Rocket member and battle if you say yes  
 - Celadon Mansion has a lot of updated dialog, the programmer defends the many bugs in his code
 - Trainers in Celadon Gym are having a bit of an argument
