@@ -657,6 +657,8 @@ HitmonleeEvosMoves:
 	db 0
 ; Learnset
 	db 35, HI_JUMP_KICK
+	db 40, EARTHQUAKE
+	db 42, ROCK_SLIDE
 	db 0
 
 HitmonchanEvosMoves:

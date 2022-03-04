@@ -34,7 +34,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Rock Tunnel map has a small change allowing the player to bypass much of it
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/r0315xic9eb2zqz/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/o2mwemlck2zznc5/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -293,7 +293,7 @@ Signature Moves and Mixed Sprites
 - Route 16 also has Hypno, Raticate, Fearow, Kangaskhan
 - Route 12 also has Shellder, Gloom, Weepinbell
 - Route 13 also has Ditto, Staryu
-- Route 14 also has Persian, Staryu, Shellder
+- Route 14 also has Persian, Hitmonchan, Hitmonlee
 - Route 15 has Wigglytuff, Fearow, Venomoth, Tauros, Dodrio, Kingler, Venusaur, Kangaskhan, Arcanine
 - Route 18 also has Hypno, Fearow, Dodrio, Raticate, Kangaskhan
 - Safari Zone has Nidoking, Nidoqueen, Clefable, Wigglytuff, Tauros, Scyther, Pinsir, Exeggutor, Chansey, Rhydon
@@ -325,7 +325,7 @@ Signature Moves and Mixed Sprites
   - Machop and Meowth evolve at level 25
 - Nearly all fully evolved Pokemon have an updated level up moveset
 - Scyther and Pinsir now know Twineedle
-- Aerodactyl, Kabutops and Omastar can learn Rock Slide and Earthquake
+- Aerodactyl, Kabutops, Omastar, Hitmonchan and Hitmonlee can learn Rock Slide and Earthquake
 - Dragonite and Charizard can learn Fly
 - Pikachu and Raichu can learn Surf
 - Moltres can learn Solarbeam
