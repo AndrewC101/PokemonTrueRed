@@ -270,7 +270,6 @@ Route23Text9:
 	SetEvent EVENT_BIG_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS
-    SetEvent EVENT_SHOULD_BEAT_SEPHIROTH
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
 	xor a
@@ -298,7 +297,9 @@ SephirothBeginBattleText:
 
 SephirothEndBattleText:
     text_far _SephirothEndBattleText
-    text_end
+    text_asm
+    SetEvent EVENT_BEAT_SEPHIROTH
+    jp TextScriptEnd
 
 SephirothAfterBattleText:
     text_far _SephirothAfterBattleText

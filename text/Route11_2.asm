@@ -23,7 +23,9 @@ _Route11BeforeBattleText10::
     prompt
 
 _Route11BattleText10::
-	text "My brother LANCE"
+    text "I am CLAIR!"
+
+	para "My brother LANCE"
 	line "can't always be"
 	cont "the one to save"
 	cont "KANTO."

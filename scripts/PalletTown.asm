@@ -247,7 +247,6 @@ PalletTownText8:
 	SetEvent EVENT_MAX_STAT_EXP
 	SetEvent EVENT_DONT_TAKE_MONEY
 	SetEvent EVENT_BIG_BONUS_MONEY
-	SetEvent EVENT_SHOULD_BEAT_RED
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
 	xor a
@@ -363,7 +362,9 @@ RedBeforeBattleText:
 
 RedEndBattleText:
 	text_far _FightingDojoEndBattleText6
-	text_end
+	text_asm
+	SetEvent EVENT_BEAT_RED
+	jp TextScriptEnd
 
 RedAfterBattleText:
 	text_far _FightingDojoAfterBattleText6

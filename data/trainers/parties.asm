@@ -126,8 +126,8 @@ LassData:
 ; Celadon Gym
 	db 43, PARASECT, TANGELA, 0
 	db 42, PARASECT, VILEPLUME, 0
-; Lance Sister
-    db 45, DRAGONAIR, SEADRA, CHARIZARD, 0
+; Clair
+    db 40, DRAGONAIR, SEADRA, CHARIZARD, 0
 ; Karen
     db $FF, 61, PERSIAN, 62, VILEPLUME, 63, ARBOK, 64, GENGAR, 65, FLAREON, 0
 ; Yuna
@@ -630,7 +630,7 @@ CooltrainerMData:
 ; Stark
     db 22, ARCANINE, 0
 ; Ichigo
-    db 40, TAUROS, 0
+    db 50, TAUROS, 0
 
 CooltrainerFData:
 ; Celadon Gym
@@ -656,7 +656,7 @@ MistyData:
 	db $FF, 76, GOLDUCK, 77, TENTACRUEL, 78, VAPOREON, 78, STARMIE, 79, LAPRAS, 80, GYARADOS, 0
 
 LtSurgeData:
-	db $FF, 33, RAICHU, 31, MAGNETON, 32 , JOLTEON, 35, ELECTABUZZ, 0
+	db $FF, 32, RAICHU, 30, MAGNETON, 31 , JOLTEON, 34, ELECTABUZZ, 0
 	db $FF, 80, RAICHU, 81, ELECTRODE, 82, MAGNETON, 83, JOLTEON, 84, ELECTABUZZ, 85, ZAPDOS, 0
 
 ErikaData:

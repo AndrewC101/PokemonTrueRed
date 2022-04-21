@@ -256,6 +256,12 @@ Museum1FText6:
     ld a, [wCurrentMenuItem]
     and a
     jr nz, .noBattle
+    CheckEvent EVENT_BEAT_ELITE_4
+    jr nz, .noRematch
+    CheckEvent EVENT_BEAT_IVY
+    jr z, .noRematch
+    SetEvent EVENT_REMATCH
+.noRematch
     ld hl, IvyBeginBattleText
     call PrintText
 	ld hl, wd72d
@@ -288,7 +294,9 @@ IvyBeginBattleText:
 
 IvyEndBattleText:
     text_far _IvyEndBattleText
-    text_end
+    text_asm
+    SetEvent EVENT_BEAT_IVY
+    jp TextScriptEnd
 
 IvyNoBattleText:
     text_far _IvyNoBattleText

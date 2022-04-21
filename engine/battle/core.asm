@@ -1194,9 +1194,6 @@ HandlePlayerBlackOut:
     ResetEvent EVENT_USE_FULL_HEALS
     ResetEvent EVENT_ANDREW_BATTLE
     ResetEvent EVENT_JAMES_BATTLE
-    ResetEvent EVENT_SHOULD_BEAT_RED
-    ResetEvent EVENT_SHOULD_BEAT_SEPHIROTH
-    ResetEvent EVENT_SHOULD_BEAT_GREEN
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
 	CheckEvent EVENT_DONT_TAKE_MONEY

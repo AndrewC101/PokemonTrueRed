@@ -74,7 +74,6 @@ GreenText:
 	SetEvent EVENT_BIG_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS
-    SetEvent EVENT_SHOULD_BEAT_GREEN
 	ld hl, GreenTrainerHeader
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -85,7 +84,9 @@ GreenBattleText:
 
 GreenEndBattleText:
     text_far _GreenEndBattleText
-    text_end
+    text_asm
+    SetEvent EVENT_BEAT_GREEN
+    jp TextScriptEnd
 
 GreenAfterBattleText:
     text_far _GreenAfterBattleText

@@ -94,7 +94,7 @@ PokemonTower7EndBattleText4:
 	text_far _PokemonTower7EndBattleText4
 	text_asm
 	SetEvent EVENT_BEAT_YUNA
-	ret
+	jp TextScriptEnd
 
 PokemonTower7AfterBattleText4:
 	text_far _PokemonTower7AfterBattleText4

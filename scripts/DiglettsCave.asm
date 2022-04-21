@@ -13,6 +13,12 @@ DiglettsCaveText1:
     ld a, [wCurrentMenuItem]
     and a
     jr nz, .noBattle
+    CheckEvent EVENT_BEAT_ELITE_4
+    jr nz, .noRematch
+    CheckEvent EVENT_BEAT_ICHIGO
+    jr z, .noRematch
+    SetEvent EVENT_REMATCH
+.noRematch
     ld hl, IchigoBeginBattleText
 	call PrintText
 	ld hl, wd72d
@@ -55,7 +61,9 @@ _IchigoBattleText:
 
 IchigoEndBattleText:
     text_far _IchigoEndBattleText
-    text_end
+    text_asm
+    SetEvent EVENT_BEAT_ICHIGO
+    jp TextScriptEnd
 _IchigoEndBattleText:
     text "Nani"
     prompt

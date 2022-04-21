@@ -1077,7 +1077,7 @@ DragonairEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 45, DRAGON_RAGE
+	db 40, DRAGON_RAGE
 	db 55, HYPER_BEAM
 	db 0
 
@@ -1118,7 +1118,7 @@ SeadraEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-    db 45, HYPER_BEAM
+    db 40, HYPER_BEAM
 	db 50, HYDRO_PUMP
 	db 55, BLIZZARD
 	db 0
