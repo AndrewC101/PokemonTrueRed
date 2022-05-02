@@ -207,7 +207,7 @@ AIMoveChoiceModification2:
     cp FOCUS_ENERGY_EFFECT
     jp z, .checkfocus
     cp SUBSTITUTE_EFFECT
-	jp z, .checksub
+	jp z, .handleSplash ; enemies don't use sub - it can glitch things
 	cp LEECH_SEED_EFFECT
 	jp z, .checkseed
 	cp ATTACK_DOWN1_EFFECT
@@ -403,14 +403,6 @@ AIMoveChoiceModification2:
 	ld a, [wEnemyBattleStatus2]
 	bit GETTING_PUMPED, a
 	jp nz, .discourageMove
-	jp .nextMove
-.checksub	;check status, and heavily discourage if bit is set
-    ld a, 4	;
-	call AICheckIfHPBelowFraction
-	jp c, .discourageMove ; don't sub of at 1/4 hp
-	ld a, [wEnemyBattleStatus2]
-	bit HAS_SUBSTITUTE_UP, a
-	jp nz, .discourageMove ; don't use if sub already up
 	jp .nextMove
 .checkseed
 	;first check to make sure leech seed isn't used on a grass pokemon

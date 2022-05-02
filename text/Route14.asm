@@ -66,12 +66,7 @@ _Route14EndBattleText4::
 	prompt
 
 _Route14AfterBattleText4::
-	text "Do you have"
-	line "the FLY HM?"
-
-	para "Where is it?"
-
-	para "can I borrow it?"
+	text "Give me FLY!"
 	done
 
 _Route14BattleText5::
@@ -90,13 +85,8 @@ _Route14EndBattleText5::
 	prompt
 
 _Route14AfterBattleText5::
-	text "I'm going to"
-	line "the abandoned"
-	cont "Power Plant!"
-
-	para "I hear there"
-	line "is a legendary"
-	cont "bird there!"
+	text "ZAPDOS will"
+	line "be mine!"
 	done
 
 _Route14BattleText6::

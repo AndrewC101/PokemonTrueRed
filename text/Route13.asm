@@ -12,11 +12,9 @@ _Route13EndBattleText2::
 	prompt
 
 _Route13AfterBattleText2::
-	text "Behold!"
-
-	para "My beautiful"
-
-	para "Angels"
+	text "May a flock"
+	line "of SPEAROW"
+	cont "get you!"
 	done
 
 _Route13BattleText3::
@@ -69,8 +67,8 @@ _Route13EndBattleText5::
 
 _Route13AfterBattleText5::
 	text "You have to make"
-	line "#MON fight to"
-	cont "toughen them up!"
+	line "#MON fight."
+	cont "They love it!"
 	done
 
 _Route13BattleText6::

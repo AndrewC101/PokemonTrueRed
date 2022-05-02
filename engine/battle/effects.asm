@@ -1457,6 +1457,8 @@ HealEffect:
 	jpfar HealEffect_
 
 TransformEffect:
+	call CheckTargetSubstitute ; test bit 4 of d063/d068 flags [target has substitute flag]
+	jp nz, PrintButItFailedText_ ; return if they have a substitute, can't effect them
 	jpfar TransformEffect_
 
 ReflectLightScreenEffect:
