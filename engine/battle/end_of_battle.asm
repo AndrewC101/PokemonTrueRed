@@ -108,7 +108,20 @@ EndOfBattle:
 	predef EvolutionAfterBattle
 .resetVariables
     ; AndrewNote - reset battle events that must be reset
-    call ResetAllBattleEvents
+    ResetEvent EVENT_NO_SHIFT
+    ResetEvent EVENT_NO_ITEMS
+	ResetEvent EVENT_REMATCH
+	ResetEvent EVENT_STOP_SWITCHING
+	ResetEvent EVENT_USE_FULL_RESTORES
+	ResetEvent EVENT_USE_FULL_HEALS
+	ResetEvent EVENT_ANDREW_BATTLE
+	ResetEvent EVENT_JAMES_BATTLE
+	ResetEvent EVENT_BONUS_MONEY
+	ResetEvent EVENT_BIG_BONUS_MONEY
+	ResetEvent EVENT_MAX_BONUS_MONEY
+	ResetEvent EVENT_MAX_STAT_EXP
+	ResetEvent EVENT_MEDIUM_STAT_EXP
+
 	xor a
 	ld [wLowHealthAlarm], a ;disable low health alarm
 	ld [wChannelSoundIDs + Ch5], a
@@ -145,21 +158,6 @@ BonusIncrement:
 	ld c, 3 ; length of money in bytes
 	predef AddBCDPredef ; add total price to money
 	ret
-
-ResetAllBattleEvents::
-    ResetEvent EVENT_NO_SHIFT
-    ResetEvent EVENT_NO_ITEMS
-	ResetEvent EVENT_REMATCH
-	ResetEvent EVENT_STOP_SWITCHING
-	ResetEvent EVENT_USE_FULL_RESTORES
-	ResetEvent EVENT_USE_FULL_HEALS
-	ResetEvent EVENT_ANDREW_BATTLE
-	ResetEvent EVENT_JAMES_BATTLE
-	ResetEvent EVENT_BONUS_MONEY
-	ResetEvent EVENT_BIG_BONUS_MONEY
-	ResetEvent EVENT_MAX_BONUS_MONEY
-	ResetEvent EVENT_MAX_STAT_EXP
-	ResetEvent EVENT_MEDIUM_STAT_EXP
 
 ; AndrewNote - this is crap, but gets the job done
 BonusIncrementBig:

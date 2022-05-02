@@ -274,11 +274,15 @@ AIMoveChoiceModification2:
     pop hl
     jp .continueEffects2
 .handlePara
-   ; don't use if the player has chosen substitute - prevents cheesing slower enemies for free setup
+   ; don't use if the player has chosen substitute and enemy is slower - prevents cheesing slower enemies for free setup
     ld a, [wPlayerMoveNum]
     cp SUBSTITUTE
-    jp z, .discourageMove
+    jp nz, .continuePara
+    call StrCmpSpeed
+    jp nc, .discourageMove
+    jp .encouragePara
 
+.continuePara
    ; encourage if slower than opponent, unless in Andrew battle
     CheckEvent EVENT_ANDREW_BATTLE
     jr nz, .faster
