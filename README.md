@@ -34,7 +34,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Rock Tunnel map has a small change allowing the player to bypass much of it
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/g7lo0oisp92u7tq/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/77huxbaf2aohtpt/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -183,7 +183,7 @@ Signature Moves and Mixed Sprites
 - Yuna (FFX) is in Pokemon Tower in Lavender Town, she will battle after the play is Grand Maester (Champion)  
 - Celadon mart has all the best TMs, available as soon as you get there
 - In Celadon Game Corner is Jackpot Jack, he always wins. Follow the clues to find out his dark secret then confront him about it
-- Celadon Game Corner offers 100 coins for $2000 
+- Celadon Game Corner offers 100 coins for $1000, double the usual rate.
 - Officer Jenny is in the Rocket Hideout, she will ask if you are a Team Rocket member and battle if you say yes  
 - Celadon Mansion has a lot of updated dialog, the programmer defends the many bugs in his code
 - Trainers in Celadon Gym are having a bit of an argument

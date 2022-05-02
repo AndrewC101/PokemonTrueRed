@@ -46,7 +46,7 @@ PrizeMenuMon2Cost:
 IF DEF(_RED)
 	bcd2 3000
 	bcd2 6000
-	bcd2 9000
+	bcd2 9999
 ENDC
 IF DEF(_BLUE)
 	bcd2 3000
@@ -62,7 +62,7 @@ PrizeMenuTMsEntries:
 	db "@"
 
 PrizeMenuTMsCost:
+	bcd2 1000
 	bcd2 2000
 	bcd2 3000
-	bcd2 4000
 	db "@"
