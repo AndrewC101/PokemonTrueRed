@@ -121,6 +121,7 @@ EndOfBattle:
 	ResetEvent EVENT_MAX_BONUS_MONEY
 	ResetEvent EVENT_MAX_STAT_EXP
 	ResetEvent EVENT_MEDIUM_STAT_EXP
+	ResetEvent EVENT_DONT_TAKE_MONEY
 
 	xor a
 	ld [wLowHealthAlarm], a ;disable low health alarm
