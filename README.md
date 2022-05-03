@@ -34,7 +34,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Rock Tunnel map has a small change allowing the player to bypass much of it
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/phwuevy5v1bfodm/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/ljutholfm937vwp/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -181,6 +181,7 @@ Signature Moves and Mixed Sprites
 - Pegasus (Yugioh) is in Rock Tunnel, looking for Kaiba  
 - Chris Chan is hiding in Rock Tunnel and he doesn't play by the rules. Get Flash to find him
 - Yuna (FFX) is in Pokemon Tower in Lavender Town, she will battle after the play is Grand Maester (Champion)  
+- Lavender name rater will rename even traded Pokemon
 - Celadon mart has all the best TMs, available as soon as you get there
 - In Celadon Game Corner is Jackpot Jack, he always wins. Follow the clues to find out his dark secret then confront him about it
 - Celadon Game Corner offers 100 coins for $1000, double the usual rate.

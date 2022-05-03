@@ -274,32 +274,22 @@ AIMoveChoiceModification2:
     pop hl
     jp .continueEffects2
 .handlePara
-   ; don't use if the player has chosen substitute and enemy is slower - prevents cheesing slower enemies for free setup
-    ld a, [wPlayerMoveNum]
-    cp SUBSTITUTE
-    jp nz, .continuePara
-    call StrCmpSpeed
-    jp nc, .discourageMove
-    jp .encouragePara
-
-.continuePara
    ; encourage if slower than opponent, unless in Andrew battle
+   ; don't use if the player has chosen substitute and enemy is slower - prevents cheesing slower enemies for free setup
     CheckEvent EVENT_ANDREW_BATTLE
     jr nz, .faster
+    ld a, [wPlayerMoveNum]
+    cp SUBSTITUTE
+    jr z, .faster
     call StrCmpSpeed
-    jp nc, .encouragePara
-
+    jp nc, .stronglyEncourageMove
 .faster
-   ; 50% chance to encourage if faster than opponent
+    ; 50% chance to encourage if faster than opponent
     call Random
     cp 128
-    jp c, .encouragePara
-
+    jp c, .stronglyEncourageMove
     inc [hl] ; 50% to not use para if faster than player
     jp .nextMove
-
-.encouragePara
-    jp .stronglyEncourageMove ; strongly encourage if slower than opponent
 .handleHealing
     ld a, 2
 	push hl

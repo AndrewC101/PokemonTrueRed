@@ -343,38 +343,38 @@ _CinnabarGymQuizIntroText::
 	prompt
 
 _CinnabarQuizQuestionsText1::
-	text "CATERPIE evolves"
-	line "into BUTTERFREE?"
+	text "CLOYSTER evolves"
+	line "via WATER STONE?"
 	done
 
 _CinnabarQuizQuestionsText2::
-	text "There are 9"
-	line "certified #MON"
-	cont "LEAGUE BADGEs?"
+	text "THUNDERBOLT"
+	line "has 90 base"
+	cont "power?"
 	done
 
 _CinnabarQuizQuestionsText3::
-	text "POLIWAG evolves 3"
-	line "times?"
+	text "SNORLAX has the"
+	line "most HP of all"
+	cont "#MON?"
 	done
 
 _CinnabarQuizQuestionsText4::
-	text "Are thunder moves"
+	text "Are GHOST moves"
 	line "effective against"
-	cont "ground element-"
-	cont "type #MON?"
+	cont "NORMAL type"
+	cont "#MON?"
 	done
 
 _CinnabarQuizQuestionsText5::
-	text "#MON of the"
-	line "same kind and"
-	cont "level are not"
-	cont "identical?"
+	text "HYPER BEAM is"
+	line "not the most"
+	cont "powerful move?"
 	done
 
 _CinnabarQuizQuestionsText6::
-	text "TM28 contains"
-	line "TOMBSTONER?"
+	text "TM14 contains"
+	line "ICE BEAM?"
 	done
 
 _CinnabarGymQuizCorrectText::
@@ -727,8 +727,8 @@ _ViridianBlackboardFrozenText::
 	prompt
 
 _VermilionGymTrashText::
-	text "Nope, there's"
-	line "only trash here."
+	text "Damn, there's"
+	line "only trash here!"
 	done
 
 _VermilionGymTrashSuccessText1::
