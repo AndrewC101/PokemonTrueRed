@@ -238,6 +238,10 @@ AIMoveChoiceModification2:
 	jp z, .handleDig
 	cp FLY_EFFECT
 	jp z, .handleFly
+	cp HAZE_EFFECT
+	jp z, .handleSplash
+	cp MIST_EFFECT
+	jp z, .handleSplash
 	jp .nextMove
 .handleFinishEnemy
     ld a, [wPlayerHPBarColor]
@@ -274,21 +278,19 @@ AIMoveChoiceModification2:
     pop hl
     jp .continueEffects2
 .handlePara
-   ; encourage if slower than opponent, unless in Andrew battle
-   ; don't use if the player has chosen substitute and enemy is slower - prevents cheesing slower enemies for free setup
-    CheckEvent EVENT_ANDREW_BATTLE
-    jr nz, .faster
+    call StrCmpSpeed
+    jp c, .faster
     ld a, [wPlayerMoveNum]
     cp SUBSTITUTE
-    jr z, .faster
-    call StrCmpSpeed
-    jp nc, .stronglyEncourageMove
+    jp z, .discourageMove ; don't use if slower than enemy and enemy has picked substitute
+    CheckEvent EVENT_ANDREW_BATTLE
+    jr nz, .faster ; in Andrew battle always use logic for faster
+    jp .stronglyEncourageMove ; always use para if slower than enemy
 .faster
-    ; 50% chance to encourage if faster than opponent
     call Random
     cp 128
-    jp c, .stronglyEncourageMove
-    inc [hl] ; 50% to not use para if faster than player
+    jp c, .stronglyEncourageMove ; 50% chance to encourage if faster than enemy
+    inc [hl] ; 50% to not use para if faster than enemy
     jp .nextMove
 .handleHealing
     ld a, 2
