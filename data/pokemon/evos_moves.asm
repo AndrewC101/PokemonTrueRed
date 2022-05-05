@@ -419,6 +419,7 @@ ArcanineEvosMoves:
 	db 35, DIG
 	db 45, FIRE_BLAST
 	db 50, HYPER_BEAM
+	db 0
 
 MewEvosMoves:
 ; Evolutions

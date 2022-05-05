@@ -4590,7 +4590,7 @@ GetDamageVarsForEnemyAttack:
 	ld a, e ; store lvl in a
 	cp $80 ; AndrewNote - is level >= 128, such levels will roll over when doubled
 	jr c, .doubleLevel ; if not double level
-	ld e, $FF ; if so just use 255 as level
+	ld e, $F5 ; if so just use 245 as level - chosen so James Persian is a reasonable 2hko range on Mewtwo
 	jr .done
 .doubleLevel
     sla e ; double level if it was a critical hit

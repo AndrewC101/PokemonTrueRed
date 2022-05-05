@@ -452,7 +452,6 @@ FightingDojoText12:
     SetEvent EVENT_NO_SHIFT
     SetEvent EVENT_NO_ITEMS
 	SetEvent EVENT_USE_FULL_HEALS
-	SetEvent EVENT_USE_FULL_RESTORES
 	SetEvent EVENT_JAMES_BATTLE
 	ld hl, FightingDojoTrainerHeader7
 	call TalkToTrainer

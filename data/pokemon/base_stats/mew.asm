@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/mew.pic", 0, 1 ; sprite dimensions
 	dw MewPicFront, MewPicBack
 
-	db FISSURE, EARTHQUAKE, SWORDS_DANCE, SOFTBOILED ; level 1 learnset
+	db FISSURE, EARTHQUAKE, SWORDS_DANCE, RECOVER ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
