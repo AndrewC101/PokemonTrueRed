@@ -34,7 +34,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Rock Tunnel map has a small change allowing the player to bypass much of it
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/3uh3cvat5o7ovxx/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/lh5rgh5vfbmeqqz/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
@@ -77,8 +77,8 @@ Signature Moves and Mixed Sprites
   - Higher stats, depending on trainer
 - All trainers can be rematched but rematches yield 1/2 of the normal exp until Elite Four is beaten 
 - Enemy trainers Pokemon can have stat exp (EVs) there are three categories of level dependant stat exp
-  - Normal trainers - 64 stat exp per level, enough for 20/64 extra stats at level 100
-  - Gym Leaders and Rival - 324 per level, enough for 45/64 extra stats at level 100
+  - Normal trainers - 41 stat exp per level, enough for 16/64 extra stats at level 100
+  - Gym Leaders and Rival - 164 per level, enough for 32/64 extra stats at level 100
   - Elite Four and optional bosses - 655 per level, enough for 64/64 extra stats at level 100
 - All enemy trainers Pokemon have 15/15 DVs in all stats. This means optional boss level 100 Pokemon have max stats
 - Items can not be used in boss battles by player or opponent. So no more Gym Leaders wasting turns on X items

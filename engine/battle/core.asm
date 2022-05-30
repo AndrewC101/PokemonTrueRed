@@ -6454,8 +6454,8 @@ LoadEnemyMonData:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; AndrewNote - give stat exp to enemies. Mostly taken from shinpokered
 ; 3 levels of stat exp for enemies, all based on lvl
-; low stat exp - 20/64 at lvl 100 for most enemies
-; medium stat exp - 45/64 at lvl 100, used by gym leaders and rivals
+; low stat exp - 16/64 at lvl 100 for most enemies
+; medium stat exp - 32/64 at lvl 100, used by gym leaders and rivals
 ; max stat exp - 64/64 at lvl 100, used by E4 and optional bosses
 
 ;is this a trainer battle? Wild pkmn do not have statexp
@@ -6799,14 +6799,14 @@ CalcEnemyStatEXP:
 	ret
 	jr .done
 ; if medium stat exp event is set
-; set 324 stat exp per level
-; this gives max 45/64 at level 100
+; set 164 stat exp per level
+; this gives max 32/64 at level 100
 .mediumExp
     CheckEvent EVENT_MEDIUM_STAT_EXP
     jr z, .lowExp
-	ld a, $01
+	ld a, $00
 	ld [hMultiplicand], a
-	ld a, $45
+	ld a, $A4
 	ld [hMultiplicand + 1], a
 	xor a
 	ld [hMultiplicand + 2], a
@@ -6819,12 +6819,12 @@ CalcEnemyStatEXP:
 	ld e, a
 	ret
 	jr .done
-; set 64 stat exp per level
-; this gives max 20/64 at level 100
+; set 41 stat exp per level
+; this gives max 16/64 at level 100
 .lowExp
 	ld a, $00
 	ld [hMultiplicand], a
-	ld a, $40
+	ld a, $29
 	ld [hMultiplicand + 1], a
 	xor a
 	ld [hMultiplicand + 2], a
