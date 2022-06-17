@@ -64,7 +64,7 @@ _ViridianFrstAfterBattleText3::
 	done
 
 _ViridianForestBeforeBattleText4::
-	text "Another weaking!"
+	text "Another weakling!"
 
 	para "You dare to"
 	line "challenge me?"

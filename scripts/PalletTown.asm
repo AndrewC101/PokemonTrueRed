@@ -152,11 +152,11 @@ PalletTown_TextPointers:
 	dw PalletTownText1
 	dw PalletTownText2
 	dw PalletTownText3
+	dw PalletTownText8
 	dw PalletTownText4
 	dw PalletTownText5
 	dw PalletTownText6
 	dw PalletTownText7
-	dw PalletTownText8
 
 PalletTownText1:
 	text_asm

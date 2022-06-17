@@ -34,7 +34,7 @@ Hack of Pokemon Red/Blue with a focus on fun, difficulty and post game content w
 - Rock Tunnel map has a small change allowing the player to bypass much of it
 
 # Download and Play
-The current version of the game can be downloaded from [here](https://www.dropbox.com/s/lh5rgh5vfbmeqqz/PokemonTrueRed.gbc?dl=0).
+The current version of the game can be downloaded from [here](https://www.dropbox.com/s/b87p4g4uaj4sjx9/PokemonTrueRed.gbc?dl=0).
 
 This is compatible with any existing gen 1 saves you have. You need to
 - Manually save your current game in an outdoor map such as Pallet Town
