@@ -30,9 +30,7 @@ _Route19EndBattleText2::
 	prompt
 
 _Route19AfterBattleText2::
-	line "came by here!"
-
-	para "I think they"
+	text "They for sure"
 	line "were HOEN"
 	cont "spies!"
 	done
