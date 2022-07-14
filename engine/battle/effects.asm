@@ -708,13 +708,15 @@ StatModifierDownEffect:
 	ld b, $4
 	call Divide
 	pop hl
+; cap at MAX_STAT_VALUE (999)
 	ldh a, [hProduct + 3]
-	ld b, a
+	sub LOW(MAX_STAT_VALUE)
 	ldh a, [hProduct + 2]
-	or b
-	jp nz, UpdateLoweredStat
+	sbc HIGH(MAX_STAT_VALUE)
+	jp c, UpdateLoweredStat
+	ld a, HIGH(MAX_STAT_VALUE)
 	ldh [hMultiplicand + 1], a
-	ld a, $1
+	ld a, LOW(MAX_STAT_VALUE)
 	ldh [hMultiplicand + 2], a
 
 UpdateLoweredStat:

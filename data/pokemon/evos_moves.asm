@@ -351,7 +351,7 @@ GengarEvosMoves:
 ; Learnset
 	db 30, HYPNOSIS
 	db 32, THUNDERBOLT
-	db 35, PSYCHIC_M
+	db 42, PSYCHIC_M
 	db 0
 
 NidoranFEvosMoves:
