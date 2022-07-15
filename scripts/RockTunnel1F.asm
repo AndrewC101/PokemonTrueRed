@@ -187,7 +187,15 @@ RockTunnel1BattleText8:
 
 RockTunnel1EndBattleText8:
 	text_far _RockTunnel1EndBattleText8
-	text_end
+    text_asm
+    ResetEvent EVENT_MAX_STAT_EXP
+	ResetEvent EVENT_BONUS_MONEY
+    ResetEvent EVENT_NO_SHIFT
+    ResetEvent EVENT_NO_ITEMS
+    ResetEvent EVENT_USE_FULL_HEALS
+    ResetEvent EVENT_USE_FULL_RESTORES
+    ResetEvent EVENT_GUARANTEED_FULL_RESTORE
+    jp TextScriptEnd
 
 RockTunnel1AfterBattleText8:
 	text_far _RockTunnel1AfterBattleText8

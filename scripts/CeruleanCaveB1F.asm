@@ -51,7 +51,7 @@ CeruleanCaveB1FTrainerHeaders:
 MewtwoTrainerHeader:
 	trainer EVENT_BEAT_MEWTWO, 0, MewtwoBattleText, MewtwoBattleText, MewtwoBattleText
 GreenTrainerHeader:
-    trainer EVENT_BEAT_GREEN, 4, GreenBattleText, GreenEndBattleText, GreenAfterBattleText
+    trainer EVENT_BEAT_GREEN, 0, GreenBattleText, GreenEndBattleText, GreenAfterBattleText
 	db -1 ; end
 
 MewtwoText:
@@ -73,7 +73,6 @@ GreenText:
 	SetEvent EVENT_MAX_STAT_EXP
 	SetEvent EVENT_BIG_BONUS_MONEY
     SetEvent EVENT_NO_SHIFT
-    SetEvent EVENT_NO_ITEMS
 	ld hl, GreenTrainerHeader
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -86,6 +85,9 @@ GreenEndBattleText:
     text_far _GreenEndBattleText
     text_asm
     SetEvent EVENT_BEAT_GREEN
+    ResetEvent EVENT_NO_SHIFT
+    ResetEvent EVENT_BIG_BONUS_MONEY
+    ResetEvent EVENT_MAX_STAT_EXP
     jp TextScriptEnd
 
 GreenAfterBattleText:

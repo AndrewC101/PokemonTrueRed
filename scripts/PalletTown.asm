@@ -332,6 +332,10 @@ _RedBattleText:
     cont "at their"
     cont "strongest."
 
+    para "You can keep"
+    line "using vitamins"
+    cont "up to max stats."
+
     para "The SS Anne"
     line "has returned."
 
@@ -364,6 +368,11 @@ RedEndBattleText:
 	text_far _FightingDojoEndBattleText6
 	text_asm
 	SetEvent EVENT_BEAT_RED
+	ResetEvent EVENT_NO_ITEMS
+	ResetEvent EVENT_NO_SHIFT
+	ResetEvent EVENT_MAX_STAT_EXP
+	ResetEvent EVENT_DONT_TAKE_MONEY
+	ResetEvent EVENT_BIG_BONUS_MONEY
 	jp TextScriptEnd
 
 RedAfterBattleText:

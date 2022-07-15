@@ -125,7 +125,7 @@ Moves:
 	move DIG,          CHARGE_EFFECT,                  80, GROUND,       100, 10
 	move TOXIC,        POISON_EFFECT,                0, POISON,        85, 10
 	move CONFUSION,    CONFUSION_SIDE_EFFECT,       50, PSYCHIC_TYPE, 100, 25
-	move PSYCHIC_M,    SPECIAL_DOWN_SIDE_EFFECT,    90, PSYCHIC_TYPE, 100, 10
+	move PSYCHIC_M,    SPECIAL_DOWN_SIDE_EFFECT,    90, PSYCHIC_TYPE, 100, 15
 	move HYPNOSIS,     SLEEP_EFFECT,                 0, NORMAL,  60, 20
 	move MEDITATE,     ATTACK_UP1_EFFECT,            0, NORMAL, 100, 40
 	move AGILITY,      SPEED_UP2_EFFECT,             0, NORMAL, 100, 30

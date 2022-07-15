@@ -31,6 +31,8 @@ DiglettsCaveText1:
 	ld [wSpriteIndex], a
 	SetEvent EVENT_MEDIUM_STAT_EXP
 	SetEvent EVENT_DONT_TAKE_MONEY
+	SetEvent EVENT_NO_ITEMS
+	SetEvent EVENT_BONUS_MONEY
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
 	xor a
@@ -63,6 +65,9 @@ IchigoEndBattleText:
     text_far _IchigoEndBattleText
     text_asm
     SetEvent EVENT_BEAT_ICHIGO
+	ResetEvent EVENT_DONT_TAKE_MONEY
+	ResetEvent EVENT_NO_ITEMS
+	ResetEvent EVENT_BONUS_MONEY
     jp TextScriptEnd
 _IchigoEndBattleText:
     text "Nani"

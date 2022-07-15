@@ -274,6 +274,8 @@ Museum1FText6:
 	ld [wSpriteIndex], a
 	SetEvent EVENT_MEDIUM_STAT_EXP
 	SetEvent EVENT_DONT_TAKE_MONEY
+    SetEvent EVENT_NO_SHIFT
+    SetEvent EVENT_NO_ITEMS
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
 	xor a
@@ -296,6 +298,7 @@ IvyEndBattleText:
     text_far _IvyEndBattleText
     text_asm
     SetEvent EVENT_BEAT_IVY
+    ResetEvent EVENT_NO_ITEMS
     jp TextScriptEnd
 
 IvyNoBattleText:
